@@ -610,7 +610,6 @@ def main() -> None:
     pipeline()
     cards()
     qrs()
-    donate_qrs()
     divider()
     social()
     # Restore the reviewed brand design after the upstream asset generator.
@@ -619,35 +618,6 @@ def main() -> None:
     print("done")
 
 
-
-# ---------------------------------------------------------------------------
-# Donation QR cards.
-#
-# The payload is the BARE address, not a `tron:` / `ethereum:` / `ton://` URI:
-# every wallet scanner understands a plain address, while URI-scheme support is
-# patchy and a scheme a wallet does not know is worse than no QR at all.
-#
-# Each address below was verified before being embedded — TRON by base58check
-# (version byte 0x41), EVM by the EIP-55 mixed-case checksum, TON by CRC16 —
-# and each generated QR is decoded again and compared to the source string.
-# ---------------------------------------------------------------------------
-
-TRON_RED = "#EF4444"
-TON_BLUE = "#0098EA"
-
-DONATE_TARGETS = [
-    ("qr-donate-trc20.svg", "TYBumju6Mjd8JCn4RTq95Kk2HPsdcinuz5",
-     "TRC20", "Tron network", TRON_RED, "Donate on the TRON TRC20 network"),
-    ("qr-donate-evm.svg", "0x4A0579eb11de7f80F719C9a4Df6CD39510400E02",
-     "EVM chains", "ETH · BSC · Polygon", VIOLET, "Donate on any EVM network"),
-    ("qr-donate-ton.svg", "UQBbZrE5aDsdGVi6enpf_vPuG022W4KjkJNzTDkjVEn4gmu6",
-     "TON", "The Open Network", TON_BLUE, "Donate on The Open Network"),
-]
-
-
-def donate_qrs() -> None:
-    for name, payload, title, sub, col, aria in DONATE_TARGETS:
-        qr_card(name, payload, title, sub, col, aria)
 
 if __name__ == "__main__":
     main()

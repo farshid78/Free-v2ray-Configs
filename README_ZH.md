@@ -64,52 +64,6 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 
 </div>
 
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
-
-## 🧩 姊妹项目 —— Free Telegram Proxy
-
-<a href="https://github.com/farshid78/Free-Telegram-Proxy"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/promo-proxy-mobile.svg" /><img src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/promo-proxy.svg" width="100%" alt="姊妹项目 Free Telegram Proxy：免费的 Telegram MTProto 代理，经过三轮验证 —— 在 GitHub 上打开" /></picture></a>
-
-<div align="center">
-
-  <a href="https://github.com/farshid78/Free-Telegram-Proxy"><img alt="Free-Telegram-Proxy 星标" src="https://img.shields.io/github/stars/farshid78/Free-Telegram-Proxy?style=for-the-badge&amp;color=FBBF24&amp;logo=github&amp;label=Free-Telegram-Proxy" /></a>
-  <a href="https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/index.json"><img alt="已验证的 Telegram 代理" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffarshid78%2FFree-Telegram-Proxy%2Fmain%2Findex.json&amp;query=%24.funnel.verified_links&amp;label=verified%20links&amp;color=16a34a&amp;style=for-the-badge" /></a>
-  <a href="https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/index.json"><img alt="Telegram 代理服务器" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffarshid78%2FFree-Telegram-Proxy%2Fmain%2Findex.json&amp;query=%24.funnel.verified_servers&amp;label=real%20servers&amp;color=247EFD&amp;style=for-the-badge" /></a>
-
-</div>
-
-V2Ray 配置能承载整台设备的流量，但需要一个客户端应用。如果你只需要 **Telegram**，同一位作者还维护着
-**[Free-Telegram-Proxy](https://github.com/farshid78/Free-Telegram-Proxy)**（英文 README）—— 遵循同样的原则：从公开来源汇总、去重，每个代理都经过
-**三轮**验证（把一个真实请求转发到 Telegram 数据中心），大约每 15 分钟在 `main` 上发布一次，并有自己的
-[实时面板](https://farshid78.github.io/Free-Telegram-Proxy/)：每一行都能直接在 Telegram 中打开 ——
-无需额外应用。最短路径：
-
-```text
-https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/top100.txt
-```
-
-<details>
-<summary><b>V2Ray 配置还是 Telegram 代理 —— 我需要哪一个？</b></summary>
-
-| | Free V2Ray Configs（本仓库） | Free Telegram Proxy |
-|:--|:--|:--|
-| **承载** | 经由客户端的整台设备或应用的全部流量 | 仅 Telegram 流量 |
-| **协议** | VLESS、VMess、Trojan、Shadowsocks、Hysteria2、TUIC、… | MTProto —— 经典、`dd`、`ee`（FakeTLS） |
-| **你需要** | 一个客户端，如 v2rayNG、Hiddify、NekoBox、v2rayN、Clash Meta 或 Shadowrocket | 只需 Telegram |
-| **工作证明** | 通过代理发出的真实 HTTP 请求，3 轮；Clash 与 sing-box 文件由真实的、版本固定的 `sing-box` 与 `mihomo` 二进制检查 | `req_pq_multi` 转发到 Telegram 数据中心，3 轮 |
-| **格式** | `configs.txt` · `configs_base64.txt` · `clash.yaml` · `singbox.json` | `tg.txt` · `tme.txt` · `proxies.json` |
-
-每个不同的已验证服务器，每个服务器 IP 一条可直接点击的 `https://t.me/proxy?…` 链接：
-
-```text
-https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/resilient/tme.txt
-```
-
-同样的提醒也适用于那里：「已验证」表示它在那个项目的测试机上可用，不一定在你的网络中可用。
-
-</details>
-
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
 
 <a name="-subscription-links"></a>
 
@@ -698,45 +652,6 @@ GitHub 的 `schedule:` cron 是尽力而为的，在繁忙时段经常被延迟�
 </table>
 
 </div>
-
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
-
-<div align="center">
-
-## 💜 可选 —— 留个小费
-
-这个页面上没有任何东西需要付费，将来也不会有：无论你是否读了这一节，上面的每一个链接
-都一模一样地可用。但如果这个项目帮你省下了一整晚寻找「真的能连上的配置」的时间，你可以
-发个小费。任何金额都很感激 —— 金额很小也完全没问题。
-
-<img alt="Donate on the TRON TRC20 network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-trc20.svg">
-<img alt="Donate on any EVM network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-evm.svg">
-<img alt="Donate on The Open Network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-ton.svg">
-
-</div>
-
-**TRC20 —— Tron 网络**
-
-```text
-TYBumju6Mjd8JCn4RTq95Kk2HPsdcinuz5
-```
-
-**EVM 链 —— Ethereum、BSC、Polygon、Arbitrum、Base、…**
-
-```text
-0x4A0579eb11de7f80F719C9a4Df6CD39510400E02
-```
-
-**TON —— The Open Network**
-
-```text
-UQBbZrE5aDsdGVi6enpf_vPuG022W4KjkJNzTDkjVEn4gmu6
-```
-
-> [!IMPORTANT]
-> 请只在每个地址上方标注的那个网络上转账。每个二维码编码的就是印在它下面的那个地址，
-> 除此之外别无内容 —— 没有金额、没有 memo、没有代币合约 —— 所以二维码和文字是同一件
-> 东西的两种读法。你更信哪一种，就扫码或复制哪一种。
 
 <div align="center">
 

@@ -67,54 +67,6 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 
 </div>
 
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
-
-## 🧩 Соседний проект — Free Telegram Proxy
-
-<a href="https://github.com/farshid78/Free-Telegram-Proxy"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/promo-proxy-mobile.svg" /><img src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/promo-proxy.svg" width="100%" alt="Free Telegram Proxy — соседний проект: бесплатные MTProto-прокси для Telegram, проверенные в трёх раундах; открыть на GitHub" /></picture></a>
-
-<div align="center">
-
-  <a href="https://github.com/farshid78/Free-Telegram-Proxy"><img alt="звёзды Free-Telegram-Proxy" src="https://img.shields.io/github/stars/farshid78/Free-Telegram-Proxy?style=for-the-badge&amp;color=FBBF24&amp;logo=github&amp;label=Free-Telegram-Proxy" /></a>
-  <a href="https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/index.json"><img alt="проверенные прокси Telegram" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffarshid78%2FFree-Telegram-Proxy%2Fmain%2Findex.json&amp;query=%24.funnel.verified_links&amp;label=verified%20links&amp;color=16a34a&amp;style=for-the-badge" /></a>
-  <a href="https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/index.json"><img alt="серверы прокси Telegram" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffarshid78%2FFree-Telegram-Proxy%2Fmain%2Findex.json&amp;query=%24.funnel.verified_servers&amp;label=real%20servers&amp;color=247EFD&amp;style=for-the-badge" /></a>
-
-</div>
-
-Конфиг V2Ray пропускает весь трафик устройства, но ему нужно приложение-клиент. Если вам нужен только
-**Telegram**, у того же автора есть **[Free-Telegram-Proxy](https://github.com/farshid78/Free-Telegram-Proxy/blob/main/README_RU.md)** — он построен
-на тех же принципах: собран из открытых источников, без дубликатов, каждый прокси проверен в **трёх
-раундах** — настоящий запрос доходит до датацентра Telegram, — публикуется в `main` примерно каждые
-15 минут, со своей [живой панелью](https://farshid78.github.io/Free-Telegram-Proxy/), где каждая строка
-открывается прямо в Telegram — без лишних приложений. Самый короткий путь:
-
-```text
-https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/top100.txt
-```
-
-<details>
-<summary><b>Конфиг V2Ray или прокси для Telegram — что мне нужно?</b></summary>
-
-| | Free V2Ray Configs (этот репозиторий) | Free Telegram Proxy |
-|:--|:--|:--|
-| **Что пропускает** | весь трафик устройства или приложения, направленный через клиент | только трафик Telegram |
-| **Протоколы** | VLESS, VMess, Trojan, Shadowsocks, Hysteria2, TUIC, … | MTProto — обычный, `dd`, `ee` (FakeTLS) |
-| **Что нужно** | клиент вроде v2rayNG, Hiddify, NekoBox, v2rayN, Clash Meta или Shadowrocket | только Telegram |
-| **Доказательство работы** | настоящий HTTP-запрос через прокси, 3 раунда; файлы Clash и sing-box проверяются настоящими бинарниками `sing-box` и `mihomo` фиксированных версий | `req_pq_multi` передан в DC Telegram, 3 раунда |
-| **Форматы** | `configs.txt` · `configs_base64.txt` · `clash.yaml` · `singbox.json` | `tg.txt` · `tme.txt` · `proxies.json` |
-
-Все различные проверенные серверы, по одной ссылке `https://t.me/proxy?…` на IP сервера:
-
-```text
-https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/resilient/tme.txt
-```
-
-Там действует та же оговорка: «проверен» значит «работал с сервера проверки того проекта», а
-необязательно из вашей сети.
-
-</details>
-
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
 
 <a name="-subscription-links"></a>
 
@@ -749,47 +701,6 @@ ShadowException, w1770946466 и другим. Этот репозиторий т
 </table>
 
 </div>
-
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
-
-<div align="center">
-
-## 💜 По желанию — оставить чаевые
-
-Ничего на этой странице не спрятано за оплатой и никогда не будет: каждая ссылка выше
-работает совершенно одинаково независимо от того, прочитали вы этот раздел или нет. Но
-если проект сэкономил вам вечер поисков конфига, который действительно подключается, вы
-можете отправить чаевые. Любая сумма ценится — маленькая совершенно нормальна.
-
-<img alt="Donate on the TRON TRC20 network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-trc20.svg">
-<img alt="Donate on any EVM network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-evm.svg">
-<img alt="Donate on The Open Network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-ton.svg">
-
-</div>
-
-**TRC20 — сеть Tron**
-
-```text
-TYBumju6Mjd8JCn4RTq95Kk2HPsdcinuz5
-```
-
-**Сети EVM — Ethereum, BSC, Polygon, Arbitrum, Base, …**
-
-```text
-0x4A0579eb11de7f80F719C9a4Df6CD39510400E02
-```
-
-**TON — The Open Network**
-
-```text
-UQBbZrE5aDsdGVi6enpf_vPuG022W4KjkJNzTDkjVEn4gmu6
-```
-
-> [!IMPORTANT]
-> Отправляйте только в той сети, которая названа над адресом. Каждый QR кодирует ровно
-> тот адрес, что напечатан под ним, и ничего больше — ни суммы, ни memo, ни контракта
-> токена — так что код и текст это два способа прочитать одно и то же. Сканируйте или
-> копируйте, чему больше доверяете.
 
 <div align="center">
 

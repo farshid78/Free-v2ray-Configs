@@ -11,5 +11,4 @@ export const RAW_BASE = "https://raw.githubusercontent.com/farshid78/Free-v2ray-
 export const CDN_BASE = "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main";
 export const SITE_URL = "https://farshid78.github.io/Free-v2ray-Configs";
 export const CHANNEL_URL = "https://t.me/farshid78";
-export const SISTER_URL = "https://github.com/farshid78/Free-Telegram-Proxy";
 export const SECURITY_URL = "https://github.com/farshid78/Free-v2ray-Configs/blob/main/SECURITY.md";

@@ -66,53 +66,6 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 
 </div>
 
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
-
-## 🧩 پروژهٔ خواهر — پروکسی رایگان تلگرام
-
-<a href="https://github.com/farshid78/Free-Telegram-Proxy"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/promo-proxy-mobile.svg" /><img src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/promo-proxy.svg" width="100%" alt="پروژهٔ خواهر Free Telegram Proxy: پروکسی رایگان MTProto برای تلگرام که در سه دور تأیید شده — در GitHub باز کن" /></picture></a>
-
-<div align="center">
-
-  <a href="https://github.com/farshid78/Free-Telegram-Proxy"><img alt="ستاره‌های Free-Telegram-Proxy" src="https://img.shields.io/github/stars/farshid78/Free-Telegram-Proxy?style=for-the-badge&amp;color=FBBF24&amp;logo=github&amp;label=Free-Telegram-Proxy" /></a>
-  <a href="https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/index.json"><img alt="پروکسی‌های تأییدشدهٔ تلگرام" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffarshid78%2FFree-Telegram-Proxy%2Fmain%2Findex.json&amp;query=%24.funnel.verified_links&amp;label=verified%20links&amp;color=16a34a&amp;style=for-the-badge" /></a>
-  <a href="https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/index.json"><img alt="سرورهای پروکسی تلگرام" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffarshid78%2FFree-Telegram-Proxy%2Fmain%2Findex.json&amp;query=%24.funnel.verified_servers&amp;label=real%20servers&amp;color=247EFD&amp;style=for-the-badge" /></a>
-
-</div>
-
-کانفیگ V2Ray همهٔ ترافیکِ دستگاه را رد می‌کند، ولی به یک برنامهٔ کلاینت نیاز دارد. اگر فقط **تلگرام**
-لازم دارید، همین نویسنده پروژهٔ **[Free-Telegram-Proxy](https://github.com/farshid78/Free-Telegram-Proxy/blob/main/README_FA.md)** را نگه می‌دارد —
-با همان اصول: از منابعِ عمومی جمع می‌شود، تکراری‌ها حذف می‌شوند، هر پروکسی در **سه دور** با رساندنِ یک
-درخواستِ واقعی به دیتاسنترِ تلگرام تأیید می‌شود و تقریباً هر ۱۵ دقیقه روی `main` منتشر می‌شود؛ با
-[داشبوردِ زندهٔ](https://farshid78.github.io/Free-Telegram-Proxy/fa/) خودش که هر ردیفش مستقیم در تلگرام
-باز می‌شود — بدونِ برنامهٔ اضافه. کوتاه‌ترین مسیرش:
-
-```text
-https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/top100.txt
-```
-
-<details>
-<summary><b>کانفیگ V2Ray یا پروکسی تلگرام — کدام را لازم دارم؟</b></summary>
-
-| | Free V2Ray Configs (همین مخزن) | Free Telegram Proxy |
-|:--|:--|:--|
-| **چه چیزی را رد می‌کند** | همهٔ ترافیکِ دستگاه یا برنامه‌ای که از کلاینت عبور کند | فقط ترافیکِ تلگرام |
-| **پروتکل‌ها** | VLESS، VMess، Trojan، Shadowsocks، Hysteria2، TUIC، … | MTProto — معمولی، `dd`، `ee` (FakeTLS) |
-| **چه لازم دارید** | یک کلاینت مثل v2rayNG، Hiddify، NekoBox، v2rayN، Clash Meta یا Shadowrocket | فقط تلگرام |
-| **اثباتِ کار کردن** | یک درخواستِ HTTP واقعی از داخلِ پروکسی، ۳ دور؛ فایل‌های Clash و sing-box با خودِ باینری‌های واقعی و نسخه‌ثابتِ `sing-box` و `mihomo` بررسی می‌شوند | رساندنِ `req_pq_multi` به دیتاسنترِ تلگرام، ۳ دور |
-| **فرمت‌ها** | `configs.txt` · `configs_base64.txt` · `clash.yaml` · `singbox.json` | `tg.txt` · `tme.txt` · `proxies.json` |
-
-همهٔ سرورهای تأییدشدهٔ متمایز، برای هر IP یک لینکِ `https://t.me/proxy?…` که با یک لمس باز می‌شود:
-
-```text
-https://raw.githubusercontent.com/farshid78/Free-Telegram-Proxy/main/resilient/tme.txt
-```
-
-همین هشدار آن‌جا هم صدق می‌کند: «تأییدشده» یعنی از سرورِ تستِ همان پروژه کار کرده، نه لزوماً از شبکهٔ شما.
-
-</details>
-
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
 
 <a name="-subscription-links"></a>
 
@@ -756,46 +709,6 @@ w1770946466 و دیگران. این ریپازیتوری فقط کانفیگ‌�
 </table>
 
 </div>
-
-<img alt="" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/divider.svg">
-
-<div align="center">
-
-## 💜 اختیاری — یک انعام بگذارید
-
-هیچ‌چیز در این صفحه پشتِ پرداخت نیست و هرگز نخواهد بود: هر لینکِ بالا دقیقاً یکسان کار
-می‌کند، چه این بخش را بخوانید چه نخوانید. اما اگر این پروژه یک شب گشتن به‌دنبالِ کانفیگی
-که واقعاً وصل شود را برایتان صرفه‌جویی کرد، می‌توانید انعامی بفرستید. هر مبلغی قدردانی
-می‌شود — مبلغِ کوچک کاملاً خوب است.
-
-<img alt="Donate on the TRON TRC20 network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-trc20.svg">
-<img alt="Donate on any EVM network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-evm.svg">
-<img alt="Donate on The Open Network" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-donate-ton.svg">
-
-</div>
-
-**TRC20 — شبکهٔ Tron**
-
-```text
-TYBumju6Mjd8JCn4RTq95Kk2HPsdcinuz5
-```
-
-**زنجیره‌های EVM — Ethereum، BSC، Polygon، Arbitrum، Base، …**
-
-```text
-0x4A0579eb11de7f80F719C9a4Df6CD39510400E02
-```
-
-**TON — The Open Network**
-
-```text
-UQBbZrE5aDsdGVi6enpf_vPuG022W4KjkJNzTDkjVEn4gmu6
-```
-
-> [!IMPORTANT]
-> فقط روی شبکه‌ای بفرستید که بالای هر نشانی نام برده شده است. هر QR دقیقاً همان نشانیِ
-> چاپ‌شده زیرش را رمزگذاری می‌کند و هیچ‌چیزِ دیگری — نه مبلغ، نه memo، نه قراردادِ توکن —
-> پس کد و متن دو راهِ خواندنِ یک چیزِ واحدند. هرکدام را بیشتر باور دارید، اسکن یا کپی کنید.
 
 <div align="center">
 

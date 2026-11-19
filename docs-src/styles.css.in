@@ -1,6 +1,5 @@
 /* {{@brand}} — Free V2Ray Configs landing page.
-   Hand-written, no build step. Brand tokens match the sister site
-   ({{@sister_site_host}}). Layout uses CSS logical
+   Hand-written, no build step. Layout uses CSS logical
    properties so the Persian (RTL) page needs no separate stylesheet. */
 
 /* ── fonts (self-hosted, SIL OFL 1.1 — see fonts/OFL-*.txt) ─────────── */

@@ -56,7 +56,6 @@ import sys
 #   GH_USER        GitHub owner: PROJECT_URL, RAW/CDN/SITE, badges, workflow
 #   GH_REPO        GitHub repository name: same
 #   GH_BRANCH      raw/CDN/pages branch (published outputs live here)
-#   SISTER_REPO    sibling project linked from README ("Free-Telegram-Proxy")
 #   CHANNEL_URL    Telegram channel link (README buttons, docs)
 #   SUPPORT_URL    Hiddify `support-url` + `profile-web-page-url`
 #   BOT_URL        bot link in README/docs prose
@@ -110,7 +109,6 @@ def _compute() -> dict:
                  or os.environ.get("AGG_DATA_BRANCH")
                  or os.environ.get("DATA_BRANCH")
                  or "main")
-    sister_repo = os.environ.get("AGG_SISTER_REPO", "Free-Telegram-Proxy")
     #: Display link — keeps the handle's original casing (Telegram treats
     #: handles case-insensitively, but the committed READMEs use
     #: `t.me/jojo_config`).
@@ -128,7 +126,6 @@ def _compute() -> dict:
     group_url = os.environ.get("AGG_GROUP_URL", "")
     #: `owner/repo` — the slug GitHub prints, and the path inside every raw URL.
     repo_slug = f"{gh_user}/{gh_repo}"
-    sister_slug = f"{gh_user}/{sister_repo}"
     project_url = os.environ.get(
         "AGG_PROJECT_URL", f"https://github.com/{repo_slug}")
     #: GitHub Pages origin for `<user>.github.io` (lower-cased host, as GitHub
@@ -150,20 +147,15 @@ def _compute() -> dict:
         "GH_USER": gh_user,
         "GH_REPO": gh_repo,
         "GH_BRANCH": gh_branch,
-        "SISTER_REPO": sister_repo,
         "CHANNEL_URL": channel_url,
         "SUPPORT_URL": support_url,
         "BOT_URL": bot_url,
         "GROUP_URL": group_url,
         "REPO_SLUG": repo_slug,
-        "SISTER_SLUG": sister_slug,
         "PROJECT_URL": project_url,
         "RAW_BASE": f"https://raw.githubusercontent.com/{repo_slug}/{gh_branch}",
         "CDN_BASE": f"https://cdn.jsdelivr.net/gh/{repo_slug}@{gh_branch}",
-        "SISTER_URL": f"https://github.com/{sister_slug}",
-        "SISTER_RAW_BASE": f"https://raw.githubusercontent.com/{sister_slug}/{gh_branch}",
         "SITE_URL": site_url,
-        "SISTER_SITE_URL": f"https://{gh_user.lower()}.github.io/{sister_repo}",
         "COMMIT_NAME": os.environ.get(
             "AGG_COMMIT_NAME", f"{brand_slug}-bot[actions]"),
         "COMMIT_EMAIL": os.environ.get(
@@ -236,11 +228,6 @@ def values() -> dict:
         "channel_url": CHANNEL_URL,
         "group_url": GROUP_URL,
         "support_url": SUPPORT_URL,
-        "sister": SISTER_REPO,
-        "sister_slug": SISTER_SLUG,
-        "sister_url": SISTER_URL,
-        "sister_raw": SISTER_RAW_BASE,
-        "sister_site": SISTER_SITE_URL,
         "site_title": SITE_TITLE,
     }
 
@@ -263,7 +250,6 @@ def render(text: str) -> str:
         if val.startswith("http"):
             table[key + "_urlenc"] = _percent_encoded(val)
     table["slug_urlenc"] = _percent_encoded(table["slug"])
-    table["sister_slug_urlenc"] = _percent_encoded(table["sister_slug"])
     # Longest-first so `{{slug}}` never eats the prefix of a longer token.
     for key in sorted(table, key=len, reverse=True):
         text = text.replace("{{" + key + "}}", table[key])
@@ -290,7 +276,6 @@ def render_dashboard_ts() -> str:
         f"export const CDN_BASE = {json.dumps(v['cdn'])};\n"
         f"export const SITE_URL = {json.dumps(v['site'])};\n"
         f"export const CHANNEL_URL = {json.dumps(v['channel_url'])};\n"
-        f"export const SISTER_URL = {json.dumps(v['sister_url'])};\n"
         f"export const SECURITY_URL = {json.dumps(v['project_url'] + '/blob/' + v['branch'] + '/SECURITY.md')};\n"
     )
 

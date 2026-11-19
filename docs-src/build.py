@@ -55,7 +55,6 @@ LANGS = {
         "alt_lang": "fa",
         "alt_label": "فارسی",
         "font_preload": "fonts/manrope-latin.woff2",
-        "sister_href": brand.SISTER_SITE_URL + "/",
     },
     "fa": {
         "out": "fa/index.html",
@@ -68,7 +67,6 @@ LANGS = {
         "alt_lang": "en",
         "alt_label": "English",
         "font_preload": "fonts/estedad-arabic.woff2",
-        "sister_href": brand.SISTER_SITE_URL + "/fa/",
     },
 }
 
@@ -196,7 +194,6 @@ def render(lang: str, template: str, strings: dict, hashes: dict) -> str:
         "alt_lang": cfg["alt_lang"],
         "alt_label": cfg["alt_label"],
         "font_preload": cfg["font_preload"],
-        "sister_href": cfg["sister_href"],
         # Brand identity for `{{@...}}` raw insertions — one config block.
         "brand": brand.BRAND_NAME,
         "brand_handle": brand.BRAND_CHANNEL.lstrip("@"),
@@ -301,9 +298,7 @@ def _render_assets(check: bool) -> list:
     """
     values = (("{{@brand}}", brand.BRAND_NAME),
               ("{{@raw}}", brand.RAW_BASE),
-              ("{{@cdn}}", brand.CDN_BASE),
-              ("{{@sister_site_host}}",
-               brand.SISTER_SITE_URL.replace("https://", "")))
+              ("{{@cdn}}", brand.CDN_BASE))
     stale = []
     for out_name, tpl_name in ASSET_TEMPLATES.items():
         text = _read(os.path.join(HERE, tpl_name))

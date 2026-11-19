@@ -21,13 +21,8 @@ sys.path.insert(0,str(DIR))
 import make_assets as _upstream
 sys.path.insert(0,str(DIR.parent/'scripts'))
 import brand  # noqa: E402 — single config block (handle, name, repo, URLs)
-QR_TARGETS={name:payload for name,payload,*_ in _upstream.QR_TARGETS+_upstream.DONATE_TARGETS}
-assert set(QR_TARGETS)=={'qr-top100.svg','qr-verified.svg','qr-telegram.svg','qr-donate-trc20.svg','qr-donate-evm.svg','qr-donate-ton.svg'},sorted(QR_TARGETS)
-DONATE_INFO={
-  'qr-donate-trc20.svg':('TRC20','Tron network'),
-  'qr-donate-evm.svg':('EVM','ETH · BSC · Polygon'),
-  'qr-donate-ton.svg':('TON','The Open Network'),
-}
+QR_TARGETS={name:payload for name,payload,*_ in _upstream.QR_TARGETS}
+assert set(QR_TARGETS)=={'qr-top100.svg','qr-verified.svg','qr-telegram.svg'},sorted(QR_TARGETS)
 
 # QR content itself never animates.
 def qr_matrix(payload):
@@ -35,8 +30,7 @@ def qr_matrix(payload):
     q=segno.make(payload,error='m',micro=False)
     return [''.join('1' if c else '0' for c in row) for row in q.matrix]
 FILES={'hero.svg','pipeline.svg','cta-links.svg','cta-telegram.svg','cta-star.svg',
-       'qr-top100.svg','qr-verified.svg','qr-telegram.svg','qr-donate-trc20.svg','qr-donate-evm.svg','qr-donate-ton.svg','divider.svg','social-preview.svg',
-       'promo-proxy.svg','promo-proxy-mobile.svg'}
+       'qr-top100.svg','qr-verified.svg','qr-telegram.svg','divider.svg','social-preview.svg'}
 
 def txt(x,y,s,size=18,w=600,color=WHITE,anchor='',space='',family=FONT):
     a=f' text-anchor="{anchor}"' if anchor else ''
@@ -154,10 +148,6 @@ def qr(name,title,subtitle):
     out(name,s)
 
 
-def donate(name):
-    title,subtitle=DONATE_INFO[name]
-    qr(name,title,subtitle)
-
 def divider():
     s=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="34" viewBox="0 0 1280 34" role="presentation" aria-hidden="true"><defs><linearGradient id="line"><stop stop-color="{BLUE}" stop-opacity="0"/><stop offset=".25" stop-color="{BLUE}" stop-opacity=".48"/><stop offset=".5" stop-color="{BLUE}" stop-opacity=".82"/><stop offset=".75" stop-color="{BLUE}" stop-opacity=".48"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></linearGradient></defs><path d="M34 17H1246" stroke="url(#line)" stroke-width="2"/><circle cx="640" cy="17" r="5" fill="{BLUE}"/><circle cx="640" cy="17" r="7" fill="none" stroke="{BLUE}" stroke-opacity=".35"><animate attributeName="r" values="7;13;7" dur="4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".35;0;.35" dur="4s" repeatCount="indefinite"/></circle>{moving_dot(140,1140,17,12,'0s',2.6)}</svg>'''
     (DIR/'divider.svg').write_text(s+'\n',encoding='utf-8')
@@ -193,13 +183,8 @@ def main():
     qr('qr-top100.svg','Top 100','Fastest verified links')
     qr('qr-verified.svg','Verified','Scan with your client')
     qr('qr-telegram.svg',brand.BRAND_CHANNEL,'Telegram channel')
-    donate('qr-donate-trc20.svg')
-    donate('qr-donate-evm.svg')
-    donate('qr-donate-ton.svg')
     divider();social()
-    import make_promo_proxy   # sister-project banner (Free-Telegram-Proxy)
-    make_promo_proxy.main()
     assert {p.name for p in DIR.glob('*.svg')}==FILES,'Extra/missing SVG outputs'
-    print(f'Generated {len(FILES)} SVG files, including donation cards.')
+    print(f'Generated {len(FILES)} SVG files.')
 
 if __name__=='__main__': main()

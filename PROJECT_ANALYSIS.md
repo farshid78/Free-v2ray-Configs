@@ -206,11 +206,11 @@ bot/admin     → GitHub API repository_dispatch: aggregate-now
 
 ## ۱۱. وضعیت فعلی داده
 
-- `all/configs.txt`: ۱۱٬۳۸۲ کانفیگ یکتا
-- `verified/`, `fast/`, `secure/`, `top100.txt`: **۰** (اجرای محلی)
-- `Countries/index.json`: فهرست خالی
-- تست‌ها: `test_pipeline.py` ۵۱۳/۵۴۲؛ `test_categories.py` ۹/۹
-- کامیت: `ef0858c` (push شده)
+- `all/configs.txt`: ۱۱٬۴۹۱ کانفیگ یکتا (`index.json.categories.all.unique`)
+- `verified/configs.txt`: ۴۲ · `fast`: ۲ · `secure`: ۱۵ · `top100.txt`: ۵۱
+- `Countries/index.json`: ۱۲ کشور، ۴۲ کانفیگ
+- تست‌ها: `test_pipeline.py` ۵۱۱ passed / ۳۱ failed؛ `test_categories.py` ۹/۹
+- کامیت: `ca43e01` (push شده)
 
 ---
 

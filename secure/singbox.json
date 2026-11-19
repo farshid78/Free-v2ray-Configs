@@ -1,0 +1,414 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxy-dns",
+        "type": "https",
+        "server": "1.1.1.1",
+        "detour": "🚀 @farshid78"
+      },
+      {
+        "tag": "local-dns",
+        "type": "local"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "Direct",
+        "server": "local-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "proxy-dns"
+      }
+    ],
+    "final": "proxy-dns",
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🚀 @farshid78",
+      "outbounds": [
+        "♻️ Auto | @farshid78",
+        "DE 🇩🇪 | @farshid78 | 5974D1",
+        "BR 🇧🇷 | @farshid78 | C8B193",
+        "CL 🇨🇱 | @farshid78 | 3679D3",
+        "DE 🇩🇪 | @farshid78 | F6053F",
+        "DE 🇩🇪 | @farshid78 | FB55EB",
+        "IR 🇮🇷 | @farshid78 | 1E742A",
+        "CA 🇨🇦 | @farshid78 | 275119",
+        "CA 🇨🇦 | @farshid78 | C9F20E",
+        "IR 🇮🇷 | @farshid78 | EF1170",
+        "IR 🇮🇷 | @farshid78 | 63B499",
+        "CL 🇨🇱 | @farshid78 | 1C085E",
+        "IR 🇮🇷 | @farshid78 | C12062",
+        "CA 🇨🇦 | @farshid78 | 17785B",
+        "CA 🇨🇦 | @farshid78 | 028A48",
+        "CA 🇨🇦 | @farshid78 | A9E2DE"
+      ],
+      "default": "♻️ Auto | @farshid78"
+    },
+    {
+      "type": "urltest",
+      "tag": "♻️ Auto | @farshid78",
+      "outbounds": [
+        "DE 🇩🇪 | @farshid78 | 5974D1",
+        "BR 🇧🇷 | @farshid78 | C8B193",
+        "CL 🇨🇱 | @farshid78 | 3679D3",
+        "DE 🇩🇪 | @farshid78 | F6053F",
+        "DE 🇩🇪 | @farshid78 | FB55EB",
+        "IR 🇮🇷 | @farshid78 | 1E742A",
+        "CA 🇨🇦 | @farshid78 | 275119",
+        "CA 🇨🇦 | @farshid78 | C9F20E",
+        "IR 🇮🇷 | @farshid78 | EF1170",
+        "IR 🇮🇷 | @farshid78 | 63B499",
+        "CL 🇨🇱 | @farshid78 | 1C085E",
+        "IR 🇮🇷 | @farshid78 | C12062",
+        "CA 🇨🇦 | @farshid78 | 17785B",
+        "CA 🇨🇦 | @farshid78 | 028A48",
+        "CA 🇨🇦 | @farshid78 | A9E2DE"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "vless",
+      "tag": "DE 🇩🇪 | @farshid78 | 5974D1",
+      "server": "187.7.206.49",
+      "server_port": 443,
+      "uuid": "976f82d9-0e6b-40ed-9c09-cafd06c4bc98",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "de166.mech-pro.online",
+        "reality": {
+          "enabled": true,
+          "public_key": "jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI",
+          "short_id": "16e0f049"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "BR 🇧🇷 | @farshid78 | C8B193",
+      "server": "216.238.104.154",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "findtemporaryworkandfreelancerprojectsonlineplatform.com"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "CL 🇨🇱 | @farshid78 | 3679D3",
+      "server": "64.176.7.205",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "advanceyouremploymentskillsandcareerdevelopmenthub.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE 🇩🇪 | @farshid78 | F6053F",
+      "server": "200.96.106.2",
+      "server_port": 9889,
+      "uuid": "0dcefe19-a42a-4d57-96be-83dcbffd425f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tiktok2.transitbp2systems.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "GPwEGfRBoztNbcAvfX4ojY9FJ1vaMD3v21tnIrN2xyE",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE 🇩🇪 | @farshid78 | FB55EB",
+      "server": "de166.mech-pro.online",
+      "server_port": 443,
+      "uuid": "976f82d9-0e6b-40ed-9c09-cafd06c4bc98",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "de166.mech-pro.online",
+        "reality": {
+          "enabled": true,
+          "public_key": "jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI",
+          "short_id": "16e0f049"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "IR 🇮🇷 | @farshid78 | 1E742A",
+      "server": "94.183.164.176",
+      "server_port": 443,
+      "uuid": "b4192dfb-f458-4303-b877-29a41a6d8416",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "CA 🇨🇦 | @farshid78 | 275119",
+      "server": "guanwang.awsno.com",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "CA 🇨🇦 | @farshid78 | C9F20E",
+      "server": "guanwang.awsno.com",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "IR 🇮🇷 | @farshid78 | EF1170",
+      "server": "94.183.164.176",
+      "server_port": 443,
+      "uuid": "b4192dfb-f458-4303-b877-29a41a6d8416",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "IR 🇮🇷 | @farshid78 | 63B499",
+      "server": "94.183.164.176",
+      "server_port": 443,
+      "uuid": "b4192dfb-f458-4303-b877-29a41a6d8416",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "CL 🇨🇱 | @farshid78 | 1C085E",
+      "server": "64.176.7.205",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "advanceyouremploymentskillsandcareerdevelopmenthub.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "IR 🇮🇷 | @farshid78 | C12062",
+      "server": "94.183.164.176",
+      "server_port": 443,
+      "uuid": "12776e55-6230-48b9-b069-1bb8a04b4237",
+      "tls": {
+        "enabled": true,
+        "server_name": "optim.tildacdn.pub",
+        "reality": {
+          "enabled": true,
+          "public_key": "_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "CA 🇨🇦 | @farshid78 | 17785B",
+      "server": "guanwang.awsno.com",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "CA 🇨🇦 | @farshid78 | 028A48",
+      "server": "guanwang.awsno.com",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "CA 🇨🇦 | @farshid78 | A9E2DE",
+      "server": "216.152.147.152",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.connectingpeoplewithgreatjobs.com"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "final": "🚀 @farshid78",
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "local-dns"
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090"
+    }
+  }
+}

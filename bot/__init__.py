@@ -1,0 +1,1 @@
+"""Minimal Telegram bot for Free-v2ray-Configs (consumer of generated configs)."""

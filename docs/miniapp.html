@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>farshid78 — پنل گلس</title>
+<style>
+  :root{--bg:#0b1020;--glass:rgba(255,255,255,.08);--border:rgba(255,255,255,.18);--accent:#4f9cff;--text:#eaf0ff;--muted:#9bb0d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(1200px 600px at 20% -10%,#1a2a4a 0%,#0b1020 60%),radial-gradient(900px 500px at 110% 110%,#1a3a6a 0%,transparent 60%);color:var(--text);min-height:100vh;padding:24px}
+  .glass{background:var(--glass);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06)}
+  header{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#4f9cff,#8b5cff);display:grid;place-items:center;font-weight:800}
+  h1{font-size:20px}
+  .sub{color:var(--muted);font-size:13px;margin-top:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{padding:18px}
+  .card h2{font-size:15px;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:13px;line-height:1.6}
+  .btn{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,#4f9cff,#8b5cff);color:#fff;text-decoration:none;font-weight:600;font-size:13px;border:0;cursor:pointer}
+  .btn.secondary{background:var(--glass);border:1px solid var(--border);color:var(--text)}
+  .status{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 8px #2ecc71}
+  footer{margin-top:24px;text-align:center;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">J</div>
+  <div><h1>farshid78 — پنل مدیریت</h1><div class="sub">@farshid78_bot · https://t.me/farshid78</div></div>
+</header>
+<div class="grid">
+  <div class="glass card">
+    <h2>📊 وضعیت پروژه</h2>
+    <p>تجمیع هر ۱۵ دقیقه از طریق GitHub Actions. خروجی‌ها روی main منتشر می‌شوند.</p>
+    <div class="status"><span class="dot"></span>سالم</div>
+  </div>
+  <div class="glass card">
+    <h2>🔄 اجرای تجمیع</h2>
+    <p>Trigger aggregate-now از طریق ربات یا GitHub Actions.</p>
+    <a class="btn" href="https://t.me/farshid78_bot">باز کردن ربات</a>
+  </div>
+  <div class="glass card">
+    <h2>📋 منابع کانفیگ</h2>
+    <p>مدیریت منابع از داخل پنل ادمین ربات (دکمهٔ «📋 منابع»).</p>
+    <a class="btn secondary" href="https://github.com/farshid78/Free-v2ray-Configs/blob/main/scripts/sources.py">مشاهدهٔ sources.py</a>
+  </div>
+  <div class="glass card">
+    <h2>🌍 کانفیگ کشورها</h2>
+    <p>دریافت کانفیگ مربوط به هر کشور از ربات (فیلتر کشور).</p>
+    <a class="btn secondary" href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/index.json">index.json</a>
+  </div>
+  <div class="glass card">
+    <h2>🛡️ مدیریت ادمین</h2>
+    <p>افزودن/حذف ادمین فقط توسط مالک (Owner ID).</p>
+    <a class="btn secondary" href="https://t.me/farshid78_bot">پنل ادمین</a>
+  </div>
+  <div class="glass card">
+    <h2>📡 کانال تلگرام</h2>
+    <p>انتشار خودکار کانفیگ‌ها در کانال farshid78.</p>
+    <a class="btn" href="https://t.me/farshid78">باز کردن کانال</a>
+  </div>
+</div>
+<footer>farshid78 · farshid78_bot · https://t.me/farshid78</footer>
+</body>
+</html>

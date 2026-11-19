@@ -1,0 +1,122 @@
+{
+  "rounds": 3,
+  "per_run_ok": [
+    93,
+    91,
+    102
+  ],
+  "ever_ok": 160,
+  "stable": 42,
+  "flaky_pct": 73.75,
+  "fast_threshold_ms": 800,
+  "verified": 42,
+  "fast": 2,
+  "secure": 15,
+  "top": 42,
+  "top_short_by": 58,
+  "median_delay_ms": 2000,
+  "l2": {
+    "endpoints": 7447,
+    "hosts": 6649,
+    "dns_failed": 537,
+    "probes": 7814,
+    "open": 933,
+    "closed": 6514,
+    "open_pct": 12.53,
+    "concurrency": 800,
+    "tcp_timeout": 3.0,
+    "addr_cap": 3,
+    "dns_s": 50.76,
+    "tcp_s": 27.47,
+    "fd_before": -1,
+    "fd_after": -1,
+    "sock_before": -1,
+    "sock_after": -1,
+    "configs_in": 11491,
+    "configs_open": 1464,
+    "configs_open_pct": 12.74
+  },
+  "countries": {
+    "countries": 12,
+    "configs": 42,
+    "input": 42,
+    "pruned": [],
+    "skipped_small": {},
+    "failed": {},
+    "named_from_db": 12,
+    "min_per_country": 1,
+    "seconds": 0.071,
+    "index": "Countries/index.json",
+    "files": {
+      "AE": "Countries/United_Arab_Emirates.txt",
+      "BR": "Countries/Brazil.txt",
+      "CA": "Countries/Canada.txt",
+      "CL": "Countries/Chile.txt",
+      "DE": "Countries/Germany.txt",
+      "FR": "Countries/France.txt",
+      "GB": "Countries/United_Kingdom.txt",
+      "IR": "Countries/Iran.txt",
+      "IT": "Countries/Italy.txt",
+      "NL": "Countries/The_Netherlands.txt",
+      "SG": "Countries/Singapore.txt",
+      "US": "Countries/United_States.txt"
+    }
+  },
+  "cascade": {
+    "exit_country": {
+      "colo": "FRA",
+      "loc": "IR",
+      "source": "https://cp.cloudflare.com/cdn-cgi/trace"
+    },
+    "layers": {
+      "l0_l1": {
+        "in": 11491,
+        "out": 11390,
+        "dropped": {
+          "unparsable": 79,
+          "invalid_port": 1,
+          "invalid_uuid": 2,
+          "unroutable_server": 16,
+          "invalid_server": 3
+        },
+        "endpoints_unique": 7447,
+        "dedup_saving_pct": 34.62,
+        "seconds": 0.28
+      },
+      "l2": {
+        "in": 11390,
+        "out": 1464,
+        "open_pct": 12.85,
+        "open_pct_of_raw_input": 12.74,
+        "dns_failed": 537,
+        "dns_seconds": 50.76,
+        "tcp_seconds": 27.47,
+        "fd_before": -1,
+        "fd_after": -1,
+        "seconds": 78.54
+      },
+      "l3": {
+        "in": 1464,
+        "rounds": 3,
+        "per_run_ok": [
+          93,
+          91,
+          102
+        ],
+        "ever_ok": 160,
+        "stable": 42,
+        "flaky_pct": 73.75,
+        "seconds": 105.78
+      }
+    },
+    "buckets": {
+      "verified": 42,
+      "fast": 2,
+      "secure": 15,
+      "top": 42,
+      "top_short_by": 58,
+      "fast_threshold_ms": 800
+    },
+    "total_seconds": 184.73
+  }
+}

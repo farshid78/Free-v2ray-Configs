@@ -1,0 +1,88 @@
+---
+source_file: "docs\app.js"
+type: "code"
+community: "Dashboard client app.js"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Dashboard_client_app.js
+---
+
+# app.js
+
+## Connections
+- [[app.js]] - `contains` [EXTRACTED]
+- [[appLink()]] - `contains` [EXTRACTED]
+- [[applyFilters()]] - `contains` [EXTRACTED]
+- [[b64decode()]] - `contains` [EXTRACTED]
+- [[brand.generated.ts]] - `imports_from` [EXTRACTED]
+- [[clear()]] - `contains` [EXTRACTED]
+- [[configRow()]] - `contains` [EXTRACTED]
+- [[copyText()]] - `contains` [EXTRACTED]
+- [[copyWithFeedback()]] - `contains` [EXTRACTED]
+- [[countBy()]] - `contains` [EXTRACTED]
+- [[countryName()]] - `contains` [EXTRACTED]
+- [[dig()]] - `contains` [EXTRACTED]
+- [[fetchJson.ts]] - `imports_from` [EXTRACTED]
+- [[fetchWithTimeout()]] - `contains` [EXTRACTED]
+- [[filesFor()]] - `contains` [EXTRACTED]
+- [[fillExplorerFilters()]] - `contains` [EXTRACTED]
+- [[fillHubSelects()]] - `contains` [EXTRACTED]
+- [[fillSelect()]] - `contains` [EXTRACTED]
+- [[fin()_1]] - `contains` [EXTRACTED]
+- [[findCountry()]] - `contains` [EXTRACTED]
+- [[flagOf()]] - `contains` [EXTRACTED]
+- [[fmtTime()]] - `contains` [EXTRACTED]
+- [[getFile()]] - `contains` [EXTRACTED]
+- [[guards.ts]] - `imports_from` [EXTRACTED]
+- [[h()]] - `contains` [EXTRACTED]
+- [[hostLabel()]] - `contains` [EXTRACTED]
+- [[init()]] - `contains` [EXTRACTED]
+- [[isHttpUrl()]] - `contains` [EXTRACTED]
+- [[loadAll()]] - `contains` [EXTRACTED]
+- [[loadConfigs()]] - `contains` [EXTRACTED]
+- [[main.tsx]] - `imports_from` [EXTRACTED]
+- [[normaliseCountries()]] - `contains` [EXTRACTED]
+- [[num()_1]] - `contains` [EXTRACTED]
+- [[obj()]] - `contains` [EXTRACTED]
+- [[openQrDialog()]] - `contains` [EXTRACTED]
+- [[parseConfig()]] - `contains` [EXTRACTED]
+- [[parseQuery()]] - `contains` [EXTRACTED]
+- [[pct()_1]] - `contains` [EXTRACTED]
+- [[pickCountry()]] - `contains` [EXTRACTED]
+- [[profileName()]] - `contains` [EXTRACTED]
+- [[relAge()]] - `contains` [EXTRACTED]
+- [[renderApps()]] - `contains` [EXTRACTED]
+- [[renderCountries()]] - `contains` [EXTRACTED]
+- [[renderExplorer()]] - `contains` [EXTRACTED]
+- [[renderFormats()]] - `contains` [EXTRACTED]
+- [[renderFreshness()]] - `contains` [EXTRACTED]
+- [[renderFunnel()]] - `contains` [EXTRACTED]
+- [[renderOverview()]] - `contains` [EXTRACTED]
+- [[renderProtocols()]] - `contains` [EXTRACTED]
+- [[renderQr()]] - `contains` [EXTRACTED]
+- [[renderSkeleton()]] - `contains` [EXTRACTED]
+- [[renderSources()]] - `contains` [EXTRACTED]
+- [[renderTierChips()]] - `contains` [EXTRACTED]
+- [[safeDecode()]] - `contains` [EXTRACTED]
+- [[secFilterLabel()]] - `contains` [EXTRACTED]
+- [[secLabel()]] - `contains` [EXTRACTED]
+- [[sections.tsx]] - `imports_from` [EXTRACTED]
+- [[selectTier()]] - `contains` [EXTRACTED]
+- [[selectionCount()]] - `contains` [EXTRACTED]
+- [[selectionDesc()]] - `contains` [EXTRACTED]
+- [[selectionName()]] - `contains` [EXTRACTED]
+- [[splitHostPort()]] - `contains` [EXTRACTED]
+- [[store()]] - `contains` [EXTRACTED]
+- [[str()_1]] - `contains` [EXTRACTED]
+- [[t()_1]] - `contains` [EXTRACTED]
+- [[tierCount()]] - `contains` [EXTRACTED]
+- [[toast()]] - `contains` [EXTRACTED]
+- [[types.ts]] - `imports_from` [EXTRACTED]
+- [[updateHub()]] - `contains` [EXTRACTED]
+- [[urlOf()]] - `contains` [EXTRACTED]
+- [[wireExplorer()]] - `contains` [EXTRACTED]
+- [[wireHub()]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Dashboard_client_app.js

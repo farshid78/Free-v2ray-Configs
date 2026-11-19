@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-11-19T20:20:05Z",
+  "source": "verified",
+  "criterion": "passed a real proxied request in ALL L3 rounds",
+  "location_method": "GeoIP (DB-IP Country Lite) on the server's network address",
+  "countries": [
+    {
+      "file": "Countries/Canada.txt",
+      "name": "Canada",
+      "code": "CA",
+      "flag": "🇨🇦",
+      "count": 9
+    },
+    {
+      "file": "Countries/Germany.txt",
+      "name": "Germany",
+      "code": "DE",
+      "flag": "🇩🇪",
+      "count": 8
+    },
+    {
+      "file": "Countries/United_States.txt",
+      "name": "United States",
+      "code": "US",
+      "flag": "🇺🇸",
+      "count": 7
+    },
+    {
+      "file": "Countries/Iran.txt",
+      "name": "Iran",
+      "code": "IR",
+      "flag": "🇮🇷",
+      "count": 4
+    },
+    {
+      "file": "Countries/Singapore.txt",
+      "name": "Singapore",
+      "code": "SG",
+      "flag": "🇸🇬",
+      "count": 4
+    },
+    {
+      "file": "Countries/United_Arab_Emirates.txt",
+      "name": "United Arab Emirates",
+      "code": "AE",
+      "flag": "🇦🇪",
+      "count": 2
+    },
+    {
+      "file": "Countries/Chile.txt",
+      "name": "Chile",
+      "code": "CL",
+      "flag": "🇨🇱",
+      "count": 2
+    },
+    {
+      "file": "Countries/France.txt",
+      "name": "France",
+      "code": "FR",
+      "flag": "🇫🇷",
+      "count": 2
+    },
+    {
+      "file": "Countries/Brazil.txt",
+      "name": "Brazil",
+      "code": "BR",
+      "flag": "🇧🇷",
+      "count": 1
+    },
+    {
+      "file": "Countries/United_Kingdom.txt",
+      "name": "United Kingdom",
+      "code": "GB",
+      "flag": "🇬🇧",
+      "count": 1
+    },
+    {
+      "file": "Countries/Italy.txt",
+      "name": "Italy",
+      "code": "IT",
+      "flag": "🇮🇹",
+      "count": 1
+    },
+    {
+      "file": "Countries/The_Netherlands.txt",
+      "name": "The Netherlands",
+      "code": "NL",
+      "flag": "🇳🇱",
+      "count": 1
+    }
+  ],
+  "stats": {
+    "countries": 12,
+    "configs": 42,
+    "min_per_country": 1
+  }
+}

@@ -1,0 +1,10 @@
+#profile-title: @farshid78 — THE NETHERLANDS (NL)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — THE NETHERLANDS (NL) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@158.173.20.171:443#NL 🇳🇱 | @farshid78 | A211DD

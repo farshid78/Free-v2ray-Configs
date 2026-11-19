@@ -1,0 +1,8 @@
+#profile-title: @farshid78 — SOCKS
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — socks — 2 configs
+socks://dGVzdDEyMzp0ZXN0MTIz@104.168.249.36:1080#US 🇺🇸 | @farshid78 | 291B2C
+socks://Og@95.38.170.222:1082#IR 🇮🇷 | @farshid78 | B360A1

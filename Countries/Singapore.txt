@@ -1,0 +1,13 @@
+#profile-title: @farshid78 — SINGAPORE (SG)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — SINGAPORE (SG) — 4 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+ss://2022-blake3-chacha20-poly1305:TlIl4pvlkROaoDMfiB%2F8bjOx4cXMnCc7rXLWwqPJDTc%3D@129.221.200.94:56927#SG 🇸🇬 | @farshid78 | 66BB4A
+ss://2022-blake3-chacha20-poly1305:8SrAY2kEk9UHKSgUJjQvfdTJP9oPlSPVP1wICL7n3hk%3D@43.106.81.90:443#SG 🇸🇬 | @farshid78 | 430640
+ss://2022-blake3-chacha20-poly1305:FQwWid%2FyN8BbtdyXcViI%2BijKYMtWgeMg%2Bo%2FOCChCbVc%3D@129.221.181.20:56927#SG 🇸🇬 | @farshid78 | B038CA
+ss://2022-blake3-chacha20-poly1305:tvEWoC%2B5YoG%2BjAL2of%2BCY2yvyBQasGAVbIgzc4drhPk%3D@129.221.131.77:56927#SG 🇸🇬 | @farshid78 | 89C465

@@ -1,0 +1,10 @@
+#profile-title: @farshid78 — KAZAKHSTAN (KZ)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — KAZAKHSTAN (KZ) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://b573cefb-7bc7-4a42-b407-b8b534e66773@109.248.170.119:13447?encryption=none&type=tcp&security=reality&sni=yahoo.com&fp=chrome&pbk=_0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE&sid=83#KZ 🇰🇿 | @farshid78 | 620A80

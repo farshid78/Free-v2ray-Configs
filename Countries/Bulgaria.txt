@@ -1,0 +1,10 @@
+#profile-title: @farshid78 — BULGARIA (BG)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — BULGARIA (BG) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://6589c320-db68-43cd-a273-b46299bab355@195.123.226.21:443?flow=xtls-rprx-vision&fp=chrome&pbk=rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo&security=reality&sid=77bb0d07bddbc832&sni=gateway.icloud.com&type=tcp#BG 🇧🇬 | @farshid78 | 02BB68

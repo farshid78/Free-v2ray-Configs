@@ -3,8 +3,10 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/farshid78
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @farshid78 — BRAZIL (BR) — 1 configs
+# @farshid78 — BRAZIL (BR) — 3 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
+vmess://eyJ2IjpudWxsLCJwcyI6IkJSIPCfh6fwn4e3IHwgQGZhcnNoaWQ3OCB8IDAyNDhERiIsImFkZCI6IjEwMy44OC4yMzIuNTUiLCJwb3J0IjoxMjcwLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6bnVsbCwiaG9zdCI6bnVsbCwiYWxwbiI6bnVsbCwicGF0aCI6Ii8iLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ4bWZobHB5LmNvbSIsImZwIjpudWxsLCJuYW1lIjoiQlIg8J+Hp/Cfh7cgfCBAZmFyc2hpZDc4IHwgMDI0OERGIn0=
+vmess://eyJ2IjoiMiIsInBzIjoiQlIg8J+Hp/Cfh7cgfCBAZmFyc2hpZDc4IHwgQUMwMEZEIiwiYWRkIjoiMTAzLjE0LjI3LjIwNyIsInBvcnQiOjEyNzAsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoidGxzIiwic25pIjoieG1maGxweS5jb20iLCJhbHBuIjoiIiwiZnAiOiIiLCJuYW1lIjoiQlIg8J+Hp/Cfh7cgfCBAZmFyc2hpZDc4IHwgQUMwMEZEIn0=
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.238.104.154:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=findtemporaryworkandfreelancerprojectsonlineplatform.com#BR 🇧🇷 | @farshid78 | C8B193

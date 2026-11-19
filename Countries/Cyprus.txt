@@ -1,0 +1,10 @@
+#profile-title: @farshid78 — CYPRUS (CY)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — CYPRUS (CY) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://d73e3cdc-a80b-4e73-a11b-cc467d7a84f8@45.88.176.223:443?mode=auto&path=%2Fmedia%2Fe1c76c&security=tls&encryption=none&insecure=0&fp=firefox&type=xhttp&allowInsecure=0&sni=m.yourvibe.my#CY 🇨🇾 | @farshid78 | 772702

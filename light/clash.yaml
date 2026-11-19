@@ -1031,21 +1031,30 @@ proxies:
   password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
   sni: hopp-legend-se.roxa.org
   skip-cert-verify: true
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | E8031B"
+- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 340F4E"
   server: 51.15.19.206
   port: 8443
   type: hysteria2
   password: HowdyHysteria2023w0W
-  sni: t.me
+  sni: hysteria.udpgw.co
   skip-cert-verify: true
   obfs: salamander
   obfs-password: HysteriaHowdy
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 9D0BB2"
+- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 2A0A72"
   server: 51.15.19.206
   port: 8443
   type: hysteria2
   password: HowdyHysteria2023w0W
-  sni: vkvd127.mycdn.me
+  sni: hysteria.udpgw.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: HysteriaHowdy
+- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 78AF0D"
+  server: 51.15.19.206
+  port: 8443
+  type: hysteria2
+  password: HowdyHysteria2023w0W
+  sni: sni-here.com
   skip-cert-verify: true
   obfs: salamander
   obfs-password: HysteriaHowdy
@@ -1115,6 +1124,13 @@ proxies:
   type: hysteria2
   password: OD6gGbGU9a
   sni: hys26.wba-pn.ru
+- name: "JP \U0001F1EF\U0001F1F5 | @farshid78 | 4BB22B"
+  server: 129.225.181.46
+  port: 8443
+  type: hysteria2
+  password: oracle_hy2_pass_2026
+  sni: bing.com
+  skip-cert-verify: true
 - name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 3E1DA0"
   server: 205.237.109.162
   port: 8443
@@ -1337,6 +1353,20 @@ proxies:
   cipher: 2022-blake3-aes-256-gcm
   password: Q2YsIzc5YkchSFjsqUZWrQAFtsSpqf7XxYxkG4+Jbsk=:zT1SecPttPY/XPW6NwjK5Wql+/6zbcGSDJK21Jk8uLo=
   udp: true
+- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | E1ED10"
+  server: 129.150.59.74
+  port: 14384
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: sUR6Ny8Y6PSvHhl/DUxconwxg6VZyFdsdfaVCvEatJo=:7bTEhHgpErKiRjE1ega+H6pcpJsNLFB0CjQseujAHrA=
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 90F921"
+  server: 129.159.1.122
+  port: 59924
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 2NxWQjT1vzoHuixEhtfH/sEAWwWBR+h1xmMtqJVBO/Y=
+  udp: true
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 657C86"
   server: 47.85.162.44
   port: 443
@@ -1421,13 +1451,6 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
   udp: true
-- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | EA008B"
-  server: 150.230.159.102
-  port: 59924
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: cz6f+UAA+0gyS85rpBJzzitys/mNOPWVG84Ba4FZSaw=
-  udp: true
 - name: "SG \U0001F1F8\U0001F1EC | @farshid78 | B038CA"
   server: 129.221.181.20
   port: 56927
@@ -1442,12 +1465,12 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: GMhXRpy/pfPMVrZeCAxOxI5MpuH3llOtZKoeNLUT0n8=
   udp: true
-- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | F40528"
-  server: 92.5.21.171
-  port: 59924
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 061847"
+  server: 129.146.38.236
+  port: 50356
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: oQirp3av7ALs6ICJj5Qf2U8wBxlAxnCk1yk6aoAAN3A=
+  password: lj5rXlwpypP0Ku0nzWOl8haA6R98vLoCsY8vmdGmfl4=
   udp: true
 - name: "SG \U0001F1F8\U0001F1EC | @farshid78 | 454EA9"
   server: 161.118.221.20
@@ -1484,13 +1507,6 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: to7FeiLLqmwqAG+Tn64PJ6Rexv6hExiiR6zlNfCSAaY=
   udp: true
-- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | 89C465"
-  server: 129.221.131.77
-  port: 56927
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: tvEWoC+5YoG+jAL2of+CY2yvyBQasGAVbIgzc4drhPk=
-  udp: true
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 030C4C"
   server: 158.178.144.201
   port: 45819
@@ -1498,12 +1514,12 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: ucQ0o3YYeedEb6oFUnlOPKrE/wqxTNJkUlQX0LExMO4=
   udp: true
-- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | 0EE52A"
-  server: 134.65.59.80
-  port: 61312
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 1359BC"
+  server: 130.61.145.251
+  port: 59924
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: zES55biUj1J3casdvf3wd5HqUccPRCc8wk0MlETzYxQ=
+  password: uou5NTq+xna9PBIG+8jtSSyQ6idxiXZgeK+Uw52qopY=
   udp: true
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | BA4344"
   server: 109.201.152.181
@@ -1666,6 +1682,13 @@ proxies:
   cipher: aes-256-cfb
   password: 1234!@#$
   udp: true
+- name: "KR \U0001F1F0\U0001F1F7 | @farshid78 | D5B1C0"
+  server: 49.254.204.134
+  port: 1774
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+  udp: true
 - name: "KR \U0001F1F0\U0001F1F7 | @farshid78 | 81E9CD"
   server: 211.178.105.134
   port: 6123
@@ -1738,13 +1761,6 @@ proxies:
   udp: true
 - name: "DE \U0001F1E9\U0001F1EA | @farshid78 | ED50FF"
   server: 145.79.177.201
-  port: 8388
-  type: ss
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  udp: true
-- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | C25D0E"
-  server: 178.162.254.38
   port: 8388
   type: ss
   cipher: aes-256-gcm
@@ -1861,6 +1877,13 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
+  udp: true
+- name: "CL \U0001F1E8\U0001F1F1 | @farshid78 | 83BCCE"
+  server: 64.176.2.21
+  port: 8388
+  type: ss
+  cipher: aes-256-gcm
+  password: xBStBEVqvGwHPocc
   udp: true
 - name: "DE \U0001F1E9\U0001F1EA | @farshid78 | D27672"
   server: 185.226.172.8
@@ -2660,14 +2683,14 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
   udp: true
-- name: "Global \U0001F310 | @farshid78 | 166F94"
+- name: "PL \U0001F1F5\U0001F1F1 | @farshid78 | 166F94"
   server: pl134.vpnbook.com
   port: 443
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
   udp: true
-- name: "Global \U0001F310 | @farshid78 | 960213"
+- name: "PL \U0001F1F5\U0001F1F1 | @farshid78 | 960213"
   server: pl140.vpnbook.com
   port: 443
   type: ss
@@ -2730,6 +2753,13 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: D7VAn-qRmggr9bIZXCZbxRQ9nYGfkJ-l
   udp: true
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 303539"
+  server: 138.197.89.234
+  port: 28960
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: DZRy4Q3QH0jUGfKFl2jDCZ
+  udp: true
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | E82A92"
   server: 198.98.53.130
   port: 443
@@ -2737,26 +2767,12 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: eDfN7SODQceIOmIAbtJJtK
   udp: true
-- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | 3BC2FA"
-  server: 57.129.138.142
-  port: 8080
+- name: "SE \U0001F1F8\U0001F1EA | @farshid78 | 54DC22"
+  server: creator.morteza1388m1122.ir
+  port: 29206
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: fwxkzn0tmurzsvrw
-  udp: true
-- name: "FI \U0001F1EB\U0001F1EE | @farshid78 | 646FE6"
-  server: fn1s.sublinkplas.ir
-  port: 53731
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: g83niIm75fBPKfJ31nak8pAWTiFWLlXY
-  udp: true
-- name: "FI \U0001F1EB\U0001F1EE | @farshid78 | 6C2BBB"
-  server: fn1s.sublinkplas.ir
-  port: 53731
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: gDxit1g_RLr2gUB54x1DYbbhHrjBDXLD
+  password: fQUUCljoCc
   udp: true
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | C49E3A"
   server: 77.221.132.206
@@ -3093,13 +3109,6 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | 9A93C9"
-  server: 15.235.57.6
-  port: 8080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: kxhnt5jtykd328cg
   udp: true
 - name: "IT \U0001F1EE\U0001F1F9 | @farshid78 | C00EBC"
   server: 57.131.4.13
@@ -3444,12 +3453,26 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: QCXDxuDlTTMD7jtgHUjIoj
   udp: true
+- name: "ZA \U0001F1FF\U0001F1E6 | @farshid78 | A10B68"
+  server: 139.84.247.164
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: tfAcRikawhNoZAhu
+  udp: true
 - name: "IE \U0001F1EE\U0001F1EA | @farshid78 | 9B90C3"
   server: 4.231.226.120
   port: 443
   type: ss
   cipher: chacha20-ietf-poly1305
   password: VBzys1cahfGVlOwR
+  udp: true
+- name: "AT \U0001F1E6\U0001F1F9 | @farshid78 | 3BBD66"
+  server: 89.58.16.116
+  port: 2342
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: wuW04H6Tq10Zw7ZVOUg6j1
   udp: true
 - name: "FR \U0001F1EB\U0001F1F7 | @farshid78 | D6482C"
   server: 51.77.144.182
@@ -5073,7 +5096,7 @@ proxies:
     path: /assets/static/main.js
     host: flawers.shop
     mode: auto
-- name: "AE \U0001F1E6\U0001F1EA | @farshid78 | B0B4A3"
+- name: "PL \U0001F1F5\U0001F1F1 | @farshid78 | B0B4A3"
   server: flawers.shop
   port: 54032
   type: trojan
@@ -5093,7 +5116,7 @@ proxies:
   udp: true
   sni: hk.catxstar.com
   network: tcp
-- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | 67DBC5"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 67DBC5"
   server: sclass-01.catcat321.com
   port: 20103
   type: trojan
@@ -5101,7 +5124,7 @@ proxies:
   udp: true
   sni: hk.catxstar.com
   network: tcp
-- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | 391105"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 391105"
   server: sclass-b1.catcat321.com
   port: 20051
   type: trojan
@@ -5233,6 +5256,7 @@ proxies:
   password: F3NzMNuYnG7akU2mSlBY
   udp: true
   sni: www.microsoft.com
+  client-fingerprint: chrome
   network: tcp
 - name: "SE \U0001F1F8\U0001F1EA | @farshid78 | 7F07F4"
   server: 95.143.196.97
@@ -5567,7 +5591,7 @@ proxies:
     path: /
     headers:
       Host: www.trusteeforward.com
-- name: "Global \U0001F310 | @farshid78 | 23191D"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | 23191D"
   server: www.calmlunch.com
   port: 443
   type: trojan
@@ -5579,7 +5603,7 @@ proxies:
     path: /
     headers:
       Host: www.calmlunch.com
-- name: "Global \U0001F310 | @farshid78 | E9319C"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | E9319C"
   server: www.calmlunch.com
   port: 443
   type: trojan
@@ -5655,14 +5679,6 @@ proxies:
   udp: true
   sni: 2.27.109.179
   network: tcp
-- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | 9854A0"
-  server: 173.234.15.84
-  port: 48994
-  type: trojan
-  password: Z5lvhmLqSc
-  udp: true
-  sni: m.microsoft.com
-  network: tcp
 - name: "RU \U0001F1F7\U0001F1FA | @farshid78 | CDFA89"
   server: 188.72.112.2
   port: 443
@@ -5676,7 +5692,7 @@ proxies:
   xhttp-opts:
     path: /
     host: secdn.fius.dev
-- name: "Global \U0001F310 | @farshid78 | 2A4F6C"
+- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | 2A4F6C"
   server: secdn.fius.dev
   port: 443
   type: vless
@@ -5965,16 +5981,6 @@ proxies:
     short-id: 86af85a72387ef02
   client-fingerprint: firefox
   network: tcp
-- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | B201B0"
-  server: 69.48.201.136
-  port: 30016
-  type: vless
-  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
-  udp: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: /usserver
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 874735"
   server: 69.48.201.136
   port: 30016
@@ -6002,6 +6008,19 @@ proxies:
     headers:
       Host: zoom.us
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 4A29D7"
+  server: uspanel.unixzone.us
+  port: 30016
+  type: vless
+  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
+  udp: true
+  tls: false
+  servername: uspanel.unixzone.us
+  network: ws
+  ws-opts:
+    path: /usserver
+    headers:
+      Host: uspanel.unixzone.us
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 24C7AC"
   server: uspanel.unixzone.us
   port: 30016
   type: vless
@@ -6102,7 +6121,6 @@ proxies:
   udp: true
   tls: true
   servername: xray-dmr3b3hy-calm-maple-7.cloady.io
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /0175469f14317d82
@@ -6443,7 +6461,7 @@ proxies:
     path: /
     host: www.samsung.com
     mode: auto
-- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | DA5DF1"
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | DA5DF1"
   server: m7a.vip784.com
   port: 33801
   type: vless
@@ -6460,7 +6478,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | C3DE14"
+- name: "EE \U0001F1EA\U0001F1EA | @farshid78 | C3DE14"
   server: ec7a81g.de15.h1clayd.click
   port: 443
   type: vless
@@ -7217,7 +7235,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
-- name: "Global \U0001F310 | @farshid78 | F7D3B0"
+- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | F7D3B0"
   server: orchard.elvano.website
   port: 443
   type: vless
@@ -7243,7 +7261,7 @@ proxies:
     path: /api/de2/stream
     headers:
       Host: quay.gerqix.online
-- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | 4D98F4"
+- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | 4D98F4"
   server: willow.filnex.baby
   port: 443
   type: vless
@@ -7351,6 +7369,19 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: "KR \U0001F1F0\U0001F1F7 | @farshid78 | 52445E"
+  server: 152.69.226.63
+  port: 25555
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  udp: true
+  tls: false
+  servername: 152.69.226.63
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.226.63
 - name: "KR \U0001F1F0\U0001F1F7 | @farshid78 | 6913F7"
   server: 152.69.226.63
   port: 25555
@@ -7648,7 +7679,7 @@ proxies:
     short-id: 6ba85179e30d4fc2
   client-fingerprint: chrome
   network: tcp
-- name: "Global \U0001F310 | @farshid78 | B9ED6C"
+- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | B9ED6C"
   server: sg2-8sb.6121999.dpdns.org
   port: 19825
   type: vless
@@ -7857,20 +7888,6 @@ proxies:
     public-key: R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ
     short-id: ''
   client-fingerprint: firefox
-  network: tcp
-- name: "KR \U0001F1F0\U0001F1F7 | @farshid78 | B37B15"
-  server: 47.80.19.173
-  port: 2053
-  type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
-    short-id: 3c4041d3
-  client-fingerprint: chrome
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | C3E9DB"
   server: 148.135.86.162
@@ -8423,6 +8440,33 @@ proxies:
     short-id: 88b6
   client-fingerprint: chrome
   network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 8A0E88"
+  server: 139.59.152.166
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  udp: true
+  tls: false
+  servername: store.steampowered.com
+  network: tcp
+- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 3928A6"
+  server: 146.190.21.145
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  udp: true
+  tls: false
+  servername: fast.com
+  network: tcp
+- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | B2763D"
+  server: 161.35.37.106
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  udp: true
+  tls: false
+  servername: fast.com
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 4BD0FC"
   server: 178.62.212.162
   port: 443
@@ -8883,16 +8927,6 @@ proxies:
   network: ws
   ws-opts:
     path: /54567/mvfkvk
-- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | B890CA"
-  server: 185.151.243.186
-  port: 443
-  type: vless
-  uuid: 45b5fdbe-c799-0001-8c64-2ad6bf39bb18
-  udp: true
-  tls: true
-  servername: piodr-ru-74sel.my-fade.cloud
-  client-fingerprint: chrome
-  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 912A47"
   server: 144.202.126.147
   port: 443
@@ -8965,6 +8999,20 @@ proxies:
   xhttp-opts:
     path: /assets/twru01/
     mode: auto
+- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | A6E2C4"
+  server: 51.170.191.10
+  port: 63286
+  type: vless
+  uuid: 478d6288-3745-4558-bf38-47ab9bf16462
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU
+    short-id: 1f2519bb96e5589c
+  client-fingerprint: firefox
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | BF617C"
   server: 176.120.72.63
   port: 38339
@@ -9059,20 +9107,6 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: ''
-  client-fingerprint: chrome
-  network: tcp
-- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 1FD863"
-  server: 15.204.97.209
-  port: 23576
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
   client-fingerprint: chrome
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 6F42E7"
@@ -9311,7 +9345,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | AA6F51"
   server: 51.158.206.87
@@ -9339,7 +9373,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 5CB288"
   server: 51.158.206.93
@@ -9353,7 +9387,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 36A918"
   server: 51.158.206.96
@@ -9367,7 +9401,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | EAB51E"
   server: 51.158.206.97
@@ -9382,20 +9416,6 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
-  network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 67C96C"
-  server: 51.158.206.97
-  port: 23576
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  client-fingerprint: firefox
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | 48A680"
   server: 51.158.206.98
@@ -9451,7 +9471,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | E89C89"
   server: ww13.levikogjgfdd.ir
@@ -10555,7 +10575,7 @@ proxies:
     short-id: '4e1682'
   client-fingerprint: firefox
   network: tcp
-- name: "Global \U0001F310 | @farshid78 | DAE34F"
+- name: "EE \U0001F1EA\U0001F1EA | @farshid78 | DAE34F"
   server: 78ec29x.fi2.h1clayd.click
   port: 443
   type: vless
@@ -10799,7 +10819,7 @@ proxies:
     path: /rain1226
     headers:
       Host: eu02.123450908.xyz
-- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | E73876"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | E73876"
   server: eu02.123450908.xyz
   port: 2052
   type: vless
@@ -12142,21 +12162,6 @@ proxies:
     short-id: 6ba7b8
   client-fingerprint: chrome
   network: tcp
-- name: "FR \U0001F1EB\U0001F1F7 | @farshid78 | B8B49A"
-  server: 152.228.139.33
-  port: 51671
-  type: vless
-  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
-  udp: true
-  tls: true
-  servername: www.sony.com
-  reality-opts:
-    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
-    short-id: 2fed44d8c59f7e71
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc_common3
 - name: "FR \U0001F1EB\U0001F1F7 | @farshid78 | C35436"
   server: 152.228.139.33
   port: 51671
@@ -12468,7 +12473,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
-- name: "Global \U0001F310 | @farshid78 | C823EC"
+- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | C823EC"
   server: reedbed.filnex.baby
   port: 443
   type: vless
@@ -12758,21 +12763,6 @@ proxies:
     short-id: b12c3119d219dc
   client-fingerprint: ios
   network: tcp
-- name: "FR \U0001F1EB\U0001F1F7 | @farshid78 | C244C8"
-  server: 152.228.139.33
-  port: 35108
-  type: vless
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-  udp: true
-  tls: true
-  servername: www.nvidia.com
-  reality-opts:
-    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
-    short-id: 52add08b86a5ccea
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-common3
 - name: "FR \U0001F1EB\U0001F1F7 | @farshid78 | 96AC3B"
   server: 152.228.139.33
   port: 35108
@@ -12788,7 +12778,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-common3
-- name: "Global \U0001F310 | @farshid78 | 08B5EE"
+- name: "JP \U0001F1EF\U0001F1F5 | @farshid78 | 08B5EE"
   server: ga1data.xyy123.bid
   port: 443
   type: vless
@@ -13348,7 +13338,7 @@ proxies:
     short-id: ca4aedd4
   client-fingerprint: random
   network: tcp
-- name: "Global \U0001F310 | @farshid78 | FB6149"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | FB6149"
   server: n04.jinggai.online
   port: 8443
   type: vless
@@ -13362,7 +13352,7 @@ proxies:
     path: /nvl-n04-ws/e0577fe8fd7c8823
     headers:
       Host: n04.jinggai.online
-- name: "Global \U0001F310 | @farshid78 | BF2615"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | BF2615"
   server: n04.jinggai.online
   port: 8443
   type: vless
@@ -13444,7 +13434,7 @@ proxies:
     short-id: 23732d14a527990d
   client-fingerprint: firefox
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | FC7937"
+- name: "EE \U0001F1EA\U0001F1EA | @farshid78 | FC7937"
   server: 345739t.de15.h1clayd.click
   port: 443
   type: vless
@@ -13675,19 +13665,6 @@ proxies:
     path: /
     headers:
       Host: free.nadun.store
-- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 7ECAEA"
-  server: p1real1.greewebservices.ir
-  port: 1230
-  type: vless
-  uuid: 998c6c40-574b-4f75-b10e-83041b8a43f3
-  udp: true
-  tls: true
-  servername: play.googleapis.com
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 9b60d3
-  client-fingerprint: ios
-  network: tcp
 - name: "GE \U0001F1EC\U0001F1EA | @farshid78 | E470F0"
   server: 93.190.9.2
   port: 3090
@@ -14167,19 +14144,6 @@ proxies:
     short-id: 429499c03d4cc8a0
   client-fingerprint: random
   network: tcp
-- name: "SG \U0001F1F8\U0001F1EC | @farshid78 | B1B261"
-  server: 172.255.210.24
-  port: 443
-  type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  udp: true
-  tls: true
-  servername: net-cfg-api.galioncc.com
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: 868419504747f6de
-  client-fingerprint: firefox
-  network: tcp
 - name: "PL \U0001F1F5\U0001F1F1 | @farshid78 | 1E6632"
   server: 80.47.10.106
   port: 443
@@ -14558,34 +14522,6 @@ proxies:
     short-id: 7a7d19880a9ee786
   client-fingerprint: chrome
   network: tcp
-- name: "BR \U0001F1E7\U0001F1F7 | @farshid78 | C2F175"
-  server: 185.133.35.86
-  port: 443
-  type: vless
-  uuid: a7e6450c-9300-44d7-8fd7-a933bb0d87d1
-  udp: true
-  tls: true
-  servername: mama511.baklajann.ru
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: mama511.baklajann.ru
-    mode: auto
-- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | CCD40A"
-  server: 192.200.160.42
-  port: 443
-  type: vless
-  uuid: a7e6450c-9300-44d7-8fd7-a933bb0d87d1
-  udp: true
-  tls: true
-  servername: mama542.baklajann.ru
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: mama542.baklajann.ru
-    mode: auto
 - name: "KZ \U0001F1F0\U0001F1FF | @farshid78 | 718BE5"
   server: 38.180.206.44
   port: 48982
@@ -14616,16 +14552,6 @@ proxies:
     short-id: ''
   client-fingerprint: chrome
   network: tcp
-- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | DBA2A5"
-  server: 81.163.22.109
-  port: 443
-  type: vless
-  uuid: aae24578-9f15-0001-a5b1-4f46630e5ef8
-  udp: true
-  tls: true
-  servername: jissa-ru-wl-47sel.my-fade.cloud
-  client-fingerprint: chrome
-  network: tcp
 - name: "FR \U0001F1EB\U0001F1F7 | @farshid78 | 568D5A"
   server: 137.74.16.237
   port: 443
@@ -14640,6 +14566,19 @@ proxies:
     short-id: b390e0a721d242b0
   client-fingerprint: chrome
   network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | FBA030"
+  server: s1.berluno.ir
+  port: 1155
+  type: vless
+  uuid: ab8fedf7-6228-41a1-ae2c-c861625ad6ce
+  udp: true
+  tls: true
+  servername: tgju.org
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    short-id: 4e4aaad65cc07da8
+  client-fingerprint: edge
+  network: tcp
 - name: "RU \U0001F1F7\U0001F1FA | @farshid78 | D23BA4"
   server: 189.74.114.119
   port: 443
@@ -14652,7 +14591,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 3e99d50d5740985d
-- name: "Global \U0001F310 | @farshid78 | EB4090"
+- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | EB4090"
   server: api.mediaklenov.cc
   port: 443
   type: vless
@@ -14677,7 +14616,7 @@ proxies:
     short-id: '1430'
   client-fingerprint: chrome
   network: tcp
-- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | B5C7FA"
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | B5C7FA"
   server: m33a.vip784.com
   port: 33801
   type: vless
@@ -15931,6 +15870,19 @@ proxies:
     path: /
     headers:
       Host: suh.cryptofront.uk
+- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | D07EC5"
+  server: suh.cryptofront.uk
+  port: 80
+  type: vless
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  udp: true
+  tls: false
+  servername: suh.cryptofront.uk
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: suh.cryptofront.uk
 - name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | B0D3A0"
   server: 172.67.199.126
   port: 2053
@@ -15959,7 +15911,7 @@ proxies:
     path: /ws-tesla
     headers:
       Host: fast.145779.xyz
-- name: "Global \U0001F310 | @farshid78 | 1E3D3F"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | 1E3D3F"
   server: fast.145779.xyz
   port: 2053
   type: vless
@@ -15973,7 +15925,7 @@ proxies:
     path: /ws-tesla
     headers:
       Host: fast.145779.xyz
-- name: "Global \U0001F310 | @farshid78 | 314A5F"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | 314A5F"
   server: fast.145779.xyz
   port: 2053
   type: vless
@@ -16208,7 +16160,7 @@ proxies:
     short-id: 2ca59bdc5121f921
   client-fingerprint: firefox
   network: tcp
-- name: "Global \U0001F310 | @farshid78 | 62A9C4"
+- name: "SK \U0001F1F8\U0001F1F0 | @farshid78 | 62A9C4"
   server: 76574ct.nl8.h1clayd.click
   port: 443
   type: vless
@@ -16236,6 +16188,19 @@ proxies:
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 1D5827"
   server: 147.224.54.25
+  port: 2053
+  type: vless
+  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: DEFJSLdILrvauMpwtpvFZddadpt3rNtv03Dui2EkmRk
+    short-id: '68'
+  client-fingerprint: chrome
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 976F3D"
+  server: panel.apexkey.store
   port: 2053
   type: vless
   uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
@@ -17657,7 +17622,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: "Global \U0001F310 | @farshid78 | 0EF300"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 0EF300"
   server: ee.point.cookie-line.cc
   port: 443
   type: vless
@@ -17695,7 +17660,7 @@ proxies:
     short-id: 4602ee9f9f36
   client-fingerprint: chrome
   network: tcp
-- name: "AU \U0001F1E6\U0001F1FA | @farshid78 | 4A323F"
+- name: "BR \U0001F1E7\U0001F1F7 | @farshid78 | 4A323F"
   server: platform102.golnamakcert.top
   port: 80
   type: vless
@@ -17779,7 +17744,7 @@ proxies:
     short-id: 15affa0af66dfc79
   client-fingerprint: qq
   network: tcp
-- name: "Global \U0001F310 | @farshid78 | DB80D7"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | DB80D7"
   server: fast.145779.xyz
   port: 2053
   type: vless
@@ -17793,7 +17758,7 @@ proxies:
     path: /ws-tesla
     headers:
       Host: fast.145779.xyz
-- name: "Global \U0001F310 | @farshid78 | A18544"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | A18544"
   server: fast.145779.xyz
   port: 2053
   type: vless
@@ -17854,6 +17819,20 @@ proxies:
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
+  network: tcp
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | 1B234A"
+  server: 184.107.179.150
+  port: 8443
+  type: vless
+  uuid: e45b8261-88c9-4181-aab4-72093dfae6b9
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.kpn.com
+  reality-opts:
+    public-key: FZvOenkKu_0DspnZA7Nc7xgWhR0_Z0MvqhntPqPchV4
+    short-id: 40a4615253b8f75d
+  client-fingerprint: firefox
   network: tcp
 - name: "MD \U0001F1F2\U0001F1E9 | @farshid78 | B2EE3B"
   server: 185.236.232.123
@@ -18588,6 +18567,20 @@ proxies:
     short-id: b176736ddbda2105
   client-fingerprint: firefox
   network: tcp
+- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | 704858"
+  server: 164.37.110.126
+  port: 443
+  type: vless
+  uuid: f439541f-c4d2-43b3-9659-8d3515d7a64c
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: 212.192.156.15
+  reality-opts:
+    public-key: a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U
+    short-id: 5fd3245e96291c37
+  client-fingerprint: chrome
+  network: tcp
 - name: "SG \U0001F1F8\U0001F1EC | @farshid78 | 5062C3"
   server: 45.132.75.213
   port: 2053
@@ -18780,7 +18773,21 @@ proxies:
     short-id: ''
   client-fingerprint: chrome
   network: tcp
-- name: "RU \U0001F1F7\U0001F1FA | @farshid78 | 97A984"
+- name: "CA \U0001F1E8\U0001F1E6 | @farshid78 | C10B26"
+  server: perplexity.ai
+  port: 443
+  type: vless
+  uuid: f7a9b27c-fd3c-4177-9f66-8be4dd726d0b
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: 2.moltafet.bond
+  network: ws
+  ws-opts:
+    path: /t.me-SubGift
+    headers:
+      Host: 2.moltafet.bond
+- name: "AM \U0001F1E6\U0001F1F2 | @farshid78 | 97A984"
   server: r4.pythonmakemigreat.wiki
   port: 8443
   type: vless
@@ -18911,14 +18918,6 @@ proxies:
     public-key: MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk
     short-id: 3c032a7e
   client-fingerprint: chrome
-  network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | @farshid78 | 9E9AF9"
-  server: 168.110.21.56
-  port: 18454
-  type: vless
-  uuid: ff8fc3f9-0c1b-4a6f-97cb-ed1cde4de62d
-  udp: true
-  tls: false
   network: tcp
 - name: "RU \U0001F1F7\U0001F1FA | @farshid78 | A1B1BD"
   server: 104.171.135.229
@@ -49857,6 +49856,16 @@ proxies:
     path: /ws-vmess
     headers:
       Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 44FBCF"
+  server: ::ffff:3981:3258
+  port: 16513
+  type: vmess
+  uuid: 5f77f446-6b97-4f39-b9b1-af353e3c4d50
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
 - name: "Global \U0001F310 | @farshid78 | 8BD210"
   server: '[2606:4700:2b::bc82:149e]'
   port: 80
@@ -53628,7 +53637,7 @@ proxies:
     path: /websocket/transfer/gayporn
     headers:
       Host: shit.67133767.xyz
-- name: "TR \U0001F1F9\U0001F1F7 | @farshid78 | FE87F8"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | FE87F8"
   server: d307384r2s75l3.cloudfront.net
   port: 80
   type: vmess
@@ -61155,7 +61164,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | AB80E0"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | AB80E0"
   server: live.theworldwidewolf.com
   port: 80
   type: vmess
@@ -67901,7 +67910,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "IR \U0001F1EE\U0001F1F7 | @farshid78 | 875198"
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 875198"
   server: tgju.org
   port: 8080
   type: vmess
@@ -71629,7 +71638,7 @@ proxies:
     path: /truth
     headers:
       Host: www.gptcloudai.com
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | A44D18"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | A44D18"
   server: www.nextkyc.com
   port: 8443
   type: vmess
@@ -71644,7 +71653,7 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: "NL \U0001F1F3\U0001F1F1 | @farshid78 | C85E95"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | C85E95"
   server: www.nextkyc.com
   port: 8443
   type: vmess
@@ -71979,7 +71988,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | 8AFF7A"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 8AFF7A"
   server: www.true.th
   port: 80
   type: vmess
@@ -71994,7 +72003,7 @@ proxies:
     path: /myo
     headers:
       Host: d1g0jlrlppl8b0.cloudfront.net
-- name: "GB \U0001F1EC\U0001F1E7 | @farshid78 | 6DD671"
+- name: "US \U0001F1FA\U0001F1F8 | @farshid78 | 6DD671"
   server: www.true.th
   port: 80
   type: vmess
@@ -73395,8 +73404,9 @@ proxy-groups:
   - "UA \U0001F1FA\U0001F1E6 | @farshid78 | 55828C"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | AB8199"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | 456C6A"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | E8031B"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 9D0BB2"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 340F4E"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 2A0A72"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 78AF0D"
   - "RO \U0001F1F7\U0001F1F4 | @farshid78 | 1B770D"
   - "RO \U0001F1F7\U0001F1F4 | @farshid78 | 73C6C6"
   - "AU \U0001F1E6\U0001F1FA | @farshid78 | 9FCFCC"
@@ -73407,6 +73417,7 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | F3AEB3"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 432B4C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 6FAA38"
+  - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 4BB22B"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 3E1DA0"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 6510F3"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | B5BE82"
@@ -73440,6 +73451,8 @@ proxy-groups:
   - "NO \U0001F1F3\U0001F1F4 | @farshid78 | 9FE8B9"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 54A551"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | FE0326"
+  - "SG \U0001F1F8\U0001F1EC | @farshid78 | E1ED10"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 90F921"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 657C86"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 430640"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | F360D4"
@@ -73452,18 +73465,16 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 56F568"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | BF5E9C"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 3B17D8"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | EA008B"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | B038CA"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 3E07E1"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | F40528"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 061847"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 454EA9"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 4A5A6E"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 9E8614"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 66BB4A"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 4C7665"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 89C465"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 030C4C"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 0EE52A"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 1359BC"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BA4344"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 1A14DC"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 66A632"
@@ -73487,6 +73498,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 02CE4D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | BB7720"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | FBAF15"
+  - "KR \U0001F1F0\U0001F1F7 | @farshid78 | D5B1C0"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | 81E9CD"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 17E3DC"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | EA55E0"
@@ -73498,7 +73510,6 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9E759D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9FAC2F"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | ED50FF"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | C25D0E"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F23C4D"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F06147"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 810F88"
@@ -73515,6 +73526,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9522DF"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | D832BE"
   - "BG \U0001F1E7\U0001F1EC | @farshid78 | 601424"
+  - "CL \U0001F1E8\U0001F1F1 | @farshid78 | 83BCCE"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | D27672"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 5CA5DA"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 8DDE67"
@@ -73629,8 +73641,8 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 71F1FC"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 32113F"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | F9157D"
-  - "Global \U0001F310 | @farshid78 | 166F94"
-  - "Global \U0001F310 | @farshid78 | 960213"
+  - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 166F94"
+  - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 960213"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | 9FE52C"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | F21D56"
   - "AT \U0001F1E6\U0001F1F9 | @farshid78 | 88EA53"
@@ -73639,10 +73651,9 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 2CD46E"
   - "Global \U0001F310 | @farshid78 | 2B2F44"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BEF84E"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 303539"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E82A92"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 3BC2FA"
-  - "FI \U0001F1EB\U0001F1EE | @farshid78 | 646FE6"
-  - "FI \U0001F1EB\U0001F1EE | @farshid78 | 6C2BBB"
+  - "SE \U0001F1F8\U0001F1EA | @farshid78 | 54DC22"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C49E3A"
   - "AL \U0001F1E6\U0001F1F1 | @farshid78 | 8B90A3"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6179FC"
@@ -73691,7 +73702,6 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | D6A012"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 834F70"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 169112"
-  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 9A93C9"
   - "IT \U0001F1EE\U0001F1F9 | @farshid78 | C00EBC"
   - "IT \U0001F1EE\U0001F1F9 | @farshid78 | F95EB2"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 0E543D"
@@ -73741,7 +73751,9 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BCE758"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 90C1D6"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 253912"
+  - "ZA \U0001F1FF\U0001F1E6 | @farshid78 | A10B68"
   - "IE \U0001F1EE\U0001F1EA | @farshid78 | 9B90C3"
+  - "AT \U0001F1E6\U0001F1F9 | @farshid78 | 3BBD66"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | D6482C"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 99C8A3"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 7CB8BF"
@@ -73948,10 +73960,10 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D4C9E4"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B9311F"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 6909C8"
-  - "AE \U0001F1E6\U0001F1EA | @farshid78 | B0B4A3"
+  - "PL \U0001F1F5\U0001F1F1 | @farshid78 | B0B4A3"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | F764EB"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 67DBC5"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 391105"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 67DBC5"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 391105"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 2BC027"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 2031DD"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | DEB3BA"
@@ -73996,8 +74008,8 @@ proxy-groups:
   - "SC \U0001F1F8\U0001F1E8 | @farshid78 | 831DB2"
   - "SC \U0001F1F8\U0001F1E8 | @farshid78 | CD2DCB"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | BA7034"
-  - "Global \U0001F310 | @farshid78 | 23191D"
-  - "Global \U0001F310 | @farshid78 | E9319C"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 23191D"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | E9319C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 3CB367"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6E1A12"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 29FDA5"
@@ -74005,9 +74017,8 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 5A27C6"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 0D633D"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 73C465"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 9854A0"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | CDFA89"
-  - "Global \U0001F310 | @farshid78 | 2A4F6C"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | 2A4F6C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D09EE5"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 7BC2C0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 605E61"
@@ -74028,10 +74039,10 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 289D87"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 45783A"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | FCB6F8"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | B201B0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 874735"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E04D5F"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 4A29D7"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 24C7AC"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 845AD6"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 5EE46A"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | EFC7C0"
@@ -74064,9 +74075,9 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 69D2AF"
   - "BE \U0001F1E7\U0001F1EA | @farshid78 | 02A5B0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D40266"
-  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | DA5DF1"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | DA5DF1"
   - "EE \U0001F1EA\U0001F1EA | @farshid78 | 29C4D9"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C3DE14"
+  - "EE \U0001F1EA\U0001F1EA | @farshid78 | C3DE14"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B9F164"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 38E5C7"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | BEC059"
@@ -74125,9 +74136,9 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C4DE22"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 504C0E"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | 644BDC"
-  - "Global \U0001F310 | @farshid78 | F7D3B0"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | F7D3B0"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | FD7089"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 4D98F4"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | 4D98F4"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 1A17D9"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 554FB2"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 1A7D14"
@@ -74136,6 +74147,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9A5F03"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | C98ACA"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | BF1564"
+  - "KR \U0001F1F0\U0001F1F7 | @farshid78 | 52445E"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | 6913F7"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | E3B6CD"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | E820CB"
@@ -74159,7 +74171,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 399932"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 6B7057"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | FBD99F"
-  - "Global \U0001F310 | @farshid78 | B9ED6C"
+  - "SG \U0001F1F8\U0001F1EC | @farshid78 | B9ED6C"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | DB6BD5"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 7D9489"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 72AA28"
@@ -74174,7 +74186,6 @@ proxy-groups:
   - "RS \U0001F1F7\U0001F1F8 | @farshid78 | 35964F"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | AD4C0E"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 4B70AB"
-  - "KR \U0001F1F0\U0001F1F7 | @farshid78 | B37B15"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | C3E9DB"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | D63858"
   - "AT \U0001F1E6\U0001F1F9 | @farshid78 | 1ED90E"
@@ -74217,6 +74228,9 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | A1D5B6"
   - "IN \U0001F1EE\U0001F1F3 | @farshid78 | 62D200"
   - "IN \U0001F1EE\U0001F1F3 | @farshid78 | 190ADC"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 8A0E88"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 3928A6"
+  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | B2763D"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 4BD0FC"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 421100"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 659B02"
@@ -74252,12 +74266,12 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 604C63"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 80F828"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 802C7F"
-  - "RU \U0001F1F7\U0001F1FA | @farshid78 | B890CA"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 912A47"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 2633B1"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | CCD9A7"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 7E323B"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | 2A91F2"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | A6E2C4"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BF617C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | B146F0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 4CDCFE"
@@ -74265,7 +74279,6 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 91D02A"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | F922EE"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 34BDB7"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 1FD863"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6F42E7"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 004A5D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 66830B"
@@ -74288,7 +74301,6 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 5CB288"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 36A918"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | EAB51E"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 67C96C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 48A680"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 475D58"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 410472"
@@ -74377,7 +74389,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | D674B6"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 762248"
   - "SE \U0001F1F8\U0001F1EA | @farshid78 | C2B320"
-  - "Global \U0001F310 | @farshid78 | DAE34F"
+  - "EE \U0001F1EA\U0001F1EA | @farshid78 | DAE34F"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | F2CAD8"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 780011"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9836C2"
@@ -74395,7 +74407,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 291DBD"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | E4747E"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 0DA3A2"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | E73876"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | E73876"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F7A793"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 1738D5"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 3B710B"
@@ -74500,7 +74512,6 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 9F5101"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | D2F30C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | A51BF0"
-  - "FR \U0001F1EB\U0001F1F7 | @farshid78 | B8B49A"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | C35436"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 20BD53"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | C3FB90"
@@ -74525,7 +74536,7 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 722298"
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 10C195"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | DD5724"
-  - "Global \U0001F310 | @farshid78 | C823EC"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | C823EC"
   - "SE \U0001F1F8\U0001F1EA | @farshid78 | 256847"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 778F38"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 1CB226"
@@ -74546,9 +74557,8 @@ proxy-groups:
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | E3757C"
   - "ES \U0001F1EA\U0001F1F8 | @farshid78 | 98ABC7"
   - "NO \U0001F1F3\U0001F1F4 | @farshid78 | 2AF3EE"
-  - "FR \U0001F1EB\U0001F1F7 | @farshid78 | C244C8"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 96AC3B"
-  - "Global \U0001F310 | @farshid78 | 08B5EE"
+  - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 08B5EE"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9F8AE5"
   - "BG \U0001F1E7\U0001F1EC | @farshid78 | 887AEA"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | F54D4A"
@@ -74592,14 +74602,14 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | BBD633"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | B8457E"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | DF69BC"
-  - "Global \U0001F310 | @farshid78 | FB6149"
-  - "Global \U0001F310 | @farshid78 | BF2615"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | FB6149"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | BF2615"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 7471BF"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | F53E3A"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | B81BB1"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 05B5CD"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | 6D5BFC"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | FC7937"
+  - "EE \U0001F1EA\U0001F1EA | @farshid78 | FC7937"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 9C328B"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | D84203"
   - "AE \U0001F1E6\U0001F1EA | @farshid78 | 90DB69"
@@ -74617,7 +74627,6 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 089E2C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | F0691B"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B881CB"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 7ECAEA"
   - "GE \U0001F1EC\U0001F1EA | @farshid78 | E470F0"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 3CAFB5"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 3B551B"
@@ -74657,7 +74666,6 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 63D8B5"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | C26A71"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | B1880B"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | B1B261"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 1E6632"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | C6ADEC"
   - "SE \U0001F1F8\U0001F1EA | @farshid78 | 4FBD22"
@@ -74685,16 +74693,14 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | DE7402"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | BF2AA2"
   - "IE \U0001F1EE\U0001F1EA | @farshid78 | 09E23C"
-  - "BR \U0001F1E7\U0001F1F7 | @farshid78 | C2F175"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | CCD40A"
   - "KZ \U0001F1F0\U0001F1FF | @farshid78 | 718BE5"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 99F3B0"
-  - "RU \U0001F1F7\U0001F1FA | @farshid78 | DBA2A5"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 568D5A"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | FBA030"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | D23BA4"
-  - "Global \U0001F310 | @farshid78 | EB4090"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | EB4090"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 476182"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | B5C7FA"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | B5C7FA"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | C11723"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 82D48F"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E46A3F"
@@ -74793,10 +74799,11 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 042F6E"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 195E0E"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 853E65"
+  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | D07EC5"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | B0D3A0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 70BC07"
-  - "Global \U0001F310 | @farshid78 | 1E3D3F"
-  - "Global \U0001F310 | @farshid78 | 314A5F"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 1E3D3F"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 314A5F"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | B7B702"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | 633D2F"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 3F4FCC"
@@ -74813,9 +74820,10 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | F60326"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | A255BA"
   - "SK \U0001F1F8\U0001F1F0 | @farshid78 | 9EC026"
-  - "Global \U0001F310 | @farshid78 | 62A9C4"
+  - "SK \U0001F1F8\U0001F1F0 | @farshid78 | 62A9C4"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9AA255"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 1D5827"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 976F3D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | C803C0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 080C5C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 590558"
@@ -74922,23 +74930,24 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 37C570"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 73541C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 5292C4"
-  - "Global \U0001F310 | @farshid78 | 0EF300"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 0EF300"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D1F418"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | E5FDC4"
-  - "AU \U0001F1E6\U0001F1FA | @farshid78 | 4A323F"
+  - "BR \U0001F1E7\U0001F1F7 | @farshid78 | 4A323F"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | F04A77"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | 7D9270"
   - "Global \U0001F310 | @farshid78 | E092A5"
   - "Global \U0001F310 | @farshid78 | B52CC9"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 839CF6"
-  - "Global \U0001F310 | @farshid78 | DB80D7"
-  - "Global \U0001F310 | @farshid78 | A18544"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | DB80D7"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | A18544"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 2AF6F0"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | B39022"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 2D911C"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 7A4BB9"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | FCF033"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 7CEBA5"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 1B234A"
   - "MD \U0001F1F2\U0001F1E9 | @farshid78 | B2EE3B"
   - "MD \U0001F1F2\U0001F1E9 | @farshid78 | 1FCFF0"
   - "MD \U0001F1F2\U0001F1E9 | @farshid78 | 264312"
@@ -74997,6 +75006,7 @@ proxy-groups:
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 173790"
   - "EE \U0001F1EA\U0001F1EA | @farshid78 | 11BEEC"
   - "EE \U0001F1EA\U0001F1EA | @farshid78 | F69163"
+  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 704858"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 5062C3"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 4E7ECB"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | F9A842"
@@ -75012,7 +75022,8 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | B8450B"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 43DB6B"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | B84AF9"
-  - "RU \U0001F1F7\U0001F1FA | @farshid78 | 97A984"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | C10B26"
+  - "AM \U0001F1E6\U0001F1F2 | @farshid78 | 97A984"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 58BE1E"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 5899E7"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E52F9F"
@@ -75022,7 +75033,6 @@ proxy-groups:
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | FBB29E"
   - "TH \U0001F1F9\U0001F1ED | @farshid78 | FCA7D1"
   - "TH \U0001F1F9\U0001F1ED | @farshid78 | 04F231"
-  - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 9E9AF9"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | A1B1BD"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 3CF7C7"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 13AAD5"
@@ -77511,6 +77521,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 51EDAA"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 0A6E49"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | AA3B51"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 44FBCF"
   - "Global \U0001F310 | @farshid78 | 8BD210"
   - "Global \U0001F310 | @farshid78 | 7814D4"
   - "Global \U0001F310 | @farshid78 | 018BD9"
@@ -77771,7 +77782,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 1E9408"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 7FD043"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D80F9B"
-  - "TR \U0001F1F9\U0001F1F7 | @farshid78 | FE87F8"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | FE87F8"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 903F53"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 54B0E6"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 9BF296"
@@ -78416,7 +78427,7 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | A322C7"
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 9EE900"
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 83208D"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | AB80E0"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | AB80E0"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9F7E31"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 09D71C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B3FC0E"
@@ -78914,7 +78925,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | @farshid78 | C51365"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | D8FEA2"
-  - "IR \U0001F1EE\U0001F1F7 | @farshid78 | 875198"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 875198"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 79F85B"
   - "Global \U0001F310 | @farshid78 | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | 198807"
@@ -79210,8 +79221,8 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 12F9B1"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 3DCAAC"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | B3074F"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | A44D18"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C85E95"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | A44D18"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | C85E95"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | D614C7"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 5CEF46"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 618C2B"
@@ -79234,8 +79245,8 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 8A0F99"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | CFC18A"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F72759"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 8AFF7A"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 6DD671"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 8AFF7A"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6DD671"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 299749"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 318FA3"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 27ED50"
@@ -79492,8 +79503,9 @@ proxy-groups:
   - "UA \U0001F1FA\U0001F1E6 | @farshid78 | 55828C"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | AB8199"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | 456C6A"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | E8031B"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 9D0BB2"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 340F4E"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 2A0A72"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 78AF0D"
   - "RO \U0001F1F7\U0001F1F4 | @farshid78 | 1B770D"
   - "RO \U0001F1F7\U0001F1F4 | @farshid78 | 73C6C6"
   - "AU \U0001F1E6\U0001F1FA | @farshid78 | 9FCFCC"
@@ -79504,6 +79516,7 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | F3AEB3"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 432B4C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 6FAA38"
+  - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 4BB22B"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 3E1DA0"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 6510F3"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | B5BE82"
@@ -79537,6 +79550,8 @@ proxy-groups:
   - "NO \U0001F1F3\U0001F1F4 | @farshid78 | 9FE8B9"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 54A551"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | FE0326"
+  - "SG \U0001F1F8\U0001F1EC | @farshid78 | E1ED10"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 90F921"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 657C86"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 430640"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | F360D4"
@@ -79549,18 +79564,16 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 56F568"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | BF5E9C"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 3B17D8"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | EA008B"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | B038CA"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 3E07E1"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | F40528"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 061847"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 454EA9"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 4A5A6E"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 9E8614"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 66BB4A"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 4C7665"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 89C465"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 030C4C"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 0EE52A"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 1359BC"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BA4344"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 1A14DC"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 66A632"
@@ -79584,6 +79597,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 02CE4D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | BB7720"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | FBAF15"
+  - "KR \U0001F1F0\U0001F1F7 | @farshid78 | D5B1C0"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | 81E9CD"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 17E3DC"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | EA55E0"
@@ -79595,7 +79609,6 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9E759D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9FAC2F"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | ED50FF"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | C25D0E"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F23C4D"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F06147"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 810F88"
@@ -79612,6 +79625,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9522DF"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | D832BE"
   - "BG \U0001F1E7\U0001F1EC | @farshid78 | 601424"
+  - "CL \U0001F1E8\U0001F1F1 | @farshid78 | 83BCCE"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | D27672"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 5CA5DA"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 8DDE67"
@@ -79726,8 +79740,8 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 71F1FC"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 32113F"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | F9157D"
-  - "Global \U0001F310 | @farshid78 | 166F94"
-  - "Global \U0001F310 | @farshid78 | 960213"
+  - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 166F94"
+  - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 960213"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | 9FE52C"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | F21D56"
   - "AT \U0001F1E6\U0001F1F9 | @farshid78 | 88EA53"
@@ -79736,10 +79750,9 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 2CD46E"
   - "Global \U0001F310 | @farshid78 | 2B2F44"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BEF84E"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 303539"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E82A92"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 3BC2FA"
-  - "FI \U0001F1EB\U0001F1EE | @farshid78 | 646FE6"
-  - "FI \U0001F1EB\U0001F1EE | @farshid78 | 6C2BBB"
+  - "SE \U0001F1F8\U0001F1EA | @farshid78 | 54DC22"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C49E3A"
   - "AL \U0001F1E6\U0001F1F1 | @farshid78 | 8B90A3"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6179FC"
@@ -79788,7 +79801,6 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | D6A012"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 834F70"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 169112"
-  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 9A93C9"
   - "IT \U0001F1EE\U0001F1F9 | @farshid78 | C00EBC"
   - "IT \U0001F1EE\U0001F1F9 | @farshid78 | F95EB2"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 0E543D"
@@ -79838,7 +79850,9 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BCE758"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 90C1D6"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 253912"
+  - "ZA \U0001F1FF\U0001F1E6 | @farshid78 | A10B68"
   - "IE \U0001F1EE\U0001F1EA | @farshid78 | 9B90C3"
+  - "AT \U0001F1E6\U0001F1F9 | @farshid78 | 3BBD66"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | D6482C"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 99C8A3"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 7CB8BF"
@@ -80045,10 +80059,10 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D4C9E4"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B9311F"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 6909C8"
-  - "AE \U0001F1E6\U0001F1EA | @farshid78 | B0B4A3"
+  - "PL \U0001F1F5\U0001F1F1 | @farshid78 | B0B4A3"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | F764EB"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 67DBC5"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 391105"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 67DBC5"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 391105"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 2BC027"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 2031DD"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | DEB3BA"
@@ -80093,8 +80107,8 @@ proxy-groups:
   - "SC \U0001F1F8\U0001F1E8 | @farshid78 | 831DB2"
   - "SC \U0001F1F8\U0001F1E8 | @farshid78 | CD2DCB"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | BA7034"
-  - "Global \U0001F310 | @farshid78 | 23191D"
-  - "Global \U0001F310 | @farshid78 | E9319C"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 23191D"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | E9319C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 3CB367"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6E1A12"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 29FDA5"
@@ -80102,9 +80116,8 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 5A27C6"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 0D633D"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 73C465"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | 9854A0"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | CDFA89"
-  - "Global \U0001F310 | @farshid78 | 2A4F6C"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | 2A4F6C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D09EE5"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 7BC2C0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 605E61"
@@ -80125,10 +80138,10 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 289D87"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 45783A"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | FCB6F8"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | B201B0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 874735"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E04D5F"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 4A29D7"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 24C7AC"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 845AD6"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 5EE46A"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | EFC7C0"
@@ -80161,9 +80174,9 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 69D2AF"
   - "BE \U0001F1E7\U0001F1EA | @farshid78 | 02A5B0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D40266"
-  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | DA5DF1"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | DA5DF1"
   - "EE \U0001F1EA\U0001F1EA | @farshid78 | 29C4D9"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C3DE14"
+  - "EE \U0001F1EA\U0001F1EA | @farshid78 | C3DE14"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B9F164"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 38E5C7"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | BEC059"
@@ -80222,9 +80235,9 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C4DE22"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 504C0E"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | 644BDC"
-  - "Global \U0001F310 | @farshid78 | F7D3B0"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | F7D3B0"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | FD7089"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 4D98F4"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | 4D98F4"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 1A17D9"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 554FB2"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 1A7D14"
@@ -80233,6 +80246,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9A5F03"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | C98ACA"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | BF1564"
+  - "KR \U0001F1F0\U0001F1F7 | @farshid78 | 52445E"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | 6913F7"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | E3B6CD"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | E820CB"
@@ -80256,7 +80270,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 399932"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 6B7057"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | FBD99F"
-  - "Global \U0001F310 | @farshid78 | B9ED6C"
+  - "SG \U0001F1F8\U0001F1EC | @farshid78 | B9ED6C"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | DB6BD5"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 7D9489"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 72AA28"
@@ -80271,7 +80285,6 @@ proxy-groups:
   - "RS \U0001F1F7\U0001F1F8 | @farshid78 | 35964F"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | AD4C0E"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 4B70AB"
-  - "KR \U0001F1F0\U0001F1F7 | @farshid78 | B37B15"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | C3E9DB"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | D63858"
   - "AT \U0001F1E6\U0001F1F9 | @farshid78 | 1ED90E"
@@ -80314,6 +80327,9 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | A1D5B6"
   - "IN \U0001F1EE\U0001F1F3 | @farshid78 | 62D200"
   - "IN \U0001F1EE\U0001F1F3 | @farshid78 | 190ADC"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 8A0E88"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 3928A6"
+  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | B2763D"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 4BD0FC"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 421100"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 659B02"
@@ -80349,12 +80365,12 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 604C63"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 80F828"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 802C7F"
-  - "RU \U0001F1F7\U0001F1FA | @farshid78 | B890CA"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 912A47"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 2633B1"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | CCD9A7"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 7E323B"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | 2A91F2"
+  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | A6E2C4"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | BF617C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | B146F0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 4CDCFE"
@@ -80362,7 +80378,6 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 91D02A"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | F922EE"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 34BDB7"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 1FD863"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6F42E7"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 004A5D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 66830B"
@@ -80385,7 +80400,6 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 5CB288"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 36A918"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | EAB51E"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 67C96C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 48A680"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 475D58"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 410472"
@@ -80474,7 +80488,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | D674B6"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 762248"
   - "SE \U0001F1F8\U0001F1EA | @farshid78 | C2B320"
-  - "Global \U0001F310 | @farshid78 | DAE34F"
+  - "EE \U0001F1EA\U0001F1EA | @farshid78 | DAE34F"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | F2CAD8"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 780011"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9836C2"
@@ -80492,7 +80506,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 291DBD"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | E4747E"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 0DA3A2"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | E73876"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | E73876"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F7A793"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 1738D5"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 3B710B"
@@ -80597,7 +80611,6 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 9F5101"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | D2F30C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | A51BF0"
-  - "FR \U0001F1EB\U0001F1F7 | @farshid78 | B8B49A"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | C35436"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 20BD53"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | C3FB90"
@@ -80622,7 +80635,7 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 722298"
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 10C195"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | DD5724"
-  - "Global \U0001F310 | @farshid78 | C823EC"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | C823EC"
   - "SE \U0001F1F8\U0001F1EA | @farshid78 | 256847"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 778F38"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 1CB226"
@@ -80643,9 +80656,8 @@ proxy-groups:
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | E3757C"
   - "ES \U0001F1EA\U0001F1F8 | @farshid78 | 98ABC7"
   - "NO \U0001F1F3\U0001F1F4 | @farshid78 | 2AF3EE"
-  - "FR \U0001F1EB\U0001F1F7 | @farshid78 | C244C8"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 96AC3B"
-  - "Global \U0001F310 | @farshid78 | 08B5EE"
+  - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 08B5EE"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 9F8AE5"
   - "BG \U0001F1E7\U0001F1EC | @farshid78 | 887AEA"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | F54D4A"
@@ -80689,14 +80701,14 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | BBD633"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | B8457E"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | DF69BC"
-  - "Global \U0001F310 | @farshid78 | FB6149"
-  - "Global \U0001F310 | @farshid78 | BF2615"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | FB6149"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | BF2615"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 7471BF"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | F53E3A"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | B81BB1"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 05B5CD"
   - "FI \U0001F1EB\U0001F1EE | @farshid78 | 6D5BFC"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | FC7937"
+  - "EE \U0001F1EA\U0001F1EA | @farshid78 | FC7937"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 9C328B"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | D84203"
   - "AE \U0001F1E6\U0001F1EA | @farshid78 | 90DB69"
@@ -80714,7 +80726,6 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 089E2C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | F0691B"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B881CB"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 7ECAEA"
   - "GE \U0001F1EC\U0001F1EA | @farshid78 | E470F0"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 3CAFB5"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 3B551B"
@@ -80754,7 +80765,6 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 63D8B5"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | C26A71"
   - "KR \U0001F1F0\U0001F1F7 | @farshid78 | B1880B"
-  - "SG \U0001F1F8\U0001F1EC | @farshid78 | B1B261"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 1E6632"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | C6ADEC"
   - "SE \U0001F1F8\U0001F1EA | @farshid78 | 4FBD22"
@@ -80782,16 +80792,14 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | DE7402"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | BF2AA2"
   - "IE \U0001F1EE\U0001F1EA | @farshid78 | 09E23C"
-  - "BR \U0001F1E7\U0001F1F7 | @farshid78 | C2F175"
-  - "US \U0001F1FA\U0001F1F8 | @farshid78 | CCD40A"
   - "KZ \U0001F1F0\U0001F1FF | @farshid78 | 718BE5"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 99F3B0"
-  - "RU \U0001F1F7\U0001F1FA | @farshid78 | DBA2A5"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 568D5A"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | FBA030"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | D23BA4"
-  - "Global \U0001F310 | @farshid78 | EB4090"
+  - "RU \U0001F1F7\U0001F1FA | @farshid78 | EB4090"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 476182"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | B5C7FA"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | B5C7FA"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | C11723"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 82D48F"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E46A3F"
@@ -80890,10 +80898,11 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 042F6E"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 195E0E"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 853E65"
+  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | D07EC5"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | B0D3A0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 70BC07"
-  - "Global \U0001F310 | @farshid78 | 1E3D3F"
-  - "Global \U0001F310 | @farshid78 | 314A5F"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 1E3D3F"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 314A5F"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | B7B702"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | 633D2F"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 3F4FCC"
@@ -80910,9 +80919,10 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | F60326"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | A255BA"
   - "SK \U0001F1F8\U0001F1F0 | @farshid78 | 9EC026"
-  - "Global \U0001F310 | @farshid78 | 62A9C4"
+  - "SK \U0001F1F8\U0001F1F0 | @farshid78 | 62A9C4"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9AA255"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 1D5827"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 976F3D"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | C803C0"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 080C5C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 590558"
@@ -81019,23 +81029,24 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 37C570"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 73541C"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 5292C4"
-  - "Global \U0001F310 | @farshid78 | 0EF300"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 0EF300"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D1F418"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | E5FDC4"
-  - "AU \U0001F1E6\U0001F1FA | @farshid78 | 4A323F"
+  - "BR \U0001F1E7\U0001F1F7 | @farshid78 | 4A323F"
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | F04A77"
   - "TR \U0001F1F9\U0001F1F7 | @farshid78 | 7D9270"
   - "Global \U0001F310 | @farshid78 | E092A5"
   - "Global \U0001F310 | @farshid78 | B52CC9"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 839CF6"
-  - "Global \U0001F310 | @farshid78 | DB80D7"
-  - "Global \U0001F310 | @farshid78 | A18544"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | DB80D7"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | A18544"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 2AF6F0"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | B39022"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 2D911C"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 7A4BB9"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | FCF033"
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 7CEBA5"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 1B234A"
   - "MD \U0001F1F2\U0001F1E9 | @farshid78 | B2EE3B"
   - "MD \U0001F1F2\U0001F1E9 | @farshid78 | 1FCFF0"
   - "MD \U0001F1F2\U0001F1E9 | @farshid78 | 264312"
@@ -81094,6 +81105,7 @@ proxy-groups:
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 173790"
   - "EE \U0001F1EA\U0001F1EA | @farshid78 | 11BEEC"
   - "EE \U0001F1EA\U0001F1EA | @farshid78 | F69163"
+  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 704858"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 5062C3"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 4E7ECB"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | F9A842"
@@ -81109,7 +81121,8 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | B8450B"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 43DB6B"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | B84AF9"
-  - "RU \U0001F1F7\U0001F1FA | @farshid78 | 97A984"
+  - "CA \U0001F1E8\U0001F1E6 | @farshid78 | C10B26"
+  - "AM \U0001F1E6\U0001F1F2 | @farshid78 | 97A984"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 58BE1E"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 5899E7"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | E52F9F"
@@ -81119,7 +81132,6 @@ proxy-groups:
   - "GB \U0001F1EC\U0001F1E7 | @farshid78 | FBB29E"
   - "TH \U0001F1F9\U0001F1ED | @farshid78 | FCA7D1"
   - "TH \U0001F1F9\U0001F1ED | @farshid78 | 04F231"
-  - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 9E9AF9"
   - "RU \U0001F1F7\U0001F1FA | @farshid78 | A1B1BD"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 3CF7C7"
   - "FR \U0001F1EB\U0001F1F7 | @farshid78 | 13AAD5"
@@ -83608,6 +83620,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 51EDAA"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 0A6E49"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | AA3B51"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 44FBCF"
   - "Global \U0001F310 | @farshid78 | 8BD210"
   - "Global \U0001F310 | @farshid78 | 7814D4"
   - "Global \U0001F310 | @farshid78 | 018BD9"
@@ -83868,7 +83881,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 1E9408"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 7FD043"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | D80F9B"
-  - "TR \U0001F1F9\U0001F1F7 | @farshid78 | FE87F8"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | FE87F8"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 903F53"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | 54B0E6"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 9BF296"
@@ -84513,7 +84526,7 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | A322C7"
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 9EE900"
   - "LV \U0001F1F1\U0001F1FB | @farshid78 | 83208D"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | AB80E0"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | AB80E0"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 9F7E31"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 09D71C"
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | B3FC0E"
@@ -85011,7 +85024,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | @farshid78 | C51365"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | D8FEA2"
-  - "IR \U0001F1EE\U0001F1F7 | @farshid78 | 875198"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 875198"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | 79F85B"
   - "Global \U0001F310 | @farshid78 | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | 198807"
@@ -85307,8 +85320,8 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 12F9B1"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 3DCAAC"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | B3074F"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | A44D18"
-  - "NL \U0001F1F3\U0001F1F1 | @farshid78 | C85E95"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | A44D18"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | C85E95"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | D614C7"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 5CEF46"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 618C2B"
@@ -85331,8 +85344,8 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 8A0F99"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | CFC18A"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | F72759"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 8AFF7A"
-  - "GB \U0001F1EC\U0001F1E7 | @farshid78 | 6DD671"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 8AFF7A"
+  - "US \U0001F1FA\U0001F1F8 | @farshid78 | 6DD671"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 299749"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 318FA3"
   - "CA \U0001F1E8\U0001F1E6 | @farshid78 | 27ED50"

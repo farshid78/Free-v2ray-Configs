@@ -1,0 +1,11 @@
+#profile-title: @farshid78 — IRELAND (IE)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/farshid78
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @farshid78 — IRELAND (IE) — 2 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWQnp5czFjYWhmR1ZsT3dS@4.231.226.120:443#IE 🇮🇪 | @farshid78 | 9B90C3
+vless://a7595994-695d-484e-bfcb-e9fbb73cfa39@83.141.92.168:443?security=reality&encryption=none&pbk=kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY&headerType=none&fp=chrome&spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM&type=tcp&flow=xtls-rprx-vision&sni=sladovna.russianpiwo.fun&sid=7a7d19880a9ee786#IE 🇮🇪 | @farshid78 | 09E23C

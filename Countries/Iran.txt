@@ -8,6 +8,6 @@
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&type=grpc&serviceName=ebl&mode=multi&security=reality&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fm=#IR 🇮🇷 | @farshid78 | EF1170
-vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&fp=&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&type=grpc#IR 🇮🇷 | @farshid78 | 1E742A
 vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?encryption=none&type=grpc&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU#IR 🇮🇷 | @farshid78 | C12062
 vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?mode=gun&security=reality&encryption=none&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&type=grpc&serviceName=ebl&sni=optim.tildacdn.pub#IR 🇮🇷 | @farshid78 | 63B499
+vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&fp=&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&type=grpc#IR 🇮🇷 | @farshid78 | 1E742A

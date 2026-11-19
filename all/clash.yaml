@@ -28286,7 +28286,7 @@ proxies:
   udp: true
   tls: true
   servername: morningfen.merlano.monster
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
@@ -31805,7 +31805,7 @@ proxies:
   reality-opts:
     public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
     short-id: e8daed2d
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
 - name: "FI \U0001F1EB\U0001F1EE | @farshid78 | E170CD"
   server: 13.140.92.21
@@ -53805,7 +53805,7 @@ proxies:
     short-id: 945974883e
   client-fingerprint: chrome
   network: tcp
-- name: "CZ \U0001F1E8\U0001F1FF | @farshid78 | 092FF3"
+- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | 092FF3"
   server: cdn7-39.vk-cdnvideo.com
   port: 8443
   type: vless
@@ -61716,6 +61716,20 @@ proxies:
   tls: false
   network: tcp
 - name: "CZ \U0001F1E8\U0001F1FF | @farshid78 | 5AD3FE"
+  server: 212.102.38.25
+  port: 443
+  type: vless
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: udemy.com
+  reality-opts:
+    public-key: 23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE
+    short-id: e90360ec7cc61b20
+  client-fingerprint: ios
+  network: tcp
+- name: "CZ \U0001F1E8\U0001F1FF | @farshid78 | 2451A9"
   server: 212.102.38.25
   port: 443
   type: vless
@@ -77000,7 +77014,7 @@ proxies:
     path: /?ed=2560
     headers:
       Host: mh.sudonetwork.com
-- name: "DE \U0001F1E9\U0001F1EA | @farshid78 | A6CA0F"
+- name: "FI \U0001F1EB\U0001F1EE | @farshid78 | A6CA0F"
   server: www.tgju.org
   port: 443
   type: vless
@@ -139616,7 +139630,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 855E2C"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | B81BB1"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 66117E"
-  - "CZ \U0001F1E8\U0001F1FF | @farshid78 | 092FF3"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 092FF3"
   - "Global \U0001F310 | @farshid78 | C80870"
   - "Global \U0001F310 | @farshid78 | A75A33"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 3FBBEC"
@@ -140214,6 +140228,7 @@ proxy-groups:
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 31BD0C"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | 2F58CF"
   - "CZ \U0001F1E8\U0001F1FF | @farshid78 | 5AD3FE"
+  - "CZ \U0001F1E8\U0001F1FF | @farshid78 | 2451A9"
   - "BH \U0001F1E7\U0001F1ED | @farshid78 | 0FBCC0"
   - "SC \U0001F1F8\U0001F1E8 | @farshid78 | BBE980"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | D30C63"
@@ -141390,7 +141405,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | DFE156"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 871FF2"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | D9FE93"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | A6CA0F"
+  - "FI \U0001F1EB\U0001F1EE | @farshid78 | A6CA0F"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | DDAFDF"
   - "Global \U0001F310 | @farshid78 | 81E805"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 173B40"
@@ -151017,7 +151032,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 855E2C"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | B81BB1"
   - "HK \U0001F1ED\U0001F1F0 | @farshid78 | 66117E"
-  - "CZ \U0001F1E8\U0001F1FF | @farshid78 | 092FF3"
+  - "DE \U0001F1E9\U0001F1EA | @farshid78 | 092FF3"
   - "Global \U0001F310 | @farshid78 | C80870"
   - "Global \U0001F310 | @farshid78 | A75A33"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | 3FBBEC"
@@ -151615,6 +151630,7 @@ proxy-groups:
   - "PL \U0001F1F5\U0001F1F1 | @farshid78 | 31BD0C"
   - "IR \U0001F1EE\U0001F1F7 | @farshid78 | 2F58CF"
   - "CZ \U0001F1E8\U0001F1FF | @farshid78 | 5AD3FE"
+  - "CZ \U0001F1E8\U0001F1FF | @farshid78 | 2451A9"
   - "BH \U0001F1E7\U0001F1ED | @farshid78 | 0FBCC0"
   - "SC \U0001F1F8\U0001F1E8 | @farshid78 | BBE980"
   - "JP \U0001F1EF\U0001F1F5 | @farshid78 | D30C63"
@@ -152791,7 +152807,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @farshid78 | DFE156"
   - "SG \U0001F1F8\U0001F1EC | @farshid78 | 871FF2"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | D9FE93"
-  - "DE \U0001F1E9\U0001F1EA | @farshid78 | A6CA0F"
+  - "FI \U0001F1EB\U0001F1EE | @farshid78 | A6CA0F"
   - "DE \U0001F1E9\U0001F1EA | @farshid78 | DDAFDF"
   - "Global \U0001F310 | @farshid78 | 81E805"
   - "NL \U0001F1F3\U0001F1F1 | @farshid78 | 173B40"

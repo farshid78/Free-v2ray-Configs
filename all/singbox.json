@@ -4881,7 +4881,7 @@
         "DE 🇩🇪 | @farshid78 | 855E2C",
         "DE 🇩🇪 | @farshid78 | B81BB1",
         "HK 🇭🇰 | @farshid78 | 66117E",
-        "CZ 🇨🇿 | @farshid78 | 092FF3",
+        "DE 🇩🇪 | @farshid78 | 092FF3",
         "Global 🌐 | @farshid78 | C80870",
         "Global 🌐 | @farshid78 | A75A33",
         "DE 🇩🇪 | @farshid78 | 3FBBEC",
@@ -5430,6 +5430,7 @@
         "PL 🇵🇱 | @farshid78 | 31BD0C",
         "IR 🇮🇷 | @farshid78 | 2F58CF",
         "CZ 🇨🇿 | @farshid78 | 5AD3FE",
+        "CZ 🇨🇿 | @farshid78 | 2451A9",
         "BH 🇧🇭 | @farshid78 | 0FBCC0",
         "SC 🇸🇨 | @farshid78 | BBE980",
         "JP 🇯🇵 | @farshid78 | D30C63",
@@ -15797,7 +15798,7 @@
         "DE 🇩🇪 | @farshid78 | 855E2C",
         "DE 🇩🇪 | @farshid78 | B81BB1",
         "HK 🇭🇰 | @farshid78 | 66117E",
-        "CZ 🇨🇿 | @farshid78 | 092FF3",
+        "DE 🇩🇪 | @farshid78 | 092FF3",
         "Global 🌐 | @farshid78 | C80870",
         "Global 🌐 | @farshid78 | A75A33",
         "DE 🇩🇪 | @farshid78 | 3FBBEC",
@@ -16346,6 +16347,7 @@
         "PL 🇵🇱 | @farshid78 | 31BD0C",
         "IR 🇮🇷 | @farshid78 | 2F58CF",
         "CZ 🇨🇿 | @farshid78 | 5AD3FE",
+        "CZ 🇨🇿 | @farshid78 | 2451A9",
         "BH 🇧🇭 | @farshid78 | 0FBCC0",
         "SC 🇸🇨 | @farshid78 | BBE980",
         "JP 🇯🇵 | @farshid78 | D30C63",
@@ -59949,7 +59951,7 @@
         "server_name": "morningfen.merlano.monster",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -64149,7 +64151,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -92612,7 +92614,7 @@
     },
     {
       "type": "vless",
-      "tag": "CZ 🇨🇿 | @farshid78 | 092FF3",
+      "tag": "DE 🇩🇪 | @farshid78 | 092FF3",
       "server": "cdn7-39.vk-cdnvideo.com",
       "server_port": 8443,
       "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
@@ -102859,6 +102861,27 @@
     {
       "type": "vless",
       "tag": "CZ 🇨🇿 | @farshid78 | 5AD3FE",
+      "server": "212.102.38.25",
+      "server_port": 443,
+      "uuid": "b34a52cb-cd52-49a8-9362-b8e97c151d49",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "udemy.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE",
+          "short_id": "e90360ec7cc61b20"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CZ 🇨🇿 | @farshid78 | 2451A9",
       "server": "212.102.38.25",
       "server_port": 443,
       "uuid": "b34a52cb-cd52-49a8-9362-b8e97c151d49",

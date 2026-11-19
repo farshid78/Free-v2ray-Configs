@@ -3,9 +3,11 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/farshid78
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @farshid78 — IRELAND (IE) — 2 configs
+# @farshid78 — IRELAND (IE) — 4 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWQnp5czFjYWhmR1ZsT3dS@4.231.226.120:443#IE 🇮🇪 | @farshid78 | 9B90C3
+vmess://eyJ2IjoiMiIsInBzIjoiSUUg8J+HrvCfh6ogfCBAZmFyc2hpZDc4IHwgMDM3NjBEIiwiYWRkIjoiNTQuMjI5LjE1MS45NyIsInBvcnQiOiI1OTIzNiIsImlkIjoiMjM4N2JmYmMtMTBhNi00YmQ3LWRjNTUtN2NiYTk1NGNlNmU4IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLyIsImhvc3QiOiJ0bXMuZGluZ3RhbGsuY29tIn0=
+vmess://eyJ2IjoiMiIsInBzIjoiSUUg8J+HrvCfh6ogfCBAZmFyc2hpZDc4IHwgQTNEOERGIiwiYWRkIjoiNTQuMjI5LjE1MS45NyIsInBvcnQiOiI1OTIzNiIsImlkIjoiMjM4N2JmYmMtMTBhNi00YmQ3LWRjNTUtN2NiYTk1NGNlNmU4IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLyJ9
 vless://a7595994-695d-484e-bfcb-e9fbb73cfa39@83.141.92.168:443?security=reality&encryption=none&pbk=kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY&headerType=none&fp=chrome&spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM&type=tcp&flow=xtls-rprx-vision&sni=sladovna.russianpiwo.fun&sid=7a7d19880a9ee786#IE 🇮🇪 | @farshid78 | 09E23C

@@ -7,7 +7,7 @@
 <p>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/actions/workflows/aggregate.yml"><img alt="pipeline" src="https://img.shields.io/github/actions/workflow/status/farshid78/Free-v2ray-Configs/aggregate.yml?style=for-the-badge&label=pipeline&logo=githubactions&logoColor=white"></a>
 <img alt="auto-update" src="https://img.shields.io/badge/auto--update-every%2015%20min-0ea5e9?style=for-the-badge">
-<a href="https://t.me/farshid78"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Ffarshid78&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
+<a href="https://t.me/joker_jojo0"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Ffarshid78&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/farshid78/Free-v2ray-Configs?style=for-the-badge&color=FBBF24&logo=github"></a>
 <a href="https://farshid78.github.io/Free-v2ray-Configs/"><img alt="dashboard" src="https://img.shields.io/badge/live-dashboard-ec4899?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
@@ -49,7 +49,7 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 <div align="center">
 
 <a href="#-subscription-links"><img alt="Jump to the subscription links" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-links.svg"></a>
-<a href="https://t.me/farshid78"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
+<a href="https://t.me/joker_jojo0"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs"><img alt="Star the repository on GitHub" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-star.svg"></a>
 
 <br><br>
@@ -58,7 +58,7 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/top100.txt"><img alt="QR code for the top 100 list" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-top100.svg"></a>
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/configs_base64.txt"><img alt="QR code for the verified subscription" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-verified.svg"></a>
-<a href="https://t.me/farshid78"><img alt="QR code for the Telegram channel" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-telegram.svg"></a>
+<a href="https://t.me/joker_jojo0"><img alt="QR code for the Telegram channel" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-telegram.svg"></a>
 
 <br>
 
@@ -693,7 +693,7 @@ There is no sign-up, no ad and no paywall here, and there never will be. The two
 that actually keep it alive cost you nothing at all:
 
 <a href="https://github.com/farshid78/Free-v2ray-Configs"><img alt="Star the repository on GitHub" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-star.svg"></a>
-<a href="https://t.me/farshid78"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
+<a href="https://t.me/joker_jojo0"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
 
 <table>
 <tr>
@@ -706,7 +706,7 @@ config ever sees this page.
 </td>
 <td width="380" valign="top">
 
-**📣 [@farshid78](https://t.me/farshid78)** is where an outage, a dead upstream or a
+**📣 [@jojo_config](https://t.me/joker_jojo0)** is where an outage, a dead upstream or a
 changed link is announced *before* you notice your client went quiet. Questions and
 broken-config reports are welcome there too.
 
@@ -718,7 +718,7 @@ broken-config reports are welcome there too.
 
 <div align="center">
 
-**Channel:** [@farshid78](https://t.me/farshid78) · **Bot:** [@farshid78_bot](https://t.me/farshid78_bot) · **Dashboard:** [live status](https://farshid78.github.io/Free-v2ray-Configs/)
+**Channel:** [@jojo_config](https://t.me/joker_jojo0) · **Bot:** [@jojo_config](https://t.me/joker_jojo0_bot) · **Dashboard:** [live status](https://farshid78.github.io/Free-v2ray-Configs/)
 
 <sub>Every number written in this README is a dated snapshot. The live numbers are always in
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/index.json"><code>index.json</code></a> and

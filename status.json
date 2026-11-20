@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T19:24:13Z",
+ "updated_at": "2026-11-20T19:35:21Z",
  "bot": {
   "online": false,
   "last_heartbeat": null,
@@ -10,52 +10,52 @@
   "note": ""
  },
  "cycle": {
-  "id": "runnervmccnms:2287",
+  "id": "runnervm0hi8g:2585",
   "workflow": "aggregate",
-  "started_at": "2026-11-20T19:14:26Z",
-  "finished_at": "2026-11-20T19:24:13Z",
+  "started_at": "2026-11-20T19:24:30Z",
+  "finished_at": "2026-11-20T19:35:21Z",
   "ok": true,
-  "duration_s": 587.9,
+  "duration_s": 651.7,
   "error": "",
   "stages": {
    "collection": {
     "status": "ok",
-    "at": "2026-11-20T19:24:13Z",
+    "at": "2026-11-20T19:35:21Z",
     "detail": "",
     "duration_s": null
    },
    "cascade": {
     "status": "ok",
-    "at": "2026-11-20T19:24:13Z",
+    "at": "2026-11-20T19:35:21Z",
     "detail": "",
     "duration_s": null
    },
    "google": {
     "status": "ok",
-    "at": "2026-11-20T19:24:13Z",
+    "at": "2026-11-20T19:35:21Z",
     "detail": "",
     "duration_s": null
    },
    "validation": {
     "status": "ok",
-    "at": "2026-11-20T19:24:13Z",
+    "at": "2026-11-20T19:35:21Z",
     "detail": "",
     "duration_s": null
    },
    "publish": {
-    "status": "ok",
-    "at": "2026-11-20T19:24:13Z",
+    "status": "failed",
+    "at": "2026-11-20T19:35:21Z",
     "detail": "",
     "duration_s": null
    }
   }
  },
  "counts": {
-  "collected": 21161,
-  "verified": 930,
+  "collected": 21159,
+  "verified": 951,
   "invalid": 1,
-  "new": 930,
-  "duplicate": 9609,
+  "new": 951,
+  "duplicate": 9607,
   "sent": 0,
   "send_failed": 0,
   "queued": 0
@@ -74,9 +74,9 @@
    "error": ""
   },
   "aggregate": {
-   "last_run_at": "2026-11-20T19:24:13Z",
+   "last_run_at": "2026-11-20T19:35:21Z",
    "last_ok": true,
-   "duration_s": 587.9,
+   "duration_s": 651.7,
    "error": ""
   }
  },
@@ -137,6 +137,23 @@
     "sent": 0,
     "send_failed": 0,
     "new": 930
+   }
+  },
+  {
+   "at": "2026-11-20T19:35:21Z",
+   "workflow": "aggregate",
+   "ok": true,
+   "duration_s": 651.7,
+   "error": "",
+   "counts": {
+    "collected": 21159,
+    "duplicate": 9607,
+    "invalid": 1,
+    "verified": 951,
+    "queued": 0,
+    "sent": 0,
+    "send_failed": 0,
+    "new": 951
    }
   }
  ]

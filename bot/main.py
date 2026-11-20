@@ -161,6 +161,13 @@ def _schedule_lifetime(app: Application) -> None:
 
 
 def main() -> None:
+    # runtime watchdog: exit the process if heartbeat goes stale (>120s) so the
+    # runner/supervisor can restart it instead of leaving a zombie.
+    try:
+        from . import watchdog as _watchdog
+        _watchdog.start()
+    except Exception:
+        pass
     app = build_app()
     # انتشارِ خودکار: هر ۳۰ ثانیه ۲۰ کانفیگ (با فاصلهٔ تصادفی) + trigger ساعتی
     # workflow. خطای زمان‌بندی قبلاً بی‌صدا بلعیده می‌شد و هیچ کانفیگی به کانال

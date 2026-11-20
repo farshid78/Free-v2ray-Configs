@@ -13308,7 +13308,7 @@ def test_zzz_cty_an_empty_round_prunes_everything_including_the_index() -> None:
     base = os.path.join(out, countries.COUNTRIES_DIR)
     assert countries.INDEX_NAME in os.listdir(base)
 
-    stats = countries.write_countries(out, [])
+    stats = countries.write_countries(out, [], clear_empty=True)
     assert stats["countries"] == 0 and stats["configs"] == 0, stats
     left = sorted(os.listdir(base)) if os.path.isdir(base) else []
     assert not [p for p in left if p.endswith(".txt")], f"فایلِ txt ماند: {left}"
@@ -13680,7 +13680,7 @@ def test_zzz_cty_index_advert_never_outlives_the_files() -> None:
         f"تبلیغ به فایلِ ناموجود اشاره کرد: {rel}"
 
     # دورِ بعد هیچ کشوری ندارد ⇒ تبلیغ باید حذف شود
-    stats2 = countries.write_countries(out, [])
+    stats2 = countries.write_countries(out, [], clear_empty=True)
     buckets2 = {"verified": [], "fast": [], "secure": [], "top": [],
                 "stats": {"countries": stats2}}
     assert pipeline.merge_index(out, buckets2)

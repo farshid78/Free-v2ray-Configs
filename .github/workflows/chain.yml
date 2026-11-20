@@ -1,0 +1,74 @@
+name: 🔗 Chain Controller
+
+on:
+  workflow_dispatch:
+    inputs:
+      chain_id:
+        description: "Chain ID"
+        required: false
+        default: "default"
+      generation:
+        description: "Generation number"
+        required: false
+        default: "0"
+      predecessor_run_id:
+        description: "Predecessor run id"
+        required: false
+        default: ""
+      handoff_id:
+        description: "Handoff id"
+        required: false
+        default: ""
+      handoff_nonce:
+        description: "Handoff nonce"
+        required: false
+        default: ""
+      trigger_reason:
+        description: "Trigger reason"
+        required: false
+        default: "manual"
+      expected_owner:
+        description: "Expected owner"
+        required: false
+        default: ""
+      slice_minutes:
+        description: "Slice duration (minutes)"
+        required: false
+        default: "5"
+
+permissions:
+  contents: read
+  actions: write
+
+env:
+  PYTHONIOENCODING: "utf-8"
+
+jobs:
+  chain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: ⬇️ Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: 📥 Pull runtime status
+        run: python scripts/status.py pull || echo "::warning::status pull skipped"
+      - name: 🔗 Run chain controller
+        env:
+          CHAIN_ID: ${{ inputs.chain_id }}
+          GENERATION: ${{ inputs.generation }}
+          PREDECESSOR_RUN_ID: ${{ inputs.predecessor_run_id }}
+          HANDOFF_ID: ${{ inputs.handoff_id }}
+          HANDOFF_NONCE: ${{ inputs.handoff_nonce }}
+          TRIGGER_REASON: ${{ inputs.trigger_reason }}
+          EXPECTED_OWNER: ${{ inputs.expected_owner }}
+          SLICE_MINUTES: ${{ inputs.slice_minutes }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -X utf8 scripts/chain_controller.py
+      - name: 📤 Publish runtime status
+        if: always()
+        continue-on-error: true
+        run: python scripts/status.py publish || echo "::warning::status publish skipped"

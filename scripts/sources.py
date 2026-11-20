@@ -199,22 +199,6 @@ def add_extra_source(category: str, url: str) -> bool:
     return True
 
 
-def remove_extra_source(category: str, url: str) -> bool:
-    """حذف منبع از overlay. برمی‌گرداند: آیا حذف شد."""
-    data = _load_extras()
-    key = "light" if category == "light" else "heavy"
-    lst = data.get(key, [])
-    if url not in lst:
-        return False
-    lst.remove(url)
-    _save_extras(data)
-    return True
-
-
-def list_extra_sources() -> dict:
-    return _load_extras()
-
-
 def _disabled_urls() -> set:
     data = _load_extras()
     return {u for u in data.get("disabled", []) if isinstance(u, str)}

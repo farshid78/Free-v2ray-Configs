@@ -168,6 +168,45 @@ def stats() -> dict:
         c.close()
 
 
+def dead_letter(limit: int = 100) -> list[dict]:
+    """ردیف‌های تسلیم‌شده (به سقفِ تلاش رسیده) را برمی‌گرداند."""
+    c = _conn()
+    try:
+        rows = c.execute(
+            "SELECT key, text, attempts, last_error, created_at, next_at"
+            " FROM outbox WHERE sent_at IS NULL AND attempts >= ?"
+            " ORDER BY created_at LIMIT ?",
+            (MAX_ATTEMPTS, int(limit)),
+        ).fetchall()
+        return [dict(r) for r in rows]
+    finally:
+        c.close()
+
+
+def retry_dead(keys: list[str] | None = None) -> int:
+    """ردیف‌های dead را برای تلاشِ مجدد آماده می‌کند (attempts را صفر می‌کند).
+    اگر keys=None باشد، همهٔ deadها reset می‌شوند. تعدادِ resetشده را برمی‌گرداند."""
+    c = _conn()
+    try:
+        if keys:
+            placeholders = ",".join("?" for _ in keys)
+            cur = c.execute(
+                f"UPDATE outbox SET attempts=0, next_at=?, last_error=NULL"
+                f" WHERE key IN ({placeholders}) AND sent_at IS NULL",
+                (time.time(), *keys),
+            )
+        else:
+            cur = c.execute(
+                "UPDATE outbox SET attempts=0, next_at=?, last_error=NULL"
+                " WHERE sent_at IS NULL AND attempts >= ?",
+                (time.time(), MAX_ATTEMPTS),
+            )
+        c.commit()
+        return int(cur.rowcount or 0)
+    finally:
+        c.close()
+
+
 def seen(key: str) -> bool:
     c = _conn()
     try:

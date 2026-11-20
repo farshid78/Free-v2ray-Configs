@@ -117,9 +117,9 @@ USER_AGENTS = (
     "(KHTML, like Gecko) Chrome/120.0 Safari/537.36",
     "ClashforWindows/0.20.39",
 )
-FETCH_TIMEOUT = int(os.getenv("AGG_FETCH_TIMEOUT", "15"))
+FETCH_TIMEOUT = int(os.getenv("AGG_FETCH_TIMEOUT", "30"))
 MAX_WORKERS = int(os.getenv("AGG_MAX_WORKERS", "16"))
-FETCH_RETRIES = int(os.getenv("AGG_FETCH_RETRIES", "3"))  # تعدادِ تلاشِ مجدد در صورتِ خطا/خالی‌بودن
+FETCH_RETRIES = int(os.getenv("AGG_FETCH_RETRIES", "2"))  # تعدادِ تلاشِ مجدد در صورتِ خطا/خالی‌بودن
 RETRY_BACKOFF = 1.5        # ثانیه × شمارهٔ تلاش
 
 #: بازهٔ به‌روزرسانی (دقیقه) — باید با jojo_config/repo_trigger.py و

@@ -593,21 +593,32 @@ def _write_text(path: str, content: str) -> None:
         raise
 
 
-def write_countries(out_dir: str, lines: Sequence[str]) -> Dict[str, Any]:
+def write_countries(out_dir: str, lines: Sequence[str],
+                    clear_empty: bool = False, clear: bool = False,
+                    **_kwargs: Any) -> Dict[str, Any]:
     """`Countries/` را از سطرهای **تأییدشده** می‌سازد. آمار را برمی‌گرداند.
 
-    هفت گام، به همین ترتیب — و ترتیب مهم است:
-      ۱) گروه‌بندی بر پایهٔ برچسبِ خودِ سطر (بی شبکه)
-      ۲) کنار گذاشتنِ گروه‌های کوچک‌تر از `MIN_PER_COUNTRY`
-      ۳) یافتنِ نامِ کشورها (هدف‌گیری → اسکنِ بودجه‌دار → کدِ ISO)
-      ۴) ساختنِ نامِ فایلِ ایمن + حلِ برخوردِ نام
-      ۵) ★ **جارو** — پیش از نوشتن، تا فایلِ دورِ قبل نماند
-      ۶) نوشتنِ فایل‌ها
-      ۷) نوشتنِ `Countries/index.json`
-    """
+    `clear_empty=True` (یا env `COUNTRIES_CLEAR_EMPTY=1`) اجازه می‌دهد یک
+    دورِ بی‌کانفیگ همهٔ فایل‌های `Countries/` را جارو کند. پیش‌فرض `False`
+    است تا یک دورِ خالی (مثلاً به‌خاطرِ شکستِ موقت) دادهٔ قبلی را بی‌صدا
+    پاک نکند."""
+    clear_empty = bool(clear_empty or clear)
+    if not clear_empty:
+        clear_empty = os.environ.get("COUNTRIES_CLEAR_EMPTY", "").strip().lower() \
+            in ("1", "true", "yes", "on")
+
+    # هفت گام: گروه‌بندی → کنارگذاریِ کوچک‌ها → نام‌گذاری → حلِ برخورد →
+    # جارو → نوشتن → index.json
     base = os.path.join(out_dir, COUNTRIES_DIR)
     started = time.time()
     lines = list(lines or [])
+
+    # opt-in destructive clear: by default an empty round leaves existing files
+    if not lines and not clear_empty:
+        return {"countries": 0, "configs": 0, "input": 0, "pruned": [],
+                "skipped_small": {}, "failed": {}, "named_from_db": 0,
+                "min_per_country": MIN_PER_COUNTRY,
+                "seconds": round(time.time() - started, 3)}
 
     # ۱ + ۲
     groups = group_by_country(lines)

@@ -86,7 +86,10 @@ def _default() -> dict:
         "counts": {"collected": 0, "verified": 0, "invalid": 0, "new": 0,
                    "duplicate": 0, "sent": 0, "send_failed": 0, "queued": 0},
         "workflows": {},
-        "lock": {"owner": None, "workflow": None, "expires_at": None},
+        "lock": {"owner": None, "workflow": None, "expires_at": None,
+                "chain_id": None, "generation": 0, "fencing_token": 0,
+                "owner_run_id": None, "acquired_at": None,
+                "last_heartbeat": None, "status": None},
         "history": [],
     }
 
@@ -216,6 +219,120 @@ def release(owner: str) -> None:
             lock.update({"owner": None, "workflow": None, "expires_at": None})
 
     _mutate(_apply)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Chain lease / fencing token (فاز ۲ — گام اول)
+# ──────────────────────────────────────────────────────────────────────────────
+def chain_state() -> dict:
+    """وضعیتِ فعلیِ chain lease را برمی‌گرداند."""
+    lock = (load().get("lock") or {})
+    return {
+        "chain_id": lock.get("chain_id"),
+        "generation": int(lock.get("generation") or 0),
+        "fencing_token": int(lock.get("fencing_token") or 0),
+        "owner": lock.get("owner"),
+        "owner_run_id": lock.get("owner_run_id"),
+        "workflow": lock.get("workflow"),
+        "acquired_at": lock.get("acquired_at"),
+        "lease_expires_at": lock.get("expires_at"),
+        "last_heartbeat": lock.get("last_heartbeat"),
+        "status": lock.get("status"),
+    }
+
+
+def acquire_chain_lease(owner: str, run_id: str | None = None,
+                       chain_id: str | None = None,
+                       generation: int | None = None,
+                       ttl_min: float = 40.0) -> tuple[bool, int, str]:
+    """Lease را به‌صورت اتمی می‌گیرد. برمی‌گرداند (ok, fencing_token, reason).
+
+    قانون: نسلِ بالاتر یا fencing بالاتر می‌تواند مالکیت را بگیرد؛ نسلِ
+    پایین‌تر (یا منقضی‌شده) نمی‌تواند. اگر leaseٔ فعلی معتبر و نسلش بالاتر
+    باشد، درخواست رد می‌شود (جلوگیری از دو مالک)."""
+    result = {"ok": False, "token": 0, "why": ""}
+
+    def _apply(data: dict) -> None:
+        lock = data.setdefault("lock", {})
+        cur_owner = lock.get("owner")
+        cur_gen = int(lock.get("generation") or 0)
+        cur_token = int(lock.get("fencing_token") or 0)
+        cur_exp = lock.get("expires_at") or 0
+        alive = bool(cur_owner) and cur_exp > _now()
+        new_gen = int(generation if generation is not None else cur_gen)
+        if alive and new_gen < cur_gen:
+            result["why"] = (f"stale generation: current={cur_gen} "
+                             f"requested={new_gen}")
+            return
+        if alive and new_gen == cur_gen and cur_owner not in (None, owner):
+            result["why"] = f"lease held by {cur_owner}"
+            return
+        new_token = cur_token + 1
+        now = _now()
+        lock.update({
+            "owner": owner,
+            "workflow": lock.get("workflow"),
+            "expires_at": now + ttl_min * 60,
+            "chain_id": chain_id if chain_id is not None else lock.get("chain_id"),
+            "generation": new_gen if new_gen >= cur_gen else cur_gen,
+            "fencing_token": new_token,
+            "owner_run_id": run_id,
+            "acquired_at": _iso(now),
+            "last_heartbeat": _iso(now),
+            "status": "active",
+        })
+        result["ok"] = True
+        result["token"] = new_token
+
+    _mutate(_apply)
+    return result["ok"], result["token"], (owner if result["ok"] else result["why"])
+
+
+def renew_chain_lease(owner: str, fencing_token: int,
+                     ttl_min: float = 40.0) -> bool:
+    """Lease را فقط اگر fencing_token معتبر باشد تمدید می‌کند."""
+    result = {"ok": False}
+
+    def _apply(data: dict) -> None:
+        lock = data.setdefault("lock", {})
+        if lock.get("owner") != owner:
+            return
+        if int(lock.get("fencing_token") or 0) != int(fencing_token):
+            return
+        lock["expires_at"] = _now() + ttl_min * 60
+        lock["last_heartbeat"] = _iso()
+        lock["status"] = "active"
+        result["ok"] = True
+
+    _mutate(_apply)
+    return result["ok"]
+
+
+def release_chain_lease(owner: str, fencing_token: int) -> bool:
+    """Lease را فقط با fencing_token معتبر آزاد می‌کند."""
+    result = {"ok": False}
+
+    def _apply(data: dict) -> None:
+        lock = data.setdefault("lock", {})
+        if lock.get("owner") != owner:
+            return
+        if int(lock.get("fencing_token") or 0) != int(fencing_token):
+            return
+        lock.update({"owner": None, "workflow": None, "expires_at": None,
+                     "owner_run_id": None, "status": "released",
+                     "last_heartbeat": _iso()})
+        result["ok"] = True
+
+    _mutate(_apply)
+    return result["ok"]
+
+
+def is_lease_valid(fencing_token: int) -> bool:
+    """آیا fencing_tokenٔ داده‌شده هنوز مالکِ معتبر است."""
+    lock = (load().get("lock") or {})
+    return (int(lock.get("fencing_token") or 0) == int(fencing_token)
+            and (lock.get("expires_at") or 0) > _now()
+            and lock.get("status") in ("active", None))
 
 
 def stage(name: str, status: str = "ok", detail: str = "") -> None:
@@ -390,9 +507,25 @@ def summarize() -> dict:
 # ──────────────────────────────────────────────────────────────────────────────
 # انتشار روی شاخهٔ state (git plumbing، بدونِ دست‌زدن به worktree)
 # ──────────────────────────────────────────────────────────────────────────────
+def _git_env() -> dict:
+    """Git identity for commit-tree/push on CI runners where user.* is unset.
+
+    GitHub Actions' checkout usually sets these, but the state branch is
+    pushed through plumbing (`commit-tree`) and on a fresh runner the author
+    identity can be missing → «Author identity unknown». Provide a sane
+    default without overriding any value the environment already has.
+    """
+    env = os.environ.copy()
+    env.setdefault("GIT_AUTHOR_NAME", "Free-v2ray status bot")
+    env.setdefault("GIT_AUTHOR_EMAIL", "status@free-v2ray-configs.local")
+    env.setdefault("GIT_COMMITTER_NAME", env["GIT_AUTHOR_NAME"])
+    env.setdefault("GIT_COMMITTER_EMAIL", env["GIT_AUTHOR_EMAIL"])
+    return env
+
+
 def _git(*args: str, timeout: int = 60, check: bool = False) -> subprocess.CompletedProcess:
     return subprocess.run(["git", *args], cwd=str(REPO_ROOT), capture_output=True,
-                          text=True, timeout=timeout, check=check)
+                          text=True, timeout=timeout, check=check, env=_git_env())
 
 
 def _parent_sha() -> str | None:
@@ -415,13 +548,14 @@ def publish() -> bool:
         try:
             h = subprocess.run(["git", "hash-object", "-w", "--stdin"],
                                cwd=str(REPO_ROOT), input=blob, capture_output=True,
-                               timeout=60)
+                               timeout=60, env=_git_env())
             if h.returncode != 0:
                 raise RuntimeError(h.stderr.decode().strip()[:200])
             blob_sha = h.stdout.decode().strip()
             tree_line = f"100644 blob {blob_sha}\t{STATE_FILE}\n"
             t = subprocess.run(["git", "mktree"], cwd=str(REPO_ROOT),
-                               input=tree_line.encode(), capture_output=True, timeout=60)
+                               input=tree_line.encode(), capture_output=True, timeout=60,
+                               env=_git_env())
             if t.returncode != 0:
                 raise RuntimeError(t.stderr.decode().strip()[:200])
             tree = t.stdout.decode().strip()

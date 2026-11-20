@@ -1,0 +1,91 @@
+name: 🐕 Watchdog (chain health)
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+env:
+  PYTHONIOENCODING: "utf-8"
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: ⬇️ Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: 📥 Pull runtime status
+        run: python scripts/status.py pull || echo "::warning::status pull skipped"
+
+      - name: 🔍 Evaluate chain health
+        id: health
+        run: |
+          python - <<'PY'
+          import json, os, sys, time
+          from pathlib import Path
+          p = Path("data/runtime/status.json")
+          try:
+              data = json.loads(p.read_text(encoding="utf-8"))
+          except Exception:
+              data = {}
+          bot = data.get("bot") or {}
+          lock = data.get("lock") or {}
+          hb = bot.get("last_heartbeat")
+          age = None
+          if hb:
+              try:
+                  t = time.strptime(hb, "%Y-%m-%dT%H:%M:%SZ")
+                  age = time.time() - time.mktime(t)
+              except Exception:
+                  age = None
+          exp = lock.get("expires_at") or 0
+          now = time.time()
+          stale = (age is None) or (age > 180)
+          expired_lease = bool(lock.get("owner")) and exp < now
+          print(f"heartbeat_age={age}")
+          print(f"stale={stale}")
+          print(f"expired_lease={expired_lease}")
+          # GitHub Actions output
+          gh = os.environ.get("GITHUB_OUTPUT")
+          if gh:
+              with open(gh, "a") as f:
+                  f.write(f"stale={'true' if stale else 'false'}\n")
+                  f.write(f"expired_lease={'true' if expired_lease else 'false'}\n")
+          if stale or expired_lease:
+              print("::warning::chain may be stalled")
+          PY
+
+      - name: 🔔 Trigger aggregate-now if stalled
+        if: steps.health.outputs.stale == 'true' || steps.health.outputs.expired_lease == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, urllib.request, json
+          repo = os.environ.get("GITHUB_REPOSITORY")
+          token = os.environ.get("GITHUB_TOKEN")
+          if not repo or not token:
+              print("missing repo/token"); raise SystemExit(0)
+          url = f"https://api.github.com/repos/{repo}/dispatches"
+          body = json.dumps({"event_type": "aggregate-now"}).encode()
+          req = urllib.request.Request(url, data=body, method="POST")
+          req.add_header("Authorization", f"Bearer {token}")
+          req.add_header("Accept", "application/vnd.github+json")
+          req.add_header("X-GitHub-Api-Version", "2022-11-28")
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print("dispatch status", r.status)
+          except Exception as e:
+              print("dispatch failed:", e)
+          PY

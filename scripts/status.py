@@ -529,9 +529,15 @@ def _git(*args: str, timeout: int = 60, check: bool = False) -> subprocess.Compl
 
 
 def _parent_sha() -> str | None:
-    r = _git("ls-remote", "origin", f"refs/heads/{STATE_BRANCH}")
+    # شاخهٔ state باید محلی موجود باشد تا commit-tree بتواند -p را حل کند.
+    # (ls-remote فقط sha می‌دهد، نه خودِ object، پس commit-tree با
+    # «is not a valid object» می‌ترکید.)
+    _git("fetch", "--depth=1", "--no-tags", "origin",
+         f"+refs/heads/{STATE_BRANCH}:refs/remotes/origin/{STATE_BRANCH}",
+         timeout=90)
+    r = _git("rev-parse", "--verify", f"refs/remotes/origin/{STATE_BRANCH}")
     if r.returncode == 0 and r.stdout.strip():
-        return r.stdout.split()[0].strip()
+        return r.stdout.strip()
     return None
 
 

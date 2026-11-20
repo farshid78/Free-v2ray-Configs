@@ -117,7 +117,7 @@ async def _another_instance_polls(token: str) -> bool:
 
 
 async def heartbeat_job(context: ContextTypes.DEFAULT_TYPE) -> None:
-    """هر دقیقه وضعیتِ «آنلاین» را با زمانِ زنده مینویسد.
+    """هر دقیقه وضعیتِ «آنلاین» را با زمانِ زنده مینویسد و منتشر می‌کند.
 
     داشبورد با همین heartbeat سنِ آخرین تماس را نشان می‌دهد؛ نبودِ آن یعنی
     ربات آفلاین است — نه این‌که «آخرین workflow سبز بود».
@@ -125,6 +125,7 @@ async def heartbeat_job(context: ContextTypes.DEFAULT_TYPE) -> None:
     try:
         from scripts import status as rt
         rt.heartbeat(note=f"run_minutes={RUN_MINUTES}")
+        await asyncio.get_event_loop().run_in_executor(None, rt.publish)
     except Exception:
         pass
 
@@ -181,7 +182,7 @@ def main() -> None:
         app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=900, first=300)
         app.job_queue.run_repeating(heartbeat_job, interval=60, first=1)
         # انتشارِ وضعیت هر ۵ دقیقه: داشبورد باید «آنلاین/آفلاین» را واقعی ببیند.
-        app.job_queue.run_repeating(status_publish_job, interval=300, first=90)
+        app.job_queue.run_repeating(status_publish_job, interval=120, first=30)
         logging.info("انتشار خودکار فعال شد: صفِ ۲۰تایی با فاصلهٔ تصادفی")
     except Exception:
         logging.exception("زمان‌بندیِ انتشار خودکار فعال نشد — کانفیگی به کانال نمی‌رود")
@@ -189,6 +190,14 @@ def main() -> None:
     # بررسیِ ۴۰۹ روی یک loop مستقل؛ بعدش یک loop تازه به‌عنوانِ current
     # می‌گذاریم، چون `asyncio.run` آن را پاک می‌کند و `run_polling` بعدی
     # `RuntimeError: There is no current event loop` می‌دهد.
+    # انتشارِ فوری تا داشبورد از همان ابتدای برش «آنلاین» ببیند.
+    try:
+        from scripts import status as _rt
+        _rt.heartbeat(note=f"run_minutes={RUN_MINUTES}")
+        _rt.publish()
+    except Exception:
+        pass
+
     probe = asyncio.new_event_loop()
     try:
         busy = probe.run_until_complete(_another_instance_polls(BOT_TOKEN))
@@ -224,6 +233,7 @@ def main() -> None:
         try:
             from scripts import status as rt
             rt.bot_offline("stopped")
+            rt.publish()
         except Exception:
             pass
 

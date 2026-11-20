@@ -3,17 +3,19 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — TURKEY (TR) — 10 configs
+# @jojo_config — TURKEY (TR) — 12 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://a346c521-7a7f-452b-9356-a4893feb5982@77.83.245.79:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&security=reality&sid=457fab2ac885dbe0&sni=tr1-r.bankai.party&type=tcp#TR 🇹🇷 | @jojo_config | B0A4FF
-vless://a346c521-7a7f-452b-9356-a4893feb5982@77.83.245.79:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tr1-r.bankai.party&fp=chrome&security=reality&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&sid=#TR 🇹🇷 | @jojo_config | 097C52
+vless://c34a41b6-598f-46ac-bea3-8b39a906f922@87.76.154.28:57231?encryption=none&security=none&type=tcp#TR 🇹🇷 | @jojo_config | C640C8
 vless://26843758-24de-4f76-b5d0-624038e353c4@153.56.229.218:443?encryption=none&fp=firefox&pbk=3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE&security=reality&sid=e572b6579ea525d4&sni=71b840t.de7.h1clayd.click&type=tcp#TR 🇹🇷 | @jojo_config | 70CDF6
 vless://ba0dbd83-3569-46dc-bc3d-ef6e58ffc97b@153.56.229.218:443?security=reality&encryption=none&pbk=3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE&headerType=none&fp=chrome&type=tcp&sni=71b840t.de7.h1clayd.click&sid=e572b6579ea525d4#TR 🇹🇷 | @jojo_config | 605606
-vless://62995b2a-8f82-41f8-ac80-dfdfc1253e76@us12.h1cloud.net:25155?mode=stream-one&path=/astral-edge-h1&security=reality&encryption=none&pbk=I4mzdgz1mvaVDtkDD9AzK1ZJkEaQu_GYEbGIfm_a5UM&type=xhttp&sni=48688cr.us12.h1clayd.click&sid=0ebb438948cdf356#TR 🇹🇷 | @jojo_config | 21019E
-vless://128bd8ad-4f6c-4d70-af13-15a2cec331d2@185.71.216.177:2194?security=reality&encryption=none&pbk=jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=55986a94e2228791#TR 🇹🇷 | @jojo_config | 57833A
-vless://f131d292-d3c2-42b3-bcea-f9712c31b303@185.71.216.94:2090?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk&sid=bb472a184677af64&type=tcp#TR 🇹🇷 | @jojo_config | 25CC71
+vless://a346c521-7a7f-452b-9356-a4893feb5982@77.83.245.79:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&security=reality&sid=457fab2ac885dbe0&sni=tr1-r.bankai.party&type=tcp#TR 🇹🇷 | @jojo_config | B0A4FF
+vless://a346c521-7a7f-452b-9356-a4893feb5982@77.83.245.79:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tr1-r.bankai.party&fp=chrome&security=reality&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&sid=#TR 🇹🇷 | @jojo_config | 097C52
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpsWlp6Zm8xbXFIN1BxbmxvQW9nZGkyWEJobGdpb2ZNeQ==@tr.subscriptionservice.ir:2089#TR 🇹🇷 | @jojo_config | 5870FB
 vless://4201786b-d99b-4147-a5f0-20d47acddb81@153.56.229.207:443?security=reality&encryption=none&pbk=MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=4935e4t.de25.h1clayd.click&sid=6976d670818644cc#TR 🇹🇷 | @jojo_config | BDEAD2
-vless://01e61db7-9e0b-4431-a995-a5288a01b951@147.45.66.208:43000?encryption=none&flow=xtls-rprx-vision&fp=&pbk=DbL9RJFvJrnxBu6fFhWkHF8nsD6cK_DKMuMV00RmlWg&security=reality&sid=4d3d8e15&sni=147.45.66.208&type=tcp#TR 🇹🇷 | @jojo_config | F8BDF5
+vless://62995b2a-8f82-41f8-ac80-dfdfc1253e76@us12.h1cloud.net:25155?mode=stream-one&path=/astral-edge-h1&security=reality&encryption=none&pbk=I4mzdgz1mvaVDtkDD9AzK1ZJkEaQu_GYEbGIfm_a5UM&type=xhttp&sni=48688cr.us12.h1clayd.click&sid=0ebb438948cdf356#TR 🇹🇷 | @jojo_config | 21019E
+vless://8b7a8f61-74c0-491f-bbba-ea153edb1a4b@185.71.216.177:2093?security=reality&encryption=none&pbk=C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=8a9725533854a7e8#TR 🇹🇷 | @jojo_config | 43D975
+vless://ca21222b-caf1-4418-b404-345ea713daa4@185.71.216.95:2092?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI&sid=716b7eba38125f3a&type=tcp#TR 🇹🇷 | @jojo_config | C8C77C
+vless://8b7a8f61-74c0-491f-bbba-ea153edb1a4b@185.71.216.94:2093?security=reality&encryption=none&pbk=C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=8a9725533854a7e8#TR 🇹🇷 | @jojo_config | 235CE9
 vless://128bd8ad-4f6c-4d70-af13-15a2cec331d2@185.71.216.95:2194?security=reality&encryption=none&pbk=jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=55986a94e2228791#TR 🇹🇷 | @jojo_config | 0C49D0

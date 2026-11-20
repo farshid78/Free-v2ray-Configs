@@ -9168,7 +9168,7 @@ proxies:
     short-id: 8d0d0679f42ffd98
   client-fingerprint: chrome
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @jojo_config | 8BD9AC"
+- name: "RU \U0001F1F7\U0001F1FA | @jojo_config | 8BD9AC"
   server: 8a2e72t.nl20.h1clayd.shop
   port: 443
   type: vless
@@ -21094,6 +21094,21 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
+- name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | 952B1E"
+  server: 104.18.42.163
+  port: 443
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
 - name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | F2461C"
   server: 104.18.57.111
   port: 2052
@@ -31324,6 +31339,21 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
+- name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | C7B750"
+  server: 172.64.145.93
+  port: 443
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
 - name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9442FF"
   server: 172.64.146.191
   port: 2083
@@ -32655,6 +32685,21 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
 - name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | 5D90F1"
+  server: 172.67.190.164
+  port: 443
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | 157557"
   server: 172.67.190.164
   port: 443
   type: vmess
@@ -35723,6 +35768,21 @@ proxies:
     path: /ws
     headers:
       Host: vmess.lbw666.dpdns.org
+- name: "US \U0001F1FA\U0001F1F8 | @jojo_config | F642DA"
+  server: 188.114.99.137
+  port: 443
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
 - name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | BFE134"
   server: 188.121.120.86
   port: 11358
@@ -55012,11 +55072,31 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | FC33B2"
+  server: dashboard.nixamarket.top
+  port: 12427
+  type: vmess
+  uuid: 3666af1e-8fa9-4285-b0e2-58e2f61dbbab
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
 - name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | 283342"
   server: dashboard.nixamarket.top
   port: 12427
   type: vmess
   uuid: d48b220f-fdc6-44c8-907a-3b10045f0bae
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5A992C"
+  server: dashboard.nixamarket.top
+  port: 12427
+  type: vmess
+  uuid: e261deb9-98ec-4231-8744-4afe0ecfebc0
   alterId: 0
   cipher: auto
   udp: true
@@ -63268,6 +63348,21 @@ proxies:
     path: /api/yBg7Aw
     headers:
       Host: mort5edf-production.up.railway.app
+- name: "SG \U0001F1F8\U0001F1EC | @jojo_config | 6C45D4"
+  server: mortaze44-production.up.railway.app
+  port: 443
+  type: vmess
+  uuid: 62c80db2-e3ee-42a6-83d3-f53439a20c3b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mortaze44-production.up.railway.app
+  network: ws
+  ws-opts:
+    path: /api/0aTsIR
+    headers:
+      Host: mortaze44-production.up.railway.app
 - name: "SG \U0001F1F8\U0001F1EC | @jojo_config | 4DF35F"
   server: morteda-production.up.railway.app
   port: 443
@@ -67518,6 +67613,26 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | 09711D"
+  server: s1.connect.bloroxy.net
+  port: 1132
+  type: vmess
+  uuid: 6ef9dc71-c182-403c-a7f2-ab06dface2c7
+  alterId: 0
+  cipher: aes-128-gcm
+  udp: true
+  tls: false
+  network: tcp
+- name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | D060C4"
+  server: s1.connect.bloroxy.net
+  port: 1132
+  type: vmess
+  uuid: 6ef9dc71-c182-403c-a7f2-ab06dface2c7
+  alterId: 1
+  cipher: aes-128-gcm
+  udp: true
+  tls: false
+  network: tcp
 - name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | 3216BD"
   server: s1.connect.bloroxy.net
   port: 1139
@@ -67791,6 +67906,16 @@ proxies:
     path: /api/qtRt1u
     headers:
       Host: sciffreredswa-production.up.railway.app
+- name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5D006A"
+  server: sefr.ishizaki.ir
+  port: 9443
+  type: vmess
+  uuid: 1e8aa5e5-78e1-41d0-9f33-cd04286b8a5c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
 - name: "HK \U0001F1ED\U0001F1F0 | @jojo_config | 3E1260"
   server: select-sg.ddnskunlun.com
   port: 9039
@@ -68919,7 +69044,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | 875198"
+- name: "FI \U0001F1EB\U0001F1EE | @jojo_config | 875198"
   server: tgju.org
   port: 8080
   type: vmess
@@ -70626,6 +70751,18 @@ proxies:
     path: /wes
     headers:
       Host: us122204.ssgreen.org
+- name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8DE20D"
+  server: US122205.ssgreen.org
+  port: 443
+  type: vmess
+  uuid: a0e886c0-0d13-4446-9ad3-1325f595e39e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /wes
 - name: "CA \U0001F1E8\U0001F1E6 | @jojo_config | E62746"
   server: US122205.ssgreen.org
   port: 443
@@ -75309,7 +75446,7 @@ proxy-groups:
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | DAD5DF"
   - "FI \U0001F1EB\U0001F1EE | @jojo_config | AC57B6"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | FEC9FA"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 8BD9AC"
+  - "RU \U0001F1F7\U0001F1FA | @jojo_config | 8BD9AC"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | FC9BE8"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 9B56D4"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | F02D49"
@@ -76220,6 +76357,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 94513B"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | A72B09"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | E20903"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 952B1E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | F2461C"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 1087F4"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8DA3B6"
@@ -77029,6 +77167,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 953111"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | C70602"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 408106"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | C7B750"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9442FF"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | D2DA3E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 157084"
@@ -77119,6 +77258,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | C40235"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 0AD519"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 5D90F1"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 157557"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9E3556"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | B889FD"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 7EDCAD"
@@ -77365,6 +77505,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 6266BD"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 0FC585"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | D446C3"
+  - "US \U0001F1FA\U0001F1F8 | @jojo_config | F642DA"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | BFE134"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 8AC970"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 1F22D5"
@@ -78916,7 +79057,9 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5D687A"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 2A0BB0"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 1542EA"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | FC33B2"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 283342"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5A992C"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 6F4AB3"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | DEC616"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 2F62B1"
@@ -79604,6 +79747,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 68AE9D"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 2D8567"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 5EAF24"
+  - "SG \U0001F1F8\U0001F1EC | @jojo_config | 6C45D4"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 4DF35F"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | CD7C25"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | FE1914"
@@ -79914,6 +80058,8 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 9EED75"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5830B0"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 9C7D95"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 09711D"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D060C4"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 3216BD"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 9A92E5"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 93F6C8"
@@ -79938,6 +80084,7 @@ proxy-groups:
   - "Global \U0001F310 | @jojo_config | A17FD9"
   - "LV \U0001F1F1\U0001F1FB | @jojo_config | CECC62"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | B75BF0"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5D006A"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | 3E1260"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | C43E45"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | 6BEBE7"
@@ -80023,7 +80170,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | @jojo_config | C51365"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D8FEA2"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 875198"
+  - "FI \U0001F1EB\U0001F1EE | @jojo_config | 875198"
   - "JP \U0001F1EF\U0001F1F5 | @jojo_config | 79F85B"
   - "Global \U0001F310 | @jojo_config | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 198807"
@@ -80158,6 +80305,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 60BE39"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 6E2C7D"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | FA4760"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8DE20D"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | E62746"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 473C1A"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 398DEF"
@@ -81497,7 +81645,7 @@ proxy-groups:
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | DAD5DF"
   - "FI \U0001F1EB\U0001F1EE | @jojo_config | AC57B6"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | FEC9FA"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 8BD9AC"
+  - "RU \U0001F1F7\U0001F1FA | @jojo_config | 8BD9AC"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | FC9BE8"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 9B56D4"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | F02D49"
@@ -82408,6 +82556,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 94513B"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | A72B09"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | E20903"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 952B1E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | F2461C"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 1087F4"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8DA3B6"
@@ -83217,6 +83366,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 953111"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | C70602"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 408106"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | C7B750"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9442FF"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | D2DA3E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 157084"
@@ -83307,6 +83457,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | C40235"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 0AD519"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 5D90F1"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 157557"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9E3556"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | B889FD"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 7EDCAD"
@@ -83553,6 +83704,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 6266BD"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 0FC585"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | D446C3"
+  - "US \U0001F1FA\U0001F1F8 | @jojo_config | F642DA"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | BFE134"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 8AC970"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 1F22D5"
@@ -85104,7 +85256,9 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5D687A"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 2A0BB0"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 1542EA"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | FC33B2"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 283342"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5A992C"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 6F4AB3"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | DEC616"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 2F62B1"
@@ -85792,6 +85946,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 68AE9D"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 2D8567"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 5EAF24"
+  - "SG \U0001F1F8\U0001F1EC | @jojo_config | 6C45D4"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 4DF35F"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | CD7C25"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | FE1914"
@@ -86102,6 +86257,8 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 9EED75"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5830B0"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 9C7D95"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 09711D"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D060C4"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 3216BD"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 9A92E5"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 93F6C8"
@@ -86126,6 +86283,7 @@ proxy-groups:
   - "Global \U0001F310 | @jojo_config | A17FD9"
   - "LV \U0001F1F1\U0001F1FB | @jojo_config | CECC62"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | B75BF0"
+  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 5D006A"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | 3E1260"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | C43E45"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | 6BEBE7"
@@ -86211,7 +86369,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | @jojo_config | C51365"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D8FEA2"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 875198"
+  - "FI \U0001F1EB\U0001F1EE | @jojo_config | 875198"
   - "JP \U0001F1EF\U0001F1F5 | @jojo_config | 79F85B"
   - "Global \U0001F310 | @jojo_config | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 198807"
@@ -86346,6 +86504,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 60BE39"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 6E2C7D"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | FA4760"
+  - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8DE20D"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | E62746"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 473C1A"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 398DEF"

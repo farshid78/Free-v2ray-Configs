@@ -3,15 +3,17 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — JAPAN (JP) — 8 configs
+# @jojo_config — JAPAN (JP) — 10 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | @jojo_config | 9EF41E
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.240:443#JP 🇯🇵 | @jojo_config | 2459E0
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.204:443#JP 🇯🇵 | @jojo_config | 554D18
-vmess://eyJ2IjoiMiIsInBzIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCA4RTVCNTgiLCJhZGQiOiI2NC4xNzYuMzQuMTAyIiwicG9ydCI6IjQ2MTMwIiwiaWQiOiI0NzczNTBiMi03NTM2LTRmMzgtZWUyMS0wMjBlZmRkZTJkMWQiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJ0bHMiOiIifQ==
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.240:443#JP 🇯🇵 | @jojo_config | 2459E0
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | @jojo_config | 9EF41E
 ss://YWVzLTI1Ni1nY206WUt3RHozbUZwVDl2R2NMOG5CczVkSHJBMnN4TQ@64.176.57.251:8388#JP 🇯🇵 | @jojo_config | 494FE5
-vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?security=reality&type=raw&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=684c7531e599dec0&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8&encryption=none#JP 🇯🇵 | @jojo_config | AA31A8
-ss://YWVzLTEyOC1nY206QndscWg3R2NGQg@168.138.205.100:53758#JP 🇯🇵 | @jojo_config | 1A14DC
 ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@jpa.123069.xyz:53758#JP 🇯🇵 | @jojo_config | 66A632
+vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?security=reality&type=raw&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=684c7531e599dec0&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8&encryption=none#JP 🇯🇵 | @jojo_config | AA31A8
+vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP 🇯🇵 | @jojo_config | 419490
+ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:80#JP 🇯🇵 | @jojo_config | EA55E0
+ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:443#JP 🇯🇵 | @jojo_config | 17E3DC
+ss://YWVzLTEyOC1nY206QndscWg3R2NGQg@168.138.205.100:53758#JP 🇯🇵 | @jojo_config | 1A14DC

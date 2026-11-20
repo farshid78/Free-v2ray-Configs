@@ -1084,7 +1084,7 @@
         "EE 🇪🇪 | @jojo_config | DAD5DF",
         "FI 🇫🇮 | @jojo_config | AC57B6",
         "SE 🇸🇪 | @jojo_config | FEC9FA",
-        "NL 🇳🇱 | @jojo_config | 8BD9AC",
+        "RU 🇷🇺 | @jojo_config | 8BD9AC",
         "SE 🇸🇪 | @jojo_config | FC9BE8",
         "NL 🇳🇱 | @jojo_config | 9B56D4",
         "NL 🇳🇱 | @jojo_config | F02D49",
@@ -1950,6 +1950,7 @@
         "CA 🇨🇦 | @jojo_config | 94513B",
         "CA 🇨🇦 | @jojo_config | A72B09",
         "CA 🇨🇦 | @jojo_config | E20903",
+        "CA 🇨🇦 | @jojo_config | 952B1E",
         "CA 🇨🇦 | @jojo_config | F2461C",
         "CA 🇨🇦 | @jojo_config | 1087F4",
         "CA 🇨🇦 | @jojo_config | 8DA3B6",
@@ -2755,6 +2756,7 @@
         "DE 🇩🇪 | @jojo_config | 953111",
         "DE 🇩🇪 | @jojo_config | C70602",
         "CA 🇨🇦 | @jojo_config | 408106",
+        "CA 🇨🇦 | @jojo_config | C7B750",
         "CA 🇨🇦 | @jojo_config | 9442FF",
         "CA 🇨🇦 | @jojo_config | D2DA3E",
         "CA 🇨🇦 | @jojo_config | 157084",
@@ -2845,6 +2847,7 @@
         "CA 🇨🇦 | @jojo_config | C40235",
         "CA 🇨🇦 | @jojo_config | 0AD519",
         "CA 🇨🇦 | @jojo_config | 5D90F1",
+        "CA 🇨🇦 | @jojo_config | 157557",
         "CA 🇨🇦 | @jojo_config | 9E3556",
         "CA 🇨🇦 | @jojo_config | B889FD",
         "CA 🇨🇦 | @jojo_config | 7EDCAD",
@@ -3083,6 +3086,7 @@
         "US 🇺🇸 | @jojo_config | 6266BD",
         "US 🇺🇸 | @jojo_config | 0FC585",
         "US 🇺🇸 | @jojo_config | D446C3",
+        "US 🇺🇸 | @jojo_config | F642DA",
         "IR 🇮🇷 | @jojo_config | BFE134",
         "IR 🇮🇷 | @jojo_config | 8AC970",
         "IR 🇮🇷 | @jojo_config | 1F22D5",
@@ -4614,7 +4618,9 @@
         "IR 🇮🇷 | @jojo_config | 5D687A",
         "IR 🇮🇷 | @jojo_config | 2A0BB0",
         "IR 🇮🇷 | @jojo_config | 1542EA",
+        "IR 🇮🇷 | @jojo_config | FC33B2",
         "IR 🇮🇷 | @jojo_config | 283342",
+        "IR 🇮🇷 | @jojo_config | 5A992C",
         "IR 🇮🇷 | @jojo_config | 6F4AB3",
         "IR 🇮🇷 | @jojo_config | DEC616",
         "IR 🇮🇷 | @jojo_config | 2F62B1",
@@ -5299,6 +5305,7 @@
         "SG 🇸🇬 | @jojo_config | 68AE9D",
         "SG 🇸🇬 | @jojo_config | 2D8567",
         "SG 🇸🇬 | @jojo_config | 5EAF24",
+        "SG 🇸🇬 | @jojo_config | 6C45D4",
         "SG 🇸🇬 | @jojo_config | 4DF35F",
         "SG 🇸🇬 | @jojo_config | CD7C25",
         "SG 🇸🇬 | @jojo_config | FE1914",
@@ -5604,6 +5611,8 @@
         "IR 🇮🇷 | @jojo_config | 9EED75",
         "IR 🇮🇷 | @jojo_config | 5830B0",
         "IR 🇮🇷 | @jojo_config | 9C7D95",
+        "IR 🇮🇷 | @jojo_config | 09711D",
+        "IR 🇮🇷 | @jojo_config | D060C4",
         "IR 🇮🇷 | @jojo_config | 3216BD",
         "IR 🇮🇷 | @jojo_config | 9A92E5",
         "IR 🇮🇷 | @jojo_config | 93F6C8",
@@ -5627,6 +5636,7 @@
         "IR 🇮🇷 | @jojo_config | 744B4B",
         "Global 🌐 | @jojo_config | A17FD9",
         "SG 🇸🇬 | @jojo_config | B75BF0",
+        "IR 🇮🇷 | @jojo_config | 5D006A",
         "HK 🇭🇰 | @jojo_config | 3E1260",
         "HK 🇭🇰 | @jojo_config | C43E45",
         "HK 🇭🇰 | @jojo_config | 6BEBE7",
@@ -5710,7 +5720,7 @@
         "TW 🇹🇼 | @jojo_config | C51365",
         "IR 🇮🇷 | @jojo_config | DA5F3B",
         "IR 🇮🇷 | @jojo_config | D8FEA2",
-        "DE 🇩🇪 | @jojo_config | 875198",
+        "FI 🇫🇮 | @jojo_config | 875198",
         "JP 🇯🇵 | @jojo_config | 79F85B",
         "Global 🌐 | @jojo_config | 6A574C",
         "IR 🇮🇷 | @jojo_config | 198807",
@@ -5845,6 +5855,7 @@
         "CA 🇨🇦 | @jojo_config | 60BE39",
         "CA 🇨🇦 | @jojo_config | 6E2C7D",
         "CA 🇨🇦 | @jojo_config | FA4760",
+        "CA 🇨🇦 | @jojo_config | 8DE20D",
         "CA 🇨🇦 | @jojo_config | E62746",
         "CA 🇨🇦 | @jojo_config | 473C1A",
         "CA 🇨🇦 | @jojo_config | 398DEF",
@@ -7160,7 +7171,7 @@
         "EE 🇪🇪 | @jojo_config | DAD5DF",
         "FI 🇫🇮 | @jojo_config | AC57B6",
         "SE 🇸🇪 | @jojo_config | FEC9FA",
-        "NL 🇳🇱 | @jojo_config | 8BD9AC",
+        "RU 🇷🇺 | @jojo_config | 8BD9AC",
         "SE 🇸🇪 | @jojo_config | FC9BE8",
         "NL 🇳🇱 | @jojo_config | 9B56D4",
         "NL 🇳🇱 | @jojo_config | F02D49",
@@ -8026,6 +8037,7 @@
         "CA 🇨🇦 | @jojo_config | 94513B",
         "CA 🇨🇦 | @jojo_config | A72B09",
         "CA 🇨🇦 | @jojo_config | E20903",
+        "CA 🇨🇦 | @jojo_config | 952B1E",
         "CA 🇨🇦 | @jojo_config | F2461C",
         "CA 🇨🇦 | @jojo_config | 1087F4",
         "CA 🇨🇦 | @jojo_config | 8DA3B6",
@@ -8831,6 +8843,7 @@
         "DE 🇩🇪 | @jojo_config | 953111",
         "DE 🇩🇪 | @jojo_config | C70602",
         "CA 🇨🇦 | @jojo_config | 408106",
+        "CA 🇨🇦 | @jojo_config | C7B750",
         "CA 🇨🇦 | @jojo_config | 9442FF",
         "CA 🇨🇦 | @jojo_config | D2DA3E",
         "CA 🇨🇦 | @jojo_config | 157084",
@@ -8921,6 +8934,7 @@
         "CA 🇨🇦 | @jojo_config | C40235",
         "CA 🇨🇦 | @jojo_config | 0AD519",
         "CA 🇨🇦 | @jojo_config | 5D90F1",
+        "CA 🇨🇦 | @jojo_config | 157557",
         "CA 🇨🇦 | @jojo_config | 9E3556",
         "CA 🇨🇦 | @jojo_config | B889FD",
         "CA 🇨🇦 | @jojo_config | 7EDCAD",
@@ -9159,6 +9173,7 @@
         "US 🇺🇸 | @jojo_config | 6266BD",
         "US 🇺🇸 | @jojo_config | 0FC585",
         "US 🇺🇸 | @jojo_config | D446C3",
+        "US 🇺🇸 | @jojo_config | F642DA",
         "IR 🇮🇷 | @jojo_config | BFE134",
         "IR 🇮🇷 | @jojo_config | 8AC970",
         "IR 🇮🇷 | @jojo_config | 1F22D5",
@@ -10690,7 +10705,9 @@
         "IR 🇮🇷 | @jojo_config | 5D687A",
         "IR 🇮🇷 | @jojo_config | 2A0BB0",
         "IR 🇮🇷 | @jojo_config | 1542EA",
+        "IR 🇮🇷 | @jojo_config | FC33B2",
         "IR 🇮🇷 | @jojo_config | 283342",
+        "IR 🇮🇷 | @jojo_config | 5A992C",
         "IR 🇮🇷 | @jojo_config | 6F4AB3",
         "IR 🇮🇷 | @jojo_config | DEC616",
         "IR 🇮🇷 | @jojo_config | 2F62B1",
@@ -11375,6 +11392,7 @@
         "SG 🇸🇬 | @jojo_config | 68AE9D",
         "SG 🇸🇬 | @jojo_config | 2D8567",
         "SG 🇸🇬 | @jojo_config | 5EAF24",
+        "SG 🇸🇬 | @jojo_config | 6C45D4",
         "SG 🇸🇬 | @jojo_config | 4DF35F",
         "SG 🇸🇬 | @jojo_config | CD7C25",
         "SG 🇸🇬 | @jojo_config | FE1914",
@@ -11680,6 +11698,8 @@
         "IR 🇮🇷 | @jojo_config | 9EED75",
         "IR 🇮🇷 | @jojo_config | 5830B0",
         "IR 🇮🇷 | @jojo_config | 9C7D95",
+        "IR 🇮🇷 | @jojo_config | 09711D",
+        "IR 🇮🇷 | @jojo_config | D060C4",
         "IR 🇮🇷 | @jojo_config | 3216BD",
         "IR 🇮🇷 | @jojo_config | 9A92E5",
         "IR 🇮🇷 | @jojo_config | 93F6C8",
@@ -11703,6 +11723,7 @@
         "IR 🇮🇷 | @jojo_config | 744B4B",
         "Global 🌐 | @jojo_config | A17FD9",
         "SG 🇸🇬 | @jojo_config | B75BF0",
+        "IR 🇮🇷 | @jojo_config | 5D006A",
         "HK 🇭🇰 | @jojo_config | 3E1260",
         "HK 🇭🇰 | @jojo_config | C43E45",
         "HK 🇭🇰 | @jojo_config | 6BEBE7",
@@ -11786,7 +11807,7 @@
         "TW 🇹🇼 | @jojo_config | C51365",
         "IR 🇮🇷 | @jojo_config | DA5F3B",
         "IR 🇮🇷 | @jojo_config | D8FEA2",
-        "DE 🇩🇪 | @jojo_config | 875198",
+        "FI 🇫🇮 | @jojo_config | 875198",
         "JP 🇯🇵 | @jojo_config | 79F85B",
         "Global 🌐 | @jojo_config | 6A574C",
         "IR 🇮🇷 | @jojo_config | 198807",
@@ -11921,6 +11942,7 @@
         "CA 🇨🇦 | @jojo_config | 60BE39",
         "CA 🇨🇦 | @jojo_config | 6E2C7D",
         "CA 🇨🇦 | @jojo_config | FA4760",
+        "CA 🇨🇦 | @jojo_config | 8DE20D",
         "CA 🇨🇦 | @jojo_config | E62746",
         "CA 🇨🇦 | @jojo_config | 473C1A",
         "CA 🇨🇦 | @jojo_config | 398DEF",
@@ -24599,7 +24621,7 @@
     },
     {
       "type": "vless",
-      "tag": "NL 🇳🇱 | @jojo_config | 8BD9AC",
+      "tag": "RU 🇷🇺 | @jojo_config | 8BD9AC",
       "server": "8a2e72t.nl20.h1clayd.shop",
       "server_port": 443,
       "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
@@ -40180,6 +40202,26 @@
     },
     {
       "type": "vmess",
+      "tag": "CA 🇨🇦 | @jojo_config | 952B1E",
+      "server": "104.18.42.163",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
       "tag": "CA 🇨🇦 | @jojo_config | F2461C",
       "server": "104.18.57.111",
       "server_port": 2052,
@@ -51085,6 +51127,26 @@
     },
     {
       "type": "vmess",
+      "tag": "CA 🇨🇦 | @jojo_config | C7B750",
+      "server": "172.64.145.93",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
       "tag": "CA 🇨🇦 | @jojo_config | 9442FF",
       "server": "172.64.146.191",
       "server_port": 2083,
@@ -52710,6 +52772,26 @@
     {
       "type": "vmess",
       "tag": "CA 🇨🇦 | @jojo_config | 5D90F1",
+      "server": "172.67.190.164",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "CA 🇨🇦 | @jojo_config | 157557",
       "server": "172.67.190.164",
       "server_port": 443,
       "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
@@ -55951,6 +56033,26 @@
         "path": "/ws",
         "headers": {
           "Host": "vmess.lbw666.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "US 🇺🇸 | @jojo_config | F642DA",
+      "server": "188.114.99.137",
+      "server_port": 443,
+      "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "guanwang.awsno.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hls/cctv5phd.m3u8",
+        "headers": {
+          "Host": "guanwang.awsno.com"
         }
       }
     },
@@ -77008,10 +77110,28 @@
     },
     {
       "type": "vmess",
+      "tag": "IR 🇮🇷 | @jojo_config | FC33B2",
+      "server": "dashboard.nixamarket.top",
+      "server_port": 12427,
+      "uuid": "3666af1e-8fa9-4285-b0e2-58e2f61dbbab",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
       "tag": "IR 🇮🇷 | @jojo_config | 283342",
       "server": "dashboard.nixamarket.top",
       "server_port": 12427,
       "uuid": "d48b220f-fdc6-44c8-907a-3b10045f0bae",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "IR 🇮🇷 | @jojo_config | 5A992C",
+      "server": "dashboard.nixamarket.top",
+      "server_port": 12427,
+      "uuid": "e261deb9-98ec-4231-8744-4afe0ecfebc0",
       "security": "auto",
       "alter_id": 0
     },
@@ -86227,6 +86347,26 @@
     },
     {
       "type": "vmess",
+      "tag": "SG 🇸🇬 | @jojo_config | 6C45D4",
+      "server": "mortaze44-production.up.railway.app",
+      "server_port": 443,
+      "uuid": "62c80db2-e3ee-42a6-83d3-f53439a20c3b",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "mortaze44-production.up.railway.app"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/0aTsIR",
+        "headers": {
+          "Host": "mortaze44-production.up.railway.app"
+        }
+      }
+    },
+    {
+      "type": "vmess",
       "tag": "SG 🇸🇬 | @jojo_config | 4DF35F",
       "server": "morteda-production.up.railway.app",
       "server_port": 443,
@@ -91337,6 +91477,24 @@
     },
     {
       "type": "vmess",
+      "tag": "IR 🇮🇷 | @jojo_config | 09711D",
+      "server": "s1.connect.bloroxy.net",
+      "server_port": 1132,
+      "uuid": "6ef9dc71-c182-403c-a7f2-ab06dface2c7",
+      "security": "aes-128-gcm",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "IR 🇮🇷 | @jojo_config | D060C4",
+      "server": "s1.connect.bloroxy.net",
+      "server_port": 1132,
+      "uuid": "6ef9dc71-c182-403c-a7f2-ab06dface2c7",
+      "security": "aes-128-gcm",
+      "alter_id": 1
+    },
+    {
+      "type": "vmess",
       "tag": "IR 🇮🇷 | @jojo_config | 3216BD",
       "server": "s1.connect.bloroxy.net",
       "server_port": 1139,
@@ -91613,6 +91771,15 @@
           "Host": "sciffreredswa-production.up.railway.app"
         }
       }
+    },
+    {
+      "type": "vmess",
+      "tag": "IR 🇮🇷 | @jojo_config | 5D006A",
+      "server": "sefr.ishizaki.ir",
+      "server_port": 9443,
+      "uuid": "1e8aa5e5-78e1-41d0-9f33-cd04286b8a5c",
+      "security": "auto",
+      "alter_id": 0
     },
     {
       "type": "vmess",
@@ -92962,7 +93129,7 @@
     },
     {
       "type": "vmess",
-      "tag": "DE 🇩🇪 | @jojo_config | 875198",
+      "tag": "FI 🇫🇮 | @jojo_config | 875198",
       "server": "tgju.org",
       "server_port": 8080,
       "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
@@ -94993,6 +95160,23 @@
         "headers": {
           "Host": "us122204.ssgreen.org"
         }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "CA 🇨🇦 | @jojo_config | 8DE20D",
+      "server": "US122205.ssgreen.org",
+      "server_port": 443,
+      "uuid": "a0e886c0-0d13-4446-9ad3-1325f595e39e",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "US122205.ssgreen.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wes"
       }
     },
     {

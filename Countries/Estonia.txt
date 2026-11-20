@@ -3,12 +3,15 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — ESTONIA (EE) — 5 configs
+# @jojo_config — ESTONIA (EE) — 8 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://a346c521-7a7f-452b-9356-a4893feb5982@178.130.46.188:443?security=reality&encryption=none&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=nl16-r.bankai.party#EE 🇪🇪 | @jojo_config | 404595
 vless://13cca0fd-bb3e-44e4-9ced-1c6efcabbb03@95.85.243.72:443?security=reality&pbk=m3opvubdy_gjBiBkXnAw3eDUP4alVeVWxKkvZHIINjs&fp=firefox&sni=212.192.156.15&sid=426165a0badade80#EE 🇪🇪 | @jojo_config | 37CD69
 vless://be146d46-ae50-4691-838c-b6c87dbaec8f@143.246.41.214:443?encryption=none&pbk=8OI8rEgAiWxH-cG03xgzuz7XTFHrbA1MY9HnPHcgSUA&security=reality&sid=1d5ac21e988c571f&sni=702e56t.pl5.h1clayd.click&type=tcp&fp=edge#EE 🇪🇪 | @jojo_config | 06A030
 vless://be146d46-ae50-4691-838c-b6c87dbaec8f@13.143.239.94:443?encryption=none&fp=chrome&pbk=8OI8rEgAiWxH-cG03xgzuz7XTFHrbA1MY9HnPHcgSUA&security=reality&sid=1d5ac21e988c571f&sni=702e56t.pl5.h1clayd.click&type=tcp#EE 🇪🇪 | @jojo_config | BC87D4
 vless://63aa95e5-3b36-4e53-a86f-7df59652e994@143.246.41.199:443?encryption=none&flow=xtls-rprx-vision&pbk=cqzzb4oRMuWNC5Ahjq4dEEZt3MKA5EQ7No6SSNoVtiQ&security=reality&sid=5a750bb3e3806a20&sni=a013fct.es15.h1clayd.shop&type=tcp&fp=edge#EE 🇪🇪 | @jojo_config | E0DD85
+vless://a346c521-7a7f-452b-9356-a4893feb5982@178.130.46.188:443?security=reality&encryption=none&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=nl16-r.bankai.party#EE 🇪🇪 | @jojo_config | 404595
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@132.243.67.224:443?security=reality&sni=717252g.nl8.h1clayd.click&fp=chrome&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&sid=d3bd772514c87d28&type=grpc&serviceName=204adda7e3da#EE 🇪🇪 | @jojo_config | 6F49DF
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@717252g.nl8.h1clayd.click:443?encryption=none&security=reality&type=grpc&serviceName=204adda7e3da&mode=gun&sni=717252g.nl8.h1clayd.click&fp=chrome&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&sid=d3bd772514c87d28#EE 🇪🇪 | @jojo_config | A8EF4E
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@132.243.66.220:443?security=reality&sni=961ec0g.nl13.h1clayd.click&fp=chrome&pbk=xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA&sid=6d289ff0f47c0aac&type=grpc&serviceName=7d5abcd7d8a1&mode=gun&encryption=none#EE 🇪🇪 | @jojo_config | 3F5223

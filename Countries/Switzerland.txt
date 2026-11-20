@@ -3,13 +3,14 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — SWITZERLAND (CH) — 6 configs
+# @jojo_config — SWITZERLAND (CH) — 7 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@23.166.88.189:19999#CH 🇨🇭 | @jojo_config | 68B652
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@leviko-ch4470.shopingggg.ir:19999#CH 🇨🇭 | @jojo_config | 0055CE
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.127:19999#CH 🇨🇭 | @jojo_config | ACB330
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@186.190.215.251:19999#CH 🇨🇭 | @jojo_config | 0AC273
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@leviko-ch4470.shopingggg.ir:19999#CH 🇨🇭 | @jojo_config | 0055CE
 vless://9dd38d60-e683-47c6-bd53-d71bdfee78f3@179.43.187.67:443?security=tls&encryption=none&headerType=none&type=tcp&sni=portal.mavexa.ir#CH 🇨🇭 | @jojo_config | A19323
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | A7A956
+vless://ce8faf30-b1d6-4a53-95a0-8520dc609db3@85.208.69.43:33055?path=/&pbk=1rvxGeCvBMccFM2LKGJ4SqezdkMxS4ZZagHR1MGdCgo&encryption=none&type=xhttp&fp=chrome&security=reality&sid=77&sni=yandex.ru#CH 🇨🇭 | @jojo_config | 56DD94
+vless://ca60984f-b1f0-4073-bd33-4c75168f749a@31.59.148.132:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=c8IEc_c_QBmI5YAwILoVH0xw2xC4AJgJDKEYKcmKogo&security=reality&sid=7f2e9c4b1a8d6e55&sni=nl-salad-12.fantoff.online&type=tcp#CH 🇨🇭 | @jojo_config | 2883A3

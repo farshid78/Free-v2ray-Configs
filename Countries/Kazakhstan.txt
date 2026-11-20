@@ -3,15 +3,11 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — KAZAKHSTAN (KZ) — 8 configs
+# @jojo_config — KAZAKHSTAN (KZ) — 4 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://cc99c57d-6c93-4031-9153-73f510636533@31.43.179.196:443?security=tls&type=xhttp&path=%2F&host=mama51.baklajann.ru&sni=mama51.baklajann.ru&fp=chrome&mode=auto&extra=%7B%22xmux%22%3A%7B%22maxConnections%22%3A%224%22%2C%22maxConcurrency%22%3A%220%22%2C%22cMaxReuseTimes%22%3A%220%22%2C%22hMaxRequestTimes%22%3A%22600-900%22%2C%22hMaxReusableSecs%22%3A%221800-3000%22%2C%22hKeepAlivePeriod%22%3A0%7D%7D&encryption=none#KZ 🇰🇿 | @jojo_config | 9779F6
-vless://e44962da-9e02-41aa-b86f-a83a521875b6@91.224.74.146:443?security=reality&type=tcp&fp=firefox&flow=xtls-rprx-vision&sid=5fd3245e96291c37&pbk=a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U#KZ 🇰🇿 | @jojo_config | C21715
 vless://e44962da-9e02-41aa-b86f-a83a521875b6@91.224.74.146:443?security=reality&type=tcp&sni=212.192.156.15&fp=firefox&flow=xtls-rprx-vision&sid=5fd3245e96291c37&pbk=a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U#KZ 🇰🇿 | @jojo_config | 69AA35
+vless://e44962da-9e02-41aa-b86f-a83a521875b6@91.224.74.146:443?security=reality&type=tcp&fp=firefox&flow=xtls-rprx-vision&sid=5fd3245e96291c37&pbk=a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U#KZ 🇰🇿 | @jojo_config | C21715
 vless://b573cefb-7bc7-4a42-b407-b8b534e66773@109.248.170.119:13447?encryption=none&type=tcp&security=reality&sni=yahoo.com&fp=chrome&pbk=_0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE&sid=83#KZ 🇰🇿 | @jojo_config | 620A80
-vmess://eyJ2IjoiMiIsInBzIjoiS1og8J+HsPCfh78gfCBAam9qb19jb25maWcgfCA2REJBOUEiLCJhZGQiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJwb3J0Ijo4MCwiaWQiOiI1NjdmNGJlNS0xMmFiLTQyZTEtYjhkOS1kYjZmZDFmZGQzMWMiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoiM2gta2F6YWtoc3RhbjEuMDl2cG4uY29tIiwicGF0aCI6Ii92bWVzcy8iLCJ0bHMiOiJub25lIiwic25pIjoiIiwiYWxwbiI6IiIsImZwIjoiIiwibmFtZSI6IktaIPCfh7Dwn4e/IHwgQGpvam9fY29uZmlnIHwgNkRCQTlBIn0=
-vmess://eyJhZGQiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNTY3ZjRiZTUtMTJhYi00MmUxLWI4ZDktZGI2ZmQxZmRkMzFjIiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzLyIsInBvcnQiOiI4MCIsInBzIjoiS1og8J+HsPCfh78gfCBAam9qb19jb25maWcgfCAxMTJDQUMiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-vmess://eyJ2IjoiMiIsInBzIjoiS1og8J+HsPCfh78gfCBAam9qb19jb25maWcgfCA5RUQyQ0UiLCJhZGQiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJwb3J0Ijo4MCwiaWQiOiI1NjdmNGJlNS0xMmFiLTQyZTEtYjhkOS1kYjZmZDFmZGQzMWMiLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6IndybWVsbXd4bGYuZ2t0ZXZscnF6bndxcW96eS5mYWJwZnM2Nmdpem1ub2poY3ZxeHdsLmt5dHJjZnpxbGE4N2d2Z3ZzNmM3a2pucnVidWguY2MiLCJwYXRoIjoiL3ZtZXNzLyJ9
-vmess://eyJ2IjoiMiIsInBzIjoiS1og8J+HsPCfh78gfCBAam9qb19jb25maWcgfCAyNzM3QkEiLCJhZGQiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJwb3J0IjoiODAiLCJpZCI6IjU2N2Y0YmU1LTEyYWItNDJlMS1iOGQ5LWRiNmZkMWZkZDMxYyIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiL3ZtZXNzLyIsInRscyI6IiIsInNuaSI6IndybWVsbXd4bGYuZ2t0ZXZscnF6bndxcW96eS5mYWJwZnM2Nmdpem1ub2poY3ZxeHdsLmt5dHJjZnpxbGE4N2d2Z3ZzNmM3a2pucnVidWguY2MiLCJhbHBuIjoiIiwiZnAiOiIiLCJpbnNlY3VyZSI6IjAifQ==

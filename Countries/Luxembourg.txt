@@ -1,0 +1,11 @@
+#profile-title: @jojo_config — LUXEMBOURG (LU)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/jojo_config
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @jojo_config — LUXEMBOURG (LU) — 2 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+trojan://4mq9w5ckqw3ewbdg@193.57.88.100:16200?security=tls&sni=staticxfastline.taymaztest.ir&type=ws&host=staticxfastline.taymaztest.ir&path=%2Fbiyasd&fp=chrome&alpn=http%2F1.1&allowInsecure=0#LU 🇱🇺 | @jojo_config | 215064
+trojan://4mq9w5ckqw3ewbdg@staticxfastline.taymaztest.ir:16200?path=/biyasd&security=tls&alpn=http/1.1&insecure=0&host=staticxfastline.taymaztest.ir&fp=chrome&type=ws&allowInsecure=0&sni=staticxfastline.taymaztest.ir#LU 🇱🇺 | @jojo_config | 7B19E7

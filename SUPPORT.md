@@ -36,7 +36,7 @@ a fresh list.
 | **An upstream source to add** | [New issue → Suggest an upstream source](https://github.com/farshid78/Free-v2ray-Configs/issues/new/choose) |
 | **A security problem** | [SECURITY.md](SECURITY.md) — report privately, not as a public issue |
 | **An accessibility barrier** — something is hard or impossible to use with your setup | [New issue → Accessibility barrier](https://github.com/farshid78/Free-v2ray-Configs/issues/new?template=accessibility.yml) · [ACCESSIBILITY.md](ACCESSIBILITY.md) |
-| **General chat, outage notices, quick questions** | [@farshid78 on Telegram](https://t.me/farshid78) |
+| **General chat, outage notices, quick questions** | [@jojo_config on Telegram](https://t.me/jojo_config) |
 | **Want to change the code** | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ---

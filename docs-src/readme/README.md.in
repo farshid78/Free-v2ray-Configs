@@ -587,7 +587,7 @@ The full technical dashboard (cascade, converter drops, geo resolution) lives at
    collapses to a single entry instead of appearing dozens of times.
 4. **Brand** — every remark rewritten to `{CC} {flag} | {{brand}} | {id}` with a
    content-derived `{id}` and an endpoint-locked country label. The default comes
-   from the repository identity (`GH_OWNER`, here `@farshid78`); set
+   from the repository identity (`GH_OWNER`, here `@jojo_config`); set
    `AGG_BRAND_CHANNEL` (or `CHANNEL_USERNAME`) to point every remark, header,
    badge and bot link at your real channel — one variable, no code edits.
 5. **Convert** — per-client schema translation with strict field validation: cipher

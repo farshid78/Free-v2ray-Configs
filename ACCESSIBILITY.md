@@ -49,7 +49,7 @@ treat these reports as expertise, not complaints.
 1. **Open an issue** with the
    [accessibility form](https://github.com/farshid78/Free-v2ray-Configs/issues/new?template=accessibility.yml).
    If a form is hard to use with your setup, a plain message on Telegram
-   ([@farshid78](https://t.me/farshid78)) is fine too.
+   ([@jojo_config](https://t.me/jojo_config)) is fine too.
 2. If you can, include:
    - what you were trying to do, and what happened instead
    - the page or file (a link is enough)

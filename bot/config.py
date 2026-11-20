@@ -12,7 +12,7 @@ except ImportError:
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
 OWNER_ID = int(os.getenv("OWNER_ID", "0") or "0")
-CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME", "farshid78").strip()
+CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME", "jojo_config").strip()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GH_OWNER = os.getenv("GH_OWNER", "farshid78").strip()
 GH_REPO = os.getenv("GH_REPO", "Free-v2ray-Configs").strip()

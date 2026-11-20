@@ -173,8 +173,8 @@ flowchart TD
 - **مصرف**: `core.BRAND_CHANNEL = brand.BRAND_CHANNEL` (alias)، `aggregate`/`pipeline` از `brand.*` می‌خوانند، `docs-src/build.py` تزریق می‌کند، `brand.generated.ts` تولید می‌شود.
 - **تزریق روی کانفیگ**: `core.brand_remark(line, idx)` → فرمت `{CC} {flag} | @brand | {idx}`. در `aggregate.process_category` روی هر خط یکتا اعمال می‌شود + دروازه برند (retry + drop + count در health.json).
 - **Hiddify header**: `core.hiddify_profile_header` → `#profile-title: @brand — LABEL`, support-url, profile-web-page-url.
-- **مقادیر فعلی (پس از rebrand)**: BRAND_CHANNEL=`@farshid78`, BRAND_NAME=`farshid78`, GH_USER=`farshid78`, GH_REPO=`Free-v2ray-Configs`, branch `main`, SITE_URL=`https://farshid78.github.io/Free-v2ray-Configs`, COMMIT_NAME=`farshid78-bot[actions]`, GROUP_URL=(خالی — گروهی نیست).
-- **پس از rebrand**: `BOT_HANDLE_DOCS` = `@farshid78_bot` (هم‌راستا)، `GROUP_URL` = خالی (گروه تعریف نشده، دکمهٔ گروه حذف شد).
+- **مقادیر فعلی (پس از rebrand)**: BRAND_CHANNEL=`@jojo_config`, BRAND_NAME=`JoJo VPN`, BOT_NAME=`jojo-aggregator`, BOT_HANDLE=`@jojo_config_bot`, GH_USER=`farshid78`, GH_REPO=`Free-v2ray-Configs`, branch `main`, CHANNEL_URL/SUPPORT_URL=`https://t.me/jojo_config`, SITE_URL=`https://farshid78.github.io/Free-v2ray-Configs`, COMMIT_NAME=`jojo_config-bot[actions]`, GROUP_URL=(خالی — گروهی نیست).
+- **پس از rebrand**: `BOT_HANDLE_DOCS` = `@jojo_config_bot` (هم‌راستا)، `GROUP_URL` = خالی (گروه تعریف نشده، دکمهٔ گروه حذف شد).
 - **تغییر برند**: یا defaults در `brand.py` را ویرایش کنید، یا env vars ست کنید؛ سپس `python scripts/brand.py --render` و `python docs-src/build.py`. `--check` drift را می‌گیرد.
 - **رشته‌های hardcoded**: `core.py` docstringها و پیام‌های فارسی؛ `brand.py` تنها منبع مقادیر برند است. تست `test_zzz_hdr_project_and_support_urls_cannot_drift` قفل می‌کند.
 

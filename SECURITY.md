@@ -60,7 +60,7 @@ be allowed to overwrite a good one in the first place.
 <https://github.com/farshid78/Free-v2ray-Configs/issues>
 
 **If disclosing publicly would put users at risk, do not open an issue.**
-Contact the maintainer privately first, via Telegram: [@farshid78](https://t.me/farshid78).
+Contact the maintainer privately first, via Telegram: [@jojo_config](https://t.me/jojo_config).
 
 When reporting, please include:
 

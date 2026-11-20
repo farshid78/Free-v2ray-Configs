@@ -1,11 +1,11 @@
-#profile-title: @farshid78 — LITHUANIA (LT)
+#profile-title: @jojo_config — LITHUANIA (LT)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
-#support-url: https://t.me/farshid78
+#support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @farshid78 — LITHUANIA (LT) — 2 configs
+# @jojo_config — LITHUANIA (LT) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@84.32.83.197:443?encryption=none&fp=&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&security=reality&sid=a7d309e4c16b825f&sni=api-dns-gw.galioncc.com&type=tcp#LT 🇱🇹 | @farshid78 | A5B1B1
-vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@84.32.209.118:443?type=raw&security=reality&fp=firefox&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&sid=a7d309e4c16b825f&sni=api-dns-gw.galioncc.com#LT 🇱🇹 | @farshid78 | CD8F6E
+vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@84.32.83.197:443?encryption=none&fp=&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&security=reality&sid=a7d309e4c16b825f&sni=api-dns-gw.galioncc.com&type=tcp#LT 🇱🇹 | @jojo_config | A5B1B1
+vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@84.32.209.118:443?type=raw&security=reality&fp=firefox&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&sid=a7d309e4c16b825f&sni=api-dns-gw.galioncc.com#LT 🇱🇹 | @jojo_config | CD8F6E

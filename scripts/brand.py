@@ -25,8 +25,10 @@ Changing the brand is ONE edit
     `--check` fails if any generated surface is stale, so a drift is caught
     instead of shipped.
 
-⚠️ The defaults below are the repository's current identity. They were NOT
-   invented; they are the exact values that were previously scattered across
+⚠️ The defaults below are the repository's current identity:
+   `gh_user=farshid78`, `gh_repo=Free-v2ray-Configs`, `brand_channel=@jojo_config`,
+   `brand_name=JoJo VPN`, `bot_handle=@jojo_config_bot`, `bot_name=jojo-aggregator`.
+   They were NOT invented; they are the exact values that were previously scattered across
    ~15 files.
 """
 
@@ -79,27 +81,25 @@ def _compute() -> dict:
     gh_repo = os.environ.get("AGG_GH_REPO", "Free-v2ray-Configs")
     #: Channel handle. Precedence: AGG_BRAND_CHANNEL → CHANNEL_USERNAME →
     #: `@<gh_user>`. When the real channel is known, ONE variable changes it.
-    _channel_env = (os.environ.get("AGG_BRAND_CHANNEL")
-                    or os.environ.get("CHANNEL_USERNAME") or "").strip()
-    brand_channel = _channel_env or f"@{gh_user}"
+    brand_channel = os.environ.get("AGG_BRAND_CHANNEL", "@jojo_config").strip()
+    if not brand_channel:
+        _fallback = (os.environ.get("CHANNEL_USERNAME") or "").strip()
+        if _fallback:
+            brand_channel = "@" + _fallback.lstrip("@")
+        else:
+            brand_channel = "@jojo_config"
     if not brand_channel.startswith("@"):
         brand_channel = "@" + brand_channel
     #: Lower-cased handle without `@` — what Telegram URLs and the bot's git
     #: identity are built from, so they can never disagree with the handle.
     brand_slug = brand_channel.lstrip("@").lower()
-    brand_name = os.environ.get("AGG_BRAND_NAME", gh_user)
+    brand_name = os.environ.get("AGG_BRAND_NAME", "JoJo VPN")
     #: Bot display name (not a handle) — used by `index.json.generator`.
-    bot_name = os.environ.get("AGG_BOT_NAME", f"{gh_user}_bot")
+    bot_name = os.environ.get("AGG_BOT_NAME", "jojo-aggregator")
     #: Bot handle as written in README/docs prose.
-    #: ⚠️ LEGACY / INCONSISTENT ON PURPOSE — do not "fix" these two defaults.
-    #: The repository as shipped states the bot handle in two different
-    #: spellings: the READMEs say ``@jojo_np_bot`` while the landing page
-    #: (``docs-src/i18n/*.json``) says ``@ConfigExBot``. Both are today's
-    #: bytes, and the default run must reproduce them byte-for-byte, so the
-    #: config carries both fields instead of silently unifying them. When the
-    #: real brand is supplied, set both to the same handle; until then the
-    #: inconsistency is data, not a bug.
-    bot_handle = os.environ.get("AGG_BOT_HANDLE", f"@{gh_user}_bot")
+    #: DEFAULT is the real brand; legacy farshid78 spellings live only in
+    #: docs-src/i18n templates — not here.
+    bot_handle = os.environ.get("AGG_BOT_HANDLE", "@jojo_config_bot")
     bot_handle_docs = os.environ.get("AGG_BOT_HANDLE_DOCS", bot_handle)
     #: Branch the published files are served from. `AGG_PUBLISH_BRANCH` is the
     #: explicit modern name; the two older names are accepted so a stale caller
@@ -112,17 +112,15 @@ def _compute() -> dict:
     #: Display link — keeps the handle's original casing (Telegram treats
     #: handles case-insensitively, but the committed READMEs use
     #: `t.me/jojo_config`).
-    channel_url = os.environ.get(
-        "AGG_CHANNEL_URL", f"https://t.me/{brand_channel.lstrip('@')}")
+    channel_url = os.environ.get("AGG_CHANNEL_URL", "https://t.me/jojo_config")
     #: Machine-facing support URL — lower-cased, exactly what `core.SUPPORT_URL`
     #: published before this refactor
     #: (`test_zzz_hdr_project_and_support_urls_cannot_drift` locks it).
-    support_url = os.environ.get("AGG_SUPPORT_URL", f"https://t.me/{brand_slug}")
-    bot_url = os.environ.get("AGG_BOT_URL", f"https://t.me/{bot_handle.lstrip('@')}")
-    #: ⚠️ LEGACY ON PURPOSE — the group button on the bot card points at
-    #: ``t.me/jojo_np_bot`` in the shipped site (a leftover from the upstream
-    #: extractor). It is preserved verbatim as the default so the default build
-    #: stays byte-identical; supply the real community link via `AGG_GROUP_URL`.
+    support_url = os.environ.get("AGG_SUPPORT_URL", "https://t.me/jojo_config")
+    bot_url = os.environ.get("AGG_BOT_URL", "https://t.me/jojo_config_bot")
+    #: Community/group link on the docs bot card — supply the real value via
+    #: `AGG_GROUP_URL`. Still empty here by default because this repo does not
+    #: ship a community group link.
     group_url = os.environ.get("AGG_GROUP_URL", "")
     #: `owner/repo` — the slug GitHub prints, and the path inside every raw URL.
     repo_slug = f"{gh_user}/{gh_repo}"
@@ -162,7 +160,7 @@ def _compute() -> dict:
             "AGG_COMMIT_EMAIL", "actions@users.noreply.github.com"),
         "GENERATOR": f"{bot_name} aggregator",
         #: Document title used by the landing page and JSON-LD.
-        "SITE_TITLE": f"{brand_name}",
+        "SITE_TITLE": brand_name,
     }
 
 

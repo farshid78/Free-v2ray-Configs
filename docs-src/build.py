@@ -198,7 +198,7 @@ def render(lang: str, template: str, strings: dict, hashes: dict) -> str:
         "brand": brand.BRAND_NAME,
         "brand_handle": brand.BRAND_CHANNEL.lstrip("@"),
         # The landing page's bot handle is its own legacy spelling
-        # (`@ConfigExBot`); the READMEs say `@farshid78_bot`. Both defaults are
+        # (`@ConfigExBot`); the READMEs say `@jojo_config_bot`. Both defaults are
         # today's bytes — see the LEGACY note in `scripts/brand.py`.
         "bot": brand.BOT_HANDLE_DOCS,
         "bot_url": brand.BOT_URL_DOCS,

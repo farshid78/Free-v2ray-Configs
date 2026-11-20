@@ -25,7 +25,7 @@ the thing that is wrong, and fixing it is a welcome pull request.
 |---|---|---|
 | Maintainer | [@farshid78](https://github.com/farshid78) | merge, release, administer the repository, final call on scope |
 | Contributor | anyone who opens an issue, discussion or pull request | propose changes, review others' changes, dispute a decision |
-| Automation | `farshid78-bot[actions]` (GitHub Actions) | regenerate and republish the output files — nothing else |
+| Automation | `jojo_config-bot[actions]` (GitHub Actions) | regenerate and republish the output files — nothing else |
 
 At the time of writing, **exactly one account has write access**, and it is the
 maintainer's. There is deliberately no second tier that exists only on paper.

@@ -1,4 +1,4 @@
-/* farshid78 — Free V2Ray Configs landing page runtime.
+/* JoJo VPN — Free V2Ray Configs landing page runtime.
  *
  * Hand-written, no framework, no build step. Shared by / and /fa/; every
  * user-visible string comes from the <script id="i18n"> block the page was
@@ -288,10 +288,10 @@
     return '—';
   }
   function profileName(sel) {
-    if (sel.kind === 'tier') return 'farshid78 ' + sel.id.toUpperCase();
-    if (sel.kind === 'country') return 'farshid78 ' + sel.code;
-    if (sel.kind === 'protocol') return 'farshid78 ' + sel.id.toUpperCase();
-    return 'farshid78';
+    if (sel.kind === 'tier') return 'JoJo VPN ' + sel.id.toUpperCase();
+    if (sel.kind === 'country') return 'JoJo VPN ' + sel.code;
+    if (sel.kind === 'protocol') return 'JoJo VPN ' + sel.id.toUpperCase();
+    return 'JoJo VPN';
   }
   function selectionDesc(sel) {
     if (sel.kind === 'tier') {

@@ -7,7 +7,7 @@
 <p>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/actions/workflows/aggregate.yml"><img alt="pipeline" src="https://img.shields.io/github/actions/workflow/status/farshid78/Free-v2ray-Configs/aggregate.yml?style=for-the-badge&label=pipeline&logo=githubactions&logoColor=white"></a>
 <img alt="auto-update" src="https://img.shields.io/badge/auto--update-every%2015%20min-0ea5e9?style=for-the-badge">
-<a href="https://t.me/farshid78"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Ffarshid78&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
+<a href="https://t.me/jojo_config"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fjojo_config&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/farshid78/Free-v2ray-Configs?style=for-the-badge&color=FBBF24&logo=github"></a>
 <a href="https://farshid78.github.io/Free-v2ray-Configs/"><img alt="dashboard" src="https://img.shields.io/badge/live-dashboard-ec4899?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 <div align="center">
 
 <a href="#-subscription-links"><img alt="Jump to the subscription links" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-links.svg"></a>
-<a href="https://t.me/farshid78"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
+<a href="https://t.me/jojo_config"><img alt="Join the Telegram channel @jojo_config" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs"><img alt="Star the repository on GitHub" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-star.svg"></a>
 
 <br><br>
@@ -56,7 +56,7 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/top100.txt"><img alt="QR code for the top 100 list" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-top100.svg"></a>
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/configs_base64.txt"><img alt="QR code for the verified subscription" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-verified.svg"></a>
-<a href="https://t.me/farshid78"><img alt="QR code for the Telegram channel" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-telegram.svg"></a>
+<a href="https://t.me/jojo_config"><img alt="QR code for the Telegram channel" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-telegram.svg"></a>
 
 <br>
 
@@ -330,7 +330,7 @@ mihomo -t -f <file>           # mihomo   v1.19.29
 
 ## 🏷️ 由内容派生的稳定名称
 
-每个备注都会被重写为 `{CC} {flag} | @farshid78 | {id}`，其中 `{id}` 是
+每个备注都会被重写为 `{CC} {flag} | @jojo_config | {id}`，其中 `{id}` 是
 `sha256(dedup-key)[:6]` —— **由配置本身派生，而不是由它在列表中的位置派生**。因此同一台
 服务器永远得到同一个标签，你客户端里的节点名称在两次更新之间保持稳定，而不会每 15 分钟
 被重新打乱一次。
@@ -542,7 +542,7 @@ jsDelivr 镜像。字体与二维码库均自托管：没有 CDN、没有追踪�
    proxies、不可路由的服务器）。
 3. **去重** —— 支持 CDN 识别的服务器身份指纹，因此位于轮换 CDN IP 之后的主机会收敛为
    一条记录，而不是出现几十次。
-4. **命名** —— 每个备注都被重写为 `{CC} {flag} | @farshid78 | {id}`，`{id}` 由内容派生，
+4. **命名** —— 每个备注都被重写为 `{CC} {flag} | @jojo_config | {id}`，`{id}` 由内容派生，
    国家标签锁定到端点。
 5. **转换** —— 按客户端做 schema 翻译，并严格校验字段：加密方式白名单、SS-2022 密钥
    长度、REALITY 的 uTLS、`short-id`/公钥格式检查，以及完整的传输层输出（`ws` / `grpc`
@@ -632,7 +632,7 @@ GitHub 的 `schedule:` cron 是尽力而为的，在繁忙时段经常被延迟�
 完全免费：
 
 <a href="https://github.com/farshid78/Free-v2ray-Configs"><img alt="Star the repository on GitHub" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-star.svg"></a>
-<a href="https://t.me/farshid78"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
+<a href="https://t.me/jojo_config"><img alt="Join the Telegram channel @jojo_config" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
 
 <table>
 <tr>
@@ -644,7 +644,7 @@ GitHub 的 `schedule:` cron 是尽力而为的，在繁忙时段经常被延迟�
 </td>
 <td width="380" valign="top">
 
-**📣 [@farshid78](https://t.me/farshid78)** 是宣布故障、上游失效或链接变更的地方 ——
+**📣 [@jojo_config](https://t.me/jojo_config)** 是宣布故障、上游失效或链接变更的地方 ——
 而且是在你察觉客户端安静下来*之前*。也欢迎在那里提问和报告有问题的配置。
 
 </td>
@@ -655,7 +655,7 @@ GitHub 的 `schedule:` cron 是尽力而为的，在繁忙时段经常被延迟�
 
 <div align="center">
 
-**频道：** [@farshid78](https://t.me/farshid78) · **机器人：** [@farshid78_bot](https://t.me/farshid78_bot) · **面板：** [实时状态](https://farshid78.github.io/Free-v2ray-Configs/)
+**频道：** [@jojo_config](https://t.me/jojo_config) · **机器人：** [@jojo_config_bot](https://t.me/jojo_config_bot) · **面板：** [实时状态](https://farshid78.github.io/Free-v2ray-Configs/)
 
 <sub>本 README 中写下的每一个数字都是带日期的快照。实时数字始终在
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/index.json"><code>index.json</code></a> 与

@@ -506,7 +506,7 @@ pass. Fixed to `endswith(f"/{GH_BRANCH}")`, and the slash-form check moved onto
 
 **8.3 — An obsolete assertion in a pre-existing test.** `test_brand_remark_strips_fragment_before_base64_decode`
 asserted `ps.endswith("| 7")`. Running the code gave
-`ps = 'Global 🌐 | @farshid78 | E1E2FB'`. The `| 7` was the **positional counter Phase G
+`ps = 'Global 🌐 | @jojo_config | E1E2FB'`. The `| 7` was the **positional counter Phase G
 deliberately removed** — the test was asserting the bug. Re-pointed at
 `core.stable_label(line)`, and I added `not endswith("| 7")` as a regression guard so
 the positional index cannot creep back.
@@ -745,7 +745,7 @@ LIVE-URL REAL-CLIENT: PASS=6 FAIL=0
 The new workflow ran on its own schedule. Round 1 at 08:13 UTC, round 2 at 08:23 UTC:
 
 ```
-round 1:  b875e41  parent = 3b39ef1  "…7955 configs [@farshid78] [auto-output]"
+round 1:  b875e41  parent = 3b39ef1  "…7955 configs [@jojo_config] [auto-output]"
 round 2:  f7bcf9d  (b875e41 REPLACED — fetch reported "forced update")
 ```
 
@@ -841,7 +841,7 @@ cost model in this very document.
 ### 14.1 The round
 
 ```
-0aa65dc  raydikalx-bot[actions]  2026-07-29 08:38 UTC  … 7937 configs [@farshid78] [auto-output]
+0aa65dc  raydikalx-bot[actions]  2026-07-29 08:38 UTC  … 7937 configs [@jojo_config] [auto-output]
 a5a1c8b  farshid78               2026-07-29 08:35 UTC  docs: record the production results …
 ```
 
@@ -947,7 +947,7 @@ clue that the file was fine and the counter was wrong — 7 869 / 7 168 / 1 595 
 fixed.
 
 A fourth apparent problem, `base64 ≠ plain` (8 015 vs 8 016 lines), was likewise mine: the
-single extra line is the `# @farshid78 — ALL — 8015 unique configs` header comment. The
+single extra line is the `# @jojo_config — ALL — 8015 unique configs` header comment. The
 base64 payload is deliberately comment-free, which is correct for subscription clients —
 excluding comments, the two match exactly.
 

@@ -4,11 +4,11 @@ blank_issues_enabled: false
 
 contact_links:
   - name: 💬 Telegram channel — updates & general questions
-    url: https://t.me/farshid78
+    url: https://t.me/jojo_config
     about: Announcements and general questions. Faster than an issue for "how do I use this".
 
   - name: 🤖 Telegram bot
-    url: https://t.me/farshid78_bot
+    url: https://t.me/jojo_config_bot
     about: Get configs through the bot.
 
   - name: 🔐 Report a security issue

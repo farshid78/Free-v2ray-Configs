@@ -25,18 +25,19 @@ pip install -r requirements.txt
 
 | فیلد env | مقدار پیش‌فرض (امروز) | کجا مصرف می‌شود |
 |---|---|---|
-| `AGG_BRAND_CHANNEL` | `@farshid78` | تگ روی کانفیگ (`#profile-title: …`)، گروه‌های Clash، `index.json.brand` |
-| `AGG_BRAND_NAME` | `farshid78` | عنوان docs، JSON-LD، توضیح generator |
-| `AGG_BOT_NAME` | `farshid78_bot` | `index.json.generator` («… aggregator») |
-| `AGG_BOT_HANDLE` | `@farshid78_bot` | READMEها |
-| `AGG_BOT_HANDLE_DOCS` | `@farshid78_bot` | صفحهٔ فرود (`docs`) — هم‌راستا با README |
+| `AGG_BRAND_CHANNEL` | `@jojo_config` | تگ روی کانفیگ (`#profile-title: …`)، گروه‌های Clash، `index.json.brand` |
+| `AGG_BRAND_NAME` | `JoJo VPN` | عنوان docs، JSON-LD، توضیح generator |
+| `AGG_BOT_NAME` | `jojo-aggregator` | `index.json.generator` («… aggregator») |
+| `AGG_BOT_HANDLE` | `@jojo_config_bot` | READMEها |
+| `AGG_BOT_HANDLE_DOCS` | `@jojo_config_bot` | صفحهٔ فرود (`docs`) — هم‌راستا با README |
 | `AGG_GROUP_URL` | (خالی — گروهی تعریف نشده) | دکمهٔ گروه حذف شد |
 | `AGG_GH_USER` | `farshid78` | `PROJECT_URL`, `RAW/CDN/SITE`, badges |
 | `AGG_GH_REPO` | `Free-v2ray-Configs` | همان |
 | `AGG_PUBLISH_BRANCH` / `PUBLISH_BRANCH` | `main` | شاخهٔ انتشار |
-| `AGG_CHANNEL_URL` | `https://t.me/farshid78` | دکمه‌های README و docs |
-| `AGG_SUPPORT_URL` | `https://t.me/farshid78` | Hiddify `support-url` |
+| `AGG_CHANNEL_URL` | `https://t.me/jojo_config` | دکمه‌های README و docs |
+| `AGG_SUPPORT_URL` | `https://t.me/jojo_config` | Hiddify `support-url` |
 | `AGG_SITE_URL` | `https://farshid78.github.io/Free-v2ray-Configs` | GitHub Pages |
+| `AGG_COMMIT_NAME` | `jojo_config-bot[actions]` | هویتِ کامیتِ خودکار انتشار |
 
 **روش ۱ (دائمی)**: defaults را در `scripts/brand.py` ویرایش کنید، سپس:
 

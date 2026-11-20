@@ -1,19 +1,20 @@
-#profile-title: @farshid78 — POLAND (PL)
+#profile-title: @jojo_config — POLAND (PL)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
-#support-url: https://t.me/farshid78
+#support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @farshid78 — POLAND (PL) — 10 configs
+# @jojo_config — POLAND (PL) — 11 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://352a250d-080b-47b5-b7db-f9f8fa31c551@132.243.212.204:443?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=10w0wjw.virtual-network.lol#PL 🇵🇱 | @farshid78 | 338F7E
-vless://ecc0e60a-f2cc-4266-8353-b228df89730a@150.241.87.52:443?security=reality&encryption=none&pbk=GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=pl.galacticworld.online#PL 🇵🇱 | @farshid78 | BC77DA
-vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | @farshid78 | 76B2DF
-vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@80.47.10.106:443?security=reality&sni=pl8.galioncc.com&fp=firefox&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&sid=a7c92e4b10d6f835&type=tcp&headerType=none&host=pl8.galioncc.com&path=/#PL 🇵🇱 | @farshid78 | 1E6632
-trojan://c76f0a11e6ba410084c745ad5e92db5f@187.52.45.183:54032?fp=&host=flawers.shop&mode=auto&path=/assets/static/main.js&pbk=SmpFJJ640phT1swTmtifquX9PSuaq2eA0hdUkD2mfyo&security=reality&sid=75aaaa50d52b0121&sni=flawers.shop&type=xhttp#PL 🇵🇱 | @farshid78 | 6909C8
-vless://ecc0e60a-f2cc-4266-8353-b228df89730a@pl.galacticworld.online:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=pl.galacticworld.online&fp=qq&pbk=GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4#PL 🇵🇱 | @farshid78 | D99E8E
-vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@80.47.10.106:443?security=reality&encryption=none&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&headerType=none&fp=chrome&type=tcp&sni=pl8.galioncc.com&sid=a7c92e4b10d6f835#PL 🇵🇱 | @farshid78 | 93B193
-trojan://c76f0a11e6ba410084c745ad5e92db5f@flawers.shop:54032?fp=&host=flawers.shop&mode=auto&path=/assets/static/main.js&pbk=SmpFJJ640phT1swTmtifquX9PSuaq2eA0hdUkD2mfyo&security=reality&sid=a4&sni=flawers.shop&type=xhttp#PL 🇵🇱 | @farshid78 | B0B4A3
-vless://e18f77f3-e518-4c8c-b230-c79e3708c7f4@tun2.minoosell.ir:1152?encryption=none&security=reality&type=xhttp&sni=in.tradingview.com&fp=chrome&pbk=Fmhl6wGywDftzMcxYFyzGrlHvP-XCwujzo_ULibHfHE&sid=ead6bdba606219a2#PL 🇵🇱 | @farshid78 | F04A77
+vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | @jojo_config | 76B2DF
+vless://ecc0e60a-f2cc-4266-8353-b228df89730a@150.241.87.52:443?security=reality&encryption=none&pbk=GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=pl.galacticworld.online#PL 🇵🇱 | @jojo_config | BC77DA
+vless://352a250d-080b-47b5-b7db-f9f8fa31c551@132.243.212.204:443?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=10w0wjw.virtual-network.lol#PL 🇵🇱 | @jojo_config | 338F7E
+vless://352a250d-080b-47b5-b7db-f9f8fa31c551@45.192.12.92:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=nltimes.nl&fp=chrome&pbk=aUOP5gJGQ1QFhdZuREZ8yosfPavFiJ6f_EySIBZ2WCE&type=tcp&headerType=none#PL 🇵🇱 | @jojo_config | DDB2B4
+vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@80.47.10.106:443?security=reality&sni=pl8.galioncc.com&fp=firefox&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&sid=a7c92e4b10d6f835&type=tcp&headerType=none&host=pl8.galioncc.com&path=/#PL 🇵🇱 | @jojo_config | 1E6632
+vless://ecc0e60a-f2cc-4266-8353-b228df89730a@pl.galacticworld.online:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=pl.galacticworld.online&fp=qq&pbk=GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4#PL 🇵🇱 | @jojo_config | D99E8E
+trojan://c76f0a11e6ba410084c745ad5e92db5f@187.52.45.183:54032?fp=&host=flawers.shop&mode=auto&path=/assets/static/main.js&pbk=SmpFJJ640phT1swTmtifquX9PSuaq2eA0hdUkD2mfyo&security=reality&sid=75aaaa50d52b0121&sni=flawers.shop&type=xhttp#PL 🇵🇱 | @jojo_config | 6909C8
+vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@80.47.10.106:443?security=reality&encryption=none&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&headerType=none&fp=chrome&type=tcp&sni=pl8.galioncc.com&sid=a7c92e4b10d6f835#PL 🇵🇱 | @jojo_config | 93B193
+vless://e18f77f3-e518-4c8c-b230-c79e3708c7f4@tun2.minoosell.ir:1152?encryption=none&security=reality&type=xhttp&sni=in.tradingview.com&fp=chrome&pbk=Fmhl6wGywDftzMcxYFyzGrlHvP-XCwujzo_ULibHfHE&sid=ead6bdba606219a2#PL 🇵🇱 | @jojo_config | F04A77
+trojan://c76f0a11e6ba410084c745ad5e92db5f@flawers.shop:54032?fp=&host=flawers.shop&mode=auto&path=/assets/static/main.js&pbk=SmpFJJ640phT1swTmtifquX9PSuaq2eA0hdUkD2mfyo&security=reality&sid=a4&sni=flawers.shop&type=xhttp#PL 🇵🇱 | @jojo_config | B0B4A3
 vmess://eyJ2IjoiMiIsInBzIjoiUEwg8J+HtfCfh7EgfCBAZmFyc2hpZDc4IHwgQ0YwRUY5IiwiYWRkIjoiNTQuMzcuMTMxLjEyNiIsInBvcnQiOiI4MCIsImlkIjoiMWU1NWJlY2EtM2M2OS00ZmE3LWZiMWYtMTVjMWI3Njc0MzVmIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJhbHBuIjoiIiwicGF0aCI6Ii8iLCJob3N0IjoiZ29vZ2xlLndoYXRzYXBwLnNuYXBwLnRvcm9iLmJhc2FsYW0uaGVzYW5pZDguaXIuIn0=

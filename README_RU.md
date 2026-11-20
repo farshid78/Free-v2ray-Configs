@@ -7,7 +7,7 @@
 <p>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/actions/workflows/aggregate.yml"><img alt="pipeline" src="https://img.shields.io/github/actions/workflow/status/farshid78/Free-v2ray-Configs/aggregate.yml?style=for-the-badge&label=pipeline&logo=githubactions&logoColor=white"></a>
 <img alt="auto-update" src="https://img.shields.io/badge/auto--update-every%2015%20min-0ea5e9?style=for-the-badge">
-<a href="https://t.me/farshid78"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Ffarshid78&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
+<a href="https://t.me/jojo_config"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fjojo_config&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/farshid78/Free-v2ray-Configs?style=for-the-badge&color=FBBF24&logo=github"></a>
 <a href="https://farshid78.github.io/Free-v2ray-Configs/"><img alt="dashboard" src="https://img.shields.io/badge/live-dashboard-ec4899?style=for-the-badge&logo=githubpages&logoColor=white"></a>
 </p>
@@ -50,7 +50,7 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 <div align="center">
 
 <a href="#-subscription-links"><img alt="Jump to the subscription links" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-links.svg"></a>
-<a href="https://t.me/farshid78"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
+<a href="https://t.me/jojo_config"><img alt="Join the Telegram channel @jojo_config" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs"><img alt="Star the repository on GitHub" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-star.svg"></a>
 
 <br><br>
@@ -59,7 +59,7 @@ https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/con
 
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/top100.txt"><img alt="QR code for the top 100 list" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-top100.svg"></a>
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/configs_base64.txt"><img alt="QR code for the verified subscription" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-verified.svg"></a>
-<a href="https://t.me/farshid78"><img alt="QR code for the Telegram channel" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-telegram.svg"></a>
+<a href="https://t.me/jojo_config"><img alt="QR code for the Telegram channel" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/qr-telegram.svg"></a>
 
 <br>
 
@@ -347,7 +347,7 @@ mihomo -t -f <file>           # mihomo   v1.19.29
 
 ## 🏷️ Стабильные имена, производные от содержимого
 
-Каждый remark переписывается в `{CC} {flag} | @farshid78 | {id}`, где `{id}` —
+Каждый remark переписывается в `{CC} {flag} | @jojo_config | {id}`, где `{id}` —
 `sha256(dedup-key)[:6]`, то есть **производная от самого конфига, а не от его позиции в
 списке**. Поэтому один и тот же сервер всегда получает одну и ту же метку, и имена
 записей в вашем клиенте остаются стабильными между обновлениями, а не перетасовываются
@@ -581,7 +581,7 @@ sing-box), поиск по всем проверенным конфигам, п�
    `App not supported`, пустые proxies, немаршрутизируемые серверы).
 3. **Дедупликация** — отпечаток идентичности сервера с учётом CDN, поэтому хост за
    меняющимися IP CDN сводится к одной записи, а не появляется десятки раз.
-4. **Брендинг** — каждый remark переписывается в `{CC} {flag} | @farshid78 | {id}` с
+4. **Брендинг** — каждый remark переписывается в `{CC} {flag} | @jojo_config | {id}` с
    `{id}`, производным от содержимого, и меткой страны, привязанной к endpoint'у.
    По умолчанию бренд берётся из идентичности репозитория (`GH_OWNER`); задайте
    `AGG_BRAND_CHANNEL` (или `CHANNEL_USERNAME`), чтобы одним параметром
@@ -679,7 +679,7 @@ ShadowException, w1770946466 и другим. Этот репозиторий т
 вещи, которые действительно держат проект живым, не стоят вам ничего:
 
 <a href="https://github.com/farshid78/Free-v2ray-Configs"><img alt="Star the repository on GitHub" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-star.svg"></a>
-<a href="https://t.me/farshid78"><img alt="Join the Telegram channel @farshid78" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
+<a href="https://t.me/jojo_config"><img alt="Join the Telegram channel @jojo_config" src="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/assets/cta-telegram.svg"></a>
 
 <table>
 <tr>
@@ -692,7 +692,7 @@ ShadowException, w1770946466 и другим. Этот репозиторий т
 </td>
 <td width="380" valign="top">
 
-**📣 [@farshid78](https://t.me/farshid78)** — там объявляют о сбое, мёртвом источнике или
+**📣 [@jojo_config](https://t.me/jojo_config)** — там объявляют о сбое, мёртвом источнике или
 изменившейся ссылке *до* того, как вы заметите, что клиент замолчал. Вопросы и сообщения
 о битых конфигах там тоже приветствуются.
 
@@ -704,7 +704,7 @@ ShadowException, w1770946466 и другим. Этот репозиторий т
 
 <div align="center">
 
-**Канал:** [@farshid78](https://t.me/farshid78) · **Бот:** [@farshid78_bot](https://t.me/farshid78_bot) · **Панель:** [состояние вживую](https://farshid78.github.io/Free-v2ray-Configs/)
+**Канал:** [@jojo_config](https://t.me/jojo_config) · **Бот:** [@jojo_config_bot](https://t.me/jojo_config_bot) · **Панель:** [состояние вживую](https://farshid78.github.io/Free-v2ray-Configs/)
 
 <sub>Каждое число в этом README — снимок с датой. Живые числа всегда в
 <a href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/index.json"><code>index.json</code></a> и

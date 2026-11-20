@@ -1,28 +1,31 @@
 # PROJECT_STATUS.md — وضعیت فعلی پروژه (برند `@jojo_config`)
 
-> راستی‌آزمایی‌شده روی یک clone تازه از `origin/main`، نه روی پوشهٔ کاری محلی.
 > مخزن: `https://github.com/farshid78/Free-v2ray-Configs` · شاخه: `main`
-> کامیتِ بررسی‌شده: `48961c3`
+> کد/دادهٔ راستی‌آزمایی‌شده: `faad62a` · آخرین `[auto-output]` در زمان نگارش: `551f74f` (۲۰۲۶-۱۱-۲۰ · ۰۱:۰۵ UTC)
 >
 > ⚠️ شاخهٔ `main` با هر اجرای workflow یک کامیتِ `chore: update configs … [auto-output]`
-> می‌گیرد، پس HEAD خودبه‌خود جلو می‌رود. اعدادِ این صفحه از همان کامیتِ بررسی‌شده
-> است؛ برای دیدنِ HEAD فعلی: `git ls-remote https://github.com/farshid78/Free-v2ray-Configs refs/heads/main`.
+> می‌گیرد و شمارش‌ها با هر اجرا کمی بالا/پایین می‌روند. اعدادِ زیر از همان دوری است که
+> `index.json` در `faad62a` گزارش می‌کند (`updated_at = 2026-11-20T00:55:35Z`).
+> HEAD فعلی: `git ls-remote https://github.com/farshid78/Free-v2ray-Configs refs/heads/main`.
 
 ---
 
-## ۱. چه چیزی روی `main` نشست (این مرحله)
+## ۱. کامیت‌های این مرحله روی `main`
 
 | کامیت | کار |
 |---|---|
-| `91a554d` | برندینگ در `scripts/brand.py` + بازتولید همهٔ سطوح تولیدی (`README`×۴، `docs/`، `dashboard-src/…/brand.generated.ts`، سبدها، `index.json`/`health.json`) |
-| `eb094da` | مستندسازی: همین فایل + مقادیر برند در `PROJECT_ANALYSIS.md` |
-| `6e535b3` | *(auto-output)* اجرای واقعیِ workflow با برند جدید: ۱۱۵۱۶ کانفیگ، همه با `@jojo_config` |
-| `ab9722d` | تعمیر `scripts/test_categories.py`: هندلِ برند + پذیرشِ سرآیندِ واقعیِ `GOOGLE READY` |
-| `48961c3` | `.gitattributes` با `* text=auto eol=lf` |
+| `91a554d` | برندینگ در `scripts/brand.py` + بازتولید همهٔ سطوح (README×۴، `docs/`، `brand.generated.ts`، سبدها، `index.json`/`health.json`) |
+| `eb094da` | مستندسازی وضعیت |
+| `6e535b3` | *(auto-output)* اجرای واقعی با برند جدید: ۱۱۵۱۶ کانفیگ |
+| `ab9722d` | تعمیر `scripts/test_categories.py` (هندلِ برند + پذیرشِ سرآیندِ `GOOGLE READY`) |
+| `48961c3` | `.gitattributes` = `* text=auto eol=lf` |
+| `c641995` | بازنویسی گزارش با اعداد clone تازه |
+| `551f74f` | *(auto-output)* اجرای بعدی: ۱۱۴۰۶ کانفیگ، همه با `@jojo_config` |
+| `faad62a` | `converters._is_unroutable_server`: سنجشِ IPv4-mapped با قاعدهٔ IPv4 (رفعِ وابستگیِ خروجی به نسخهٔ پایتون) |
 
 ---
 
-## ۲. مقادیر برند فعلی (خروجی `brand.py --json`)
+## ۲. مقادیر برند (خروجی `brand.py --json`)
 
 | فیلد | مقدار |
 |---|---|
@@ -64,12 +67,12 @@ bot/admin     →  GitHub API repository_dispatch (aggregate-now)
 
 1. **واکشی** منابع با ThreadPool، retry/backoff و ثبتِ سلامت هر منبع در `health.json`.
 2. **استخراج** خطوط از لینک مستقیم یا بدنهٔ base64 (`core.extract_valid_lines`).
-3. **پردازش دسته**: حذف خراب → دروازهٔ mihomo → dedup آگاه از CDN → **برندینگ `core.brand_remark`** (`{CC} {flag} | @jojo_config | {id}`) + دروازهٔ برند (retry و حذف خطِ بی‌برند).
-4. **نوشتن**: `configs.txt`, `configs_base64.txt`, `clash.yaml`, `singbox.json` + سرآیند Hiddify (`#profile-title`, `#support-url`, `#profile-web-page-url`).
-5. **پروتکل‌ها/آرشیو/متادیتا**: `protocols/*.txt`, `archive/*_broken|*_duplicates.txt`, `index.json`, `health.json`.
+3. **پردازش دسته**: حذف خراب → دروازهٔ mihomo → dedup آگاه از CDN → **برندینگ `core.brand_remark`** (`{CC} {flag} | @jojo_config | {id}`) + دروازهٔ برند (retry و حذفِ خطِ بی‌برند).
+4. **نوشتن**: `configs.txt`, `configs_base64.txt`, `clash.yaml`, `singbox.json` + سرآیند Hiddify.
+5. **پروتکل‌ها/آرشیو/متادیتا**: `protocols/*.txt`, `archive/*`, `index.json`, `health.json`.
 6. **آبشار کیفیت**: L0/L1 → L2 TCP → L3×۳ (xray-knife) → `verified/ fast/ secure/ top100.txt`.
 7. **کشورها**: گروه‌بندی `verified/` با GeoIP.
-8. **مستندات**: `docs-src/build.py` + `brand.py --render` (با `--check` برای دریفت).
+8. **مستندات**: `docs-src/build.py` + `brand.py --render` (هر دو `--check` دارند).
 
 ---
 
@@ -94,9 +97,9 @@ bot/admin     →  GitHub API repository_dispatch (aggregate-now)
 
 **بله، ولی فقط عملیاتِ مدیریتی — نه اجرای خط لوله روی ماشین محلی.**
 
-- کاربر: `/start`، ۲۰ تای آخر، دسته/کشور/پروتکل/تعداد — از فایل‌های محلیِ منتشرشده (`bot/utils.py:load_configs`).
+- کاربر: `/start`، ۲۰ تای آخر، دسته/کشور/پروتکل/تعداد — از فایل‌های منتشرشدهٔ محلی (`bot/utils.py:load_configs`).
 - ادمین: `adm_stats`، `adm_trigger` (dispatch به GitHub)، `adm_broadcast` (به کاربران ربات، نه کانال)، `adm_addadmin`/`adm_removeadmin`، `adm_sources`/`adm_source_toggle`/`adm_source_remove`، `adm_addsource`.
-- `bot/config.py`: `CHANNEL_USERNAME` پیش‌فرض `jojo_config` است، ولی هیچ کدی از آن برای پست در کانال استفاده نمی‌کند.
+- `bot/config.py`: `CHANNEL_USERNAME` پیش‌فرض `jojo_config`، ولی هیچ کدی از آن برای پست در کانال استفاده نمی‌کند.
 - `GITHUB_TOKEN` در `.env` خالی است ⇒ `adm_trigger` تا ست نشدنِ توکن با scope `actions:write`/`repo` کار نمی‌کند.
 
 ---
@@ -105,19 +108,18 @@ bot/admin     →  GitHub API repository_dispatch (aggregate-now)
 
 | مرحله | وضعیت |
 |---|---|
-| ست شدن برند روی هر کانفیگ | ✅ در `aggregate.process_category` (`core.brand_remark`) — الان `@jojo_config` |
-| انتشار در ربات خودم | ✅ ربات همان خطوطِ برندخورده را از `verified/`/`fast/`/`secure/` می‌فرستد |
-| انتشار خودکار در کانال | ❌ وجود ندارد (نیاز به ادمین‌بودنِ ربات در کانال + شناسهٔ کانال + هندلر `send_document` بعد از aggregate) |
+| ست شدن برند روی هر کانفیگ | ✅ `aggregate.process_category` (`core.brand_remark`) — `@jojo_config` |
+| انتشار در ربات خودم | ✅ ربات همان خطوطِ برندخورده را می‌فرستد |
+| انتشار خودکار در کانال | ❌ وجود ندارد (نیاز به ادمین‌بودنِ ربات در کانال + شناسهٔ کانال + هندلر `send_document`) |
 
 ---
 
-## ۸. کانفیگ‌ها از کجا می‌آیند و چطور منبع اضافه کنیم
+## ۸. منابع کانفیگ و راه‌های افزودن
 
-- **۱۳ منبع فعال** در `scripts/sources.py`: ۸ منبع `LIGHT` + ۵ منبع `HEAVY` (همه اشتراک/مخزن عمومی).
+- **۱۳ منبع فعال** در `scripts/sources.py`: ۸ منبع `LIGHT` + ۵ منبع `HEAVY`.
 - منابع افزوده از ربات در `data/sources_extra.json` ذخیره و merge می‌شوند.
 - سلامت هر منبع در `health.json`؛ `state.py` منبعِ ضعیف را با چهار شرط ایمنی auto-disable می‌کند.
 
-راه‌های افزودن:
 1. **دائمی**: URL در `LIGHT_SOURCES`/`HEAVY_SOURCES` + به‌روزرسانی عددِ docstring (تست `test_source_docstring_count_matches_the_actual_list` قفلش کرده) + کامیت.
 2. **از ربات (ادمین)**: پنل «منابع» → افزودن/روشن‌خاموش/حذف → `data/sources_extra.json`.
 3. **PR** به مخزن برای لحاظ شدن در CI.
@@ -126,57 +128,77 @@ bot/admin     →  GitHub API repository_dispatch (aggregate-now)
 
 ---
 
-## ۹. نتایج راستی‌آزمایی روی clone تازهٔ `48961c3`
+## ۹. اعداد منتشرشده در `faad62a`
 
-| بررسی | نتیجه |
+| سطح | تعداد |
 |---|---|
-| `git status --porcelain` | خالی (working tree پاک) |
-| `python -X utf8 scripts/brand.py --check` | rc=0 |
-| `python -X utf8 docs-src/build.py --check` | rc=0 |
-| `python -X utf8 scripts/test_categories.py` | 9/9 passed |
-| `python -X utf8 -m pytest scripts/test_pipeline.py` | 508 passed، ۳۴ failed — همه محیطی (پایین توضیح داده شده) |
-| هندلِ قدیمی در سبدهای کانفیگ/خروجی‌های تولیدی | ۰ فایل |
-| `#profile-title: @jojo_config` | ۷۳ فایل (سبدها + کشورها + پروتکل‌ها + top100) |
-| `index.json` | `brand=@jojo_config`، `generator=jojo-aggregator aggregator`، `updated_at=2026-11-20T00:38:43Z` |
-| شمارش‌ها | all=۱۱۵۱۶، heavy=۶۵۲۴، light=۶۱۳۶، verified=۱۳۹۴، fast=۹۹۲، secure=۸۵۲، google=۶۲۷، top100=۱۰۰ |
-| خطوطِ واترمارک `| @jojo_config |` در `Countries/` | ۱۱۳۱ خط در ۴۹ فایل |
-| `protocols/` | ۱۸ فایل (txt + base64) |
+| `index.json.categories.all.unique` | ۱۱۴۰۶ |
+| `index.json.categories.heavy.unique` | ۶۵۳۸ |
+| `index.json.categories.light.unique` | ۶۱۳۶ |
+| `verified/configs.txt` | ۱۵۰۰ |
+| `fast/configs.txt` | ۱۱۲۲ |
+| `secure/configs.txt` | ۹۵۱ |
+| `google/configs.txt` (GOOGLE READY) | ۵۹۷ |
+| `top100.txt` | ۱۰۰ |
+| `Countries/*.txt` | ۵۱ فایل · ۱۲۴۶ خط واترمارک `| @jojo_config |` |
+| `protocols/` | ۱۶ فایل |
 | `archive/` | ۴ فایل |
+| `index.json` | `brand=@jojo_config`، `generator=jojo-aggregator aggregator`، `updated_at=2026-11-20T00:55:35Z` |
 
-### دربارهٔ ۳۴ تستِ ناموفق (محیطی، نه رگرسیون)
-
-مجموعهٔ همان ۳۴ تست روی کامیتِ **قبل از تغییرات** (`eb094da`) هم عیناً fail می‌شود
-(مقایسهٔ مجموعه‌ها: `same set: True`). دلیل‌ها، همه مخصوصِ ویندوز/این ماشین:
-
-- `OSError: [WinError 1314] A required privilege is not held` → ساختِ symlink نیاز به Developer Mode/ادمین دارد.
-- `OSError: [WinError 193] %1 is not a valid Win32 application` → تست‌هایی که یک باینریِ bash/اجراییِ لینوکسی را صدا می‌زنند.
-- ۳ تستِ نامِ کشور (`Germany.txt` در برابر `DE.txt`) به پایگاهِ GeoIP در `.cache/` نیاز دارند که در clone تازه وجود ندارد (`countries.resolve_names` → `geo.database_available()`).
-
-شاهدِ اینکه در محیطِ درست پاس می‌شوند: اجرای workflow روی `91a554d` با نتیجهٔ **success**، در حالی که همان workflow `python scripts/test_pipeline.py` را اجرا می‌کند.
+هر عددِ بالا با خط‌های واقعیِ همان فایل (بدون خطوط `#`) برابر است و `scripts/test_categories.py` همین را قفل می‌کند.
 
 ---
 
-## ۱۰. سرنوشتِ تغییراتِ `scripts/test_categories.py`
+## ۱۰. خودسازگاریِ خروجی‌های کامیت‌شده (سنجیده، نه ادعا)
 
-در پوشِ قبلی این فایل از کامیت کنار گذاشته شد. حالا روشن و کامیت‌شده است:
+روی همان کامیت، با خودِ توابعِ تولیدِ پروژه:
 
-- نسخهٔ کنارگذاشته‌شده یک کپیِ **خراب** از همان فایل بود: هر خط با خطِ خالی و CRLF تکراری، ۱۱۷۲ خط در برابر ۲۴۷ خط. تنها محتوای معنایی‌اش یک خط بود: `BRAND = "@jojo_config"`.
-- آن تغییرِ معتبر حالا در `ab9722d` درست و بدون خرابیِ خطوط کامیت شده است (`BRAND`، assertion هویت، و پیام/docstring مربوط).
-- به‌علاوه یک باگِ **از قبل موجود** در همان تست تعمیر شد: الگوی `HEADER_COUNT` سرآیندِ واقعیِ `# @jojo_config — GOOGLE READY — 627 configs` را رد می‌کرد و ۳ تست روی `eb094da` شکست می‌خورد. الگو اکنون یک کلمهٔ اضافی و داشِ اختیاری قبل از عدد را می‌پذیرد و ۹/۹ تست پاس می‌شود.
+1. `python -X utf8 scripts/brand.py --render` → هیچ فایلی بازنویسی نشد؛ `git status` پاک.
+2. `python -X utf8 docs-src/build.py` → `docs/index.html` و `docs/fa/index.html` بازتولید شدند ولی **صفر بایت تغییر**؛ `git status` پاک.
+3. بازتولیدِ ۱۲ خروجیِ سبدها از payload کامیت‌شدهٔ خودشان (`configs_base64.txt` → `configs.txt` + `configs_base64.txt` + `clash.yaml` + `singbox.json`) برای `all/`, `heavy/`, `light/` **بایت‌به‌بایت** برابر است.
+4. `verified/`, `fast/`, `secure/`, `google/`, `Countries/` را `pipeline.py`/`countries.py`/`googleready.py` می‌سازند و ورودیِ خامشان (نتیجهٔ تستِ واقعیِ شبکه) در مخزن نیست؛ پس بازتولیدِ آفلاینِ آن‌ها ممکن نیست و در این سنجش نیامده‌اند. آن‌ها با `test_categories.py` (سرآیند/شمارش/زیرمجموعه‌بودن) سنجیده می‌شوند.
 
-هیچ تغییری بی‌صدا دور ریخته نشد: نسخهٔ خراب در تاریخِ گیت (`3c43917`) باقی است و محتوای معتبرش کامیت شده.
+### چرا این خودسازگاری قبلاً برقرار نبود — و چه شد
 
----
-
-## ۱۱. یک نکتهٔ زیرساختی (`48961c3`)
-
-روی ویندوز، `core.autocrlf` فایل‌ها را با CRLF check-out می‌کند در حالی که مخزن LF ذخیره می‌کند. دو بررسیِ خودکار بایت‌محور بودند (`brand.py --check` و هشِ `?v=` در `docs-src/build.py`) و در نتیجه **هر clone تازه** دریفتِ غیرواقعی نشان می‌داد. `.gitattributes` با `* text=auto eol=lf` این را قطعی کرد؛ الان clone تازه بدون هیچ بازتولیدی هر دو `--check` را پاس می‌کند.
+`converters._is_unroutable_server` روی پایتونِ ۳٫۱۱ نشانی‌های `::ffff:1.2.3.4` را «reserved» می‌دید و حذف می‌کرد، ولی CI (پایتونِ ۳٫۱۲) نگه می‌داشت؛ یعنی یک ورودی، دو خروجیِ متفاوت، فقط به‌خاطرِ نسخهٔ مفسر. حالا آدرسِ map‌شده با قاعدهٔ IPv4 سنجیده می‌شود (`faad62a`) و بازتولیدِ محلی دقیقاً همان بایت‌های منتشرشده است.
 
 ---
 
-## ۱۲. باقی‌مانده‌ها
+## ۱۱. تست‌ها
 
-1. **انتشار در کانال** پیاده‌سازی نشده (بخش ۷) — عمداً در این مرحله اضافه نشد.
+| اجرا | نتیجه |
+|---|---|
+| `python -X utf8 scripts/test_categories.py` | **9/9 passed** |
+| `python -X utf8 -m pytest scripts/test_pipeline.py` روی این ماشین (با `.cache/` موجود) | ۵۱۱ passed، ۳۱ failed |
+| همان، روی clone تازه (بدون پایگاهِ GeoIP) | ۵۰۸ passed، ۳۴ failed |
+
+۳۴ موردِ clone تازه همه محیطی‌اند و روی کامیتِ **قبل از تغییرات** (`eb094da`) هم عیناً fail می‌شدند (مجموعهٔ یکسان):
+
+- `WinError 1314` → ساختِ symlink نیاز به Developer Mode/ادمین دارد.
+- `WinError 193` → تست‌هایی که باینریِ bash/لینوکسی را اجرا می‌کنند.
+- ۳ تستِ نامِ کشور (`Germany.txt` در برابر `DE.txt`) که به پایگاهِ GeoIP در `.cache/` نیاز دارند.
+
+شاهدِ پاس‌شدن در محیطِ درست: workflow روی `91a554d` با نتیجهٔ **success**، در حالی که همان workflow `python scripts/test_pipeline.py` را اجرا می‌کند.
+
+---
+
+## ۱۲. سرنوشتِ `scripts/test_categories.py`
+
+- نسخه‌ای که در پوشِ قبلی کنار گذاشته شد، کپیِ **خرابِ** همان فایل بود (هر خط با خطِ خالی + CRLF؛ ۱۱۷۲ خط در برابر ۲۴۷). تنها محتوای معنایی‌اش `BRAND = "@jojo_config"` بود.
+- همان تغییر در `ab9722d` **درست** کامیت شد: `BRAND`، assertion هویت (ممنوعیتِ هندلِ قدیمی به‌جای ممنوعیتِ هندلِ جدید) و پیام/docstring.
+- باگِ از پیش موجود هم تعمیر شد: `HEADER_COUNT` سرآیندِ واقعیِ `# @jojo_config — GOOGLE READY — 597 configs` را رد می‌کرد و ۳ تست روی `eb094da` شکست می‌خورد.
+
+---
+
+## ۱۳. `.gitattributes` (چرا لازم بود)
+
+ویندوز با `core.autocrlf` فایل‌ها را CRLF check-out می‌کند ولی مخزن LF است؛ `brand.py --check` و هشِ `?v=` در `docs-src/build.py` بایت‌محورند، پس هر clone تازه دریفتِ غیرواقعی نشان می‌داد. `* text=auto eol=lf` این را قطعی کرد.
+
+---
+
+## ۱۴. باقی‌مانده‌ها
+
+1. **انتشار در کانال** پیاده نشده (بخش ۷) — عمداً در این مرحله اضافه نشد.
 2. **`GITHUB_TOKEN`** در `.env` خالی است ⇒ trigger از ربات غیرفعال.
 3. هندلِ قدیمی فقط در سه جای **هویتی** مانده و عمداً دست‌نخورده است: `ACCESSIBILITY.md:89`، `GOVERNANCE.md:26` (نگه‌دارندهٔ مخزن)، `PHASE_A_REPORT.md:594` (امضای گزارشِ تاریخی).
-4. کامیت‌های `[auto-output]` هر ~۱۵ دقیقه اضافه می‌شوند؛ اعدادِ بخش ۹ مربوط به کامیتِ ذکرشده است.
+4. کامیت‌های `[auto-output]` هر ~۱۵ دقیقه اضافه می‌شوند و شمارش‌ها را کمی جابه‌جا می‌کنند؛ اعدادِ بخش ۹ مربوط به `faad62a` است.

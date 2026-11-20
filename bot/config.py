@@ -25,9 +25,12 @@ def _env(name: str, default: str = "") -> str:
 BOT_TOKEN = _env("BOT_TOKEN")
 OWNER_ID = int(_env("OWNER_ID", "0") or "0")
 CHANNEL_USERNAME = _env("CHANNEL_USERNAME", "jojo_config")
+BRAND_CHANNEL = _env("BRAND_CHANNEL", "@jojo_config")
 GITHUB_TOKEN = _env("GITHUB_TOKEN")
 GH_OWNER = _env("GH_OWNER", "farshid78")
 GH_REPO = _env("GH_REPO", "Free-v2ray-Configs")
+GH_BRANCH = _env("GH_BRANCH", "main")
+CHANNEL_PUBLISH = _env("CHANNEL_PUBLISH")
 
 DB_PATH = _env("BOT_DB", str(REPO_ROOT / "data" / "bot.db"))
 #: آدرسِ پنلِ گلس. تلگرام فقط HTTPS را برای Web App قبول می‌کند، پس هر مقدارِ

@@ -52,6 +52,7 @@ def build_app() -> Application:
     app = Application.builder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", user.start))
+    app.add_handler(CommandHandler("sub", user.sub_link))
     app.add_handler(CommandHandler("health", admin.adm_stats))
 
     # callback routing
@@ -75,6 +76,8 @@ def build_app() -> Application:
     app.add_handler(CallbackQueryHandler(admin.adm_cats_help, pattern="^adm_cats_help$"))
     app.add_handler(CallbackQueryHandler(admin.adm_addsource, pattern="^adm_addsource$"))
     app.add_handler(CallbackQueryHandler(admin.adm_addsource_cat, pattern="^addsrc:"))
+    app.add_handler(CallbackQueryHandler(user.sub_link, pattern="^sub_link$"))
+    app.add_handler(CallbackQueryHandler(admin.adm_publish, pattern="^adm_publish$"))
 
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, _route_text))
     return app

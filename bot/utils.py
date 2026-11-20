@@ -3,7 +3,8 @@ import binascii
 from pathlib import Path
 
 from .config import (VERIFIED_DIR, FAST_DIR, SECURE_DIR, ALL_DIR,
-                     HEAVY_DIR, LIGHT_DIR, GOOGLE_DIR, TOP100_PATH)
+                     HEAVY_DIR, LIGHT_DIR, GOOGLE_DIR, TOP100_PATH,
+                     GH_OWNER, GH_REPO, GH_BRANCH, REPO_ROOT)
 
 
 def _read_lines(path: Path) -> list[str]:
@@ -94,6 +95,36 @@ def filter_by_protocol(lines: list[str], proto: str) -> list[str]:
 def filter_by_country(lines: list[str], country: str) -> list[str]:
     c = country.lower()
     return [ln for ln in lines if c in ln.lower()]
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# لینک‌های ساب‌سکریپشنِ برندشده (فایل‌های واقعیِ موجود در مخزن)
+# ──────────────────────────────────────────────────────────────────────────────
+RAW_BASE = f"https://raw.githubusercontent.com/{GH_OWNER}/{GH_REPO}/{GH_BRANCH}"
+
+
+def subscription_urls() -> list[tuple[str, str]]:
+    """فهرست (عنوان, URL) برای فایل‌های ساب‌سکریپشنِ برندشدهٔ موجود.
+
+    همهٔ URLها به فایل‌های واقعیِ موجود در مخزن اشاره می‌کنند (نه به مسیری
+    که ۴۰۴ می‌دهد). خوانندهٔ ربات باید بتواند هر کدام را import کند.
+    """
+    items = [
+        ("🏆 Verified (پیشنهادی) — base64", f"{RAW_BASE}/verified/configs_base64.txt"),
+        ("🏆 Verified — Clash", f"{RAW_BASE}/verified/clash.yaml"),
+        ("🏆 Verified — Sing-box", f"{RAW_BASE}/verified/singbox.json"),
+        ("🌐 All — base64", f"{RAW_BASE}/all/configs_base64.txt"),
+        ("⚡ Fast — base64", f"{RAW_BASE}/fast/configs_base64.txt"),
+        ("🔐 Secure — base64", f"{RAW_BASE}/secure/configs_base64.txt"),
+        ("🟢 Google — base64", f"{RAW_BASE}/google/configs_base64.txt"),
+        ("📦 Heavy — base64", f"{RAW_BASE}/heavy/configs_base64.txt"),
+        ("⭐ Light — base64", f"{RAW_BASE}/light/configs_base64.txt"),
+    ]
+    # پروتکل‌های جداگانه (فایل‌های واقعیِ موجود)
+    for proto in ("vless", "vmess", "trojan", "shadowsocks", "hysteria2", "shadowsocksr"):
+        items.append((f"📄 {proto.upper()} — base64",
+                      f"{RAW_BASE}/protocols/{proto}_base64.txt"))
+    return items
 
 
 def chunk_text(lines: list[str], max_chars: int = 3900) -> list[str]:

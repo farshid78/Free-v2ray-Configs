@@ -5,7 +5,9 @@ import requests
 from telegram import Update
 from telegram.ext import ContextTypes
 
-from ..config import GITHUB_TOKEN, GH_OWNER, GH_REPO, is_owner, REPO_ROOT
+from ..config import (GITHUB_TOKEN, GH_OWNER, GH_REPO, GH_BRANCH,
+                      CHANNEL_USERNAME, CHANNEL_PUBLISH, BRAND_CHANNEL,
+                      is_owner, REPO_ROOT)
 from ..db import add_admin, remove_admin, is_admin, user_count
 from ..keyboards import admin_menu
 
@@ -246,6 +248,68 @@ async def adm_addsource_cat(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
 
 
+
+
+async def adm_publish(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """انتشار در کانال: پیش‌نمایش (dry-run) یا post واقعی.
+
+    به‌طور پیش‌فرض dry-run است (CHANNEL_PUBLISH تنظیم نشده) تا در تست محلی
+    هیچ post واقعی به تلگرام نرود. برای post واقعی: CHANNEL_PUBLISH=live و
+    بات باید ادمین کانال باشد. همیشه به فایلِ واقعیِ موجود (verified/configs_base64.txt)
+    اشاره می‌کند؛ اگر فایل نباشد، پیامِ راهنما می‌دهد نه خطای مرده.
+    """
+    q = update.callback_query
+    await q.answer()
+    if not _is_admin(q.from_user.id):
+        await q.edit_message_text("دسترسی ندارید.")
+        return
+    from ..utils import subscription_urls
+    sub_path = REPO_ROOT / "verified" / "configs_base64.txt"
+    raw_url = f"https://raw.githubusercontent.com/{GH_OWNER}/{GH_REPO}/{GH_BRANCH}/verified/configs_base64.txt"
+    if not sub_path.exists():
+        await q.edit_message_text(
+            "فایلِ ساب‌سکریپشنِ برندشده یافت نشد (verified/configs_base64.txt).\n"
+            "ابتدا pipeline/aggregate را اجرا کنید.\n\n"
+            "مسیرِ انتظار: " + str(sub_path),
+            reply_markup=admin_menu(),
+        )
+        return
+    try:
+        size = sub_path.stat().st_size
+        import base64
+        raw = base64.b64decode("".join(sub_path.read_text(encoding="utf-8").split()))
+        ncfg = sum(1 for ln in raw.decode("utf-8", errors="replace").splitlines()
+                   if ln.strip() and not ln.lstrip().startswith("#"))
+    except Exception as e:
+        await q.edit_message_text(f"خواندنِ فایل ناموفق: {e}", reply_markup=admin_menu())
+        return
+    channel = "@" + CHANNEL_USERNAME.lstrip("@")
+    msg = (f"JoJo VPN — ساب‌سکریپشنِ برندشده\n"
+           f"{ncfg} کانفیگ · verified\n"
+           f"Import: {raw_url}")
+    dry = (CHANNEL_PUBLISH != "live")
+    preview = ("📢 پیش‌نمایشِ انتشار در کانال\n"
+               f"کانال: {channel}\n"
+               f"فایل: verified/configs_base64.txt ({ncfg} کانفیگ، {size} بایت)\n"
+               f"برند: همهٔ remarkها «{BRAND_CHANNEL}» دارند\n"
+               f"URL: {raw_url}\n\n"
+               f"پیامی که ارسال می‌شود:\n{msg}\n\n")
+    if dry:
+        preview += ("حالت: DRY-RUN (پیش‌فرض). هیچ post واقعی ارسال نشد.\n"
+                    "برای post واقعی: CHANNEL_PUBLISH=live تنظیم کنید و بات را "
+                    "ادمین کانال کنید، سپس دوباره بزنید.")
+        await q.edit_message_text(preview, reply_markup=admin_menu())
+        return
+    # live mode: attempt to post
+    try:
+        await context.bot.send_message(chat_id=channel, text=msg)
+        await q.edit_message_text(preview + "\n✅ در کانال منتشر شد.", reply_markup=admin_menu())
+    except Exception as e:
+        await q.edit_message_text(
+            preview + f"\n❌ ارسال ناموفق: {type(e).__name__}: {e}\n"
+            "بررسی کنید بات ادمین کانال باشد و CHANNEL_USERNAME درست باشد.",
+            reply_markup=admin_menu(),
+        )
 
 
 async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

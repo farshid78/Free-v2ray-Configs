@@ -4,7 +4,8 @@ from telegram.ext import ContextTypes
 from ..config import is_owner
 from ..db import add_user, is_admin
 from ..keyboards import main_menu, protocols_menu, categories_menu
-from ..utils import load_configs, filter_by_protocol, filter_by_country, chunk_text
+from ..utils import (load_configs, filter_by_protocol, filter_by_country,
+                     chunk_text, subscription_urls)
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -124,6 +125,26 @@ async def proto_selected(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await q.edit_message_text(f"{len(lines)} کانفیگ {proto.upper()}:")
     for chunk in chunk_text(lines[:50]):
         await q.message.reply_text(chunk)
+
+
+async def sub_link(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """ارسال لینک‌های ساب‌سکریپشنِ برندشده (فایل‌های واقعیِ موجود)."""
+    q = update.callback_query
+    if q:
+        await q.answer()
+        reply = q.message.reply_text
+    else:
+        reply = update.message.reply_text
+    lines = ["🔗 ساب‌سکریپشنِ برندشده (همهٔ کانفیگ‌ها remark/نامِ برند دارند):", ""]
+    for title, url in subscription_urls():
+        lines.append(f"• {title}\n  {url}")
+    lines.append("")
+    lines.append("کپی کنید یا در کلاینت import کنید. تعداد و پروتکل با index.json می‌خواند.")
+    await reply("\n".join(lines))
+    if q:
+        u = q.from_user
+        await q.message.reply_text("بازگشت:", reply_markup=main_menu(
+            bool(u and (is_admin(u.id) or is_owner(u.id)))))
 
 
 async def back_main(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

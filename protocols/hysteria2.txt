@@ -3,7 +3,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — hysteria2 — 213 configs
+# @jojo_config — hysteria2 — 210 configs
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=off#US 🇺🇸 | @jojo_config | 19974A
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=163.192.14.135#US 🇺🇸 | @jojo_config | 4929FF
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=css.rbxcdn.com#US 🇺🇸 | @jojo_config | BDDA85
@@ -48,7 +48,6 @@ hy2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?insecure=1&sni=vp3.y
 hy2://a0052f4f-4c63-0002-a16f-ab2d5d718cd3@192.142.23.46:443?sni=diffoscope.com#SE 🇸🇪 | @jojo_config | 903A3D
 hy2://b0917015b656b3dd2286b5633af0c5c1@31.57.248.176:50160?insecure=1&sni=www.bing.com%2523%25e9%25a6%2583%25e5%259a%259f%25e9%25a6%2583%25e5%259a%25a2%257chk%257c%2540wxgqlfx%257c147#HK 🇭🇰 | @jojo_config | E6A2D1
 hy2://b0917015b656b3dd2286b5633af0c5c1@31.57.248.176:50160?insecure=1&sni=www.bing.com#HK 🇭🇰 | @jojo_config | B36608
-hy2://b36a14f8-fc3f-4142-968f-48031cf5f330@179.254.127.219:25318/?sni=775c8bt.lt4.h1clayd.click#DE 🇩🇪 | @jojo_config | BAB310
 hy2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333?insecure=1&sni=off#US 🇺🇸 | @jojo_config | 8436F1
 hy2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333?insecure=1&sni=155.248.209.2#US 🇺🇸 | @jojo_config | 42733D
 hy2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333?insecure=1&sni=155.248.209.237#US 🇺🇸 | @jojo_config | E8866F
@@ -118,7 +117,6 @@ hy2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1#JP 🇯🇵 | @jojo
 hy2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=8.211.175.236#JP 🇯🇵 | @jojo_config | 7993A9
 hy2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com#JP 🇯🇵 | @jojo_config | A83BE6
 hy2://usqmqUKJFIlCmvkCNSY64L3k@8.209.247.109:443?insecure=1&sni=bing.com#JP 🇯🇵 | @jojo_config | EE8BCF
-hy2://yO8pug5XmwkBXBAjleYIaVt@192.255.152.147:443/?insecure=1&sni=192.255.152.147#US 🇺🇸 | @jojo_config | D1EFD6
 hysteria2://083417772bc618cd61f0cca23dd91680@167.179.34.31:55443?insecure=1&sni=gorbachev-new-th.kvnfreetest.uk#TH 🇹🇭 | @jojo_config | 2373E1
 hysteria2://2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f@144.31.148.87:443?insecure=1&sni=replay.wwwinternetvideo.click#DE 🇩🇪 | @jojo_config | FBA013
 hysteria2://2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f@replay.wwwinternetvideo.click:443?insecure=1&sni=replay.wwwinternetvideo.click#DE 🇩🇪 | @jojo_config | 49387F
@@ -129,8 +127,6 @@ hysteria2://5ictxgawam84vgrp@109.70.74.213:2098?security=tls&obfs=salamander&obf
 hysteria2://6aab8efdf13945829ae3699c342be406@31.76.80.69:443?security=tls&obfs=salamander&obfs-password=uw9b2qq5rx&insecure=0&sni=fiproxy1.lockdwn.com#FI 🇫🇮 | @jojo_config | A5D1E1
 hysteria2://6f7a8009ecf6a12e10d03f9d88493c89@167.179.34.13:55443?insecure=1&sni=gorbachev-th.kvnfreetest.uk#TH 🇹🇭 | @jojo_config | 84D0BF
 hysteria2://8674df07-56b3-43ea-b687-aef2b1a20137@31.76.22.210:443?insecure=1&sni=crt.ultimagamest.com#PL 🇵🇱 | @jojo_config | 9BED5E
-hysteria2://99a271e85dbc4aa8950f9c7beee06b19@ide.vipvirtualnet.eu:30746?security=tls&obfs=salamander&alpn=h3&obfs-password=7wjvepshx5g115x4&insecure=0&sni=del.vipvirtualnet.eu#IR 🇮🇷 | @jojo_config | 012FFC
-hysteria2://z/yIxn3sBV03PkAxbnX8rg==@137.131.177.121:20000?security=tls&obfs=salamander&obfs-password=z/yIxn3sBV03PkAxbnX8rg==&insecure=0&mport=20000-30000&sni=hy2-br.whuiy.xyz#BR 🇧🇷 | @jojo_config | 7709D3
 hysteria2://b36a14f8-fc3f-4142-968f-48031cf5f330@hy2-eee-1.aloranode.top:443?sni=hy2-eee-1.aloranode.top&insecure=0#EE 🇪🇪 | @jojo_config | E62E9A
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@181.214.99.162:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=api.kermanshahi.org#DE 🇩🇪 | @jojo_config | 9BA342
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@5.175.249.174:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=0&sni=api.kermanshahi.org#DE 🇩🇪 | @jojo_config | 4825ED
@@ -144,6 +140,7 @@ hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@31.76.30.97:443?ins
 hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@fast.wwwinternetvideo.click:443?insecure=1&sni=fast.wwwinternetvideo.click#FI 🇫🇮 | @jojo_config | D3E813
 hysteria2://CnVfXXvMzh@72.56.92.120:443?insecure=1&sni=hys13.wba-pn.ru#NL 🇳🇱 | @jojo_config | BB67B0
 hysteria2://CnVfXXvMzh@hys13.wba-pn.ru:443?insecure=1&sni=hys13.wba-pn.ru#NL 🇳🇱 | @jojo_config | 874A31
+hysteria2://CyG0RFxMjzs41uQD4OLuHQ==@150.230.229.100:20000?security=tls&obfs=salamander&obfs-password=CyG0RFxMjzs41uQD4OLuHQ==&insecure=0&mport=20000-30000&sni=hy2-br2.whuiy.xyz#BR 🇧🇷 | @jojo_config | B690CF
 hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?sni=panel.autonetshop.ir&obfs=salamander&obfs-password=km9oqmefh2km1i5n#TR 🇹🇷 | @jojo_config | 02F64C
 hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?security=tls&obfs=salamander&obfs-password=km9oqmefh2km1i5n&insecure=0&sni=panel.autonetshop.ir#TR 🇹🇷 | @jojo_config | 5848FC
 hysteria2://dongtaiwang.com@142.249.37.90:44356?sni=hy2.561891.xyz#US 🇺🇸 | @jojo_config | B50285
@@ -169,6 +166,7 @@ hysteria2://HATATEAYA@77.90.15.183:8964/?insecure=1&obfs=salamander&obfs-passwor
 hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=hysteria.udpgw.co#NL 🇳🇱 | @jojo_config | 340F4E
 hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=hysteria.udpgw.com#NL 🇳🇱 | @jojo_config | 2A0A72
 hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=sni-here.com#NL 🇳🇱 | @jojo_config | 78AF0D
+hysteria2://HowdyHysteria2023w0W@hysteria.udpgw.com:8443/?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=sni-here.com#NL 🇳🇱 | @jojo_config | B843BA
 hysteria2://Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0@85.204.107.178:8080?insecure=1&sni=hopp-romania-new.roxa.org#RO 🇷🇴 | @jojo_config | 1B770D
 hysteria2://Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0@85.204.107.181:8080?insecure=1&sni=hopp-romania-new.roxa.org#RO 🇷🇴 | @jojo_config | 73C6C6
 hysteria2://KevinZakarian@179.61.132.96:8443?security=tls&obfs=salamander&obfs-password=KevinZakarian&insecure=1&sni=179.61.132.96#DE 🇩🇪 | @jojo_config | BD6A32
@@ -200,7 +198,6 @@ hysteria2://suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g@159.223.157.129:8443?insecure=1#US 
 hysteria2://Telegram-vpnjey@179.61.138.145:36264?sni=de2.jey.cc.cd&insecure=1&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | @jojo_config | 97F01B
 hysteria2://Telegram:vpnjey@179.61.138.145:36264?sni=de2.jey.cc.cd&insecure=1&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | @jojo_config | 177181
 hysteria2://Telegram:vpnjey@179.61.138.145:36264?security=tls&obfs=salamander&obfs-password=Telegram@vpnjey&insecure=0&sni=de2.jey.cc.cd#DE 🇩🇪 | @jojo_config | 00BA77
-hysteria2://u9axzkplfc3463am@sub.macdonalder.cyou:16146?security=tls&obfs=salamander&obfs-password=mn1g0eianbese7bl&insecure=0&sni=sub.macdonalder.cyou#DE 🇩🇪 | @jojo_config | FA8D3F
 hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@5.83.129.11:443?insecure=1&sni=germany1.h2corp.local#DE 🇩🇪 | @jojo_config | 14D688
 hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@de.1.22.washing.help:443?insecure=1&sni=germany1.h2corp.local#DE 🇩🇪 | @jojo_config | 05ED52
 hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@hold.wwwinternetvideo.click:443?insecure=1&sni=germany1.h2corp.local#RU 🇷🇺 | @jojo_config | 62FACB
@@ -208,7 +205,7 @@ hysteria2://V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8@144.31.221.57:443?insecu
 hysteria2://V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8@player.wwwinternetvideo.click:443?insecure=1&sni=player.wwwinternetvideo.click#DE 🇩🇪 | @jojo_config | 23DFE5
 hysteria2://VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC@82.38.60.15:8443?insecure=1&sni=hopp-us.yyuyy.com#US 🇺🇸 | @jojo_config | 9B0747
 hysteria2://VPNJEY@179.61.138.145:36264?sni=de2.jey.cc.cd&insecure=1&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | @jojo_config | 1D19F4
-hysteria2://VPNJEy@[2a0f:5707:aaf1:11a6::1]:36264?sni=de2.jey.cc.cd&insecure=1&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | @jojo_config | 1EE32A
+hysteria2://VPNJEy@[2a0f:5707:aaf1:11a6::1]:36264/?insecure=1&obfs=salamander&obfs-password=Telegram@vpnjey&sni=de2.jey.cc.cd#DE 🇩🇪 | @jojo_config | 1EE32A
 hysteria2://wrSuBorIlf@72.56.116.57:443?insecure=1&sni=hys9.wba-pn.ru#NL 🇳🇱 | @jojo_config | 68AEDF
 hysteria2://wrSuBorIlf@hys9.wba-pn.ru:443?insecure=1#NL 🇳🇱 | @jojo_config | FA225A
 hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@144.31.49.47:443?insecure=1&sni=admin.wwwinternetvideo.click#RU 🇷🇺 | @jojo_config | 507E18

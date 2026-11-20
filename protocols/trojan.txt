@@ -3,11 +3,12 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — trojan — 1536 configs
+# @jojo_config — trojan — 1532 configs
 trojan://%21str18844@49.212.193.129:443?type=tcp#JP 🇯🇵 | @jojo_config | 7D91F6
 trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443#JP 🇯🇵 | @jojo_config | F278EA
 trojan://!str18844@zxcvbn@os-tr-3.cats22.net:443#JP 🇯🇵 | @jojo_config | ED4401
-trojan://+Y4bH6SejVz8gunXYHMS94Oy2yn4313jzITBdW8eLsI=@sub.macdonalder.cyou:37468?path=/&security=tls&alpn=h2,http/1.1&insecure=0&host=sub.macdonalder.cyou&fp=chrome&ech=AGf+DQBjAAAgACAhFNYCzEaeuJhDdU3vr+RcePA8Hsa1jMoB38bav18pdQAkAAEAAQABAAIAAQADAAIAAQACAAIAAgADAAMAAQADAAIAAwADABRzdWIubWFjZG9uYWxkZXIuY3lvdQAA&type=httpupgrade&allowInsecure=0&sni=sub.macdonalder.cyou#DE 🇩🇪 | @jojo_config | 63C1C7
+trojan://+Y4bH6SejVz8gunXYHMS94Oy2yn4313jzITBdW8eLsI=@48.103.230.51:37468?security=tls&type=httpupgrade&sni=sub.macdonalder.cyou&fp=chrome&alpn=h2,http/1.1#US 🇺🇸 | @jojo_config | 701916
+trojan://+Y4bH6SejVz8gunXYHMS94Oy2yn4313jzITBdW8eLsI=@sub.macdonalder.cyou:37468?security=tls&type=httpupgrade&sni=sub.macdonalder.cyou&fp=chrome&alpn=h2,http/1.1#DE 🇩🇪 | @jojo_config | 02B4A0
 trojan://-kbAbEMlUlkHZkCc00Xq0Zu7p5x4WAa7@eksmstr-production.up.railway.app:443?path=/live/d76b7cf8-35ad-4417-bf04-e86cf84a19b4?ed=2560&security=tls&alpn=http/1.1&insecure=0&host=eksmstr-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=eksmstr-production.up.railway.app#SG 🇸🇬 | @jojo_config | CB86EE
 trojan://8r<[9'l6hAO#Global 🌐 | @jojo_config | DF03FA
 trojan://002023c45d18bca3eba2757bb683309a@42.51.25.69:59443?allowInsecure=1&sni=ja262.magiclampcloud.cn&type=tcp#CN 🇨🇳 | @jojo_config | 3A2284
@@ -131,7 +132,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.66:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?allowInsecure=0&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | @jojo_config | D429FC
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?security=tls&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com&type=tcp&headerType=none&path=/#US 🇺🇸 | @jojo_config | 56DDC3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?security=tls&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | F195D8
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443#CA 🇨🇦 | @jojo_config | 48B559
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?sni=learn.connectingpeoplewithgreatjobs.com&type=tcp#CA 🇨🇦 | @jojo_config | 65E3BE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=learn.connectingpeoplewithgreatjobs.com#CA 🇨🇦 | @jojo_config | A9E2DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.201:443?sni=resources.connectingpeoplewithgreatjobs.com&type=tcp#CA 🇨🇦 | @jojo_config | B897AE
@@ -173,6 +173,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?allowInsecure=1&ty
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?allowInsecure=1&sni=216.152.156.212&type=tcp#US 🇺🇸 | @jojo_config | 5C3772
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?allowInsecure=1&sni=courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com&type=tcp#US 🇺🇸 | @jojo_config | D9D90E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?security=tls&sni=courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | DC936D
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.42:443?allowInsecure=1&fp=chrome#US 🇺🇸 | @jojo_config | 7AC966
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.42:443?allowInsecure=1&sni=216.152.156.42&type=tcp#US 🇺🇸 | @jojo_config | 792421
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.42:443?allowInsecure=1&sni=blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com&type=tcp#US 🇺🇸 | @jojo_config | D0B12B
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.49:443?allowInsecure=1&sni=api.unlockyourfuturefindyourperfectcareer.com&type=tcp#US 🇺🇸 | @jojo_config | B26947
@@ -198,6 +199,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.163.182:443?allowInsecure=1&sni
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?sni=advanceyouremploymentskillsandcareerdevelopmenthub.com&type=tcp#CL 🇨🇱 | @jojo_config | 3679D3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?security=tls&sni=advanceyouremploymentskillsandcareerdevelopmenthub.com&type=tcp&headerType=none&path=/#CL 🇨🇱 | @jojo_config | 4FBE5E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?security=tls&sni=advanceyouremploymentskillsandcareerdevelopmenthub.com&type=tcp&headerType=none#CL 🇨🇱 | @jojo_config | 1C085E
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&fp=chrome#US 🇺🇸 | @jojo_config | 6700F5
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&sni=66.163.112.121&type=tcp#US 🇺🇸 | @jojo_config | CFA29A
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=0&sni=www.unlockyourfuturefindyourperfectcareer.com#US 🇺🇸 | @jojo_config | 4934D4
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&sni=www.unlockyourfuturefindyourperfectcareer.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | 4E295C
@@ -221,6 +223,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls#US 🇺
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?sni=unlockyourfuturefindyourperfectcareer.com&type=tcp#US 🇺🇸 | @jojo_config | 1BAF48
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&sni=unlockyourfuturefindyourperfectcareer.com&type=tcp&headerType=none&path=/#US 🇺🇸 | @jojo_config | 465745
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&sni=unlockyourfuturefindyourperfectcareer.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | 785433
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.76:443?allowInsecure=1&fp=chrome#US 🇺🇸 | @jojo_config | BD1DD8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.76:443?allowInsecure=1&sni=66.163.112.76&type=tcp#US 🇺🇸 | @jojo_config | 52E9AA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.76:443?allowInsecure=1&sni=api.unlockyourfuturefindyourperfectcareer.com&type=tcp#US 🇺🇸 | @jojo_config | 9BDFE6
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.76:443?security=tls&sni=api.unlockyourfuturefindyourperfectcareer.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | 80BAA3
@@ -250,12 +253,11 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.166:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443#ES 🇪🇸 | @jojo_config | F6A42C
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?security=tls&insecure=0&host=/?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI&headerType=none&type=tcp&allowInsecure=0&sni=blog.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | F12CA1
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443#ES 🇪🇸 | @jojo_config | 3B5924
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 15FDDA
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?security=tls&insecure=0&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&allowInsecure=0&sni=api.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 15FDDA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.251:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=resources.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 2A8C03
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.40:443#ES 🇪🇸 | @jojo_config | D8B403
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.40:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=cdn.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | F48624
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.62:443#ES 🇪🇸 | @jojo_config | 32DD1D
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.62:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 2712B5
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.113:443?allowInsecure=1&sni=api.searchnationwidecareerchangehelperandguidancetoday.com&type=tcp#US 🇺🇸 | @jojo_config | 4AC1E7
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.113:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.searchnationwidecareerchangehelperandguidancetoday.com#US 🇺🇸 | @jojo_config | 651D8C
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.25:443?security=tls&sni=cdn.searchnationwidecareerchangehelperandguidancetoday.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | 77C617
@@ -283,6 +285,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.9:443?allowInsecure=1&sni=r
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.9:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=resources.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | 5ADB5B
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@70.34.252.255:443?sni=browseexecutivejobopeningsandenhanceleadershipcareer.com&type=tcp#PL 🇵🇱 | @jojo_config | 2C8E24
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@leviko-ch7952.shopingggg.ir:443?security=tls&headerType=none&type=tcp&sni=cdn.yourultimateprofessionalcareerhub.com#Global 🌐 | @jojo_config | B36FE6
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@leviko-cl7123.shopingggg.ir:443?security=tls&headerType=none&type=tcp&sni=advanceyouremploymentskillsandcareerdevelopmenthub.com#CL 🇨🇱 | @jojo_config | 590A4E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@leviko-cl8093.shopingggg.ir:443?security=tls&headerType=none&type=tcp&sni=advanceyouremploymentskillsandcareerdevelopmenthub.com#Global 🌐 | @jojo_config | 862D3B
 trojan://0ce39170-e787-11ef-a9be-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | @jojo_config | BC9C34
 trojan://0ce39170-e787-11ef-a9be-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @jojo_config | A6C8F7
@@ -308,7 +311,7 @@ trojan://1234567890@152.53.228.86:443?sni=kfm-bn0.pages.dev&allowInsecure=1#DE �
 trojan://1234567890@202.61.195.167:443?sni=kfm-bn0.pages.dev&allowInsecure=1#DE 🇩🇪 | @jojo_config | FBB342
 trojan://1234567890@31.172.71.23:443?sni=kfm-bn0.pages.dev&type=tcp#DE 🇩🇪 | @jojo_config | 679468
 trojan://123456@194.233.88.109:443/?type=tcp&security=tls&sni=194.233.88.109&alpn=http%2F1.1&allowInsecure=1&fp=chrome#SG 🇸🇬 | @jojo_config | 71FAD2
-trojan://123456@34.80.15.95:443?type=tcp&security=tls&fp=chrome&sni=tw.ctt25.uk#TW 🇹🇼 | @jojo_config | 13A957
+trojan://123456@34.80.15.95:443/?type=tcp&security=tls&sni=tw.ctt25.uk&fp=chrome#TW 🇹🇼 | @jojo_config | 13A957
 trojan://123456@34.94.152.229:443?fp=chrome&sni=us.ctt25.uk#US 🇺🇸 | @jojo_config | 8F39FA
 trojan://123456@34.94.152.229:443?fp=chrome&insecure=0&security=tls&sni=us.ctt25.uk&type=tcp#US 🇺🇸 | @jojo_config | 76D633
 trojan://123456@us.ctt25.uk:443?allowInsecure=1#US 🇺🇸 | @jojo_config | C2A750
@@ -377,7 +380,6 @@ trojan://2bfc5fda7fbccde82d6fada1465d131c@tyy129.magiclampcloud.com:59443?allowI
 trojan://2ce88088024f525d77c2bda96e81d737@ja262.magiclampcloud.cn:59443?allowInsecure=1&sni=ja262.magiclampcloud.cn&type=tcp#CN 🇨🇳 | @jojo_config | D8CFA4
 trojan://2d1321a0-df39-11ef-851e-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @jojo_config | 5AA518
 trojan://2ddeb5f43bbb897b13db728b2dfbef92@ja304.magiclampcloud.cn:59443?type=tcp&sni=ja304.magiclampcloud.cn#CN 🇨🇳 | @jojo_config | 3F23FB
-trojan://2do42jyU0n_zLlqu@mtvdderwts-production.up.railway.app:443?path=/api/zo6GV-&security=tls&alpn=http/1.1&insecure=0&host=mtvdderwts-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=mtvdderwts-production.up.railway.app#SG 🇸🇬 | @jojo_config | 1D364A
 trojan://2e7sEZERnvGOlt35hf6rNg@96.44.133.37:2087?sni=www.bing.com&allowInsecure=1#US 🇺🇸 | @jojo_config | B2B2A1
 trojan://2ea5fc44-bd38-4fb0-a9b9-88c83fc56622@194.146.26.40:443?allowInsecure=1&sni=4-193-105-141.nhost.00cdn.com#TR 🇹🇷 | @jojo_config | 977F98
 trojan://2ee85121-31de-4581-a492-eb00f606e392@103.252.116.138:443/?type=tcp&security=tls&sni=hk.freeguard.org#HK 🇭🇰 | @jojo_config | 2D35B7
@@ -511,6 +513,7 @@ trojan://4d8e20bdae228d69021cdac530a5ce6d@tyy129.magiclampcloud.com:59443?allowI
 trojan://4ea3cdc0-ec7d-11ef-ba77-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @jojo_config | DAD86D
 trojan://4f2c305b-9a03-4493-b3e4-2dff2f1af8c9@103.168.56.77:443?security=tls#MN 🇲🇳 | @jojo_config | 9E4E0F
 trojan://4fa64bc99914bc5e4339589945720e94@tyy129.magiclampcloud.com:59443?allowInsecure=1&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | @jojo_config | 09CD9C
+trojan://4mq9w5ckqw3ewbdg@staticxfastline.taymaztest.ir:16200?path=/biyasd&security=tls&alpn=http/1.1&insecure=0&host=staticxfastline.taymaztest.ir&fp=chrome&type=ws&allowInsecure=0&sni=staticxfastline.taymaztest.ir#LU 🇱🇺 | @jojo_config | 7B19E7
 trojan://510b4540-0a7d-11f0-b23c-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | @jojo_config | 06B795
 trojan://510b4540-0a7d-11f0-b23c-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @jojo_config | 7AAADD
 trojan://518299d0-066f-11f0-a2c8-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | @jojo_config | B916FD
@@ -601,7 +604,6 @@ trojan://6aa25635a999d62f49eba40879fbc915@ja262.magiclampcloud.cn:59443?allowIns
 trojan://6bd61140c3512e2b9c2be81ed012faff@tyy129.magiclampcloud.com:59443?allowInsecure=1&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | @jojo_config | 021CD0
 trojan://6c16b08c-8560-4d87-8e11-2961e1e2e4da@57.128.45.211:443?security=tls&sni=s103.tohell.cf&type=tcp&headerType=none#FR 🇫🇷 | @jojo_config | CC181B
 trojan://6c6bcdab-767c-4a36-8419-4ebc8c3b7066@143.198.62.157:443?sni=206.237.5.220&fp=chrome&alpn=http%2F1.1&type=tcp#US 🇺🇸 | @jojo_config | 6C9B25
-trojan://6c862415-30d2-4813-8e49-42e99a0bd415@104.16.72.101:443?security=tls&sni=space.byu.id.yxls.eu.cc&insecure=0&allowInsecure=0&type=ws&host=space.byu.id.yxls.eu.cc&path=/us-gllc@ThePackageCom#CA 🇨🇦 | @jojo_config | 99B815
 trojan://6c862415-30d2-4813-8e49-42e99a0bd415@104.16.72.101:443?security=tls&sni=space.byu.id.yxls.eu.cc&insecure=0&allowInsecure=0&type=ws&host=space.byu.id.yxls.eu.cc&path=/us-gllc@VPsave#CA 🇨🇦 | @jojo_config | DC7A3B
 trojan://6c862415-30d2-4813-8e49-42e99a0bd415@104.16.72.101:443?security=tls&sni=space.byu.id.yxls.eu.cc&insecure=0&allowInsecure=0&type=ws&host=space.byu.id.yxls.eu.cc&path=/us-gllc@soskeynets#CA 🇨🇦 | @jojo_config | CE4646
 trojan://6c8f2de0-48a2-11f0-bdd4-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @jojo_config | 4228C6
@@ -1032,12 +1034,12 @@ trojan://d6cbceb1-901e-44e1-b68e-0199063eb35f@141.95.74.53:443/?type=tcp&securit
 trojan://d6d88710-b755-11ef-a019-1239d0255272@uk1.test3.net:443?sni=chatbuzzteambhm.chatbuzzt7150.workers.dev#GB 🇬🇧 | @jojo_config | 2C93ED
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@157.254.38.210:20051?sni=hk.catxstar.com&allowInsecure=0#US 🇺🇸 | @jojo_config | EA159B
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@157.254.38.210:20103?sni=hk.catxstar.com&allowInsecure=1#US 🇺🇸 | @jojo_config | 71838A
+trojan://d7563108-615c-4338-a7bd-77f359869a4a@157.254.38.210:20103?security=tls&insecure=0&headerType=&fp=chrome&type=tcp&allowInsecure=0&sni=hk.catxstar.com#US 🇺🇸 | @jojo_config | 4E9BF5
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-00.catcat321.com:20103?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=hk.catxstar.com#HK 🇭🇰 | @jojo_config | F764EB
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?sni=hk.catxstar.com&type=tcp#US 🇺🇸 | @jojo_config | B634B8
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?path=%2F&security=tls&sni=hk.catxstar.com#US 🇺🇸 | @jojo_config | E5B637
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=hk.catxstar.com#US 🇺🇸 | @jojo_config | 67DBC5
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-b1.catcat321.com:20051?allowInsecure=0&sni=hk.catxstar.com#US 🇺🇸 | @jojo_config | B87E0A
-trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-b1.catcat321.com:20028?security=tls&sni=hk.catxstar.com&fp=chrome&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | E35D2D
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-b1.catcat321.com:20051?security=tls&sni=hk.catxstar.com#US 🇺🇸 | @jojo_config | 391105
 trojan://d76294c5-a31f-408d-ba0b-89880107cab5@5.75.152.12:443?security=tls&allowInsecure=1&type=tcp#DE 🇩🇪 | @jojo_config | AB1651
 trojan://d7f4b46d9e42ad4a6519bde2ff7ce43c@tyy129.magiclampcloud.com:59443?allowInsecure=1&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | @jojo_config | F8FEF7
@@ -1046,11 +1048,13 @@ trojan://d8e9f5e0-1233-11f0-85ba-1239d0255272@51.38.65.155:443?security=tls&sni=
 trojan://d8e9f5e0-1233-11f0-85ba-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @jojo_config | 51AB01
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@157.254.38.210:20051?security=tls&sni=hk.catxstar.com&path=/#US 🇺🇸 | @jojo_config | 1F577B
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@217.217.222.230:20123?sni=hk.catxstar.com&allowInsecure=0#GB 🇬🇧 | @jojo_config | C2C4C7
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@217.217.222.230:20123?security=tls&insecure=0&headerType=&fp=chrome&type=tcp&allowInsecure=0&sni=hk.catxstar.com#GB 🇬🇧 | @jojo_config | 342B88
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | @jojo_config | 2BC027
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20103?security=tls&sni=hk.catxstar.com#HK 🇭🇰 | @jojo_config | BEF953
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?allowInsecure=1&security=tls&sni=hk.catxstar.com#HK 🇭🇰 | @jojo_config | 0168AB
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20051?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=hk.catxstar.com#HK 🇭🇰 | @jojo_config | DEB3BA
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@Sclass-C1.catcat321.com:20086?security=tls&sni=hk.catxstar.com&fp=chrome&type=tcp&headerType=none#HK 🇭🇰 | @jojo_config | 4AB5D5
-trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c2.catcat321.com:20051?sni=hk.catxstar.com&allowInsecure=1#US 🇺🇸 | @jojo_config | A4F230
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c2.catcat321.com:20051?security=tls&insecure=0&headerType=&type=tcp&allowInsecure=0&sni=hk.catxstar.com#US 🇺🇸 | @jojo_config | D6CDBA
 trojan://da5051376e910e2b7c371ef039ab6a28@ja262.magiclampcloud.cn:59443?type=tcp#CN 🇨🇳 | @jojo_config | 1C33DB
 trojan://db258420-fd1e-11ef-9a77-1239d0255272@51.38.65.155:443?security=tls&sni=vkvd127.mycdn.me&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | @jojo_config | EF60B4
 trojan://db258420-fd1e-11ef-9a77-1239d0255272@uk1.test3.net:443?type=tcp&sni=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc&allowInsecure=1&fp=chrome#GB 🇬🇧 | @jojo_config | 309A41
@@ -1111,7 +1115,6 @@ trojan://ee633fac24a4a265077aa7290e3d29d0@ja262.magiclampcloud.cn:59443?allowIns
 trojan://ee872a10-c818-11ef-bdaf-1239d0255272@51.38.65.155:443?allowInsecure=0&sni=telewebion.com#GB 🇬🇧 | @jojo_config | 6D5EE6
 trojan://eeb6823c-b926-4ea2-866a-5542edd26e59@104.253.175.99:443?allowInsecure=1&sni=tjsp.hhxaf.cc.cd#US 🇺🇸 | @jojo_config | 746EFF
 trojan://eeb6823c-b926-4ea2-866a-5542edd26e59@18.143.76.130:443/?type=tcp&security=tls&sni=hhcm.hhxaf.cc.cd#SG 🇸🇬 | @jojo_config | 5E998A
-trojan://eeb6823c-b926-4ea2-866a-5542edd26e59@209.33.173.167:443?security=tls&sni=tjsp.hhxaf.cc.cd&type=ws&path=/&Host=tjsp.hhxaf.cc.cd#JP 🇯🇵 | @jojo_config | F4828C
 trojan://eeb6823c-b926-4ea2-866a-5542edd26e59@64.110.70.64:443?security=tls&sni=tjsp.hhxaf.cc.cd&type=ws&path=/&Host=tjsp.hhxaf.cc.cd#KR 🇰🇷 | @jojo_config | 91813C
 trojan://eeb6823c-b926-4ea2-866a-5542edd26e59@64.120.94.225:443?allowInsecure=0&sni=tjsp.hhxaf.cc.cd#SG 🇸🇬 | @jojo_config | BF3391
 trojan://eeb6823c-b926-4ea2-866a-5542edd26e59@83.229.121.78:8443?security=tls#HK 🇭🇰 | @jojo_config | E05CDB
@@ -1175,7 +1178,6 @@ trojan://FH72359861@game-firefly.rooster465.autos:443?security=tls#PL 🇵🇱 |
 trojan://FH72359861@pleased-sawfly.rooster465.autos:443?sni=pleased-sawfly.rooster465.autos&fp=chrome&type=tcp&path=/#SG 🇸🇬 | @jojo_config | 984C04
 trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.32:443?type=tcp&security=tls&fp=chrome&sni=connect-se.mimowhat.online&alpn=h2,http/1.1#SE 🇸🇪 | @jojo_config | 22BF10
 trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.97:443?security=tls&alpn=h2,http/1.1&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=connect-se.mimowhat.online#SE 🇸🇪 | @jojo_config | 7F07F4
-trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.97:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=connect-se.mimowhat.online#SE 🇸🇪 | @jojo_config | 19D6DC
 trojan://Fn9TZuYXiFYhsyp65T@45.80.191.177:443?sni=os-2.rise-fuji.com&type=tcp#JP 🇯🇵 | @jojo_config | 65B61B
 trojan://Fn9TZuYXiFYhsyp65T@os-2.rise-fuji.com:443?sni=os-2.rise-fuji.com&type=tcp#JP 🇯🇵 | @jojo_config | 1C84F8
 trojan://FnF2E0fmnd@146.190.86.235:443?sni=dl-media.viber.com&fp=chrome&alpn=http%2F1.1&type=tcp#SG 🇸🇬 | @jojo_config | 97C27A
@@ -1187,7 +1189,6 @@ trojan://GToK9gzuwh@146.190.84.34:443?allowInsecure=0&sni=aka.ms#SG 🇸🇬 | @
 trojan://GUGm7DHtpSx7SuPyUD@45.139.194.80:443?alpn=h2%2Chttp%2F1.1&type=tcp#EE 🇪🇪 | @jojo_config | F2D63C
 trojan://GUGm7DHtpSx7SuPyUD@ee-1.kamediorg.com:443/?type=tcp&security=tls&alpn=h2%2Chttp%2F1.1#EE 🇪🇪 | @jojo_config | 106AEF
 trojan://HK78346019@suitable-feline.rooster465.autos:443?allowInsecure=1&sni=#PL 🇵🇱 | @jojo_config | C52F17
-trojan://HQGIuRN4S3@www.777064.xyz:59642?sni=www.777064.xyz&allowInsecure=1#US 🇺🇸 | @jojo_config | 73B486
 trojan://humanity@104.16.7.70:443?allowInsecure=1&sni=www.calmlunch.com&type=ws#CA 🇨🇦 | @jojo_config | 7E1AB6
 trojan://humanity@104.16.71.213:443?sni=www.calmlunch.com&type=ws#CA 🇨🇦 | @jojo_config | F2E0E3
 trojan://humanity@104.16.72.50:443?allowInsecure=1&sni=www.calmlunch.com&type=ws#CA 🇨🇦 | @jojo_config | 1AFF0A
@@ -1200,7 +1201,6 @@ trojan://humanity@104.18.35.86:443?path=/assignment&security=tls&alpn=http/1.1&f
 trojan://humanity@104.18.37.127:443?path=/assignment&security=tls&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#CA 🇨🇦 | @jojo_config | B0F04A
 trojan://humanity@104.18.39.55:443?type=ws&path=/assignment&host=&sni=www.cordweave.com#CA 🇨🇦 | @jojo_config | 8AB631
 trojan://humanity@104.18.45.38:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | @jojo_config | F3A4FF
-trojan://humanity@104.18.45.38:443?path=/assignment&security=tls&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | @jojo_config | C30D2A
 trojan://humanity@104.18.45.38:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.trusteeforward.com&type=ws&allowInsecure=0&sni=www.trusteeforward.com#CA 🇨🇦 | @jojo_config | 1EFE59
 trojan://humanity@104.18.8.83:443?sni=www.calmlunch.com&type=ws#CA 🇨🇦 | @jojo_config | CAA504
 trojan://humanity@104.18.8.83:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#CA 🇨🇦 | @jojo_config | AE6904
@@ -1293,7 +1293,6 @@ trojan://i99Cef@211.20.156.191:28160?sni=download.windowsupdate.com&type=tcp#TW 
 trojan://i99Cef@211.20.156.191:28161?sni=download.windowsupdate.com&type=tcp#TW 🇹🇼 | @jojo_config | CF13E4
 trojan://i99Cef@45.32.57.242:27242?sni=download.windowsupdate.com&type=tcp#JP 🇯🇵 | @jojo_config | 5A09EF
 trojan://i99Cef@45.76.51.23:443?security=tls&sni=download.windowsupdate.com#JP 🇯🇵 | @jojo_config | D7C253
-trojan://IDgAbZbs8cZw@104.20.26.192:2053?path=/?ed=2560&security=tls&insecure=0&host=rAyan02-1d7cmk9v-t3.rayAn-02.worKers.dEV&fp=chrome&type=ws&allowInsecure=0&sni=rAyan02-1d7cmk9v-t3.rayAn-02.worKers.dEV#CA 🇨🇦 | @jojo_config | E1387F
 trojan://IQ68037294@193.169.239.198:443?sni=present-warthog.rooster465.autos&fp=chrome&type=tcp&path=/#NL 🇳🇱 | @jojo_config | 0B3469
 trojan://IQ68037294@202.78.163.100:443?sni=enough-basilisk.rooster465.autos&fp=chrome&type=tcp&path=/#PL 🇵🇱 | @jojo_config | E98615
 trojan://IQ68037294@202.78.163.113:443?fp=chrome#PL 🇵🇱 | @jojo_config | C74D12
@@ -1308,8 +1307,6 @@ trojan://IQ68037294@sterling-vervet.rooster465.autos:443?security=tls#JP 🇯�
 trojan://iyinglong@18.140.67.76:443?security=tls#SG 🇸🇬 | @jojo_config | 7CCFB5
 trojan://j0GM8nFJVq@167.71.209.134:443?sni=aka.ms&fp=chrome&alpn=http%2F1.1&type=tcp#SG 🇸🇬 | @jojo_config | A24CE2
 trojan://j8HSz13mcSpcbzQD-jxhNt3T99NLzgMB@nl4.275.axolab.org:443?sni=nl4.275.axolab.org&fp=chrome&alpn=h2%2Chttp%2F1.1&type=tcp#NL 🇳🇱 | @jojo_config | 023561
-trojan://jCpBEnDOnqJ7J36rdoJ_cYvrKK5ErK9H@217.78.237.118:8446?security=tls&alpn=http/1.1&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=files05f4.static.tv-av.fun#DK 🇩🇰 | @jojo_config | 9AAD5C
-trojan://jCpBEnDOnqJ7J36rdoJ_cYvrKK5ErK9H@217.78.237.118:8447?security=tls&alpn=h2&insecure=0&fp=chrome&type=grpc&serviceName=grpc&allowInsecure=0&sni=imgffbf.static.tv-av.fun#DK 🇩🇰 | @jojo_config | 795B0F
 trojan://jcTG9WSWMJAmR4rv10xpww@199.232.78.159:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER&security=tls&insecure=0&host=copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | 9F8FBD
 trojan://jcTG9WSWMJAmR4rv10xpww@199.232.78.159:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=&security=tls&insecure=0&host=copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | EA12D6
 trojan://jcTG9WSWMJAmR4rv10xpww@fastly2.dunnexa.ir:443?path=/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER&security=tls&host=copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.&type=ws&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | F1CCB5
@@ -1326,6 +1323,7 @@ trojan://KV63147582@game-firefly.rooster465.autos:443#PL 🇵🇱 | @jojo_config
 trojan://kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi@tr-wien.unlimited-access.ru:443?security=tls&type=tcp&headerType=none&sni=tr-wien.unlimited-access.ru&fp=firefox&alpn=http%2F1.1#AT 🇦🇹 | @jojo_config | 509CC4
 trojan://LcICDcp%21jD9TFV%24NbH@dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev:443?path=%2Ftr%2Fpg4wM48V9O859nmqsJg22EOFKN4S570y%3Fed%3D2560&security=tls&alpn=http%2F1.1&insecure=0&host=dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=dl2uF-iVdeZILZ3E86rK18.Hhvt37tjm2XBOsQL5HXogN-Y.woRKERS.dEv#CA 🇨🇦 | @jojo_config | 17A838
 trojan://Ldbgt4IUYv0S+5cFrG4vcWEbvdf8RgPGmoIXhnnOEh4=@65.109.215.50:54673?security=none&type=tcp#FI 🇫🇮 | @jojo_config | 0CD100
+trojan://Lp3a6Cpr3xLHHblW@dgfrtryesdgff-production.up.railway.app:443?path=/api/wVB5pJ&security=tls&alpn=http/1.1&insecure=0&host=dgfrtryesdgff-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=dgfrtryesdgff-production.up.railway.app#SG 🇸🇬 | @jojo_config | 0EC212
 trojan://LSS6HLnp7IeEEJUcox@78.142.194.52:443?security=tls&sni=nl-1.tr202607.com&type=tcp&allowInsecure=1#NL 🇳🇱 | @jojo_config | 808C9A
 trojan://LSS6HLnp7IeEEJUcox@78.142.194.96:443?type=tcp#NL 🇳🇱 | @jojo_config | 576AD4
 trojan://LSS6HLnp7IeEEJUcox@nl-1.tr202607.com:443?type=tcp&security=tls&headerType=none&allowInsecure=1#NL 🇳🇱 | @jojo_config | 09F6A8
@@ -1344,7 +1342,6 @@ trojan://MiTiVPN@151.101.36.120:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@
 trojan://MiTiVPN@151.101.36.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http/1.1&insecure=0&host=mitivpn--mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @jojo_config | A8E363
 trojan://mitivpn@151.101.36.244:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=ns2.firefox.com#US 🇺🇸 | @jojo_config | 9BBE21
 trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=Abu.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | 26F46F
-trojan://MiTiVPN@151.101.56.101:443?path=@mehrosaboran&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-5.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @jojo_config | 331FDE
 trojan://MiTiVPN@151.101.56.230:443?security=tls&sni=ssl.fastly.com&alpn=http/1.1&fp=chrome&allowinsecure=0&type=ws&host=MiTiVPN-MiTiVPN-MiTiVPN---MiTiVPN--MiTiVPN.global.ssl.fastly.net&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN#US 🇺🇸 | @jojo_config | 864FF1
 trojan://MiTiVPN@151.101.56.255:443?security=tls&alpn=http/1.1&insecure=0&host=mitivpn---nl--s---mitivpn-2.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @jojo_config | 265BF5
 trojan://MiTIVPN@151.101.56.56:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-66e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @jojo_config | 721F07
@@ -1362,7 +1359,7 @@ trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece2
 trojan://mitivpn@167.82.64.46:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @jojo_config | 28E51C
 trojan://mitivpn@167.82.64.46:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @jojo_config | 8BAC57
 trojan://mitivpn@167.82.64.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN?26#US 🇺🇸 | @jojo_config | 23E5B2
-trojan://mitivpn@167.82.64.7:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&type=ws&security=tls&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN?26#US 🇺🇸 | @jojo_config | E4B8AF
+trojan://mitivpn@167.82.64.7:443?type=ws&security=tls&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN?26#US 🇺🇸 | @jojo_config | E4B8AF
 trojan://mitivpn@167.82.64.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@VPsave---@VPsave/---@VPsave---@VPsave?26#US 🇺🇸 | @jojo_config | 51C7AD
 trojan://MiTiVPN@167.82.64.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=MiTiVPN-1-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | 62405C
 trojan://mitivpn@167.82.64.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=?26&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.talk&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#US 🇺🇸 | @jojo_config | D42339
@@ -1385,7 +1382,7 @@ trojan://MItIVPN@199.232.78.101:443?security=tls&alpn=http/1.1&insecure=0&host=m
 trojan://MiTiVPN@199.232.78.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mtlooabmakaakaoijji.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | 2D4574
 trojan://MiTiVPN@199.232.78.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http/1.1&insecure=0&host=mitivpn--mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @jojo_config | F3DE87
 trojan://MiTiVPN@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26?ed#US 🇺🇸 | @jojo_config | 9D1663
-trojan://MiTiVPN@199.232.78.160:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&type=ws&security=tls&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26?ed#US 🇺🇸 | @jojo_config | D7B07F
+trojan://MiTiVPN@199.232.78.160:443?type=ws&security=tls&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26?ed#US 🇺🇸 | @jojo_config | D7B07F
 trojan://MiTiVPN@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@VPsave---@VPsave/---@VPsave---@VPsave=26?ed#US 🇺🇸 | @jojo_config | B50AC9
 trojan://mitivpn@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=community.fastly.steamstatic.com#US 🇺🇸 | @jojo_config | F49021
 trojan://mitivpn@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=community.fastly.steamstatic.com#US 🇺🇸 | @jojo_config | 5D6333
@@ -1399,8 +1396,7 @@ trojan://MiTIVPN@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarks
 trojan://MITIVpN@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/NLSus---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-44e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @jojo_config | 69C8D9
 trojan://MiTIVPN@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @jojo_config | 675C3A
 trojan://MItIVPN@199.232.78.160:443?security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @jojo_config | F78E64
-trojan://MiTiVPN@199.232.78.160:443?alpn=http/1.1&fp=chrome&host=mitivpn.si&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26&security=tls&sni=steamstatic.com&type=ws#US 🇺🇸 | @jojo_config | 1B60D0
-trojan://MiTiVPN@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/?Telegram---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#US 🇺🇸 | @jojo_config | 5DA8EE
+trojan://MiTiVPN@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#US 🇺🇸 | @jojo_config | 1B60D0
 trojan://MiTiVPN@199.232.78.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.si&fp=chrome&type=ws&allowInsecure=0&sni=steamstatic.com#US 🇺🇸 | @jojo_config | 6D7B62
 trojan://MiTiVPN@199.232.78.254:443?type=ws&host=Abu.ac.ir&path=/---@MiTiVPN---@MiTiVPN&security=tls&fp=chrome&sni=cdn.akamai.steamstatic.com&alpn=http/1.1&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e#US 🇺🇸 | @jojo_config | 65AAF1
 trojan://mitivpn@27.50.48.49:443?path=/index.html/ed=mitivpn&security=tls&alpn=http/1.1&insecure=0&host=gamingdll.ir&fp=chrome&type=ws&allowInsecure=0&sni=gamingdll.ir#HK 🇭🇰 | @jojo_config | B9F74E
@@ -1455,7 +1451,6 @@ trojan://PD07395842@enough-basilisk.rooster465.autos:443?fp=chrome#PL 🇵🇱 |
 trojan://pjqRC5wfEFhYTyiaKF@45.139.194.60:443?sni=ee-1.tr202604.com&allowInsecure=1&type=tcp#EE 🇪🇪 | @jojo_config | 389C78
 trojan://pjqRC5wfEFhYTyiaKF@ee-1.tr202604.com:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0#EE 🇪🇪 | @jojo_config | 4503BA
 trojan://poimnap@alireza.karamoz1.ir:443?security=tls&alpn=h2,http/1.1&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=alireza.karamoz1.ir#DE 🇩🇪 | @jojo_config | 8783EE
-trojan://poimnap@alireza.karamoz1.ir:443?security=tls&sni=alireza.karamoz1.ir#DE 🇩🇪 | @jojo_config | 65527D
 trojan://PQ05174892@13.115.145.243:443?sni=smooth-cougar.rooster465.autos&type=tcp&fp=chrome#JP 🇯🇵 | @jojo_config | DD5F12
 trojan://PQ05174892@13.192.168.51:443/?type=tcp&security=tls&sni=learning-leopard.rooster465.autos&fp=chrome#JP 🇯🇵 | @jojo_config | 66D149
 trojan://PQ05174892@13.214.213.158:443?sni=apparent-wasp.rooster465.autos&type=tcp&path=/#SG 🇸🇬 | @jojo_config | 5A3D43
@@ -1491,6 +1486,7 @@ trojan://RJbtIstwtcU5buDY3r@78.142.194.34:443?security=tls&type=tcp&headerType=n
 trojan://RJbtIstwtcU5buDY3r@nl-1.tr202604.com:443#NL 🇳🇱 | @jojo_config | FDCC49
 trojan://RJbtIstwtcU5buDY3r@nl-4.tr202604.com:443/?type=tcp&security=tls#NL 🇳🇱 | @jojo_config | DC0863
 trojan://rmVQOJ9JPo@5.175.249.117:443?security=reality&pbk=kEfLVGaYdINZml2Jz3NMy8dMhlsXY8PiF08dtGN4cH8&host=www.namasha.com%2Cs45.namasha.com&headerType=http&fp=chrome&spx=%2F&type=tcp&sni=google.com&sid=9715efa856269398#DE 🇩🇪 | @jojo_config | C0ED3C
+trojan://RXR0MNWOjvFH@equityapartments.com:2083?security=tls&type=ws&path=/?ed=2560&host=raYAnCOnfiG01-dPbXh49m-t1.raYAn-cONfig-01.workERs.dEV&sni=raYAnCOnfiG01-dPbXh49m-t1.raYAn-cONfig-01.workERs.dEV&fp=chrome#CA 🇨🇦 | @jojo_config | 6B8400
 trojan://s_WEN9lMmufG+qDIsn-4C7JOVAnDdbS3Ui@172.236.220.10:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=172.236.220.10#DE 🇩🇪 | @jojo_config | 3FA33A
 trojan://sI0wl1bvYlSXu2RsMSAtAIMM@starlink-us6.mfa.cat:443?allowInsecure=1&security=tls&sni=www.cloudflare.com&type=tcp#US 🇺🇸 | @jojo_config | A730F3
 trojan://SiFvGI5bX01GGtGOJ2_nxA@199.232.249.131:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER&security=tls&insecure=0&host=copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @jojo_config | 0592EB
@@ -1513,7 +1509,6 @@ trojan://Tn9ytcFXsOnbUsJYKJ@de-2.tr202605.com:443?security=tls&insecure=0&header
 trojan://Tn9ytcFXsOnbUsJYKJ@us-3.tr202605.com:443#US 🇺🇸 | @jojo_config | A287FE
 trojan://TRY332RCOD4panalyy9nISleFSZDOYFwzXSSNaCCwYelEyDR230cxAZxDqFOTzA3AX68S@13.53.176.184:443?sni=otcele.golfland.club&type=tcp#SE 🇸🇪 | @jojo_config | 0B2F84
 trojan://ttfang@138.2.39.24:443?sni=ttfang.fange.me&allowInsecure=0#JP 🇯🇵 | @jojo_config | DD79CF
-trojan://uNHUYISEQSZo4hmv@sciffreredswa-production.up.railway.app:443?path=/api/YqZqe7&security=tls&alpn=http/1.1&insecure=0&host=sciffreredswa-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=sciffreredswa-production.up.railway.app#SG 🇸🇬 | @jojo_config | 13196A
 trojan://uThbm8eGmXZ7GKqnWy@194.124.216.109:443?allowInsecure=1&type=tcp#NL 🇳🇱 | @jojo_config | 06BE53
 trojan://uThbm8eGmXZ7GKqnWy@nl-4.tr202507.com:443?security=tls#NL 🇳🇱 | @jojo_config | 2E83A1
 trojan://UX82473651%40meet-goshawk.rooster465.autos@162.19.10.99:443?sni=nasnet-162191099-direct.mbghalibaf.com&type=tcp#FR 🇫🇷 | @jojo_config | 357A96
@@ -1532,6 +1527,7 @@ trojan://WG39087154@sterling-vervet.rooster465.autos:443?security=tls&sni=sterli
 trojan://wkmY1R4EcP@216.128.147.13:443?sni=z-v2-003274.kailib.com&allowInsecure=1#US 🇺🇸 | @jojo_config | 780AC7
 trojan://WQSShTQIMW@212.18.104.164:14166?sni=v.qq.com&allowInsecure=1&type=tcp#US 🇺🇸 | @jojo_config | 4A3BC6
 trojan://wQz5G4ybA9eC3BQDkd@ee-1.kamediorg.com:443?sni=ee-1.kamediorg.com&fp=chrome&type=tcp#EE 🇪🇪 | @jojo_config | AC4E1E
+trojan://wxsV9io89b18h1U8@jfdgswrsfder-production.up.railway.app:443?path=/api/ffTM6l&security=tls&alpn=http/1.1&insecure=0&host=jfdgswrsfder-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=jfdgswrsfder-production.up.railway.app#SG 🇸🇬 | @jojo_config | 4EF103
 trojan://X00HagvwL8gQXNDAnsxsN8dv1_VdneEo@178.17.60.97:5443?security=tls&alpn=h2,http/1.1&headerType=none&fp=chrome&type=tcp&sni=fi1.nebulaguard.org#FI 🇫🇮 | @jojo_config | 5A12B5
 trojan://X00HagvwL8gQXNDAnsxsN8dv1_VdneEo@38.180.101.235:5443?security=tls&sni=rs.nebulaguard.org&alpn=h2,http/1.1&fp=chrome#RS 🇷🇸 | @jojo_config | 390FE3
 trojan://xiubaixue000@160.251.136.55:443?security=tls&sni=hakuiteam.duckdns.org&allowInsecure=1&fp=chrome&type=tcp#JP 🇯🇵 | @jojo_config | 74ACBD

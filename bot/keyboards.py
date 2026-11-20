@@ -13,7 +13,7 @@ def main_menu(is_admin: bool = False) -> InlineKeyboardMarkup:
         rows.append([InlineKeyboardButton("🌐 پنل گلس (Mini App)",
                                           web_app=WebAppInfo(url=MINI_APP_URL))])
     rows += [
-        [InlineKeyboardButton("🔗 ساب‌سکریپشن (برندشده)", callback_data="sub_link")],
+        [InlineKeyboardButton("📥 دریافت لینک‌های ساب", callback_data="sub_link")],
         [InlineKeyboardButton("📦 آخرین 20 کانفیگ", callback_data="latest20")],
         [InlineKeyboardButton("📚 دسته‌بندی‌ها", callback_data="categories"),
          InlineKeyboardButton("🌍 فیلتر کشور", callback_data="ask_country")],
@@ -40,6 +40,7 @@ def admin_menu() -> InlineKeyboardMarkup:
         [InlineKeyboardButton("📊 آمار", callback_data="adm_stats"),
          InlineKeyboardButton("📢 Broadcast", callback_data="adm_broadcast")],
         [InlineKeyboardButton("📢 انتشار در کانال (dry-run/live)", callback_data="adm_publish")],
+        [InlineKeyboardButton("📤 انتشارِ تکیِ کانفیگ‌ها (۵ تایی)", callback_data="adm_publish_configs")],
         [InlineKeyboardButton("🔄 Trigger aggregate", callback_data="adm_trigger")],
         [InlineKeyboardButton("📋 منابع و مدیریت", callback_data="adm_sources")],
         [InlineKeyboardButton("🔍 اسکن/استخراج از URL", callback_data="adm_scan")],

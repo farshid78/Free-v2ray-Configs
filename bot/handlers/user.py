@@ -135,12 +135,14 @@ async def sub_link(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         reply = q.message.reply_text
     else:
         reply = update.message.reply_text
-    lines = ["🔗 ساب‌سکریپشنِ برندشده (همهٔ کانفیگ‌ها remark/نامِ برند دارند):", ""]
-    for title, url in subscription_urls():
-        lines.append(f"• {title}\n  {url}")
-    lines.append("")
+    lines = ["📥 لینک‌های ساب‌سکریپشن (برندشده — همهٔ کانفیگ‌ها remark/نامِ برند دارند):", ""]
+    for title, url, desc in subscription_urls():
+        lines.append(f"{title}")
+        lines.append(f"`{url}`")
+        lines.append(f"_{desc}_")
+        lines.append("")
     lines.append("کپی کنید یا در کلاینت import کنید. تعداد و پروتکل با index.json می‌خواند.")
-    await reply("\n".join(lines))
+    await reply("\n".join(lines), parse_mode="Markdown")
     if q:
         u = q.from_user
         await q.message.reply_text("بازگشت:", reply_markup=main_menu(

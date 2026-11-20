@@ -345,6 +345,113 @@ async def adm_publish(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         )
 
 
+def _country_map() -> dict:
+    """نقشهٔ base-config → (flag, country name) از پوشهٔ Countries/."""
+    import json as _json
+    from pathlib import Path
+    result = {}
+    try:
+        idx = _json.loads((REPO_ROOT / "Countries" / "index.json").read_text(encoding="utf-8"))
+    except Exception:
+        idx = {"countries": []}
+    code2flag = {c.get("code"): c.get("flag", "") for c in idx.get("countries", [])}
+    code2name = {c.get("code"): c.get("name", "") for c in idx.get("countries", [])}
+    cdir = REPO_ROOT / "Countries"
+    if not cdir.exists():
+        return result
+    for f in cdir.glob("*.txt"):
+        try:
+            for line in f.read_text(encoding="utf-8", errors="replace").splitlines():
+                if not line.strip() or line.lstrip().startswith("#"):
+                    continue
+                base = line.split("#", 1)[0].strip()
+                remark = line.split("#", 1)[1] if "#" in line else ""
+                code = remark.split("|")[0].strip().split()[0] if remark else ""
+                if base and code and code in code2flag:
+                    result[base] = (code2flag[code], code2name.get(code, code))
+        except OSError:
+            continue
+    return result
+
+
+def _proto_of(line: str) -> str:
+    scheme = line.split("://", 1)[0].lower() if "://" in line else ""
+    return {
+        "vless": "VLESS", "vmess": "VMESS", "trojan": "TROJAN",
+        "ss": "SHADOWSOCKS", "shadowsocks": "SHADOWSOCKS",
+        "hysteria": "HYSTERIA2", "hysteria2": "HYSTERIA2", "hy2": "HYSTERIA2",
+        "tuic": "TUIC",
+    }.get(scheme, scheme.upper() or "CONFIG")
+
+
+def _format_channel_msg(line: str, cmap: dict) -> str:
+    base = line.split("#", 1)[0].strip()
+    flag, cname = cmap.get(base, ("", ""))
+    proto = _proto_of(line)
+    if flag and cname:
+        header = f"🈳🈱 {flag} {cname} ┃ ⚙️ {proto}"
+    else:
+        header = f"🈳🈱 ⚙️ {proto}"
+    return (f"{header}\n"
+            f"━━━━━━━━━━━━━━━━━━━━\n"
+            f"{line.strip()}\n"
+            f"━━━━━━━━━━━━━━━━━━━━\n"
+            f"📢 t.me/{CHANNEL_USERNAME.lstrip('@')}")
+
+
+async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """انتشارِ تکیِ کانفیگ‌ها در کانال (۵ تایی، با offset ذخیره‌شده)."""
+    q = update.callback_query
+    await q.answer()
+    if not _is_admin(q.from_user.id):
+        await q.edit_message_text("دسترسی ندارید.")
+        return
+    from ..utils import load_configs
+    lines = load_configs("verified")
+    if not lines:
+        await q.edit_message_text("هیچ کانفیگی در verified نیست.", reply_markup=admin_menu())
+        return
+    cmap = _country_map()
+    offset = context.user_data.get("publish_offset", 0)
+    batch = 5
+    chunk = lines[offset:offset + batch]
+    if not chunk:
+        context.user_data["publish_offset"] = 0
+        await q.edit_message_text("همهٔ کانفیگ‌ها منتشر شدند. offset صفر شد.", reply_markup=admin_menu())
+        return
+    msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
+    channel = "@" + CHANNEL_USERNAME.lstrip("@")
+    dry = (CHANNEL_PUBLISH != "live")
+    preview = (f"📤 انتشارِ تکی در کانال\nکانال: {channel}\n"
+               f"offset {offset} → {offset + len(chunk)} از {len(lines)}\n\n"
+               + "\n\n".join(m for m in msgs[:3]))
+    if len(msgs) > 3:
+        preview += f"\n\n… و {len(msgs) - 3} کانفیگِ دیگر در این دسته."
+    if dry:
+        preview += ("\n\nحالت: DRY-RUN. برای post واقعی CHANNEL_PUBLISH=live تنظیم کنید "
+                    "و بات را ادمین کانال کنید.")
+        await q.edit_message_text(preview, reply_markup=admin_menu())
+        return
+    sent = 0
+    try:
+        for m in msgs:
+            await context.bot.send_message(chat_id=channel, text=m)
+            sent += 1
+            await asyncio.sleep(1.2)
+    except Exception as e:
+        await q.edit_message_text(
+            preview + f"\n\n❌ بعد از {sent} ارسال: {type(e).__name__}: {e}",
+            reply_markup=admin_menu(),
+        )
+        context.user_data["publish_offset"] = offset + sent
+        return
+    context.user_data["publish_offset"] = offset + sent
+    await q.edit_message_text(
+        preview + f"\n\n✅ {sent} کانفیگ در کانال منتشر شد.",
+        reply_markup=admin_menu(),
+    )
+
+
 async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     mode = context.user_data.get("mode")
     text = (update.message.text or "").strip()

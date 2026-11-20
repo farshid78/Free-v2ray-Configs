@@ -103,27 +103,37 @@ def filter_by_country(lines: list[str], country: str) -> list[str]:
 RAW_BASE = f"https://raw.githubusercontent.com/{GH_OWNER}/{GH_REPO}/{GH_BRANCH}"
 
 
-def subscription_urls() -> list[tuple[str, str]]:
-    """فهرست (عنوان, URL) برای فایل‌های ساب‌سکریپشنِ برندشدهٔ موجود.
+def subscription_urls() -> list[tuple[str, str, str]]:
+    """فهرست (عنوان, URL, توضیح) برای فایل‌های ساب‌سکریپشنِ برندشدهٔ موجود.
 
     همهٔ URLها به فایل‌های واقعیِ موجود در مخزن اشاره می‌کنند (نه به مسیری
     که ۴۰۴ می‌دهد). خوانندهٔ ربات باید بتواند هر کدام را import کند.
     """
     items = [
-        ("🏆 Verified (پیشنهادی) — base64", f"{RAW_BASE}/verified/configs_base64.txt"),
-        ("🏆 Verified — Clash", f"{RAW_BASE}/verified/clash.yaml"),
-        ("🏆 Verified — Sing-box", f"{RAW_BASE}/verified/singbox.json"),
-        ("🌐 All — base64", f"{RAW_BASE}/all/configs_base64.txt"),
-        ("⚡ Fast — base64", f"{RAW_BASE}/fast/configs_base64.txt"),
-        ("🔐 Secure — base64", f"{RAW_BASE}/secure/configs_base64.txt"),
-        ("🟢 Google — base64", f"{RAW_BASE}/google/configs_base64.txt"),
-        ("📦 Heavy — base64", f"{RAW_BASE}/heavy/configs_base64.txt"),
-        ("⭐ Light — base64", f"{RAW_BASE}/light/configs_base64.txt"),
+        ("🏆 Verified (پیشنهادی) — base64", f"{RAW_BASE}/verified/configs_base64.txt",
+         "کانفیگ‌های تست‌شده در ۳ دور — پیشنهادی برای همهٔ کلاینت‌ها"),
+        ("🏆 Verified — Clash", f"{RAW_BASE}/verified/clash.yaml",
+         "فرمت Clash/Mihomo — برای کلاینت‌های Clash"),
+        ("🏆 Verified — Sing-box", f"{RAW_BASE}/verified/singbox.json",
+         "فرمت Sing-box — برای Sing-box/Amnezia"),
+        ("🌐 All — base64", f"{RAW_BASE}/all/configs_base64.txt",
+         "همهٔ کانفیگ‌ها (dedup) — بزرگ‌ترین لیست"),
+        ("⚡ Fast — base64", f"{RAW_BASE}/fast/configs_base64.txt",
+         "Verified با تأخیر < ۸۰۰ms — برای سرعت بالا"),
+        ("🔐 Secure — base64", f"{RAW_BASE}/secure/configs_base64.txt",
+         "Verified + forward secrecy — امنیت بیشتر"),
+        ("🟢 Google — base64", f"{RAW_BASE}/google/configs_base64.txt",
+         "Verified + آزمون گوگل — برای دسترسی به سرویس‌های گوگل"),
+        ("📦 Heavy — base64", f"{RAW_BASE}/heavy/configs_base64.txt",
+         "۵ منبع پرحجم — حجم بالا"),
+        ("⭐ Light — base64", f"{RAW_BASE}/light/configs_base64.txt",
+         "۸ منبع گزیده — سبک و سریع"),
     ]
     # پروتکل‌های جداگانه (فایل‌های واقعیِ موجود)
     for proto in ("vless", "vmess", "trojan", "shadowsocks", "hysteria2", "shadowsocksr"):
         items.append((f"📄 {proto.upper()} — base64",
-                      f"{RAW_BASE}/protocols/{proto}_base64.txt"))
+                      f"{RAW_BASE}/protocols/{proto}_base64.txt",
+                      f"فقط پروتکل {proto.upper()} — برای کلاینت‌های تک‌پروتکل"))
     return items
 
 

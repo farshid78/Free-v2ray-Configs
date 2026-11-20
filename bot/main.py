@@ -80,6 +80,7 @@ def build_app() -> Application:
     app.add_handler(CallbackQueryHandler(admin.adm_scan_cat, pattern="^scancat:"))
     app.add_handler(CallbackQueryHandler(user.sub_link, pattern="^sub_link$"))
     app.add_handler(CallbackQueryHandler(admin.adm_publish, pattern="^adm_publish$"))
+    app.add_handler(CallbackQueryHandler(admin.adm_publish_configs, pattern="^adm_publish_configs$"))
 
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, _route_text))
     return app

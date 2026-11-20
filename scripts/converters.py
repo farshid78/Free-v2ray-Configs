@@ -637,6 +637,15 @@ def _is_unroutable_server(host: Any) -> bool:
         ip = ipaddress.ip_address(s)
     except ValueError:
         return False          # نامِ میزبان است، نه IP — این‌جا داوری نمی‌کنیم
+    # نشانیِ IPv4-mapped (`::ffff:1.2.3.4`) باید با قاعدهٔ IPv4 سنجیده شود.
+    # دلیلش سنجیده است: `ipaddress` پیش از ۳٫۱۲ کلِ `::ffff:0:0/96` را
+    # `is_reserved` می‌دانست، پس روی پایتونِ ۳٫۱۱ همین فایل یک کانفیگِ سالم را
+    # حذف می‌کرد و روی ۳٫۱۲ (پایتونِ CI) نگه می‌داشت — یعنی خروجیِ کامیت‌شده به
+    # نسخهٔ مفسر وابسته می‌شد. با بازکردنِ آدرسِ map‌شده، هر دو نسخه یک نتیجه
+    # می‌دهند و بازتولیدِ محلی دقیقاً همان بایت‌های منتشرشده است.
+    mapped = getattr(ip, "ipv4_mapped", None)
+    if mapped is not None:
+        ip = mapped
     return bool(ip.is_loopback or ip.is_unspecified or ip.is_multicast
                 or ip.is_reserved or ip.is_link_local)
 

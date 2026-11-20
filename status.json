@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T20:57:07Z",
+ "updated_at": "2026-11-20T20:57:23Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-20T20:56:23Z",
-  "heartbeat_age_s": 44,
+  "last_heartbeat": "2026-11-20T20:57:23Z",
+  "heartbeat_age_s": 0,
   "pid": 2442,
   "host": "ip-10-0-133-115",
   "note": "run_minutes=12.0"
@@ -74,9 +74,9 @@
    "error": ""
   },
   "aggregate": {
-   "last_run_at": "2026-11-20T20:57:07Z",
+   "last_run_at": "2026-11-20T20:38:17Z",
    "last_ok": true,
-   "duration_s": 537.4,
+   "duration_s": 571.4,
    "error": ""
   }
  },

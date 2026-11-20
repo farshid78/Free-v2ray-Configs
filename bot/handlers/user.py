@@ -27,7 +27,7 @@ async def latest20(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await q.edit_message_text("کانفیگی موجود نیست. ابتدا pipeline را اجرا کنید.")
         return
     for chunk in chunk_text(lines):
-        await q.message.reply_text(chunk)
+        await q.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
 
 
 async def categories(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -59,7 +59,7 @@ async def cat_selected(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         return
     await q.edit_message_text(f"{len(lines)} کانفیگ در دستهٔ {bucket}:")
     for chunk in chunk_text(lines[:100]):
-        await q.message.reply_text(chunk)
+        await q.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
     await q.message.reply_text("بازگشت:", reply_markup=categories_menu())
 
 
@@ -93,7 +93,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
             await update.message.reply_text("چیزی یافت نشد.")
             return
         for chunk in chunk_text(lines[:50]):
-            await update.message.reply_text(chunk)
+            await update.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
     elif mode == "count":
         context.user_data.pop("mode", None)
         try:
@@ -103,13 +103,13 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
             return
         lines = load_configs("verified", n)
         for chunk in chunk_text(lines):
-            await update.message.reply_text(chunk)
+            await update.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
     else:
         # treat as free-text country search fallback
         lines = filter_by_country(load_configs("verified"), text)
         if lines:
             for chunk in chunk_text(lines[:20]):
-                await update.message.reply_text(chunk)
+                await update.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
         else:
             await update.message.reply_text("برای شروع /start را بزنید.")
 

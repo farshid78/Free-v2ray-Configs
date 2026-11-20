@@ -1,4 +1,5 @@
 import asyncio
+import json as _json_mod
 import sys
 
 import requests
@@ -319,7 +320,7 @@ async def adm_publish(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     channel = "@" + CHANNEL_USERNAME.lstrip("@")
     msg = (f"JoJo VPN — ساب‌سکریپشنِ برندشده\n"
            f"{ncfg} کانفیگ · verified\n"
-           f"Import: {raw_url}")
+           f"Import: `{raw_url}`")
     dry = (CHANNEL_PUBLISH != "live")
     preview = ("📢 پیش‌نمایشِ انتشار در کانال\n"
                f"کانال: {channel}\n"
@@ -335,7 +336,7 @@ async def adm_publish(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         return
     # live mode: attempt to post
     try:
-        await context.bot.send_message(chat_id=channel, text=msg)
+        await context.bot.send_message(chat_id=channel, text=msg, parse_mode="Markdown")
         await q.edit_message_text(preview + "\n✅ در کانال منتشر شد.", reply_markup=admin_menu())
     except Exception as e:
         await q.edit_message_text(
@@ -394,7 +395,7 @@ def _format_channel_msg(line: str, cmap: dict) -> str:
         header = f"🈳🈱 ⚙️ {proto}"
     return (f"{header}\n"
             f"━━━━━━━━━━━━━━━━━━━━\n"
-            f"{line.strip()}\n"
+            f"`{line.strip()}`\n"
             f"━━━━━━━━━━━━━━━━━━━━\n"
             f"📢 t.me/{CHANNEL_USERNAME.lstrip('@')}")
 
@@ -541,3 +542,73 @@ async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) 
             await update.message.reply_text("این منبع قبلاً وجود داشت.")
     else:
         return
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# انتشارِ خودکار (بدونِ دخالتِ دستی)
+# ──────────────────────────────────────────────────────────────────────────────
+_AUTO_STATE_PATH = REPO_ROOT / "data" / "auto_publish_state.json"
+
+
+def _load_auto_offset() -> int:
+    try:
+        return int(_json_mod.load(open(_AUTO_STATE_PATH, encoding="utf-8")).get("offset", 0))
+    except Exception:
+        return 0
+
+
+def _save_auto_offset(off: int) -> None:
+    try:
+        _AUTO_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        _json_mod.dump({"offset": int(off)}, open(_AUTO_STATE_PATH, "w", encoding="utf-8"))
+    except Exception:
+        pass
+
+
+async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
+    """هر ساعت ۵ کانفیگِ بعدی را به‌طور خودکار به کانال می‌فرستد (monospace)."""
+    if CHANNEL_PUBLISH != "live":
+        return
+    try:
+        from ..utils import load_configs
+        lines = load_configs("verified")
+    except Exception:
+        return
+    if not lines:
+        return
+    channel = "@" + CHANNEL_USERNAME.lstrip("@")
+    cmap = _country_map()
+    offset = _load_auto_offset()
+    batch = 5
+    chunk = lines[offset:offset + batch]
+    if not chunk:
+        offset = 0
+        chunk = lines[:batch]
+    msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
+    sent = 0
+    for m in msgs:
+        try:
+            await context.bot.send_message(chat_id=channel, text=m, parse_mode="Markdown")
+            sent += 1
+            await asyncio.sleep(1.2)
+        except Exception:
+            break
+    _save_auto_offset(offset + sent if sent else offset)
+
+
+async def trigger_aggregate_job(context: ContextTypes.DEFAULT_TYPE) -> None:
+    """هر ساعت workflowِ aggregate را از طریق repository_dispatch trigger می‌کند."""
+    if not GITHUB_TOKEN:
+        return
+    try:
+        import requests
+        url = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches"
+        requests.post(
+            url,
+            headers={"Authorization": f"token {GITHUB_TOKEN}",
+                    "Accept": "application/vnd.github+json"},
+            json={"event_type": "aggregate-now"},
+            timeout=15,
+        )
+    except Exception:
+        pass

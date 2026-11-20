@@ -40,7 +40,7 @@ def admin_menu() -> InlineKeyboardMarkup:
         [InlineKeyboardButton("📊 آمار", callback_data="adm_stats"),
          InlineKeyboardButton("📢 Broadcast", callback_data="adm_broadcast")],
         [InlineKeyboardButton("📢 انتشار در کانال (dry-run/live)", callback_data="adm_publish")],
-        [InlineKeyboardButton("📤 انتشارِ تکیِ کانفیگ‌ها (۵ تایی)", callback_data="adm_publish_configs")],
+        [InlineKeyboardButton("🤖 انتشار خودکار: هر ساعت ۵ کانفیگ", callback_data="adm_stats")],
         [InlineKeyboardButton("🔄 Trigger aggregate", callback_data="adm_trigger")],
         [InlineKeyboardButton("📋 منابع و مدیریت", callback_data="adm_sources")],
         [InlineKeyboardButton("🔍 اسکن/استخراج از URL", callback_data="adm_scan")],

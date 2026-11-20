@@ -33,3 +33,10 @@ data/runtime/
 data/outbox.db
 data/outbox.db-wal
 data/outbox.db-shm
+# پایگاهِ دادهٔ ربات تلگرام (SQLite) — رانتایم، نباید commit شود
+data/bot.db
+data/bot.db-wal
+data/bot.db-shm
+
+# گراف کد (تولیدشده توسط graphify) — نگه‌داری محلی، main را lean نگه می‌دارد
+graphify-out/

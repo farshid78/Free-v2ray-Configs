@@ -6,7 +6,7 @@
 
 <p>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/actions/workflows/aggregate.yml"><img alt="pipeline" src="https://img.shields.io/github/actions/workflow/status/farshid78/Free-v2ray-Configs/aggregate.yml?style=for-the-badge&label=pipeline&logo=githubactions&logoColor=white"></a>
-<img alt="auto-update" src="https://img.shields.io/badge/auto--update-every%2015%20min-0ea5e9?style=for-the-badge">
+<img alt="auto-update" src="https://img.shields.io/badge/auto--update-every%205%20min-0ea5e9?style=for-the-badge">
 <a href="https://t.me/jojo_config"><img alt="telegram subscribers" src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fjojo_config&label=telegram&color=229ED9&style=for-the-badge&logo=telegram&logoColor=white"></a>
 <a href="https://github.com/farshid78/Free-v2ray-Configs/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/farshid78/Free-v2ray-Configs?style=for-the-badge&color=FBBF24&logo=github"></a>
 <a href="https://farshid78.github.io/Free-v2ray-Configs/"><img alt="dashboard" src="https://img.shields.io/badge/live-dashboard-ec4899?style=for-the-badge&logo=githubpages&logoColor=white"></a>

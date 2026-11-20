@@ -568,7 +568,7 @@ async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 _AUTO_STATE_PATH = REPO_ROOT / "data" / "auto_publish_state.json"
 
 #: ۲۰ کانفیگ در هر دور، با فاصلهٔ تصادفی بین هر دو ارسال.
-_PUBLISH_PER_CYCLE = 30
+_PUBLISH_PER_CYCLE = 50
 _PUBLISH_CYCLE_SECONDS = 30
 #: فاصلهٔ پایه. تلگرام برای هر کانال حدود ۲۰ پیام در دقیقه اجازه می‌دهد؛
 #: با اندازه‌گیریِ واقعی، ۴۰ و ۲۵ پیام در دقیقه هر دو «Flood control» دادند
@@ -823,8 +823,9 @@ async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
         # هر کانفیگ یک کلیدِ محتوایی دارد؛ صف و دفترِ idempotency تضمین می‌کنند
         # یک کانفیگ با هیچ ری‌استارت/برشی دو بار به کانال نرود.
         from ..outbox import config_key
+        scan = min(_ENQUEUE_SCAN, max(1, 2 * len(lines)))
         added = enqueue([(config_key(ln), _format_channel_msg(ln, cmap))
-                         for ln in lines[:_ENQUEUE_SCAN]])
+                         for ln in lines[:scan]])
         sent = await _drain_outbox(context.bot, channel)
         st = stats()
         try:

@@ -31,6 +31,16 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Local dev prerequisites (optional)
+
+Some pipeline stages need extra binaries/data that CI downloads automatically:
+
+- `xray-knife` — set `L3_XK_BIN` or place it on `PATH` (CI pins 10.1.1 + SHA-256).
+- GeoIP DB-IP Country Lite — `geo.py` downloads it; cached under `.cache/` (gitignored).
+
+Tests that need these are skipped/fail gracefully when they are absent; mention
+environmental failures in your PR rather than "fixing" the test.
+
 Runtime dependencies are deliberately few and exactly pinned:
 
 ```

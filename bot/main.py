@@ -88,13 +88,17 @@ def build_app() -> Application:
 
 def main() -> None:
     app = build_app()
-    # انتشارِ خودکار: هر ساعت ۵ کانفیگ + trigger workflow (بدونِ دخالتِ دستی)
+    # انتشارِ خودکار: هر ۳۰ ثانیه ۲۰ کانفیگ (با فاصلهٔ تصادفی) + trigger ساعتی
+    # workflow. خطای زمان‌بندی قبلاً بی‌صدا بلعیده می‌شد و هیچ کانفیگی به کانال
+    # نمی‌رسید؛ الان در لاگ دیده می‌شود.
     try:
         from .handlers import admin as _admin
-        app.job_queue.run_repeating(_admin.auto_publish_job, interval=4, first=5)
+        app.job_queue.run_repeating(_admin.auto_publish_job,
+                                    interval=_admin._PUBLISH_CYCLE_SECONDS, first=10)
         app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=3600, first=300)
+        logging.info("انتشار خودکار فعال شد: ۲۰ کانفیگ در هر ۳۰ ثانیه")
     except Exception:
-        pass
+        logging.exception("زمان‌بندیِ انتشار خودکار فعال نشد — کانفیگی به کانال نمی‌رود")
     try:
         app.run_polling()
     except (TimedOut, NetworkError) as exc:

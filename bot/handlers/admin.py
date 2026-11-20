@@ -1,10 +1,14 @@
 import asyncio
 import html as _html
 import json as _json_mod
+import logging
+import random
 import sys
+import time
 
 import httpx
 from telegram import Update
+from telegram.error import BadRequest, NetworkError, RetryAfter, TimedOut
 from telegram.ext import ContextTypes
 
 from ..config import (GITHUB_TOKEN, GH_OWNER, GH_REPO, GH_BRANCH,
@@ -14,6 +18,8 @@ from ..db import add_admin, remove_admin, is_admin, user_count
 from ..keyboards import admin_menu
 
 sys.path.insert(0, str(REPO_ROOT))
+
+logger = logging.getLogger(__name__)
 
 
 def _is_admin(user_id: int) -> bool:
@@ -386,6 +392,11 @@ def _proto_of(line: str) -> str:
     }.get(scheme, scheme.upper() or "CONFIG")
 
 
+#: سقفِ امنِ متنِ پیام تلگرام ۴۰۹۶ کاراکتر است؛ کانفیگ‌های بلندتر (بعضی
+#: vmessها) کلِ پیام را رد می‌کردند و ارسال قطع می‌شد.
+_MAX_TEXT = 3800
+
+
 def _format_channel_msg(line: str, cmap: dict) -> str:
     base = line.split("#", 1)[0].strip()
     flag, cname = cmap.get(base, ("", ""))
@@ -394,9 +405,12 @@ def _format_channel_msg(line: str, cmap: dict) -> str:
         header = f"🈳🈱 {flag} {cname} ┃ ⚙️ {proto}"
     else:
         header = f"🈳🈱 ⚙️ {proto}"
+    body = line.strip()
+    if len(body) > _MAX_TEXT:
+        body = body[:_MAX_TEXT] + "…"
     # HTML parse mode: کانفیگ را در <code> می‌گذاریم تا monospace شود و
     # کاراکترهای خاصِ Markdown (مانند `_` یا backtick) باعث خطای parse نشوند.
-    safe_line = _html.escape(line.strip())
+    safe_line = _html.escape(body)
     return (f"{header}\n"
             f"━━━━━━━━━━━━━━━━━━━━\n"
             f"<code>{safe_line}</code>\n"
@@ -405,7 +419,7 @@ def _format_channel_msg(line: str, cmap: dict) -> str:
 
 
 async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """انتشارِ تکیِ کانفیگ‌ها در کانال (۵ تایی، با offset ذخیره‌شده)."""
+    """انتشارِ دستیِ یک دور کامل (۲۰ کانفیگ) در کانال، با فاصلهٔ تصادفی."""
     q = update.callback_query
     await q.answer()
     if not _is_admin(q.from_user.id):
@@ -417,8 +431,8 @@ async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE
         await q.edit_message_text("هیچ کانفیگی در verified نیست.", reply_markup=admin_menu())
         return
     cmap = _country_map()
-    offset = context.user_data.get("publish_offset", 0)
-    batch = 3
+    offset = context.user_data.get("publish_offset", _load_auto_offset())
+    batch = _PUBLISH_PER_CYCLE
     chunk = lines[offset:offset + batch]
     if not chunk:
         context.user_data["publish_offset"] = 0
@@ -427,7 +441,7 @@ async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE
     msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
     channel = "@" + CHANNEL_USERNAME.lstrip("@")
     dry = (CHANNEL_PUBLISH != "live")
-    preview = (f"📤 انتشارِ تکی در کانال\nکانال: {channel}\n"
+    preview = (f"📤 انتشارِ دستی در کانال\nکانال: {channel}\n"
                f"offset {offset} → {offset + len(chunk)} از {len(lines)}\n\n"
                + "\n\n".join(m for m in msgs[:3]))
     if len(msgs) > 3:
@@ -437,24 +451,21 @@ async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE
                     "و بات را ادمین کانال کنید.")
         await q.edit_message_text(preview, reply_markup=admin_menu(), parse_mode="HTML")
         return
-    sent = 0
-    try:
-        for m in msgs:
-            await context.bot.send_message(chat_id=channel, text=m, parse_mode="HTML")
-            sent += 1
-            await asyncio.sleep(4.0)
-    except Exception as e:
+    sent = await _send_batch(context.bot, channel, msgs)
+    context.user_data["publish_offset"] = (
+        0 if offset + sent >= len(lines) else offset + sent
+    )
+    if sent == len(msgs):
         await q.edit_message_text(
-            preview + f"\n\n❌ بعد از {sent} ارسال: {type(e).__name__}: {_html.escape(str(e))}",
+            preview + f"\n\n✅ {sent} کانفیگ در کانال منتشر شد.",
             reply_markup=admin_menu(), parse_mode="HTML",
         )
-        context.user_data["publish_offset"] = offset + sent
-        return
-    context.user_data["publish_offset"] = offset + sent
-    await q.edit_message_text(
-        preview + f"\n\n✅ {sent} کانفیگ در کانال منتشر شد.",
-        reply_markup=admin_menu(), parse_mode="HTML",
-    )
+    else:
+        await q.edit_message_text(
+            preview + f"\n\n⚠️ {sent} از {len(msgs)} ارسال شد؛ بقیه رد شدند "
+            "(FloodWait یا خطای شبکه — لاگِ ربات را ببینید).",
+            reply_markup=admin_menu(), parse_mode="HTML",
+        )
 
 
 async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -555,71 +566,204 @@ async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 # ──────────────────────────────────────────────────────────────────────────────
 _AUTO_STATE_PATH = REPO_ROOT / "data" / "auto_publish_state.json"
 
+#: ۲۰ کانفیگ در هر دور، با فاصلهٔ تصادفی بین هر دو ارسال.
+_PUBLISH_PER_CYCLE = 20
+_PUBLISH_CYCLE_SECONDS = 30
+#: فاصلهٔ پایه. تلگرام برای هر کانال حدود ۲۰ پیام در دقیقه اجازه می‌دهد؛
+#: با اندازه‌گیریِ واقعی، ۴۰ و ۲۵ پیام در دقیقه هر دو «Flood control» دادند
+#: (یک‌بار ۵۱۴ ثانیه قفل شد). ۳.۳ ثانیه ⇒ ~۱۸ پیام در دقیقه، پایین‌تر از
+#: سقف، پس یک دورِ ۲۰تایی ~۶۵ ثانیه طول می‌کشد و پایدار می‌ماند.
+_GAP_BASE = 3.3
+_GAP_FLOOR = 3.3
+_GAP_CEIL = 30.0
+#: فلود‌کنترلِ تلگرام روی همهٔ متدها اعمال می‌شود؛ تا پایانش هیچ ارسالی
+#: نمی‌کنیم تا جریمه تمدید نشود.
+_flood_until = 0.0
+_gap_base = _GAP_BASE
+#: کفِ امن: کوچک‌ترین فاصله‌ای که تا حالا باعث جریمه شده؛ دیگر از آن پایین‌تر
+#: نمی‌رویم تا هر چند دور یک‌بار دوباره به دیوارِ فلود نخوریم.
+_min_gap = _GAP_FLOOR
+
+
+def _load_auto_state() -> dict:
+    try:
+        with open(_AUTO_STATE_PATH, encoding="utf-8") as f:
+            d = _json_mod.load(f)
+        return {"offset": int(d.get("offset", 0)),
+                "gap": float(d.get("gap", _GAP_BASE)),
+                "min_gap": float(d.get("min_gap", _GAP_FLOOR))}
+    except Exception:
+        return {"offset": 0, "gap": _GAP_BASE, "min_gap": _GAP_FLOOR}
+
 
 def _load_auto_offset() -> int:
-    try:
-        return int(_json_mod.load(open(_AUTO_STATE_PATH, encoding="utf-8")).get("offset", 0))
-    except Exception:
-        return 0
+    return _load_auto_state()["offset"]
 
 
 def _save_auto_offset(off: int) -> None:
+    _save_auto_state(offset=off)
+
+
+def _save_auto_state(offset: int | None = None, gap: float | None = None,
+                     min_gap: float | None = None) -> None:
     try:
+        cur = _load_auto_state()
+        data = {
+            "offset": int(cur["offset"] if offset is None else offset),
+            "gap": round(float(cur["gap"] if gap is None else gap), 2),
+            "min_gap": round(float(cur["min_gap"] if min_gap is None else min_gap), 2),
+        }
         _AUTO_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        _json_mod.dump({"offset": int(off)}, open(_AUTO_STATE_PATH, "w", encoding="utf-8"))
+        with open(_AUTO_STATE_PATH, "w", encoding="utf-8") as f:
+            _json_mod.dump(data, f)
     except Exception:
-        pass
+        logger.warning("ذخیرهٔ وضعیتِ انتشار خودکار ناموفق بود", exc_info=True)
+
+
+def _sync_gap() -> None:
+    """فاصله و کفِ امنِ یادگرفته‌شده را از فایلِ وضعیت برمی‌دارد."""
+    global _gap_base, _min_gap
+    st = _load_auto_state()
+    _min_gap = _clamp_gap(st["min_gap"])
+    _gap_base = max(_min_gap, _clamp_gap(st["gap"]))
+
+
+def _clamp_gap(g: float) -> float:
+    try:
+        return max(_GAP_FLOOR, min(_GAP_CEIL, float(g)))
+    except (TypeError, ValueError):
+        return _GAP_BASE
+
+
+def _retry_seconds(exc: RetryAfter) -> float:
+    """مقدارِ انتظارِ FloodWait را به ثانیه تبدیل می‌کند.
+
+    در python-telegram-bot نسخهٔ ۲۰ به بعد `retry_after` یک `timedelta` است،
+    نه عدد؛ `float(timedelta)` خطا می‌دهد و همان خطا کلِ ارسالِ خودکار را
+    متوقف می‌کرد.
+    """
+    ra = getattr(exc, "retry_after", 0)
+    try:
+        return max(1.0, float(ra))
+    except (TypeError, ValueError):
+        return max(1.0, float(getattr(ra, "total_seconds", lambda: 5.0)()))
+
+
+class _FloodStop(Exception):
+    """جریمهٔ طولانیِ تلگرام: دورِ فعلی باید همین‌جا تمام شود."""
+
+
+def _gap() -> float:
+    """فاصلهٔ تصادفی دور و برِ فاصلهٔ یادگرفته‌شده (±۲۵٪)."""
+    return random.uniform(_gap_base * 0.75, _gap_base * 1.25)
+
+
+async def _send_one(bot, channel: str, text: str, attempts: int = 3) -> bool:
+    """یک پیام را می‌فرستد و در برابر FloodWait/شبکه مقاوم است.
+
+    خطاها لاگ می‌شوند؛ قبلاً بی‌صدا بلعیده می‌شدند و معلوم نبود چرا هیچ
+    کانفیگی به کانال نمی‌رسد.
+    """
+    global _flood_until, _gap_base
+    for attempt in range(attempts):
+        try:
+            await bot.send_message(chat_id=channel, text=text, parse_mode="HTML",
+                                   disable_web_page_preview=True)
+            return True
+        except RetryAfter as exc:
+            wait = _retry_seconds(exc)
+            if wait > 20:
+                # جریمهٔ سنگین: ادامه دادن، جریمه را تمدید می‌کند. کلِ دور را
+                # متوقف می‌کنیم و فاصله را برای دورهای بعدی زیاد می‌کنیم.
+                _flood_until = time.time() + wait + 3
+                _min_gap = _clamp_gap(_gap_base * 1.6)
+                _gap_base = _min_gap
+                _save_auto_state(gap=_gap_base, min_gap=_min_gap)
+                logger.warning("تلگرام %.0f ثانیه قفل کرد؛ فاصله به %.1fs زیاد شد",
+                               wait, _gap_base)
+                raise _FloodStop
+            logger.warning("FloodWait %.0fs (تلاش %d/%d) — صبر می‌کنیم",
+                           wait, attempt + 1, attempts)
+            await asyncio.sleep(wait + 1)
+        except TimedOut:
+            logger.warning("TimedOut در ارسال (تلاش %d/%d)", attempt + 1, attempts)
+            await asyncio.sleep(2.0 * (attempt + 1))
+        except NetworkError as exc:
+            logger.warning("NetworkError در ارسال: %s (تلاش %d/%d)",
+                           exc, attempt + 1, attempts)
+            await asyncio.sleep(3.0 * (attempt + 1))
+        except BadRequest as exc:
+            logger.error("BadRequest در ارسال به کانال: %s", exc)
+            return False
+    logger.error("ارسال یک کانفیگ پس از %d تلاش ناموفق ماند", attempts)
+    return False
+
+
+async def _send_batch(bot, channel: str, msgs: list[str]) -> int:
+    """پیام‌ها را با فاصلهٔ تصادفی می‌فرستد؛ تعدادِ ارسال‌شده را برمی‌گرداند."""
+    sent = 0
+    for i, m in enumerate(msgs):
+        try:
+            if await _send_one(bot, channel, m):
+                sent += 1
+        except _FloodStop:
+            break
+        if i < len(msgs) - 1:
+            await asyncio.sleep(_gap())
+    return sent
 
 
 _AUTO_PUBLISH_LOCK = asyncio.Lock()
 
 
 async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
-    """هر چند ثانیه ۳ کانفیگِ بعدی را به‌طور خودکار به کانال می‌فرستد (monospace).
+    """هر دور ۲۰ کانفیگِ بعدی را خودکار به کانال می‌فرستد (monospace).
 
-    اگر اجرای قبلی هنوز تمام نشده، این اجرا رد می‌شود تا ارسال‌ها روی هم نیفتند.
+    هر کانفیگ با فاصلهٔ تصادفی حدودِ ۲.۵ تا ۴ ثانیه از کانفیگِ قبلی
+    فرستاده می‌شود تا ارسال یکنواخت و شبیهِ اسپم به نظر نرسد. فاصله در
+    `data/auto_publish_state.json` ذخیره می‌شود و اگر تلگرام جریمه کند
+    خودکار بزرگ‌تر می‌ماند. اگر دورِ قبلی هنوز تمام نشده، این اجرا رد
+    می‌شود تا ارسال‌ها روی هم نیفتند.
     """
+    global _gap_base
     if CHANNEL_PUBLISH != "live":
         return
-    if _AUTO_PUBLISH_LOCK.locked():
+    remaining = _flood_until - time.time()
+    if remaining > 0:
+        logger.info("جریمهٔ تلگرام فعال است؛ %.0f ثانیهٔ دیگر ادامه می‌دهیم", remaining)
         return
+    if _AUTO_PUBLISH_LOCK.locked():
+        logger.info("دورِ قبلی انتشار خودکار هنوز تمام نشده؛ این دور رد شد")
+        return
+    _sync_gap()
     async with _AUTO_PUBLISH_LOCK:
         try:
             from ..utils import load_configs
             lines = load_configs("verified")
         except Exception:
+            logger.warning("خواندنِ کانفیگ‌ها برای انتشار خودکار ناموفق بود", exc_info=True)
             return
         if not lines:
+            logger.warning("هیچ کانفیگِ verified برای انتشار نیست")
             return
         channel = "@" + CHANNEL_USERNAME.lstrip("@")
         cmap = _country_map()
         offset = _load_auto_offset()
-        batch = 3
-        chunk = lines[offset:offset + batch]
-        if not chunk:
+        if offset >= len(lines) or offset < 0:
             offset = 0
-            chunk = lines[:batch]
+        chunk = lines[offset:offset + _PUBLISH_PER_CYCLE]
         msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
-        sent = 0
-        for m in msgs:
-            try:
-                await context.bot.send_message(chat_id=channel, text=m, parse_mode="HTML")
-                sent += 1
-                await asyncio.sleep(4.0)
-            except Exception as e:
-                # FloodWait: تلگرام از ما می‌خواهد کمی صبر کنیم.
-                retry_after = getattr(e, "retry_after", None)
-                if retry_after:
-                    await asyncio.sleep(float(retry_after) + 1.0)
-                    try:
-                        await context.bot.send_message(chat_id=channel, text=m, parse_mode="HTML")
-                        sent += 1
-                        await asyncio.sleep(4.0)
-                        continue
-                    except Exception:
-                        break
-                break
-        _save_auto_offset(offset + sent if sent else offset)
+        sent = await _send_batch(context.bot, channel, msgs)
+        new_offset = offset + sent
+        _save_auto_state(offset=0 if new_offset >= len(lines) else new_offset)
+        if sent == len(msgs):
+            # دورِ تمیز: آرام‌آرام به سرعتِ خواسته‌شده برمی‌گردیم، ولی هرگز
+            # پایین‌تر از کفِ امنی که تلگرام به ما تحمیل کرده.
+            _gap_base = max(_min_gap, _clamp_gap(_gap_base * 0.92))
+            _save_auto_state(gap=_gap_base)
+        logger.info("انتشار خودکار: %d از %d کانفیگ به %s ارسال شد (offset → %d، فاصله %.1fs)",
+                    sent, len(msgs), channel,
+                    0 if new_offset >= len(lines) else new_offset, _gap_base)
 
 
 async def trigger_aggregate_job(context: ContextTypes.DEFAULT_TYPE) -> None:

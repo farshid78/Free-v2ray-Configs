@@ -169,6 +169,23 @@
   "use strict";
 
   var OWNER = "farshid78", REPO = "Free-v2ray-Configs", BRANCH = "main";
+  // آیدیِ عددیِ مالک برای پنل ادمینِ مینی‌اپ. پیش‌فرض ۰ = پنل ادمین برای هیچ‌کس
+  // نمایش داده نمی‌شود (امن). برای فعال‌سازی، مقدارِ OWNER_ID خود را اینجا بگذارید
+  // یا از ?owner=<id> برای تست استفاده کنید (باید با همین مقدار برابر باشد).
+  var OWNER_ID = 0;
+
+  function ownerOk() {
+    if (!OWNER_ID) return false;
+    var uid = 0;
+    try {
+      var tg = window.Telegram && window.Telegram.WebApp;
+      if (tg && tg.initDataUnsafe && tg.initDataUnsafe.user) uid = tg.initDataUnsafe.user.id || 0;
+    } catch (e) { uid = 0; }
+    if (uid && uid === OWNER_ID) return true;
+    var q = params.get("owner");
+    if (q && Number(q) === OWNER_ID) return true;
+    return false;
+  }
   var RAW = "https://raw.githubusercontent.com/" + OWNER + "/" + REPO + "/" + BRANCH;
   var CDN = "https://cdn.jsdelivr.net/gh/" + OWNER + "/" + REPO + "@" + BRANCH;
   var REPO_URL = "https://github.com/" + OWNER + "/" + REPO;
@@ -248,7 +265,8 @@
     function fromCascade(key, label, icon) {
       var node = cc[key] || {}, files = node.files || {};
       return { key: key, label: label, icon: icon, count: node.unique,
-               txt: files.configs_txt, b64: files.configs_base64, note: node.criterion };
+               txt: files.configs_txt, b64: files.configs_base64,
+               clash: files.clash_yaml, singbox: files.singbox_json, note: node.criterion };
     }
     var out = [
       fromCascade("verified", "Verified", "🏆"),
@@ -257,11 +275,13 @@
       fromCascade("google", "Google", "🟢")
     ];
     if (idx.top100) out.push({ key: "top100", label: "۱۰۰ برتر", icon: "🥇",
-                               count: idx.top100.count, txt: idx.top100.url, note: idx.top100.criterion });
+                               count: idx.top100.count, txt: idx.top100.url, note: idx.top100.criterion,
+                               clash: null, singbox: null, b64: null });
     [["all", "همه", "🌐"], ["heavy", "Heavy", "📦"], ["light", "Light", "⭐"]].forEach(function (b) {
       var node = cats[b[0]] || {}, files = node.files || {};
       out.push({ key: b[0], label: b[1], icon: b[2], count: node.unique,
-                 txt: files.configs_txt, b64: files.configs_base64 });
+                 txt: files.configs_txt, b64: files.configs_base64,
+                 clash: files.clash_yaml, singbox: files.singbox_json });
     });
     return out;
   }
@@ -357,16 +377,27 @@
     var list = buckets();
     $("catsBody").innerHTML = list.map(function (b, i) {
       var txt = safeUrl(b.txt), b64 = safeUrl(b.b64);
+      var clash = safeUrl(b.clash), sing = safeUrl(b.singbox);
+      // لینک‌های ساب‌سکریپشن (کپی‌پذیر) — هر فرمت یک دکمهٔ کپی + یک لینکِ بازکردن
+      var links = [];
+      if (b64) links.push(['base64', b64]);
+      if (txt) links.push(['plain', txt]);
+      if (clash) links.push(['clash', clash]);
+      if (sing) links.push(['sing-box', sing]);
+      var linksHtml = links.map(function (lk) {
+        return '<button class="btn ghost" data-copy="' + esc(lk[1]) + '" title="کپی">' + esc(lk[0]) + ' · کپی</button>' +
+               '<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="' + lk[1] + '" title="باز کردن">↗</a>';
+      }).join(' ');
       return '<div class="glass" style="padding:12px 14px;border-radius:14px;margin-bottom:8px">' +
         '<div style="display:flex;align-items:center;gap:8px">' +
           '<span style="font-size:16px">' + b.icon + "</span>" +
           '<span class="t" style="flex:1">' + esc(b.label) + "</span>" +
           '<span class="c">' + num(b.count) + " کانفیگ</span>" +
         "</div>" +
-        '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">' +
+        '<div class="hint" style="margin:6px 2px 4px">لینک‌های ساب‌سکریپشن (برای کپی، روی دکمه بزنید):</div>' +
+        '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">' + (linksHtml || '<span class="hint">لینکی ثبت نشده.</span>') + "</div>" +
+        '<div style="display:flex;gap:6px;flex-wrap:wrap">' +
           '<button class="btn" data-preview="' + i + '">پیش‌نمایش ۱۰ مورد</button>' +
-          (b64 ? '<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="' + b64 + '">base64</a>' : "") +
-          (txt ? '<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="' + txt + '">فایل کامل</a>' : "") +
         "</div>" +
         '<div id="prev-' + i + '"></div>' +
       "</div>";
@@ -480,6 +511,7 @@
   }
 
   function renderAdmin() {
+    if (!ownerOk()) { $("adminBody").innerHTML = '<div class="hint">دسترسی ندارید — این بخش فقط برای مالک (OWNER_ID) است.</div>'; return; }
     var idx = state.idx || {}, h = state.health || {}, s = h.summary || {};
     var cards = [
       ["📊 آمار پروژه", num(allCount()) + " کانفیگ · " + num(idx.countries && idx.countries.count) + " کشور", "stats"],
@@ -508,10 +540,12 @@
   }
 
   function selectTab(name) {
+    if (name === "admin" && !ownerOk()) return;
     document.querySelectorAll("nav button").forEach(function (b) {
       b.setAttribute("aria-selected", String(b.getAttribute("data-tab") === name));
     });
     ["stats", "cats", "protos", "countries", "sources", "admin"].forEach(function (t) {
+      if (t === "admin" && !ownerOk()) { $("tab-" + t).hidden = true; return; }
       $("tab-" + t).hidden = t !== name;
     });
     if (name === "countries" && !state.countries) loadCountries();
@@ -538,6 +572,13 @@
   }
 
   function boot() {
+    // پنل ادمین فقط برای مالک (ownerOk). کاربران عادی دکمه و تب را نمی‌بینند.
+    if (!ownerOk()) {
+      var adminBtn = document.querySelector('nav button[data-tab="admin"]');
+      if (adminBtn) adminBtn.style.display = "none";
+      var adminTab = $("tab-admin");
+      if (adminTab) adminTab.hidden = true;
+    }
     $("kpis").innerHTML = '<div class="glass kpi"><b>…</b><span>در حال بارگذاری</span></div>';
     getFile("index.json", true).then(function (idx) {
       state.idx = idx;

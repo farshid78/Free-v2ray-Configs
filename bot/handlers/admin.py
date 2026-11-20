@@ -237,6 +237,39 @@ async def adm_addsource(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await q.edit_message_text("دستهٔ منبع را انتخاب کنید:", reply_markup=kb)
 
 
+async def adm_scan(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    q = update.callback_query
+    await q.answer()
+    if not _is_admin(q.from_user.id):
+        await q.edit_message_text("دسترسی ندارید.")
+        return
+    context.user_data["mode"] = "scanurl"
+    await q.edit_message_text(
+        "🔍 URL را بفرستید (وب‌صفحه، raw لینک، یا t.me/channel):\n"
+        "پس از اسکن، تعداد کانفیگ‌های استخراج‌شده و نمونه نشان داده می‌شود "
+        "و می‌توانید آن را به منابع اضافه کنید."
+    )
+
+
+async def adm_scan_cat(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    q = update.callback_query
+    await q.answer()
+    if not _is_admin(q.from_user.id):
+        return
+    cat = q.data.split(":", 1)[1]
+    url = context.user_data.pop("scan_url", None)
+    if not url:
+        await q.edit_message_text("چیزی برای افزودن نیست. دوباره اسکن کنید.", reply_markup=admin_menu())
+        return
+    from scripts.sources import add_extra_source
+    ok = add_extra_source(cat, url)
+    if ok:
+        trig = await _trigger_aggregate()
+        await q.edit_message_text(f"منبع افزوده شد ✅ ({cat})\n{trig}", reply_markup=admin_menu())
+    else:
+        await q.edit_message_text("این منبع قبلاً وجود داشت.", reply_markup=admin_menu())
+
+
 async def adm_addsource_cat(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     q = update.callback_query
     await q.answer()
@@ -354,6 +387,37 @@ async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) 
             return
         remove_admin(uid)
         await update.message.reply_text(f"ادمین {uid} حذف شد.")
+    elif mode == "scanurl":
+        context.user_data.pop("mode", None)
+        url = text.strip()
+        if not (url.startswith("http://") or url.startswith("https://")):
+            await update.message.reply_text("URL نامعتبر (باید با http/https شروع شود).")
+            return
+        await update.message.reply_text("در حال اسکن…")
+        try:
+            r = requests.get(url, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
+            r.raise_for_status()
+            from scripts.core import extract_valid_lines
+            lines = extract_valid_lines(r.text)
+        except Exception as e:
+            await update.message.reply_text(f"اسکن ناموفق: {type(e).__name__}: {e}")
+            return
+        if not lines:
+            await update.message.reply_text("هیچ کانفیگ معتبری در این صفحه یافت نشد.")
+            return
+        context.user_data["scan_url"] = url
+        sample = "\n".join(lines[:5])
+        from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+        kb = InlineKeyboardMarkup([
+            [InlineKeyboardButton("➕ Light", callback_data="scancat:light"),
+             InlineKeyboardButton("➕ Heavy", callback_data="scancat:heavy")],
+            [InlineKeyboardButton("❌ انصراف", callback_data="back_main")],
+        ])
+        await update.message.reply_text(
+            f"✅ {len(lines)} کانفیگ استخراج شد.\nنمونه:\n{sample}\n\n"
+            "برای انتشار، این URL را به منابع اضافه کنید:",
+            reply_markup=kb,
+        )
     elif mode and mode.startswith("addsource_"):
         context.user_data.pop("mode", None)
         cat = mode.split("_", 1)[1]

@@ -76,6 +76,8 @@ def build_app() -> Application:
     app.add_handler(CallbackQueryHandler(admin.adm_cats_help, pattern="^adm_cats_help$"))
     app.add_handler(CallbackQueryHandler(admin.adm_addsource, pattern="^adm_addsource$"))
     app.add_handler(CallbackQueryHandler(admin.adm_addsource_cat, pattern="^addsrc:"))
+    app.add_handler(CallbackQueryHandler(admin.adm_scan, pattern="^adm_scan$"))
+    app.add_handler(CallbackQueryHandler(admin.adm_scan_cat, pattern="^scancat:"))
     app.add_handler(CallbackQueryHandler(user.sub_link, pattern="^sub_link$"))
     app.add_handler(CallbackQueryHandler(admin.adm_publish, pattern="^adm_publish$"))
 

@@ -42,6 +42,7 @@ def admin_menu() -> InlineKeyboardMarkup:
         [InlineKeyboardButton("📢 انتشار در کانال (dry-run/live)", callback_data="adm_publish")],
         [InlineKeyboardButton("🔄 Trigger aggregate", callback_data="adm_trigger")],
         [InlineKeyboardButton("📋 منابع و مدیریت", callback_data="adm_sources")],
+        [InlineKeyboardButton("🔍 اسکن/استخراج از URL", callback_data="adm_scan")],
         [InlineKeyboardButton("➕ افزودن ادمین", callback_data="adm_addadmin"),
          InlineKeyboardButton("➖ حذف ادمین", callback_data="adm_removeadmin")],
         [InlineKeyboardButton("🔙 بازگشت", callback_data="back_main")],

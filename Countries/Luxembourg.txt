@@ -3,10 +3,9 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — LUXEMBOURG (LU) — 3 configs
+# @jojo_config — LUXEMBOURG (LU) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-trojan://4mq9w5ckqw3ewbdg@staticxfastline.taymaztest.ir:16200?path=/biyasd&security=tls&alpn=http/1.1&insecure=0&host=staticxfastline.taymaztest.ir&fp=chrome&type=ws&allowInsecure=0&sni=staticxfastline.taymaztest.ir#LU 🇱🇺 | @jojo_config | 7B19E7
 vless://740b2630-b42d-425c-bacd-37e7e30d78f1@92.223.84.254:443?encryption=none&fp=chrome&host=subgift.gcorecdn.com&path=/t.me-SubGift&security=tls&sni=subgift.gcorecdn.com&type=ws#LU 🇱🇺 | @jojo_config | 98FC96
-vless://740b2630-b42d-425c-bacd-37e7e30d78f1@subgift.gcorecdn.com:443?encryption=none&security=tls&sni=subgift.gcorecdn.com&alpn=http/1.1&type=ws&host=subgift.gcorecdn.com&path=/t.me-SubGift#LU 🇱🇺 | @jojo_config | 1D3D38
+vless://740b2630-b42d-425c-bacd-37e7e30d78f1@subgift.gcorecdn.com:443?path=/t.me-SubGift&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=subgift.gcorecdn.com#LU 🇱🇺 | @jojo_config | 1B6956

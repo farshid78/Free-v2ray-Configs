@@ -1,10 +1,10 @@
-#profile-title: @jojo_config — GREECE (GR)
+#profile-title: @jojo_config — LITHUANIA (LT)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — GREECE (GR) — 1 configs
+# @jojo_config — LITHUANIA (LT) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://8f704ed6-9a1a-4d04-94dd-1bff501716de@85.90.197.220:443?security=reality&type=tcp&fp=chrome&headerType=none&encryption=none&sid=94acb54627612d43&sni=www.cloudflare.com&pbk=biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4&flow=xtls-rprx-vision#GR 🇬🇷 | @jojo_config | C82D7F
+vless://a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6@88.216.74.37:443?&security=reality&flow=xtls-rprx-vision&pbk=UpOOm5-gcSp3fLuCzWl2HJnnqtUHpnbyOWU2yUCcsRI&sid=0492eabdb9&fp=firefox&sni=yw0ein72.dendi.top&type=tcp&headerType=none&host=yw0ein72.dendi.top&path=%2F#LT 🇱🇹 | @jojo_config | 74EED3

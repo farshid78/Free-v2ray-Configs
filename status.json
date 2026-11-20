@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T20:47:46Z",
+ "updated_at": "2026-11-20T20:47:53Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-20T20:46:53Z",
-  "heartbeat_age_s": 53,
+  "last_heartbeat": "2026-11-20T20:47:53Z",
+  "heartbeat_age_s": 0,
   "pid": 2392,
   "host": "runnervm0hi8g",
   "note": "run_minutes=12.0"
@@ -51,14 +51,14 @@
   }
  },
  "counts": {
-  "collected": 21126,
-  "verified": 1049,
-  "invalid": 1,
-  "new": 1049,
-  "duplicate": 9575,
-  "sent": 0,
+  "collected": 0,
+  "verified": 0,
+  "invalid": 0,
+  "new": 0,
+  "duplicate": 0,
+  "sent": 70,
   "send_failed": 0,
-  "queued": 0
+  "queued": 894
  },
  "workflows": {
   "test": {
@@ -74,9 +74,9 @@
    "error": ""
   },
   "aggregate": {
-   "last_run_at": "2026-11-20T20:47:46Z",
+   "last_run_at": "2026-11-20T20:38:17Z",
    "last_ok": true,
-   "duration_s": 553.5,
+   "duration_s": 571.4,
    "error": ""
   }
  },

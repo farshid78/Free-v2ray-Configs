@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T20:26:05Z",
+ "updated_at": "2026-11-20T20:26:46Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-20T20:25:46Z",
-  "heartbeat_age_s": 29,
+  "last_heartbeat": "2026-11-20T20:26:46Z",
+  "heartbeat_age_s": 0,
   "pid": 2266,
   "host": "runnervmccnms",
   "note": "run_minutes=12.0"

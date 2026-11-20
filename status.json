@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T20:00:32Z",
+ "updated_at": "2026-11-20T20:00:36Z",
  "bot": {
   "online": true,
   "last_heartbeat": "2026-11-20T20:00:32Z",
-  "heartbeat_age_s": 0,
+  "heartbeat_age_s": 29,
   "pid": 2263,
   "host": "runnervm0hi8g",
   "note": "run_minutes=12.0"
@@ -25,9 +25,9 @@
   "invalid": 0,
   "new": 0,
   "duplicate": 0,
-  "sent": 20,
+  "sent": 40,
   "send_failed": 0,
-  "queued": 910
+  "queued": 890
  },
  "workflows": {
   "test": {

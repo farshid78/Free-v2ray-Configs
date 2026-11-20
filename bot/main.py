@@ -116,6 +116,28 @@ async def _another_instance_polls(token: str) -> bool:
         return False
 
 
+async def heartbeat_job(context: ContextTypes.DEFAULT_TYPE) -> None:
+    """هر دقیقه وضعیتِ «آنلاین» را با زمانِ زنده مینویسد.
+
+    داشبورد با همین heartbeat سنِ آخرین تماس را نشان می‌دهد؛ نبودِ آن یعنی
+    ربات آفلاین است — نه این‌که «آخرین workflow سبز بود».
+    """
+    try:
+        from scripts import status as rt
+        rt.heartbeat(note=f"run_minutes={RUN_MINUTES}")
+    except Exception:
+        pass
+
+
+async def status_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
+    """وضعیت را هر چند دقیقه روی شاخهٔ state منتشر می‌کند (fail-open)."""
+    try:
+        from scripts import status as rt
+        await asyncio.get_event_loop().run_in_executor(None, rt.publish)
+    except Exception:
+        pass
+
+
 def _schedule_lifetime(app: Application) -> None:
     """ربات را پس از `BOT_RUN_MINUTES` تمیز خاموش می‌کند.
 
@@ -150,7 +172,10 @@ def main() -> None:
         app.job_queue.run_repeating(_admin.auto_publish_job,
                                     interval=_admin._PUBLISH_CYCLE_SECONDS, first=10)
         app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=3600, first=300)
-        logging.info("انتشار خودکار فعال شد: ۲۰ کانفیگ در هر ۳۰ ثانیه")
+        app.job_queue.run_repeating(heartbeat_job, interval=60, first=1)
+        # انتشارِ وضعیت هر ۵ دقیقه: داشبورد باید «آنلاین/آفلاین» را واقعی ببیند.
+        app.job_queue.run_repeating(status_publish_job, interval=300, first=90)
+        logging.info("انتشار خودکار فعال شد: صفِ ۲۰تایی با فاصلهٔ تصادفی")
     except Exception:
         logging.exception("زمان‌بندیِ انتشار خودکار فعال نشد — کانفیگی به کانال نمی‌رود")
     _schedule_lifetime(app)
@@ -180,12 +205,20 @@ def main() -> None:
         logging.warning("نمونهٔ دیگری از همین ربات در حال poll است (409 Conflict) — "
                         "این نمونه کنار می‌رود")
         return
-    except (TimedOut, NetworkError) as exc:
+    except (TimedOut, NetworkError) as exc:  # noqa: BLE001
         # شبکهٔ ایران معمولاً به api.telegram.org نمی‌رسد. این خطای محیط است،
         # نه باگِ ربات؛ یک خطِ روشن به‌جای tracebackِ چندصفحه‌ای.
         print(f"[warn] telegram API unreachable ({type(exc).__name__}); "
               f"bot did not start polling", flush=True)
         raise SystemExit(3)
+    finally:
+        # خروج (خواه عمرِ برش تمام شده باشد، خواه ۴۰۹/قطعیِ شبکه): وضعیت
+        # آنلاین را پاک کن تا داشبورد واقعیت را نشان دهد، نه وضعیتِ کهنه.
+        try:
+            from scripts import status as rt
+            rt.bot_offline("stopped")
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":

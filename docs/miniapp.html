@@ -137,6 +137,11 @@
     <div class="glass" style="padding:14px">
       <div id="statsBody" class="hint"><span class="spinner"></span> خواندن index.json…</div>
     </div>
+    <!-- وضعیتِ واقعیِ سیستم: آنلاین‌بودنِ ربات، آخرین چرخه، صفِ ارسال.
+         منبعش `status.json` روی شاخهٔ `state` است، نه «آخرین اجرای workflow». -->
+    <div class="glass" style="padding:14px;margin-top:10px">
+      <div id="sysBody" class="hint"><span class="spinner"></span> خواندن وضعیتِ اجرا…</div>
+    </div>
   </section>
   <section id="tab-cats" hidden><div id="catsBody"></div></section>
   <section id="tab-protos" hidden><div id="protosBody"></div></section>
@@ -188,6 +193,14 @@
   }
   var RAW = "https://raw.githubusercontent.com/" + OWNER + "/" + REPO + "/" + BRANCH;
   var CDN = "https://cdn.jsdelivr.net/gh/" + OWNER + "/" + REPO + "@" + BRANCH;
+  // وضعیتِ رانتایم روی شاخهٔ `state` منتشر می‌شود: شاخهٔ main با force-pushِ
+  // انتشار بازنویسی می‌شود و هر فایلی بیرون از فهرستِ خروجی را پاک می‌کند.
+  // تابع است (نه مقدارِ ثابت) چون DATA_ROOT پایین‌تر تعریف می‌شود.
+  function statusBases() {
+    return DATA_ROOT ? [DATA_ROOT]
+      : ["https://raw.githubusercontent.com/" + OWNER + "/" + REPO + "/state",
+         "https://cdn.jsdelivr.net/gh/" + OWNER + "/" + REPO + "@state"];
+  }
   var REPO_URL = "https://github.com/" + OWNER + "/" + REPO;
 
   var params = new URLSearchParams(location.search);
@@ -235,19 +248,22 @@
     });
   }
 
-  /** خواندن `path` از ریشهٔ داده، سپس آینه؛ خطا فقط وقتی همه شکست بخورند. */
-  function getFile(path, asJson) {
+  /** خواندن `path` از فهرستِ پایه‌ها به‌ترتیب، سپس آینه؛ خطا فقط وقتی همه شکست بخورند. */
+  function getFrom(bases, path, asJson, bust) {
     var i = 0, lastErr = null;
     function attempt() {
-      var url = BASES[i] + "/" + path.replace(/^\/+/, "");
+      // `?t=`: لبهٔ raw تا ~۵ دقیقه کش می‌کند؛ برای وضعیتِ زنده لازم است.
+      var url = bases[i] + "/" + path.replace(/^\/+/, "") + (bust ? "?t=" + Date.now() : "");
       return fetchWithTimeout(url, asJson).catch(function (err) {
         lastErr = err; i += 1;
-        if (i < BASES.length) return attempt();
+        if (i < bases.length) return attempt();
         throw lastErr;
       });
     }
     return attempt();
   }
+
+  function getFile(path, asJson) { return getFrom(BASES, path, asJson); }
 
   function ago(iso) {
     var t = Date.parse(iso || "");
@@ -341,6 +357,74 @@
       '<div class="hint" style="margin:0 2px 10px">پروتکل‌ها در کلِ استخر (dedup)</div>' + rows +
       '<div class="hint">در این اجرا ' + num(fetched) + " خط خوانده شد؛ " + num(dup) +
       " تکراری حذف شد و " + num(allCount()) + " کانفیگِ یکتا ماند.</div>";
+  }
+
+  /** بخشِ «وضعیتِ سیستم» — همین چیزی که داشبورد باید نشان دهد، نه «سبزِ آخرین run». */
+  function renderSystem() {
+    var s = state.sys;
+    var box = $("sysBody");
+    if (!s) {
+      box.innerHTML = '<div class="hint">وضعیتِ اجرا هنوز منتشر نشده است (شاخهٔ <code>state</code> خالی است).</div>';
+      return;
+    }
+    var bot = s.bot || {}, cyc = s.cycle || {}, c = s.counts || {};
+    var stages = cyc.stages || {}, wfs = s.workflows || {};
+    function dot(ok) { return ok ? "🟢" : "🔴"; }
+    function hbText(sec) {
+      if (sec == null) return "بدونِ heartbeat";
+      if (sec < 120) return sec + " ثانیه پیش";
+      if (sec < 7200) return Math.round(sec / 60) + " دقیقه پیش";
+      return Math.round(sec / 3600) + " ساعت پیش";
+    }
+    var rows = [];
+    rows.push(["ربات تلگرام", dot(bot.online) + (bot.online ? " آنلاین" : " آفلاین"),
+               "heartbeat: " + hbText(bot.heartbeat_age_s)]);
+    rows.push(["آخرین چرخه", cyc.ok === true ? "✅ موفق" : (cyc.ok === false ? "❌ ناموفق" : "—"),
+               (cyc.finished_at ? ago(cyc.finished_at) : "—") +
+               (cyc.duration_s ? " · " + Math.round(cyc.duration_s) + " ثانیه" : "") +
+               (cyc.error ? " · " + cyc.error : "")]);
+    rows.push(["آخرین استخراج", stages.collection ? (stages.collection.status === "ok" ? "✅" : "⚠️") : "—",
+               (stages.collection && stages.collection.at ? ago(stages.collection.at) : "—") +
+               (stages.collection && stages.collection.detail ? " · " + stages.collection.detail : "")]);
+    rows.push(["کانفیگ‌ها", num(c.collected), "خوانده‌شده در این چرخه"]);
+    rows.push(["معتبر / نامعتبر", num(c.verified) + " / " + num(c.invalid), "verified در برابر broken"]);
+    rows.push(["تکراری", num(c.duplicate), "حذف‌شده در dedup"]);
+    rows.push(["ارسال به کانال", num(c.sent) + " موفق", num(c.send_failed) + " تلاشِ ناموفق · " + num(c.queued) + " در صف"]);
+    Object.keys(wfs).forEach(function (name) {
+      var w = wfs[name] || {};
+      rows.push(["workflow «" + name + "»", dot(w.last_ok) + (w.last_ok ? " آخرین اجرا موفق" : " آخرین اجرا ناموفق"),
+                 (w.last_run_at ? ago(w.last_run_at) : "—") +
+                 (w.duration_s ? " · " + Math.round(w.duration_s) + " ثانیه" : "") +
+                 (w.error ? " · " + w.error : "")]);
+    });
+    var stageKeys = Object.keys(stages);
+    var stageHtml = stageKeys.length ? ('<div class="hint" style="margin-top:8px">مراحل: ' +
+      stageKeys.map(function (k) {
+        var v = stages[k] || {};
+        var icon = v.status === "ok" ? "✅" : (v.status === "skipped" ? "⏭️" : "❌");
+        return icon + " " + esc(k);
+      }).join(" · ") + "</div>") : "";
+    // کهنگی: اگر وضعیت بیش از ۲۰ دقیقه به‌روز نشده باشد، عددها قابلِ اتکا نیستند.
+    var ageMin = (function () { var t = Date.parse(s.updated_at || ""); return t ? (Date.now() - t) / 60000 : null; })();
+    var stale = ageMin != null && ageMin > 20;
+    box.innerHTML = rows.map(function (r) {
+      return '<div class="row glass"><span class="t">' + esc(r[0]) + '</span>' +
+             '<span class="c" style="font-size:12px;text-align:left">' + esc(r[1]) +
+             (r[2] ? '<br><span class="hint">' + esc(r[2]) + "</span>" : "") + "</span></div>";
+    }).join("") + stageHtml +
+    '<div class="hint" style="margin-top:8px">' +
+      (stale ? "⚠️ وضعیت " + ago(s.updated_at) + " به‌روز نشده — عددها ممکن است کهنه باشند."
+             : "وضعیت " + ago(s.updated_at) + " به‌روز شد") + "</div>";
+  }
+
+  function loadStatus() {
+    getFrom(statusBases(), "status.json", true, true).then(function (data) {
+      state.sys = data;
+      renderSystem();
+    }).catch(function () {
+      state.sys = null;
+      renderSystem();
+    });
   }
 
   function previewBlock(id, lines, total, label) {
@@ -580,6 +664,9 @@
       if (adminTab) adminTab.hidden = true;
     }
     $("kpis").innerHTML = '<div class="glass kpi"><b>…</b><span>در حال بارگذاری</span></div>';
+    // وضعیتِ سیستم مستقل از index.json بارگذاری می‌شود؛ خرابیِ یکی نباید
+    // اطلاعاتِ دیگری را پنهان کند.
+    loadStatus();
     getFile("index.json", true).then(function (idx) {
       state.idx = idx;
       renderHeader(); renderKpis(); renderStats(); renderCats(); renderProtos(); renderAdmin();

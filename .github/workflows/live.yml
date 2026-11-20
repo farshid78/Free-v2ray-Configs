@@ -62,6 +62,12 @@ jobs:
       - name: 📦 Install bot dependencies
         run: pip install -r bot/requirements.txt
 
+      - name: 📥 Pull runtime status
+        # وضعیتِ چرخه‌ها و شمارنده‌ها را از شاخهٔ state می‌خواند تا داشبورد
+        # پس از این برش عددهای واقعی داشته باشد. fail-open: نبودِ شبکه یا
+        # شاخه نباید اجرای ربات را متوقف کند.
+        run: python scripts/status.py pull || echo "::warning::status pull skipped"
+
       - name: 🔑 Check configuration
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -78,6 +84,14 @@ jobs:
           OWNER_ID: ${{ secrets.OWNER_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -X utf8 -m bot.main
+
+      - name: 📤 Publish runtime status
+        if: always()
+        continue-on-error: true
+        run: |
+          # «آفلاین» شدن پس از خاموشیِ تمیز: ربات در finally خودش offline
+          # می‌کند؛ این گام همان وضعیت را روی شاخهٔ state می‌نشاند.
+          python scripts/status.py publish || echo "::warning::status publish skipped"
 
       - name: 📊 Slice summary
         if: always()

@@ -745,8 +745,47 @@ async def _send_batch(bot, channel: str, msgs: list[str]) -> int:
 _AUTO_PUBLISH_LOCK = asyncio.Lock()
 
 
+#: کلِ فهرستِ verified اسکن می‌شود، نه یک برشِ ثابت از ابتدای آن. با برشِ
+#: ثابت (۴۰۰ خط) پس از مهاجرتِ دفترِ idempotency هیچ چیزِ تازه‌ای پیدا نمی‌شد و
+#: صف برای همیشه خالی می‌ماند — با اجرای واقعی دیده شد. `enqueue` روی کلید،
+#: «درج یا نادیده‌گرفتن» است، پس اسکنِ کامل هزینه‌اش ناچیز است.
+_ENQUEUE_SCAN = 20000
+
+
+async def _drain_outbox(bot, channel: str, limit: int = _PUBLISH_PER_CYCLE) -> int:
+    """صف را تا سقفِ `limit` پیام خالی می‌کند؛ تعدادِ ارسال را برمی‌گرداند.
+
+    سقف عمدی است: بدونِ سقف، یک فراخوانی می‌تواند صدها پیام (چند ساعت) قفل را
+    نگه دارد و هیچ لاگ/عددی به وضعیت نرسد. با سقفِ ۲۰، هر دور یک خطِ لاگ و
+    یک به‌روزرسانیِ شمارنده دارد و انسدادِ قفل کوتاه می‌ماند.
+    """
+    from ..outbox import due, mark_failed, mark_sent
+
+    sent = 0
+    while sent < limit:
+        if _time_left() < 8:
+            logger.info("وقتِ این برش تمام است؛ صف برای دورِ بعد می‌ماند")
+            break
+        rows = due(limit=1)
+        if not rows:
+            break
+        row = rows[0]
+        try:
+            ok = await _send_one(bot, channel, row["text"])
+        except _FloodStop:
+            break                     # جریمهٔ تلگرام: بقیه در صف می‌مانند
+        if ok:
+            mark_sent(row["key"])     # بی‌درنگ، بدونِ کارِ دیگر در این میان
+            sent += 1
+        else:
+            attempts = mark_failed(row["key"], "send failed")
+            logger.warning("ارسال ناموفق (تلاش %d) — پیام در صف می‌ماند", attempts)
+        await asyncio.sleep(_gap())
+    return sent
+
+
 async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
-    """هر دور ۲۰ کانفیگِ بعدی را خودکار به کانال می‌فرستد (monospace).
+    """صفِ کانال را با کانفیگ‌های *جدید* پر می‌کند و با فاصلهٔ تصادفی خالی می‌کند.
 
     هر کانفیگ با فاصلهٔ تصادفی حدودِ ۲.۵ تا ۴ ثانیه از کانفیگِ قبلی
     فرستاده می‌شود تا ارسال یکنواخت و شبیهِ اسپم به نظر نرسد. فاصله در
@@ -764,15 +803,13 @@ async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
     if _AUTO_PUBLISH_LOCK.locked():
         logger.info("دورِ قبلی انتشار خودکار هنوز تمام نشده؛ این دور رد شد")
         return
-    # یک دستهٔ ۲۰تایی ~۶۵ ثانیه طول می‌کشد. اگر عمرِ برش کافی نیست، دسته را
-    # شروع نکن: نیمه‌کاره ماندن یعنی خاموشیِ دیرهنگام و از دست رفتنِ چند ارسال.
-    if _time_left() < _PUBLISH_PER_CYCLE * _GAP_BASE + 20:
-        logger.info("عمرِ این برش برای یک دستهٔ کامل کافی نیست (%.0fs) — دستهٔ بعدی را رد می‌کنم",
-                    _time_left())
+    if _time_left() < 25:
+        logger.info("عمرِ این برش برای ارسال کافی نیست (%.0fs) — دورِ بعد", _time_left())
         return
     _sync_gap()
     async with _AUTO_PUBLISH_LOCK:
         try:
+            from ..outbox import enqueue, stats
             from ..utils import load_configs
             lines = load_configs("verified")
         except Exception:
@@ -783,23 +820,26 @@ async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
             return
         channel = "@" + CHANNEL_USERNAME.lstrip("@")
         cmap = _country_map()
-        # `%` عمدی است: در CI این عدد از ساعت می‌آید و بزرگ‌تر از تعدادِ
-        # کانفیگ‌هاست؛ با `if offset >= len(lines): offset = 0` همیشه صفر
-        # می‌شد و همان ابتدای فهرست تکرار می‌شد.
-        offset = _load_auto_offset() % len(lines)
-        chunk = lines[offset:offset + _PUBLISH_PER_CYCLE]
-        msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
-        sent = await _send_batch(context.bot, channel, msgs)
-        new_offset = offset + sent
-        _save_auto_state(offset=0 if new_offset >= len(lines) else new_offset)
-        if sent == len(msgs):
-            # دورِ تمیز: آرام‌آرام به سرعتِ خواسته‌شده برمی‌گردیم، ولی هرگز
-            # پایین‌تر از کفِ امنی که تلگرام به ما تحمیل کرده.
-            _gap_base = max(_min_gap, _clamp_gap(_gap_base * 0.92))
+        # هر کانفیگ یک کلیدِ محتوایی دارد؛ صف و دفترِ idempotency تضمین می‌کنند
+        # یک کانفیگ با هیچ ری‌استارت/برشی دو بار به کانال نرود.
+        from ..outbox import config_key
+        added = enqueue([(config_key(ln), _format_channel_msg(ln, cmap))
+                         for ln in lines[:_ENQUEUE_SCAN]])
+        sent = await _drain_outbox(context.bot, channel)
+        st = stats()
+        try:
+            from scripts import status as rt
+            rt.set_counts(queued=st["pending"], sent=st["sent_total"],
+                          send_failed=st["failed_attempts"])
+        except Exception:
+            pass
+        if sent and st["pending"] == 0:
+            # صف خالی شد: کمی سرعت را به هدفِ اصلی نزدیک کن (ولی هرگز زیرِ کفِ
+            # امنی که تلگرام تحمیل کرده).
+            _gap_base = max(_min_gap, _clamp_gap(_gap_base * 0.96))
             _save_auto_state(gap=_gap_base)
-        logger.info("انتشار خودکار: %d از %d کانفیگ به %s ارسال شد (offset → %d، فاصله %.1fs)",
-                    sent, len(msgs), channel,
-                    0 if new_offset >= len(lines) else new_offset, _gap_base)
+        logger.info("انتشار: +%d صف، %d ارسال، %d در صف، %d کل (فاصله %.1fs)",
+                    added, sent, st["pending"], st["sent_total"], _gap_base)
 
 
 async def trigger_aggregate_job(context: ContextTypes.DEFAULT_TYPE) -> None:

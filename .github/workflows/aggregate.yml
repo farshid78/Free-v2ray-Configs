@@ -358,7 +358,7 @@ jobs:
       # در `scripts/test_pipeline.py` قفل شده‌اند.
       # ══════════════════════════════════════════════════════════════════════
       - name: 🐍 Setup Python
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
@@ -382,7 +382,7 @@ jobs:
       # OUTPUT_PATHS باید عیناً همانِ گامِ انتشار باشد (آزمون قفلش کرده است).
       - name: 🔄 Sync outputs with the newest publish
         id: sync_outputs
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         timeout-minutes: 3
         run: |
           OUTPUT_PATHS="all heavy light protocols archive index.json health.json verified fast secure top100.txt state.json Countries google"
@@ -425,15 +425,40 @@ jobs:
       # توصیفیِ خروجیِ قبلی باید پیش از آن خوانده شوند. منطق و آزمون‌ها در
       # `scripts/lkg.py`؛ پس از هر گامِ تولیدکننده گامِ «settle» تصمیم می‌گیرد.
       - name: 🗄️ Stash last-known-good tiers
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         continue-on-error: true
         run: |
           python scripts/lkg.py stash --set cascade --out .
           python scripts/lkg.py stash --set google --out .
 
       - name: 📦 Install dependencies
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         run: pip install -r requirements.txt
+
+      # ── قفلِ چرخه و آغازِ رکوردِ وضعیت ──────────────────────────────────
+      # چرا: دو چرخهٔ هم‌زمان (یک اجرای cron و یک dispatch از ربات) هم شبکه
+      # را دو برابر می‌کنند و هم دو کامیتِ متقارن می‌سازند. قفل با مالک و
+      # انقضا روی شاخهٔ `state` نگه داشته می‌شود، پس حتی اگر اجرای دیگری روی
+      # ماشینِ دیگری باشد، این چرخه می‌فهمد و در عوضِ خراب‌کاری کنار می‌رود.
+      # `continue-on-error` عمدی است: خرابیِ وضعیت/قفل نباید چرخهٔ سالم را
+      # بشکند (fail-open). اگر قفل در دستِ دیگری باشد، گام‌های بعدی می‌فهمند.
+      - name: 🔐 Begin cycle (lock + status)
+        id: cycle
+        if: steps.gate.outputs.should_run == 'true'
+        continue-on-error: true
+        run: |
+          python scripts/status.py pull || true
+          set +e
+          OUT=$(python scripts/status.py begin --workflow aggregate --ttl-min 40 2>&1)
+          RC=$?
+          echo "$OUT"
+          if [ "$RC" -eq 75 ]; then
+            echo "busy=true" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Another cycle is running::$OUT"
+          else
+            echo "busy=false" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
 
       # تست‌های واحد پیش از هر تولیدی — هر تست به یک باگِ واقعیِ کشف‌شده گره خورده
       # است، پس شکستِ آن یعنی یک رگرسیونِ شناخته‌شده برگشته.
@@ -466,7 +491,7 @@ jobs:
       # نتیجه در اولِ ماه هیچ پایگاهِ داده‌ای به دست نمی‌آمد. فرمولِ زیر روی
       # همان ۲۵۲ تاریخ، ۲۵۲ بار درست بود.
       - name: 🌍 Resolve GeoIP cache key
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         id: geoip_key
         run: |
           set -euo pipefail
@@ -493,7 +518,7 @@ jobs:
       # پس restore و save از هم جدا شده‌اند تا ذخیره‌سازی **فقط** زیرِ کلیدِ
       # همان ماهی انجام شود که واقعاً در فایل است.
       - name: 🌍 Restore GeoIP database cache
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         id: geoip_cache
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
@@ -519,7 +544,7 @@ jobs:
       # این گام هرگز job را نمی‌شکند: ابزار همیشه با کدِ ۰ خارج می‌شود و
       # خروجی‌اش تنها یک برچسبِ وضعیت است.
       - name: 🌍 Identify cached GeoIP month
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         id: geoip_have
         run: |
           set -euo pipefail
@@ -556,7 +581,7 @@ jobs:
       # از واژگانِ سرویسِ کلیددار پاک می‌خواهد؛ این کامنتِ سطحِ YAML در پارس
       # حذف می‌شود و مشمولِ آن قاعده نیست.
       - name: 🌍 Download GeoIP database
-        if: steps.gate.outputs.should_run == 'true' && steps.geoip_have.outputs.status != 'current'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true' && steps.geoip_have.outputs.status != 'current'
         id: geoip_dl
         run: |
           set -euo pipefail
@@ -643,7 +668,7 @@ jobs:
       # همه‌چیز را در `catch` می‌گیرد و `ReserveCacheError` به `core.info`
       # نگاشته می‌شود)، نه از روی مستندات فرض شد.
       - name: 🌍 Save GeoIP database cache
-        if: steps.gate.outputs.should_run == 'true' && steps.geoip_dl.outputs.got != ''
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true' && steps.geoip_dl.outputs.got != ''
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .cache/dbip-country-lite.mmdb
@@ -653,7 +678,7 @@ jobs:
       # اگر cache خراب شده باشد، بهتر است همین‌جا در لاگ دیده شود تا بعداً از
       # روی برچسب‌های غلط حدس زده شود.
       - name: 🌍 Verify GeoIP database
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         run: |
           python - <<'EOF'
           import sys
@@ -673,11 +698,12 @@ jobs:
           EOF
 
       - name: 🧪 Unit tests
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         run: python scripts/test_pipeline.py
 
       - name: 🚀 Run aggregator
-        if: steps.gate.outputs.should_run == 'true'
+        id: aggregate
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         run: python scripts/aggregate.py --out .
 
       # ── نصبِ کلاینت‌های واقعی برای اعتبارسنجی ────────────────────────────
@@ -746,7 +772,7 @@ jobs:
       # از ۱۰ دقیقهٔ پیش‌فرض به ۲ دقیقه می‌آورد؛ پس از آن، بازیابی کنار گذاشته
       # می‌شود و گامِ نصب خودش دانلود می‌کند.
       - name: 🧰 Restore validator archives cache
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         env:
           SEGMENT_DOWNLOAD_TIMEOUT_MINS: "2"
@@ -775,7 +801,7 @@ jobs:
       #     بیشینه ۹٫۳ دقیقه است (۲۳۹ اجرای موفقِ ۲۰۲۶-۱۱-۰۶ تا ۰۸)، پس با این
       #     سقف هم زیرِ `timeout-minutes: 15` می‌ماند.
       - name: 🧰 Install sing-box & mihomo (pinned + checksum verified)
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         id: validators
         # سقفِ سختِ کلِ گام؛ خودِ دانلود با `FETCH_BUDGET_SECONDS` به ۵ دقیقه محدود است.
         timeout-minutes: 8
@@ -876,7 +902,7 @@ jobs:
       # پس آرشیوِ تأییدنشده یا نیمه هرگز به cache نمی‌رسد. خطای این گام (مثلاً
       # در دسترس نبودنِ سرویسِ cache) در سورسِ v6.1.0 فقط هشدار است.
       - name: 🧰 Save validator archives cache
-        if: steps.gate.outputs.should_run == 'true' && steps.validators.outputs.downloaded == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true' && steps.validators.outputs.downloaded == 'true'
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .cache/validators
@@ -910,7 +936,7 @@ jobs:
       # خودِ checksum است، پس تغییرِ pin به‌طورِ خودکار cache را بی‌اعتبار
       # می‌کند و هیچ گامِ دستی‌ای فراموش نمی‌شود.
       - name: 📦 Restore xray-knife cache
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .cache/xray-knife
@@ -921,7 +947,7 @@ jobs:
           key: xray-knife-10.1.1-linux-64-a3b10a40ccaf423d96836f9606ffec8b2e5f4fce36375eac1aadc10ba9c58034
 
       - name: 📦 Install xray-knife (pinned + checksum verified)
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         env:
           XRAY_KNIFE_VERSION: "10.1.1"
           XRAY_KNIFE_ASSET: "Xray-knife-linux-64.zip"
@@ -1012,7 +1038,7 @@ jobs:
       # `pipeline.json` هر دو در خلاصهٔ کار دیده می‌شوند.
       - name: 🧬 Verify configs with real proxied requests (L3 cascade)
         id: cascade
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         continue-on-error: true
         timeout-minutes: 15
         # خروجیِ دورِ قبل این‌جا نیست: گامِ «Stash last-known-good» آن را کنار
@@ -1029,7 +1055,7 @@ jobs:
       # تا آخرین خروجیِ سالم تحتِ هیچ شرایطی از دست نرود.
       - name: 🧯 Settle cascade outputs (fresh or last-known-good)
         id: settle_cascade
-        if: always() && steps.gate.outputs.should_run == 'true'
+        if: always() && steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         continue-on-error: true
         env:
           CASCADE_OUTCOME: ${{ steps.cascade.outcome }}
@@ -1059,7 +1085,7 @@ jobs:
       #    پس هر شکستی به «نبودِ دسته» می‌رسد، نه «دستهٔ بایات یا نیمه‌نوشته».
       - name: 🟢 Google Ready (real proxied requests to Google services)
         id: google
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         continue-on-error: true
         # زودترین آغازِ سنجیده ۳۲۶ ثانیه ⇒ ۳۲۶ + ۸۴۰ = ۱۱۶۶ < ۱۲۰۰؛ و سقفِ ۸ دقیقهٔ
         # پیشین گام را **پیش از** مهلتِ ۱۰۵۰ ثانیه می‌کشت.
@@ -1083,7 +1109,7 @@ jobs:
 
       - name: 🧯 Settle Google Ready (fresh or last-known-good)
         id: settle_google
-        if: always() && steps.gate.outputs.should_run == 'true'
+        if: always() && steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         continue-on-error: true
         run: |
           python scripts/lkg.py settle --set google --out . || {
@@ -1101,11 +1127,11 @@ jobs:
       # `verified/` را بسازد، همین دروازه هم آن را واقعاً می‌سنجد — یعنی
       # لایهٔ جدید از اعتبارسنجی معاف نمی‌شود، بلکه مشمولِ آن می‌شود.
       - name: 🔍 Validate outputs with real clients
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         run: python scripts/validate.py --out . --strict --json validation.json
 
       - name: 📎 Upload validation report on failure
-        if: failure() && steps.gate.outputs.should_run == 'true'
+        if: failure() && steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: validation-report
@@ -1117,7 +1143,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: 📊 Job summary
-        if: always() && steps.gate.outputs.should_run == 'true'
+        if: always() && steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         run: |
           if [ -f index.json ]; then
             python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
@@ -1351,7 +1377,8 @@ jobs:
       #       نبودِ کلِ خروجی‌ها) → همه رد شدند و شاخه دست‌نخورده ماند.
       #     • نبودِ پوشهٔ archive/ → بدونِ کرشِ «pathspec did not match».
       - name: 🚀 Publish outputs to `main` (rolling squash — O(1) history)
-        if: steps.gate.outputs.should_run == 'true'
+        id: publish
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         # ⏱️ سقفِ زمانیِ خودِ step — قبلاً **هیچ** سقفی نداشت.
         #    این مرحله چند عملیاتِ شبکه‌ای دارد و تنها سقفِ موجود، سقفِ
         #    کلِ job (۱۵ دقیقه) بود؛ یعنی یک fetchِ گیرکرده می‌توانست کلِ
@@ -1724,7 +1751,7 @@ jobs:
       #   لحظه انجام شده و لینک‌های raw تازه‌اند؛ اگر purge موقتاً throttle
       #   یا قطع شود، نباید کلِ اجرا شکست‌خورده اعلام شود.
       - name: 🧹 Purge jsDelivr cache
-        if: steps.gate.outputs.should_run == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
         continue-on-error: true
         timeout-minutes: 3
         run: |
@@ -1888,3 +1915,32 @@ jobs:
                     f"{'' if same else '  (branch-ref lag on jsDelivr origin — raw links are unaffected)'}")
           print(f"   mirror agreement: {agree}/{len(probes)}")
           PY
+
+      # ── گزارشِ چرخه ───────────────────────────────────────────────────────
+      # چرا این گام آخر و با `if: always()`: وضعیتِ چرخه باید حتی وقتی یک
+      # مرحله شکست خورده هم ثبت شود؛ وگرنه داشبورد فقط «آخرین اجرای موفق»
+      # را می‌بیند و خرابیِ پایدار پنهان می‌ماند.
+      - name: 🧾 Report cycle
+        if: always()
+        continue-on-error: true
+        run: |
+          st() { case "$1" in success) echo ok ;; skipped|cancelled) echo skipped ;; *) echo failed ;; esac }
+          if [ "${{ steps.gate.outputs.should_run }}" != "true" ]; then
+            echo "gate skipped this tick — nothing to report"
+            exit 0
+          fi
+          if [ "${{ steps.cycle.outputs.busy }}" = "true" ]; then
+            echo "another cycle held the lock — this tick did nothing"
+            exit 0
+          fi
+          BIG="${{ steps.aggregate.outcome }}"
+          ARGS=(--workflow aggregate
+                --stage "collection=$(st "$BIG")"
+                --stage "cascade=$(st "${{ steps.cascade.outcome }}")"
+                --stage "google=$(st "${{ steps.google.outcome }}")"
+                --stage "validation=$(st "${{ steps.validators.outcome }}")"
+                --stage "publish=$(st "${{ steps.publish.outcome }}")")
+          if [ "$BIG" != "success" ]; then
+            ARGS+=(--failed --error "aggregate step: $BIG")
+          fi
+          python scripts/status.py report --root . "${ARGS[@]}"

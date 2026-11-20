@@ -26,3 +26,10 @@ validation.json
 
 # وضعیتِ رانتایمِ انتشار خودکار (offset/فاصله) — نه سورس
 data/auto_publish_state.json
+
+# وضعیتِ رانتایم (status/lock/heartbeat) — منبعِ حقیقت محلی؛ نسخهٔ منتشرشده روی شاخهٔ state است
+data/runtime/
+# صف و دفترِ ارسال (SQLite، فقط رانتایم)
+data/outbox.db
+data/outbox.db-wal
+data/outbox.db-shm

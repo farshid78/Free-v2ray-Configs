@@ -212,3 +212,25 @@ bot/admin     →  GitHub API repository_dispatch (aggregate-now)
 2. **`GITHUB_TOKEN`** در `.env` خالی است ⇒ trigger از ربات غیرفعال.
 3. هندلِ قدیمی فقط در سه جای **هویتی** مانده و عمداً دست‌نخورده است: `ACCESSIBILITY.md:89`، `GOVERNANCE.md:26` (نگه‌دارندهٔ مخزن)، `PHASE_A_REPORT.md:594` (امضای گزارشِ تاریخی).
 4. کامیت‌های `[auto-output]` هر ~۱۵ دقیقه اضافه می‌شوند و شمارش‌ها را کمی جابه‌جا می‌کنند؛ اعدادِ بخش ۹ مربوط به دورِ `551f74f` است.
+
+---
+
+## ۱۲. زیرساختِ رانتایم (کامیت‌های `f2bd4f6` … `0baddbd`)
+
+| کامیت | کار |
+|---|---|
+| `f2bd4f6` | `live.yml` + حذف ۵ fallback + runtime در bot |
+| `c6c3614` | `feat(runtime)`: status/outbox/aggregate/live/miniapp (10 فایل) |
+| `0baddbd` | `fix(ci)`: gate heavy steps on cycle lock; pre-lock steps unconditional |
+
+- **`scripts/status.py`**: وضعیتِ پایدار + قفل + heartbeat + انتشار روی شاخهٔ `state` (git plumbing).
+- **`bot/outbox.py`**: صف SQLite idempotent + ledger `sha256(config)[:16]` + backoff ۵s→۳۰۰s.
+- **`bot/main.py`**: heartbeat ۶۰s، publish ۳۰۰s، ۴۰۹ pre-check، `bot_offline()` در `finally`.
+- **`bot/handlers/admin.py`**: `auto_publish_job` روی صف، `_drain_outbox(20)`، `_ENQUEUE_SCAN=20000`.
+- **`aggregate.yml`**: تک cron `*/5`، gate rc=75 busy، ۲۱ شرط gated on busy، `Report cycle` always.
+- **`live.yml`**: pull/publish runtime status، برش ۲۵min.
+- **`docs/miniapp.html`**: کارت «وضعیت سیستم» (`#sysBody`).
+- **`docs/runtime.md`**: معماری/اندازه‌گیری/محدودیتها.
+- **`scripts/test_runtime.py`**: ۱۲ تست (همه پاس).
+
+عدادِ زندهٔ آخرین publish: `verified 1108`، `sent 818`، `queued 290`، `new 40`، `pending 235` (outbox)، `dead 0`، `send_failed 0`، `bot.online=true`، `hb_age≈29s`.

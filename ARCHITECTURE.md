@@ -26,13 +26,16 @@
 | `validate.py` | دروازهٔ اعتبارسنجی خروجی‌ها (`--with-validate`) | سبدها | — |
 | `lkg.py` | last-known-good: پشتیبان/بازیابی tierها وقتی دور شکست می‌خورد | tierها | tierها |
 | `state.py` | حافظهٔ بین‌دوره‌ای: بازدهٔ یکتا، auto-disable منابع | `state.json` | `state.json` |
+| `status.py` | وضعیتِ پایدار + قفل + heartbeat + انتشار روی شاخهٔ `state` (git plumbing)؛ `begin/stage/finish/report/heartbeat/offline/publish/pull/show/counts/incr` | `status.json` (local + remote) | شاخهٔ `state` |
+| `outbox.py` *(در `bot/`)* | صفِ SQLite idempotent برای ارسالِ کانال: `enqueue/due/mark_sent/mark_failed/stats/seen/reset` + ledger با کلید `sha256(config)[:16]` + backoff ۵s→۳۰۰s (سقف ۲۰ تلاش) | `data/outbox.db` | همان |
 | `run_all.py` | **هماهنگ‌کنندهٔ کل زنجیره** (brand check → aggregate → pipeline → google → docs). فلگ‌ها: `--out`, `--quick`, `--skip-fetch`, `--limit N`, `--rounds N`, `--with-validate`, `--with-tests` | — | همهٔ خروجی‌ها |
 | `test_pipeline.py` | سوئیت تست‌های ناوردا | — | — |
 
 ### `bot/` — ربات تلگرام
 | فایل | نقش |
 |---|---|
-| `main.py` | نقاط ورود (`python -X utf8 -m bot.main`): ساخت `Application`، ثبت هندلرها، `run_polling()`، گارد `BOT_TOKEN` |
+| `main.py` | نقاط ورود (`python -X utf8 -m bot.main`): ساخت `Application`، ثبت هندلرها، `run_polling()`، گارد `BOT_TOKEN`؛ heartbeat ۶۰s، publish status ۳۰۰s، پیش‌بررسی ۴۰۹ با httpx، `bot_offline()` در `finally` |
+| `outbox.py` | صفِ SQLite idempotent برای ارسالِ کانال (شرح در بالا) | `data/outbox.db` | همان |
 | `config.py` | env: `BOT_TOKEN`, `OWNER_ID`, `CHANNEL_USERNAME` (پیش‌فرضِ هندلِ کانال؛ `brand.py` هم آن را override می‌خواند), `GITHUB_TOKEN`, `GH_OWNER`, `GH_REPO`, `BOT_DB`, `MINI_APP_URL` + مسیر `verified/`, `fast/`, `secure/` |
 | `db.py` | SQLite (`data/bot.db`): جدول‌های `users` و `admins` |
 | `keyboards.py` | منوهای اصلی/پروتکل/ادمین |
@@ -44,11 +47,13 @@
 - `docs-src/build.py` — رندر README×۴ (`.in`ها) + `docs/index.html`، `docs/fa/index.html`، `docs/status/`، `sitemap.xml`، `robots.txt`؛ `--check` دریفت را می‌گیرد.
 - `docs-src/app.js.in` — داشبورد اصلی (EN/FA): در `localhost`/`127.0.0.1` داده را از همان origin می‌خواند (`LOCAL`, `getFile`, `urlOf`).
 - `dashboard-src/` — اپ React/TS (Vite) صفحهٔ `/docs/status/`؛ `src/lib/fetchJson.ts` با `resolveBases()` در loopback از origin محلی، وگرنه raw/CDN. اسکریپت‌ها: `bundle` (parcel + html-inline + make-docs)، `typecheck`.
+- `docs/miniapp.html` — داشبورد تلگرام (Mini App)؛ کارت «وضعیت سیستم» (`#sysBody`) با `renderSystem()/loadStatus()` که `status.json` را از شاخهٔ `state` می‌خواند (online، heartbeat، counts، وضعیت workflow، تأخیر).
 - `assets/make_*.py` — تولید SVG/PNG‌های برند (علامت، social preview، promo، pipeline).
 - `tools/graphify/build.py` — گراف کد (`graphify-out/`)؛ `graphify-out/GRAPH_REPORT.md` گزارش خوشه‌هاست.
 
 ### داده و گردش‌کار
-- `.github/workflows/aggregate.yml` — cron هر ۵ دقیقه + `workflow_dispatch` + `repository_dispatch` (`aggregate-now`)؛ نصب xray-knife pin‌شده، اجرای aggregate/pipeline/google، گیت انتشار، commit خروجی‌ها.
+- `.github/workflows/aggregate.yml` — cron `*/5` (یک cron، نه چهار) + `workflow_dispatch` + `repository_dispatch` (`aggregate-now`) + `push`; دروازهٔ تازگی ۱۳min؛ قفل/مالکیت روی شاخهٔ `state`؛ گام `Begin cycle` (id: cycle, rc=75 busy)؛ گام `Report cycle` (always); شرط‌های downstream gated on busy.
+- `.github/workflows/live.yml` — برش ۲۵دقیقه‌ای ربات (cron `*/20`, timeout 32)؛ pull/publish runtime status.
 - `data/bot.db` (sqlite ربات)، `data/sources_extra.json` (منابع افزوده‌شده از ربات)، `.env` (کلیدها).
 
 ---

@@ -2911,7 +2911,6 @@
         "CA 🇨🇦 | @jojo_config | 95DDD9",
         "CA 🇨🇦 | @jojo_config | 418904",
         "DE 🇩🇪 | @jojo_config | C8C6FB",
-        "RU 🇷🇺 | @jojo_config | 820CA6",
         "DE 🇩🇪 | @jojo_config | 79DE93",
         "US 🇺🇸 | @jojo_config | C7AEBD",
         "DE 🇩🇪 | @jojo_config | 746A25",
@@ -10555,7 +10554,7 @@
         "TW 🇹🇼 | @jojo_config | C51365",
         "IR 🇮🇷 | @jojo_config | DA5F3B",
         "IR 🇮🇷 | @jojo_config | D8FEA2",
-        "DE 🇩🇪 | @jojo_config | 875198",
+        "FI 🇫🇮 | @jojo_config | 875198",
         "JP 🇯🇵 | @jojo_config | 79F85B",
         "Global 🌐 | @jojo_config | 6A574C",
         "IR 🇮🇷 | @jojo_config | 198807",
@@ -13835,7 +13834,6 @@
         "CA 🇨🇦 | @jojo_config | 95DDD9",
         "CA 🇨🇦 | @jojo_config | 418904",
         "DE 🇩🇪 | @jojo_config | C8C6FB",
-        "RU 🇷🇺 | @jojo_config | 820CA6",
         "DE 🇩🇪 | @jojo_config | 79DE93",
         "US 🇺🇸 | @jojo_config | C7AEBD",
         "DE 🇩🇪 | @jojo_config | 746A25",
@@ -21479,7 +21477,7 @@
         "TW 🇹🇼 | @jojo_config | C51365",
         "IR 🇮🇷 | @jojo_config | DA5F3B",
         "IR 🇮🇷 | @jojo_config | D8FEA2",
-        "DE 🇩🇪 | @jojo_config | 875198",
+        "FI 🇫🇮 | @jojo_config | 875198",
         "JP 🇯🇵 | @jojo_config | 79F85B",
         "Global 🌐 | @jojo_config | 6A574C",
         "IR 🇮🇷 | @jojo_config | 198807",
@@ -55739,27 +55737,6 @@
       "transport": {
         "type": "ws",
         "path": "/nlrma"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "RU 🇷🇺 | @jojo_config | 820CA6",
-      "server": "193.163.203.170",
-      "server_port": 443,
-      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
-          "short_id": "b28db60d77c50b4f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
       }
     },
     {
@@ -179223,7 +179200,7 @@
     },
     {
       "type": "vmess",
-      "tag": "DE 🇩🇪 | @jojo_config | 875198",
+      "tag": "FI 🇫🇮 | @jojo_config | 875198",
       "server": "tgju.org",
       "server_port": 8080,
       "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",

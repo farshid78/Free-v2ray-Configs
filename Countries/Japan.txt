@@ -3,17 +3,21 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — JAPAN (JP) — 10 configs
+# @jojo_config — JAPAN (JP) — 14 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | @jojo_config | 9EF41E
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.204:443#JP 🇯🇵 | @jojo_config | 554D18
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.240:443#JP 🇯🇵 | @jojo_config | 2459E0
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | @jojo_config | 9EF41E
 ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@168.138.205.100:53758#JP 🇯🇵 | @jojo_config | 1A14DC
 ss://YWVzLTI1Ni1nY206WUt3RHozbUZwVDl2R2NMOG5CczVkSHJBMnN4TQ@64.176.57.251:8388#JP 🇯🇵 | @jojo_config | 494FE5
 ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@jpa.123069.xyz:53758#JP 🇯🇵 | @jojo_config | 66A632
 vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8&security=reality&sid=684c7531e599dec0&sni=www.microsoft.com&type=tcp#JP 🇯🇵 | @jojo_config | AA31A8
-vmess://eyJ2IjoiMiIsInBzIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCA4RTVCNTgiLCJhZGQiOiI2NC4xNzYuMzQuMTAyIiwicG9ydCI6IjQ2MTMwIiwiaWQiOiI0NzczNTBiMi03NTM2LTRmMzgtZWUyMS0wMjBlZmRkZTJkMWQiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJ0bHMiOiIifQ==
-vmess://eyJ2IjoiMiIsInBzIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCAxRTFDMTQiLCJhZGQiOiIxNjguMTM4LjQzLjc1IiwicG9ydCI6IjgwIiwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6IiIsInRscyI6IiIsInBhdGgiOiIvY2N0djEzLm0zdTgiLCJob3N0IjoianAwMS5hMGEueHl6In0=
-vless://1751bebc-1bf1-420c-8b9d-97157aad179b@168.110.21.56:18453?security=none&type=tcp&encryption=none#JP 🇯🇵 | @jojo_config | CFEA5D
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@185.222.43.175:443?encryption=none&security=tls&sni=jp3.yohototo.top&fp=unsafe&fm=%7B%22tcp%22%3A%5B%7B%22type%22%3A%22fragment%22%2C%22settings%22%3A%7B%22packets%22%3A%22tlshello%22%2C%22lengths%22%3A%5B%220%22%2C%22104%22%2C%221%22%5D%2C%22delays%22%3A%5B%220%22%5D%2C%22maxSplit%22%3A%220%22%7D%7D%2C%7B%22type%22%3A%22fragment%22%2C%22settings%22%3A%7B%22packets%22%3A%221-1%22%2C%22lengths%22%3A%5B%22114%22%2C%221%22%5D%2C%22delays%22%3A%5B%221%22%5D%2C%22maxSplit%22%3A%2211%22%7D%7D%5D%7D&type=ws&host=jp3.yohototo.top&path=%2Ftyxyws#JP 🇯🇵 | @jojo_config | 5523C8
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@152.69.200.216:443?fp=chrome&host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | @jojo_config | 3C8099
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@154.31.114.162:8443?host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | @jojo_config | 8EB17B
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@62.106.75.2:443?security=tls&type=ws&sni=jp3.yohototo.top&path=%2Ftyxyws&host=jp3.yohototo.top#JP 🇯🇵 | @jojo_config | E3209F
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@103.201.131.202:2053?path=/tyxyws&security=tls&encryption=none&fm={"tcp":[{"type":"fragment","settings":{"packets":"tlshello","lengths":["0","104","1"],"delays":["0"],"maxSplit":"0"}},{"type":"fragment","settings":{"packets":"1-1","lengths":["114","1"],"delays":["1"],"maxSplit":"11"}}]}&insecure=0&host=jp3.yohototo.top&fp=unsafe&type=ws&allowInsecure=0&sni=jp3.yohototo.top#JP 🇯🇵 | @jojo_config | 3B0D40
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@45.129.8.204:443?&security=tls&sni=jp3.yohototo.top&type=ws&headerType=&host=jp3.yohototo.top&path=%2Ftyxyws#JP 🇯🇵 | @jojo_config | 65F117
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@13.114.101.22:443?&security=tls&fp=unsafe&sni=jp3.yohototo.top&type=ws&headerType=none&host=jp3.yohototo.top&path=%2Ftyxyws#JP 🇯🇵 | @jojo_config | 32DC87

@@ -12379,7 +12379,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: "NL \U0001F1F3\U0001F1F1 | @jojo_config | 26A9C0"
+- name: "BG \U0001F1E7\U0001F1EC | @jojo_config | 26A9C0"
   server: api.ferrin.uk
   port: 443
   type: vless
@@ -68139,7 +68139,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | 875198"
+- name: "FI \U0001F1EB\U0001F1EE | @jojo_config | 875198"
   server: tgju.org
   port: 8080
   type: vmess
@@ -74793,7 +74793,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 64F0AA"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | CE068A"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 0A6789"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 26A9C0"
+  - "BG \U0001F1E7\U0001F1EC | @jojo_config | 26A9C0"
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 76B2DF"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 8DB263"
   - "FR \U0001F1EB\U0001F1F7 | @jojo_config | E6BF70"
@@ -79206,7 +79206,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | @jojo_config | C51365"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D8FEA2"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 875198"
+  - "FI \U0001F1EB\U0001F1EE | @jojo_config | 875198"
   - "JP \U0001F1EF\U0001F1F5 | @jojo_config | 79F85B"
   - "Global \U0001F310 | @jojo_config | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 198807"
@@ -80919,7 +80919,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 64F0AA"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | CE068A"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 0A6789"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 26A9C0"
+  - "BG \U0001F1E7\U0001F1EC | @jojo_config | 26A9C0"
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 76B2DF"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 8DB263"
   - "FR \U0001F1EB\U0001F1F7 | @jojo_config | E6BF70"
@@ -85332,7 +85332,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | @jojo_config | C51365"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D8FEA2"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 875198"
+  - "FI \U0001F1EB\U0001F1EE | @jojo_config | 875198"
   - "JP \U0001F1EF\U0001F1F5 | @jojo_config | 79F85B"
   - "Global \U0001F310 | @jojo_config | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 198807"

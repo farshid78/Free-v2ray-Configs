@@ -2520,7 +2520,6 @@
         "CA 🇨🇦 | @jojo_config | 95DDD9",
         "CA 🇨🇦 | @jojo_config | 418904",
         "DE 🇩🇪 | @jojo_config | C8C6FB",
-        "RU 🇷🇺 | @jojo_config | 820CA6",
         "DE 🇩🇪 | @jojo_config | 79DE93",
         "US 🇺🇸 | @jojo_config | C7AEBD",
         "DE 🇩🇪 | @jojo_config | 746A25",
@@ -8568,7 +8567,6 @@
         "CA 🇨🇦 | @jojo_config | 95DDD9",
         "CA 🇨🇦 | @jojo_config | 418904",
         "DE 🇩🇪 | @jojo_config | C8C6FB",
-        "RU 🇷🇺 | @jojo_config | 820CA6",
         "DE 🇩🇪 | @jojo_config | 79DE93",
         "US 🇺🇸 | @jojo_config | C7AEBD",
         "DE 🇩🇪 | @jojo_config | 746A25",
@@ -41197,27 +41195,6 @@
     },
     {
       "type": "vless",
-      "tag": "RU 🇷🇺 | @jojo_config | 820CA6",
-      "server": "193.163.203.170",
-      "server_port": 443,
-      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
-          "short_id": "b28db60d77c50b4f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "DE 🇩🇪 | @jojo_config | 79DE93",
       "server": "91.107.190.63",
       "server_port": 8080,
@@ -69808,7 +69785,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -90112,7 +90089,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       }
     },

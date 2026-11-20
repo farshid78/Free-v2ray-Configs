@@ -32,6 +32,20 @@ GH_REPO = _env("GH_REPO", "Free-v2ray-Configs")
 GH_BRANCH = _env("GH_BRANCH", "main")
 CHANNEL_PUBLISH = _env("CHANNEL_PUBLISH")
 
+
+def _minutes(name: str) -> float:
+    """مدتِ اجرا به دقیقه؛ مقدارِ نامعتبر/منفی = «بی‌نهایت» (حالتِ سرور)."""
+    try:
+        return max(0.0, float(_env(name, "0") or "0"))
+    except ValueError:
+        return 0.0
+
+
+#: عمرِ این نمونه از ربات. صفر = تا وقتی کسی متوقفش کند (حالتِ سرور/لوکال).
+#: روی GitHub Actions هر برش ۲۵ دقیقه زنده است تا پیش از سقفِ job و پیش از
+#: رسیدنِ برشِ بعدی، تمیز خاموش شود.
+RUN_MINUTES = _minutes("BOT_RUN_MINUTES")
+
 DB_PATH = _env("BOT_DB", str(REPO_ROOT / "data" / "bot.db"))
 #: آدرسِ پنلِ گلس. تلگرام فقط HTTPS را برای Web App قبول می‌کند، پس هر مقدارِ
 #: غیرِ HTTPS در `keyboards.main_menu` کنار گذاشته می‌شود (دکمهٔ بی‌اعتبار نباید

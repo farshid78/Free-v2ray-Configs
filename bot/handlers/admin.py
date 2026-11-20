@@ -2,6 +2,7 @@ import asyncio
 import html as _html
 import json as _json_mod
 import logging
+import os
 import random
 import sys
 import time
@@ -580,6 +581,19 @@ _GAP_CEIL = 30.0
 #: نمی‌کنیم تا جریمه تمدید نشود.
 _flood_until = 0.0
 _gap_base = _GAP_BASE
+#: زمانی که این نمونه باید خاموش شود (epoch). صفر = بی‌نهایت.
+#: در CI عمرِ هر برش محدود است؛ بدونِ این، یک دستهٔ ۲۰تایی می‌تواند از
+#: لحظهٔ خاموشی رد شود و shutdown را قفل کند.
+_deadline = 0.0
+
+
+def set_run_deadline(epoch: float | None) -> None:
+    global _deadline
+    _deadline = float(epoch or 0.0)
+
+
+def _time_left() -> float:
+    return float("inf") if _deadline <= 0 else _deadline - time.time()
 #: کفِ امن: کوچک‌ترین فاصله‌ای که تا حالا باعث جریمه شده؛ دیگر از آن پایین‌تر
 #: نمی‌رویم تا هر چند دور یک‌بار دوباره به دیوارِ فلود نخوریم.
 _min_gap = _GAP_FLOOR
@@ -597,7 +611,18 @@ def _load_auto_state() -> dict:
 
 
 def _load_auto_offset() -> int:
-    return _load_auto_state()["offset"]
+    """offset ذخیره‌شده؛ در CI (هر برش یک ماشینِ تازه) از ساعت مشتق می‌شود.
+
+    بدونِ این، هر برشِ Actions بی‌حافظه شروع می‌شد و همان ۲۰ کانفیگِ اول را
+    دوباره به کانال می‌فرستاد. commitِ فایلِ وضعیت هم گزینه نبود: workflowِ
+    تجمیع با force-push منتشر می‌کند و این فایل را پاک می‌کرد. پس نقطهٔ شروع
+    را از زمان می‌گیریم؛ در هر برش هم به‌اندازهٔ ارسال‌ها جلو می‌رود.
+    """
+    if _AUTO_STATE_PATH.exists():
+        return _load_auto_state()["offset"]
+    if os.environ.get("GITHUB_ACTIONS"):
+        return int(time.time() // _PUBLISH_CYCLE_SECONDS) * _PUBLISH_PER_CYCLE
+    return 0
 
 
 def _save_auto_offset(off: int) -> None:
@@ -700,7 +725,11 @@ async def _send_one(bot, channel: str, text: str, attempts: int = 3) -> bool:
 
 
 async def _send_batch(bot, channel: str, msgs: list[str]) -> int:
-    """پیام‌ها را با فاصلهٔ تصادفی می‌فرستد؛ تعدادِ ارسال‌شده را برمی‌گرداند."""
+    """پیام‌ها را با فاصلهٔ تصادفی می‌فرستد؛ تعدادِ ارسال‌شده را برمی‌گرداند.
+
+    اگر عمرِ این نمونه در حال تمام شدن باشد، دسته را نیمه‌کاره نمی‌گذارد ولی
+    از شروعِ دستهٔ بعدی هم خودداری می‌کند (به `auto_publish_job` نگاه کنید).
+    """
     sent = 0
     for i, m in enumerate(msgs):
         try:
@@ -735,6 +764,12 @@ async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
     if _AUTO_PUBLISH_LOCK.locked():
         logger.info("دورِ قبلی انتشار خودکار هنوز تمام نشده؛ این دور رد شد")
         return
+    # یک دستهٔ ۲۰تایی ~۶۵ ثانیه طول می‌کشد. اگر عمرِ برش کافی نیست، دسته را
+    # شروع نکن: نیمه‌کاره ماندن یعنی خاموشیِ دیرهنگام و از دست رفتنِ چند ارسال.
+    if _time_left() < _PUBLISH_PER_CYCLE * _GAP_BASE + 20:
+        logger.info("عمرِ این برش برای یک دستهٔ کامل کافی نیست (%.0fs) — دستهٔ بعدی را رد می‌کنم",
+                    _time_left())
+        return
     _sync_gap()
     async with _AUTO_PUBLISH_LOCK:
         try:
@@ -748,9 +783,10 @@ async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
             return
         channel = "@" + CHANNEL_USERNAME.lstrip("@")
         cmap = _country_map()
-        offset = _load_auto_offset()
-        if offset >= len(lines) or offset < 0:
-            offset = 0
+        # `%` عمدی است: در CI این عدد از ساعت می‌آید و بزرگ‌تر از تعدادِ
+        # کانفیگ‌هاست؛ با `if offset >= len(lines): offset = 0` همیشه صفر
+        # می‌شد و همان ابتدای فهرست تکرار می‌شد.
+        offset = _load_auto_offset() % len(lines)
         chunk = lines[offset:offset + _PUBLISH_PER_CYCLE]
         msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
         sent = await _send_batch(context.bot, channel, msgs)

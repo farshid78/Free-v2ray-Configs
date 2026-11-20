@@ -21,12 +21,15 @@ on:
   workflow_call:
     # اجازهٔ فراخوانیِ این workflow از workflowهای fallback بدون تکرارِ کد.
   schedule:
-    # چند تعریفِ cron با offsetهای مختلف: اگر یکی اجرا نشد یا تأخیر داشت،
-    # دیگری شانسِ اجرا دارد. دروازهٔ تازگی (۱۳ دقیقه) جلوی اجرای سنگینِ
-    # تکراری را می‌گیرد، پس هزینهٔ اضافه ندارد.
-    - cron: "0,15,30,45 * * * *"
-    - cron: "5,20,35,50 * * * *"
-    - cron: "10,25,40,55 * * * *"
+    # ★ یک cron، نه چهارتا ★
+    #
+    # قبلاً چهار cron اینجا بود (`0,15,30,45` و `5,20,35,50` و `10,25,40,55`
+    # و `*/5`) به‌علاوۀ پنج فایلِ fallback با ۷ cron دیگر. مجموعاً ~۱۴ تریگر
+    # در هر ۱۵ دقیقه برای همان یک job. اما `*/5` از قبل تمام دقیقه‌های ۵تایی
+    # را پوشش می‌دهد، پس سه cronهای دیگر و کلِ پنج فایلِ fallback **صفر**
+    # تریگرِ اضافه می‌ساختند: فقط هر ۵ دقیقه یک runner بیدار می‌شد. آن‌ها را
+    # حذف کردیم؛ کاورِ تأخیرِ cron با دروازهٔ تازگی (۱۳ دقیقه) و آرگومانِ
+    # `repository_dispatch` تأمین می‌شود، نه با تکرارِ تریگر.
     - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
@@ -152,10 +155,19 @@ jobs:
           FORCE="${{ github.event.inputs.force }}"
           EVENT="${{ github.event_name }}"
           # رویدادهای دستی/دیسپچ/پوش همیشه اجرا می‌شوند (بدون دروازه)
+          # ★ repository_dispatch هم از دروازه رد می‌شود ★
+          #
+          # قبلاً dispatch دروازه را دور می‌زد. ولی مبدأ پارسِ اصلیِ آن،
+          # `trigger_aggregate_job` در ربات است که **هر ساعت** اجرا می‌شود؛ در
+          # عمل یعنی یک اجرای کامل و سنگین بی‌درنگ پس از یک اجرای cron، با دو
+          # نیروی هم‌زمان روی شبکه و دو کامیتِ متقارن. حالا dispatch فقط
+          # «یادآوری» است: اگر داده تازه باشد هیچ کاری نمی‌کند و اگر کهنه باشد
+          # (بیش از FRESHNESS_GATE_MINUTES) واقعاً اجرا می‌شود. برای اجرای
+          # اجباری، از `workflow_dispatch` با `force=true` استفاده کنید.
           if [ "$FORCE" = "true" ] || [ "$EVENT" = "workflow_dispatch" ] || \
-             [ "$EVENT" = "repository_dispatch" ] || [ "$EVENT" = "push" ]; then
+             [ "$EVENT" = "push" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Manual/dispatch/push event → running unconditionally."
+            echo "✅ Manual/push event → running unconditionally."
             exit 0
           fi
           # ⚠️ index.json را از **remote** می‌خوانیم، نه از worktree.

@@ -1,14 +1,18 @@
+import asyncio
 import logging
 import re
+import time
+
+import httpx
 
 from telegram import Update
-from telegram.error import NetworkError, TimedOut
+from telegram.error import Conflict, NetworkError, TimedOut
 from telegram.ext import (
     Application, CallbackQueryHandler, CommandHandler,
     ContextTypes, MessageHandler, filters,
 )
 
-from .config import BOT_TOKEN
+from .config import BOT_TOKEN, RUN_MINUTES
 from .db import add_admin
 from .handlers import user, admin
 from .keyboards import main_menu
@@ -86,6 +90,54 @@ def build_app() -> Application:
     return app
 
 
+async def _another_instance_polls(token: str) -> bool:
+    """آیا نمونهٔ دیگری با همین توکن در حال poll است؟
+
+    تلگرام برای هر ربات فقط یک `getUpdates` هم‌زمان اجازه می‌دهد و به دومی
+    `409 Conflict` می‌دهد. این بررسی پیش از start_polling انجام می‌شود چون
+    خودِ کتابخانه ۴۰۹ را در حلقهٔ شبکه‌اش می‌گیرد و فقط لاگ می‌کند؛ نتیجه در
+    عمل یک برشِ ۲۵ دقیقه‌ایِ بی‌کار بود که تا تایم‌اوت job زنده می‌ماند.
+
+    `limit=1` و `timeout=0` هیچ updateای را حذف نمی‌کند: تا وقتی offset تأیید
+    نشود، آپدیت‌ها در صفِ تلگرام می‌مانند و poll بعدی دوباره می‌گیردشان.
+    """
+    # ⚠️ عمداً `app.bot` استفاده نمی‌شود: کلاینتِ HTTPِ آن به loop فعلی گره
+    # می‌خورد و وقتی probe را در یک loop جداگانه اجرا می‌کنیم، همان کلاینت در
+    # اولین ارسال با «Event loop is closed» می‌ترکد (با اجرای واقعی دیده شد).
+    # یک کلاینتِ مستقل که در همین loop بسته می‌شود، این نشتی را ندارد.
+    try:
+        async with httpx.AsyncClient(timeout=15) as client:
+            r = await client.get(
+                f"https://api.telegram.org/bot{token}/getUpdates",
+                params={"timeout": 0, "limit": 1},
+            )
+        return r.status_code == 409
+    except Exception:      # شبکه/توکن: اجازه بده start_polling خودش تصمیم بگیرد
+        return False
+
+
+def _schedule_lifetime(app: Application) -> None:
+    """ربات را پس از `BOT_RUN_MINUTES` تمیز خاموش می‌کند.
+
+    چرا لازم است: روی GitHub Actions هر برش باید خودش پیش از سقفِ job تمام
+    شود. اگر منتظر kill شدنِ job بمانیم، خاموشی ناگهانی است و آخرین ارسال‌ها
+    و offset ذخیره نمی‌شوند.
+    """
+    if RUN_MINUTES <= 0:
+        return
+
+    async def _stop(context: ContextTypes.DEFAULT_TYPE) -> None:
+        # `stop_running()` (نه `stop()`): خودِ `run_polling` بعد از این پرچم
+        # به‌ترتیب updater و job_queue را می‌بندد. فراخوانیِ مستقیمِ `stop()`
+        # از داخلِ یک job، loop را زیرِ پای همان job می‌بندد — با اجرای واقعی
+        # دیده شد که پروسه تا تایم‌اوت زنده ماند و `Event loop is closed` داد.
+        logging.info("⏹️ عمرِ این برش تمام شد (%.1f دقیقه) — خاموشیِ تمیز", RUN_MINUTES)
+        context.application.stop_running()
+
+    app.job_queue.run_once(_stop, when=RUN_MINUTES * 60)
+    logging.info("عمرِ این نمونه: %.1f دقیقه", RUN_MINUTES)
+
+
 def main() -> None:
     app = build_app()
     # انتشارِ خودکار: هر ۳۰ ثانیه ۲۰ کانفیگ (با فاصلهٔ تصادفی) + trigger ساعتی
@@ -93,14 +145,41 @@ def main() -> None:
     # نمی‌رسید؛ الان در لاگ دیده می‌شود.
     try:
         from .handlers import admin as _admin
+        if RUN_MINUTES > 0:
+            _admin.set_run_deadline(time.time() + RUN_MINUTES * 60)
         app.job_queue.run_repeating(_admin.auto_publish_job,
                                     interval=_admin._PUBLISH_CYCLE_SECONDS, first=10)
         app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=3600, first=300)
         logging.info("انتشار خودکار فعال شد: ۲۰ کانفیگ در هر ۳۰ ثانیه")
     except Exception:
         logging.exception("زمان‌بندیِ انتشار خودکار فعال نشد — کانفیگی به کانال نمی‌رود")
+    _schedule_lifetime(app)
+    # بررسیِ ۴۰۹ روی یک loop مستقل؛ بعدش یک loop تازه به‌عنوانِ current
+    # می‌گذاریم، چون `asyncio.run` آن را پاک می‌کند و `run_polling` بعدی
+    # `RuntimeError: There is no current event loop` می‌دهد.
+    probe = asyncio.new_event_loop()
     try:
+        busy = probe.run_until_complete(_another_instance_polls(BOT_TOKEN))
+    finally:
+        probe.close()
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
+    try:
+        if busy:
+            logging.warning(
+                "نمونهٔ دیگری از همین ربات در حال poll است (409) — این برش "
+                "بدونِ ارسالِ هیچ پیامی کنار می‌رود. اگر ربات را روی کامپیوترِ "
+                "خودتان هم روشن گذاشته‌اید، همان کافی است.")
+            return
         app.run_polling()
+    except Conflict:
+        # دو نمونه با یک توکن نمی‌توانند هم‌زمان getUpdates بزنند. در زنجیرهٔ
+        # Actions این حالت نباید رخ بدهد (concurrency سریالی می‌کند)، ولی اگر
+        # رباتِ محلیِ کاربر هم روشن باشد، برشِ CI باید بی‌سروصدا کنار برود،
+        # نه این‌که با traceback بترکد.
+        logging.warning("نمونهٔ دیگری از همین ربات در حال poll است (409 Conflict) — "
+                        "این نمونه کنار می‌رود")
+        return
     except (TimedOut, NetworkError) as exc:
         # شبکهٔ ایران معمولاً به api.telegram.org نمی‌رسد. این خطای محیط است،
         # نه باگِ ربات؛ یک خطِ روشن به‌جای tracebackِ چندصفحه‌ای.

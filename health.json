@@ -1,8 +1,8 @@
 {
   "brand": "@jojo_config",
-  "checked_at": "2026-11-20T00:55:35.652349+00:00",
-  "checked_at_unix": 1795136135,
-  "elapsed_seconds": 21.1,
+  "checked_at": "2026-11-20T01:11:48.763170+00:00",
+  "checked_at_unix": 1795137108,
+  "elapsed_seconds": 20.2,
   "summary": {
     "total": 13,
     "ok": 10,
@@ -20,7 +20,7 @@
       "count": 147,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 56
+      "latency_ms": 137
     },
     {
       "url": "https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
@@ -30,7 +30,7 @@
       "count": 205,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 52
+      "latency_ms": 57
     },
     {
       "url": "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
@@ -56,7 +56,7 @@
       "count": 4845,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 254
+      "latency_ms": 389
     },
     {
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
@@ -66,7 +66,7 @@
       "count": 1751,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 81
+      "latency_ms": 323
     },
     {
       "url": "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
@@ -76,7 +76,7 @@
       "count": 526,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 93
+      "latency_ms": 127
     },
     {
       "url": "https://raw.githubusercontent.com/LalatinaHub/LatinaSub/main/result/sub",
@@ -86,7 +86,7 @@
       "count": 500,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 41
+      "latency_ms": 132
     },
     {
       "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt",
@@ -96,7 +96,7 @@
       "count": 150,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 87
+      "latency_ms": 120
     },
     {
       "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_base64_Sub.txt",
@@ -106,7 +106,7 @@
       "count": 8981,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 414
+      "latency_ms": 304
     },
     {
       "url": "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat",
@@ -116,7 +116,7 @@
       "count": 143,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 43
+      "latency_ms": 162
     },
     {
       "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/all_configs.txt",
@@ -126,7 +126,7 @@
       "count": 3880,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 132
+      "latency_ms": 159
     },
     {
       "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
@@ -321,25 +321,25 @@
   "converter_gate": {},
   "geo": {
     "db_loaded": 1,
-    "by_ip_literal": 4527,
+    "by_ip_literal": 4529,
     "unknown_ip_literal": 7,
     "by_dns": 1557,
-    "dns_failed": 601,
-    "unknown_after_dns": 1,
+    "dns_failed": 600,
+    "unknown_after_dns": 2,
     "skipped_no_db": 0,
-    "hosts_resolved": 6084,
+    "hosts_resolved": 6086,
     "hosts_unknown": 609
   },
   "cascade": {
     "exit_country": {
-      "colo": "IAD",
+      "colo": "MSP",
       "loc": "US",
       "source": "https://cp.cloudflare.com/cdn-cgi/trace"
     },
     "layers": {
       "l0_l1": {
-        "in": 11406,
-        "out": 11308,
+        "in": 11411,
+        "out": 11313,
         "dropped": {
           "unparsable": 79,
           "invalid_port": 1,
@@ -347,58 +347,58 @@
           "unroutable_server": 13,
           "invalid_server": 3
         },
-        "endpoints_unique": 7369,
-        "dedup_saving_pct": 34.83,
-        "seconds": 0.3
+        "endpoints_unique": 7371,
+        "dedup_saving_pct": 34.84,
+        "seconds": 0.22
       },
       "l2": {
-        "in": 11308,
-        "out": 6908,
-        "open_pct": 61.09,
-        "open_pct_of_raw_input": 60.56,
-        "dns_failed": 569,
-        "dns_seconds": 18.28,
-        "tcp_seconds": 9.68,
+        "in": 11313,
+        "out": 6917,
+        "open_pct": 61.14,
+        "open_pct_of_raw_input": 60.62,
+        "dns_failed": 568,
+        "dns_seconds": 16.16,
+        "tcp_seconds": 9.76,
         "fd_before": 6,
         "fd_after": 6,
-        "seconds": 28.29
+        "seconds": 26.17
       },
       "l3": {
-        "in": 6908,
+        "in": 6917,
         "rounds": 3,
         "per_run_ok": [
-          1652,
-          1609,
-          1656
+          1626,
+          1592,
+          1599
         ],
-        "ever_ok": 1747,
-        "stable": 1500,
-        "flaky_pct": 14.14,
-        "seconds": 201.36
+        "ever_ok": 1745,
+        "stable": 1430,
+        "flaky_pct": 18.05,
+        "seconds": 210.42
       }
     },
     "buckets": {
-      "verified": 1500,
-      "fast": 1122,
-      "secure": 951,
+      "verified": 1430,
+      "fast": 1045,
+      "secure": 887,
       "top": 100,
       "top_short_by": 0,
       "fast_threshold_ms": 800
     },
-    "total_seconds": 230.58
+    "total_seconds": 237.24
   },
   "freshness": {
     "cascade": {
       "state": "fresh",
-      "tested_at": "2026-11-20 00:59 UTC",
+      "tested_at": "2026-11-20 01:15 UTC",
       "age_minutes": 0,
-      "detail": "1500 configs"
+      "detail": "1430 configs"
     },
     "google": {
       "state": "fresh",
-      "tested_at": "2026-11-20 01:05 UTC",
+      "tested_at": "2026-11-20 01:21 UTC",
       "age_minutes": 0,
-      "detail": "597 configs"
+      "detail": "614 configs"
     }
   },
   "google": {
@@ -433,7 +433,7 @@
       }
     },
     "removed_previous": [],
-    "input": 1500,
+    "input": 1430,
     "reference": {
       "ok": true,
       "endpoints": {
@@ -475,104 +475,104 @@
       }
     },
     "per_round_seconds": [
-      65.34,
-      75.8
+      67.58,
+      62.98
     ],
-    "panel_ready": 705,
-    "fail": 611,
-    "unknown": 184,
-    "judged": 1316,
+    "panel_ready": 725,
+    "fail": 626,
+    "unknown": 79,
+    "judged": 1351,
     "per_service": {
       "gstatic": {
-        "all_ok": 1239,
-        "all_fail": 11,
-        "mixed": 66,
+        "all_ok": 1309,
+        "all_fail": 3,
+        "mixed": 39,
         "fail_outcomes": {
-          "error": 88
+          "error": 45
         }
       },
       "youtube": {
-        "all_ok": 1200,
-        "all_fail": 39,
-        "mixed": 77,
+        "all_ok": 1248,
+        "all_fail": 56,
+        "mixed": 47,
         "fail_outcomes": {
-          "error": 155
+          "error": 159
         }
       },
       "play": {
-        "all_ok": 1206,
-        "all_fail": 44,
-        "mixed": 66,
+        "all_ok": 1245,
+        "all_fail": 51,
+        "mixed": 55,
         "fail_outcomes": {
-          "error": 154
+          "error": 157
         }
       },
       "maven": {
-        "all_ok": 870,
-        "all_fail": 392,
-        "mixed": 54,
+        "all_ok": 879,
+        "all_fail": 415,
+        "mixed": 57,
         "fail_outcomes": {
-          "status404": 702,
-          "error": 136
+          "status404": 783,
+          "error": 104
         }
       },
       "gemini": {
-        "all_ok": 1027,
-        "all_fail": 233,
-        "mixed": 56,
+        "all_ok": 1089,
+        "all_fail": 221,
+        "mixed": 41,
         "fail_outcomes": {
-          "status403": 203,
-          "status404": 152,
-          "error": 167
+          "error": 140,
+          "status403": 265,
+          "status404": 78
         }
       }
     },
     "geo": {
       "source": "https://www.youtube.com/sw.js_data",
       "kept_by_country": {
-        "US": 308,
-        "SG": 49,
-        "NL": 45,
+        "US": 304,
+        "SG": 42,
+        "NL": 39,
+        "DE": 33,
         "ID": 26,
         "EG": 24,
-        "GB": 23,
-        "DE": 19,
-        "FR": 15,
-        "CA": 10,
+        "GB": 21,
+        "FR": 20,
+        "JP": 16,
+        "IQ": 12,
+        "CA": 11,
         "KR": 10,
         "ES": 8,
-        "JP": 7,
-        "IQ": 6,
         "AE": 5,
         "CH": 5,
+        "SE": 5,
         "ZA": 5,
         "AU": 3,
         "BR": 3,
+        "IN": 3,
         "PL": 3,
-        "SE": 3,
         "TR": 3,
         "VN": 3,
+        "AT": 2,
         "HK": 2,
-        "IN": 2,
-        "MA": 2,
-        "AT": 1,
         "CZ": 1,
         "FI": 1,
-        "LT": 1,
         "LU": 1,
-        "MX": 1,
+        "MA": 1,
         "PK": 1,
         "TH": 1
       },
       "dropped_unsupported_country": {
-        "RU": 108
+        "RU": 109
       },
-      "dropped_unknown": {},
-      "retried": 6,
-      "seconds": 197.25
+      "dropped_unknown": {
+        "fetch_failed": 2
+      },
+      "retried": 2,
+      "seconds": 215.65
     },
-    "ready": 597,
-    "ready_pct_of_judged": 45.36,
-    "seconds": 338.89
+    "ready": 614,
+    "ready_pct_of_judged": 45.45,
+    "seconds": 347.01
   }
 }

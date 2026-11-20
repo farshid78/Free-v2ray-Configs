@@ -3,7 +3,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — shadowsocks — 823 configs
+# @jojo_config — shadowsocks — 824 configs
 ss://00ee2eeb-cb0e-453c-b151-c8cf28089d31@116.203.7.223:34257?security=reality&encryption=none&pbk=5FkOfDtgsGr856IC5mE1c27qzl_HQ85onkcaIzd_qgk&host=play.google.com&headerType=none&fp=chrome&type=tcp&sni=play.google.com&sid=601e43eb94a28919#DE 🇩🇪 | @jojo_config | 281D9A
 ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206RGlnOXQ0RThyZHlkVjEzNzRiM0V1dz09OkhzUjNFUEkzSm5YS2tlcncxKytpM2c9PQ@81.12.35.246:8080#IR 🇮🇷 | @jojo_config | DA1C76
 ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206SUwvN0ovQ2M1elFwSnZwQVAwWlZrQT09OkJaU2llMU0xNlBERHRQblhLb1ZiYXc9PQ==@rel.pasmazy1.ir:8080#DE 🇩🇪 | @jojo_config | EED0B7
@@ -672,6 +672,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5WmlQcnI0ODRPZFNZY2l2RFV2K1VJeWd3dnlXK0hRWXl
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6SklOaEVybENYQnB5UDk1@20.164.204.82:443#ZA 🇿🇦 | @jojo_config | D9CB8C
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6bkV0amdITFhINEZCTGlj@74.234.59.81:443#IE 🇮🇪 | @jojo_config | 7C923B
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6UlpOQnN6WXlXbzU=@51.77.225.200:8388#GB 🇬🇧 | @jojo_config | 74E10E
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6Wk1OVEdwUGwzOEFTbGJJMUVLT0JK@135.220.178.46:46303#DE 🇩🇪 | @jojo_config | D02870
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp+NEhULH1iQ0BoZWlSYWk@67.159.56.79:8388#GB 🇬🇧 | @jojo_config | B7C443
 ss://Y2hhY2hhMjAtaWV0Zjphc2QxMjM0NTY=@103.149.182.79:8388#HK 🇭🇰 | @jojo_config | F28AB8
 ss://Y2hhY2hhMjAtaWV0Zjphc2QxMjM0NTY@103.36.91.32:8388#SG 🇸🇬 | @jojo_config | D39BE5

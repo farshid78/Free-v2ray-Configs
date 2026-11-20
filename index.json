@@ -1,11 +1,11 @@
 {
   "brand": "@jojo_config",
   "generator": "jojo-aggregator aggregator",
-  "updated_at": "2026-11-20T00:55:35.651685+00:00",
-  "updated_at_unix": 1795136135,
-  "next_update_eta": "2026-11-20T01:10:35.651685+00:00",
+  "updated_at": "2026-11-20T01:11:48.762612+00:00",
+  "updated_at_unix": 1795137108,
+  "next_update_eta": "2026-11-20T01:26:48.762612+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 21.1,
+  "elapsed_seconds": 20.2,
   "raw_base": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main",
@@ -23,16 +23,16 @@
   },
   "categories": {
     "all": {
-      "unique": 11406,
+      "unique": 11411,
       "broken": 1,
-      "duplicates": 9711,
+      "duplicates": 9706,
       "total_fetched": 21128,
       "active_sources": 10,
       "protocols": {
         "vless": 4443,
         "vmess": 4396,
-        "trojan": 1532,
-        "shadowsocks": 823,
+        "trojan": 1536,
+        "shadowsocks": 824,
         "hysteria2": 210,
         "shadowsocksr": 2
       },
@@ -48,16 +48,16 @@
       }
     },
     "heavy": {
-      "unique": 6538,
+      "unique": 6539,
       "broken": 1,
-      "duplicates": 6605,
+      "duplicates": 6604,
       "total_fetched": 13154,
       "active_sources": 4,
       "protocols": {
-        "vless": 3909,
-        "trojan": 1399,
-        "shadowsocks": 764,
-        "vmess": 436,
+        "vless": 3907,
+        "trojan": 1403,
+        "shadowsocks": 765,
+        "vmess": 434,
         "hysteria2": 28,
         "shadowsocksr": 2
       },
@@ -100,8 +100,8 @@
   "protocols": {
     "vless": 4443,
     "vmess": 4396,
-    "trojan": 1532,
-    "shadowsocks": 823,
+    "trojan": 1536,
+    "shadowsocks": 824,
     "hysteria2": 210,
     "shadowsocksr": 2,
     "hysteria": 0,
@@ -154,7 +154,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1500,
+      "unique": 1430,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/configs.txt",
@@ -168,7 +168,7 @@
       }
     },
     "fast": {
-      "unique": 1122,
+      "unique": 1045,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/fast/configs.txt",
@@ -182,7 +182,7 @@
       }
     },
     "secure": {
-      "unique": 951,
+      "unique": 887,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/secure/configs.txt",
@@ -196,7 +196,7 @@
       }
     },
     "google": {
-      "unique": 597,
+      "unique": 614,
       "criterion": "verified AND, in all rounds, a real proxied request succeeded to gstatic, YouTube and Play generate_204 (exactly 204), a Google Maven POM (2xx) and gemini.google.com (2xx: not blocked, not CAPTCHA-flagged) AND Google places the exit IP in a Gemini-supported country; measured from the CI runner",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/google/configs.txt",
@@ -217,8 +217,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 51,
-    "configs": 1500,
+    "count": 49,
+    "configs": 1430,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/Countries/index.json",
@@ -227,15 +227,15 @@
   "freshness": {
     "cascade": {
       "state": "fresh",
-      "tested_at": "2026-11-20 00:59 UTC",
+      "tested_at": "2026-11-20 01:15 UTC",
       "age_minutes": 0,
-      "detail": "1500 configs"
+      "detail": "1430 configs"
     },
     "google": {
       "state": "fresh",
-      "tested_at": "2026-11-20 01:05 UTC",
+      "tested_at": "2026-11-20 01:21 UTC",
       "age_minutes": 0,
-      "detail": "597 configs"
+      "detail": "614 configs"
     }
   }
 }

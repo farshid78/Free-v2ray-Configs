@@ -3,7 +3,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — trojan — 1532 configs
+# @jojo_config — trojan — 1536 configs
 trojan://%21str18844@49.212.193.129:443?type=tcp#JP 🇯🇵 | @jojo_config | 7D91F6
 trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443#JP 🇯🇵 | @jojo_config | F278EA
 trojan://!str18844@zxcvbn@os-tr-3.cats22.net:443#JP 🇯🇵 | @jojo_config | ED4401
@@ -44,6 +44,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@139.84.231.142:443?security=tls&sni=ex
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?sni=searchcreativejobsandshowcaseyourartistictalents.com&type=tcp#SG 🇸🇬 | @jojo_config | E75317
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=searchcreativejobsandshowcaseyourartistictalents.com#SG 🇸🇬 | @jojo_config | D156D8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443#SG 🇸🇬 | @jojo_config | 1DBE61
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?allowInsecure=0&sni=exploredigitaljobplatformandfindonlinework.com#SG 🇸🇬 | @jojo_config | BB2FE8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?security=tls&insecure=0&headerType=none&type=tcp&sni=exploredigitaljobplatformandfindonlinework.com#SG 🇸🇬 | @jojo_config | E9C28A
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | @jojo_config | 75B776
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&type=tcp&headerType=none&path=/#KR 🇰🇷 | @jojo_config | D1BD16
@@ -102,7 +103,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.78:443#DE 🇩🇪 | @jojo
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.78:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=www.iloverussia2026.com#DE 🇩🇪 | @jojo_config | B69AB6
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?sni=learn.iloverussia2026.com&type=tcp#DE 🇩🇪 | @jojo_config | B194A8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?security=tls&sni=learn.iloverussia2026.com#DE 🇩🇪 | @jojo_config | 94738A
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443#CH 🇨🇭 | @jojo_config | FB69CD
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?#CH 🇨🇭 | @jojo_config | FB69CD
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 8433E8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?#CH 🇨🇭 | @jojo_config | 4EFF3D
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?sni=www.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | 252CA9
@@ -132,6 +133,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.66:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?allowInsecure=0&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | @jojo_config | D429FC
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?security=tls&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com&type=tcp&headerType=none&path=/#US 🇺🇸 | @jojo_config | 56DDC3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?security=tls&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com&type=tcp&headerType=none#US 🇺🇸 | @jojo_config | F195D8
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?#CA 🇨🇦 | @jojo_config | 48B559
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?sni=learn.connectingpeoplewithgreatjobs.com&type=tcp#CA 🇨🇦 | @jojo_config | 65E3BE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=learn.connectingpeoplewithgreatjobs.com#CA 🇨🇦 | @jojo_config | A9E2DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.201:443?sni=resources.connectingpeoplewithgreatjobs.com&type=tcp#CA 🇨🇦 | @jojo_config | B897AE
@@ -250,9 +252,9 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.114.45:443?security=tls&insecur
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.115:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 19E8AE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.131:443?allowInsecure=1&sni=www.discovergreatjobsandadvanceyourcareer.com&type=tcp#ES 🇪🇸 | @jojo_config | 4F4C3C
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.166:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=learn.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 4AC48F
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443#ES 🇪🇸 | @jojo_config | F6A42C
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?#ES 🇪🇸 | @jojo_config | F6A42C
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?security=tls&insecure=0&host=/?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI&headerType=none&type=tcp&allowInsecure=0&sni=blog.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | F12CA1
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443#ES 🇪🇸 | @jojo_config | 3B5924
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?#ES 🇪🇸 | @jojo_config | 3B5924
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?security=tls&insecure=0&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&allowInsecure=0&sni=api.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 15FDDA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.251:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=resources.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | @jojo_config | 2A8C03
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.40:443#ES 🇪🇸 | @jojo_config | D8B403
@@ -276,8 +278,9 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?#NL 🇳🇱 | @jojo_config | 0F27E9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?sni=indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | 8B573E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?security=tls&headerType=none&type=tcp&allowInsecure=0&sni=indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | 4C40A9
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?#NL 🇳🇱 | @jojo_config | A8D519
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?allowInsecure=0&security=tls&headerType=none&sni=courses.indyourperfectremotetechjobfromthecomfortofhome.com&insecure=0&type=tcp#NL 🇳🇱 | @jojo_config | 3D936F
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?allowInsecure=0&sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | 97C064
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | 97C064
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | A34B18
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.44:443#NL 🇳🇱 | @jojo_config | C982FF
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.44:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=learn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @jojo_config | A5AEF2
@@ -1450,6 +1453,7 @@ trojan://PD07395842@91.199.84.39:443?sni=magical-kodiak.rooster465.autos&fp=chro
 trojan://PD07395842@enough-basilisk.rooster465.autos:443?fp=chrome#PL 🇵🇱 | @jojo_config | ADD6A8
 trojan://pjqRC5wfEFhYTyiaKF@45.139.194.60:443?sni=ee-1.tr202604.com&allowInsecure=1&type=tcp#EE 🇪🇪 | @jojo_config | 389C78
 trojan://pjqRC5wfEFhYTyiaKF@ee-1.tr202604.com:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0#EE 🇪🇪 | @jojo_config | 4503BA
+trojan://poimnap@alireza.karamoz1.ir:443?allowInsecure=1&sni=alireza.karamoz1.ir#DE 🇩🇪 | @jojo_config | 73CABF
 trojan://poimnap@alireza.karamoz1.ir:443?security=tls&alpn=h2,http/1.1&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=alireza.karamoz1.ir#DE 🇩🇪 | @jojo_config | 8783EE
 trojan://PQ05174892@13.115.145.243:443?sni=smooth-cougar.rooster465.autos&type=tcp&fp=chrome#JP 🇯🇵 | @jojo_config | DD5F12
 trojan://PQ05174892@13.192.168.51:443/?type=tcp&security=tls&sni=learning-leopard.rooster465.autos&fp=chrome#JP 🇯🇵 | @jojo_config | 66D149

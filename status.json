@@ -1,11 +1,11 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T08:36:13Z",
+ "updated_at": "2026-11-20T08:39:19Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-20T08:36:13Z",
+  "last_heartbeat": "2026-11-20T08:39:00Z",
   "heartbeat_age_s": 29,
-  "pid": 3088,
+  "pid": 3644,
   "host": "DESKTOP-PJH7B1E",
   "note": "run_minutes=0.0"
  },
@@ -38,9 +38,9 @@
   "invalid": 1,
   "new": 40,
   "duplicate": 9756,
-  "sent": 443,
+  "sent": 498,
   "send_failed": 0,
-  "queued": 0
+  "queued": 610
  },
  "workflows": {
   "test": {

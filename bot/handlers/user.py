@@ -23,11 +23,15 @@ async def latest20(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     q = update.callback_query
     await q.answer()
     lines = load_configs("verified", 20)
+    user = q.from_user
+    admin = bool(user and (is_admin(user.id) or is_owner(user.id)))
     if not lines:
-        await q.edit_message_text("کانفیگی موجود نیست. ابتدا pipeline را اجرا کنید.")
+        await q.edit_message_text("کانفیگی موجود نیست. ابتدا pipeline را اجرا کنید.",
+                                  reply_markup=main_menu(admin))
         return
     for chunk in chunk_text(lines):
         await q.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
+    await q.message.reply_text("بازگشت:", reply_markup=main_menu(admin))
 
 
 async def categories(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -94,6 +98,9 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
             return
         for chunk in chunk_text(lines[:50]):
             await update.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
+        u = update.effective_user
+        await update.message.reply_text("بازگشت:", reply_markup=main_menu(
+            bool(u and (is_admin(u.id) or is_owner(u.id)))))
     elif mode == "count":
         context.user_data.pop("mode", None)
         try:
@@ -104,6 +111,9 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         lines = load_configs("verified", n)
         for chunk in chunk_text(lines):
             await update.message.reply_text(f"```\n{chunk}\n```", parse_mode="Markdown")
+        u = update.effective_user
+        await update.message.reply_text("بازگشت:", reply_markup=main_menu(
+            bool(u and (is_admin(u.id) or is_owner(u.id)))))
     else:
         # treat as free-text country search fallback
         lines = filter_by_country(load_configs("verified"), text)
@@ -120,11 +130,16 @@ async def proto_selected(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     proto = q.data.split(":", 1)[1]
     lines = filter_by_protocol(load_configs("verified"), proto)
     if not lines:
-        await q.edit_message_text(f"کانفیگ {proto} یافت نشد.")
+        user = q.from_user
+        admin = bool(user and (is_admin(user.id) or is_owner(user.id)))
+        await q.edit_message_text(f"کانفیگ {proto} یافت نشد.", reply_markup=main_menu(admin))
         return
     await q.edit_message_text(f"{len(lines)} کانفیگ {proto.upper()}:")
     for chunk in chunk_text(lines[:50]):
         await q.message.reply_text(chunk)
+    user = q.from_user
+    admin = bool(user and (is_admin(user.id) or is_owner(user.id)))
+    await q.message.reply_text("بازگشت:", reply_markup=main_menu(admin))
 
 
 async def sub_link(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

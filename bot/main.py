@@ -171,7 +171,7 @@ def main() -> None:
             _admin.set_run_deadline(time.time() + RUN_MINUTES * 60)
         app.job_queue.run_repeating(_admin.auto_publish_job,
                                     interval=_admin._PUBLISH_CYCLE_SECONDS, first=10)
-        app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=3600, first=300)
+        app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=900, first=300)
         app.job_queue.run_repeating(heartbeat_job, interval=60, first=1)
         # انتشارِ وضعیت هر ۵ دقیقه: داشبورد باید «آنلاین/آفلاین» را واقعی ببیند.
         app.job_queue.run_repeating(status_publish_job, interval=300, first=90)

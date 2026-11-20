@@ -568,14 +568,14 @@ async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 _AUTO_STATE_PATH = REPO_ROOT / "data" / "auto_publish_state.json"
 
 #: ۲۰ کانفیگ در هر دور، با فاصلهٔ تصادفی بین هر دو ارسال.
-_PUBLISH_PER_CYCLE = 20
+_PUBLISH_PER_CYCLE = 30
 _PUBLISH_CYCLE_SECONDS = 30
 #: فاصلهٔ پایه. تلگرام برای هر کانال حدود ۲۰ پیام در دقیقه اجازه می‌دهد؛
 #: با اندازه‌گیریِ واقعی، ۴۰ و ۲۵ پیام در دقیقه هر دو «Flood control» دادند
 #: (یک‌بار ۵۱۴ ثانیه قفل شد). ۳.۳ ثانیه ⇒ ~۱۸ پیام در دقیقه، پایین‌تر از
 #: سقف، پس یک دورِ ۲۰تایی ~۶۵ ثانیه طول می‌کشد و پایدار می‌ماند.
-_GAP_BASE = 3.3
-_GAP_FLOOR = 3.3
+_GAP_BASE = 1.0
+_GAP_FLOOR = 1.0
 _GAP_CEIL = 30.0
 #: فلود‌کنترلِ تلگرام روی همهٔ متدها اعمال می‌شود؛ تا پایانش هیچ ارسالی
 #: نمی‌کنیم تا جریمه تمدید نشود.

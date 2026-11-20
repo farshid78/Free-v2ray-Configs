@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T21:05:23Z",
+ "updated_at": "2026-11-20T21:06:23Z",
  "bot": {
-  "online": true,
+  "online": false,
   "last_heartbeat": "2026-11-20T21:05:23Z",
-  "heartbeat_age_s": 0,
+  "heartbeat_age_s": 60,
   "pid": 2442,
   "host": "ip-10-0-133-115",
-  "note": "run_minutes=12.0"
+  "note": "stopped"
  },
  "cycle": {
   "id": "ip-10-0-133-201:2449",
@@ -56,9 +56,9 @@
   "invalid": 1,
   "new": 1071,
   "duplicate": 9575,
-  "sent": 160,
+  "sent": 182,
   "send_failed": 0,
-  "queued": 889
+  "queued": 867
  },
  "workflows": {
   "test": {

@@ -1,9 +1,9 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T08:49:00Z",
+ "updated_at": "2026-11-20T08:54:25Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-20T08:49:00Z",
+  "last_heartbeat": "2026-11-20T08:54:00Z",
   "heartbeat_age_s": 29,
   "pid": 3644,
   "host": "DESKTOP-PJH7B1E",
@@ -38,9 +38,9 @@
   "invalid": 1,
   "new": 40,
   "duplicate": 9756,
-  "sent": 618,
+  "sent": 698,
   "send_failed": 0,
-  "queued": 490
+  "queued": 410
  },
  "workflows": {
   "test": {

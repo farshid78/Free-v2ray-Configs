@@ -578,8 +578,11 @@ def publish() -> bool:
                     isinstance(data.get("cycle"), dict) and data["cycle"].get("id") is not None):
                 data["cycle"] = dict(_rc)
             _rcounts = _remote.get("counts")
-            if isinstance(_rcounts, dict) and _rcounts and not (data.get("counts") or {}):
-                data["counts"] = dict(_rcounts)
+            _lcounts = data.setdefault("counts", {})
+            if isinstance(_rcounts, dict):
+                for _k, _v in _rcounts.items():
+                    if _k not in _lcounts or (_lcounts.get(_k) in (None, 0) and _v not in (None, 0)):
+                        _lcounts[_k] = _v
             _rlock = _remote.get("lock")
             if isinstance(_rlock, dict) and (_rlock.get("owner") or _rlock.get("fencing_token")) and not (
                     isinstance(data.get("lock"), dict) and (data["lock"].get("owner") or data["lock"].get("fencing_token"))):

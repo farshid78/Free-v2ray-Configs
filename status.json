@@ -1,46 +1,64 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T19:05:52Z",
+ "updated_at": "2026-11-20T19:24:13Z",
  "bot": {
-  "online": true,
-  "last_heartbeat": "2026-11-20T19:05:52Z",
-  "heartbeat_age_s": 0,
-  "pid": 2988,
-  "host": "DESKTOP-PJH7B1E",
-  "note": "local-test2"
+  "online": false,
+  "last_heartbeat": null,
+  "heartbeat_age_s": null,
+  "pid": null,
+  "host": null,
+  "note": ""
  },
  "cycle": {
-  "id": "DESKTOP-PJH7B1E:11564",
-  "workflow": "smoke",
-  "started_at": "2026-11-20T08:30:49Z",
-  "finished_at": "2026-11-20T08:31:16Z",
+  "id": "runnervmccnms:2287",
+  "workflow": "aggregate",
+  "started_at": "2026-11-20T19:14:26Z",
+  "finished_at": "2026-11-20T19:24:13Z",
   "ok": true,
-  "duration_s": 27.5,
+  "duration_s": 587.9,
   "error": "",
   "stages": {
    "collection": {
     "status": "ok",
-    "at": "2026-11-20T08:31:16Z",
-    "detail": "integration",
+    "at": "2026-11-20T19:24:13Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "cascade": {
+    "status": "ok",
+    "at": "2026-11-20T19:24:13Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "google": {
+    "status": "ok",
+    "at": "2026-11-20T19:24:13Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "validation": {
+    "status": "ok",
+    "at": "2026-11-20T19:24:13Z",
+    "detail": "",
     "duration_s": null
    },
    "publish": {
     "status": "ok",
-    "at": "2026-11-20T08:31:16Z",
-    "detail": "smoke",
+    "at": "2026-11-20T19:24:13Z",
+    "detail": "",
     "duration_s": null
    }
   }
  },
  "counts": {
-  "collected": 21263,
-  "verified": 1108,
+  "collected": 21161,
+  "verified": 930,
   "invalid": 1,
-  "new": 40,
-  "duplicate": 9756,
-  "sent": 858,
+  "new": 930,
+  "duplicate": 9609,
+  "sent": 0,
   "send_failed": 0,
-  "queued": 250
+  "queued": 0
  },
  "workflows": {
   "test": {
@@ -54,19 +72,25 @@
    "last_ok": true,
    "duration_s": 27.5,
    "error": ""
+  },
+  "aggregate": {
+   "last_run_at": "2026-11-20T19:24:13Z",
+   "last_ok": true,
+   "duration_s": 587.9,
+   "error": ""
   }
  },
  "lock": {
   "owner": null,
   "workflow": null,
   "expires_at": null,
-  "chain_id": "chainA",
-  "generation": 1,
-  "fencing_token": 1,
-  "owner_run_id": "run1",
-  "acquired_at": "2026-11-20T14:32:20Z",
-  "last_heartbeat": "2026-11-20T14:32:20Z",
-  "status": "released"
+  "chain_id": null,
+  "generation": 0,
+  "fencing_token": 0,
+  "owner_run_id": null,
+  "acquired_at": null,
+  "last_heartbeat": null,
+  "status": null
  },
  "history": [
   {
@@ -96,6 +120,23 @@
     "queued": 0,
     "sent": 0,
     "send_failed": 0
+   }
+  },
+  {
+   "at": "2026-11-20T19:24:13Z",
+   "workflow": "aggregate",
+   "ok": true,
+   "duration_s": 587.9,
+   "error": "",
+   "counts": {
+    "collected": 21161,
+    "duplicate": 9609,
+    "invalid": 1,
+    "verified": 930,
+    "queued": 0,
+    "sent": 0,
+    "send_failed": 0,
+    "new": 930
    }
   }
  ]

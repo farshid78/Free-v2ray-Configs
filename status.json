@@ -1,64 +1,46 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T18:43:55Z",
+ "updated_at": "2026-11-20T19:05:52Z",
  "bot": {
-  "online": false,
-  "last_heartbeat": null,
-  "heartbeat_age_s": null,
-  "pid": null,
-  "host": null,
-  "note": ""
+  "online": true,
+  "last_heartbeat": "2026-11-20T19:05:52Z",
+  "heartbeat_age_s": 0,
+  "pid": 2988,
+  "host": "DESKTOP-PJH7B1E",
+  "note": "local-test2"
  },
  "cycle": {
-  "id": "runnervm0hi8g:2279",
-  "workflow": "aggregate",
-  "started_at": "2026-11-20T18:33:54Z",
-  "finished_at": "2026-11-20T18:43:55Z",
+  "id": "DESKTOP-PJH7B1E:11564",
+  "workflow": "smoke",
+  "started_at": "2026-11-20T08:30:49Z",
+  "finished_at": "2026-11-20T08:31:16Z",
   "ok": true,
-  "duration_s": 601.3,
+  "duration_s": 27.5,
   "error": "",
   "stages": {
    "collection": {
     "status": "ok",
-    "at": "2026-11-20T18:43:55Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "cascade": {
-    "status": "ok",
-    "at": "2026-11-20T18:43:55Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "google": {
-    "status": "ok",
-    "at": "2026-11-20T18:43:55Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "validation": {
-    "status": "ok",
-    "at": "2026-11-20T18:43:55Z",
-    "detail": "",
+    "at": "2026-11-20T08:31:16Z",
+    "detail": "integration",
     "duration_s": null
    },
    "publish": {
     "status": "ok",
-    "at": "2026-11-20T18:43:55Z",
-    "detail": "",
+    "at": "2026-11-20T08:31:16Z",
+    "detail": "smoke",
     "duration_s": null
    }
   }
  },
  "counts": {
-  "collected": 21212,
-  "verified": 966,
+  "collected": 21263,
+  "verified": 1108,
   "invalid": 1,
-  "new": 966,
-  "duplicate": 9717,
-  "sent": 0,
+  "new": 40,
+  "duplicate": 9756,
+  "sent": 858,
   "send_failed": 0,
-  "queued": 0
+  "queued": 250
  },
  "workflows": {
   "test": {
@@ -72,25 +54,19 @@
    "last_ok": true,
    "duration_s": 27.5,
    "error": ""
-  },
-  "aggregate": {
-   "last_run_at": "2026-11-20T18:43:55Z",
-   "last_ok": true,
-   "duration_s": 601.3,
-   "error": ""
   }
  },
  "lock": {
   "owner": null,
   "workflow": null,
   "expires_at": null,
-  "chain_id": null,
-  "generation": 0,
-  "fencing_token": 0,
-  "owner_run_id": null,
-  "acquired_at": null,
-  "last_heartbeat": null,
-  "status": null
+  "chain_id": "chainA",
+  "generation": 1,
+  "fencing_token": 1,
+  "owner_run_id": "run1",
+  "acquired_at": "2026-11-20T14:32:20Z",
+  "last_heartbeat": "2026-11-20T14:32:20Z",
+  "status": "released"
  },
  "history": [
   {
@@ -120,74 +96,6 @@
     "queued": 0,
     "sent": 0,
     "send_failed": 0
-   }
-  },
-  {
-   "at": "2026-11-20T09:50:42Z",
-   "workflow": "aggregate",
-   "ok": true,
-   "duration_s": 598.8,
-   "error": "",
-   "counts": {
-    "collected": 21108,
-    "duplicate": 9614,
-    "invalid": 1,
-    "verified": 1035,
-    "queued": 0,
-    "sent": 0,
-    "send_failed": 0,
-    "new": 1035
-   }
-  },
-  {
-   "at": "2026-11-20T10:36:41Z",
-   "workflow": "aggregate",
-   "ok": true,
-   "duration_s": 626.6,
-   "error": "",
-   "counts": {
-    "collected": 21074,
-    "duplicate": 9592,
-    "invalid": 1,
-    "verified": 906,
-    "queued": 0,
-    "sent": 0,
-    "send_failed": 0,
-    "new": 906
-   }
-  },
-  {
-   "at": "2026-11-20T11:59:01Z",
-   "workflow": "aggregate",
-   "ok": true,
-   "duration_s": 622.8,
-   "error": "",
-   "counts": {
-    "collected": 21275,
-    "duplicate": 9686,
-    "invalid": 1,
-    "verified": 932,
-    "queued": 0,
-    "sent": 0,
-    "send_failed": 0,
-    "new": 932
-   }
-  },
-  {
-   "at": "2026-11-20T18:43:55Z",
-   "workflow": "aggregate",
-   "ok": true,
-   "duration_s": 601.3,
-   "error": "",
-   "counts": {
-    "collected": 21212,
-    "duplicate": 9717,
-    "invalid": 1,
-    "verified": 966,
-    "queued": 0,
-    "sent": 0,
-    "send_failed": 0,
-    "new": 966
    }
   }
  ]

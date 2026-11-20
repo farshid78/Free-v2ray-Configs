@@ -544,6 +544,34 @@ def _parent_sha() -> str | None:
 def publish() -> bool:
     """`status.json` را روی شاخهٔ `state` می‌نویسد. False = ناموفق (fail-open)."""
     data = summarize()
+    # حفظِ heartbeat ربات از شاخهٔ remote: چرخه‌های غیرِ ربات (aggregate،
+    # chain) خودشان رباتی ندارند و نباید وضعیتِ «آنلاین» را با خالی
+    # جایگزین کنند.
+    try:
+        _git("fetch", "--depth=1", "--no-tags", "origin",
+             f"+refs/heads/{STATE_BRANCH}:refs/remotes/origin/{STATE_BRANCH}",
+             timeout=90)
+        _rs = _git("show", f"refs/remotes/origin/{STATE_BRANCH}:{STATE_FILE}")
+        if _rs.returncode == 0 and _rs.stdout.strip():
+            _remote = json.loads(_rs.stdout)
+            _rb = _remote.get("bot") or {}
+            _lb = data.get("bot") or {}
+            if _rb.get("last_heartbeat") and (
+                    not _lb.get("last_heartbeat")
+                    or str(_rb.get("last_heartbeat")) > str(_lb.get("last_heartbeat"))):
+                data["bot"] = dict(_rb)
+                _hb = data["bot"].get("last_heartbeat")
+                if _hb:
+                    with contextlib.suppress(Exception):
+                        _t = _dt.datetime.strptime(
+                            _hb, "%Y-%m-%dT%H:%M:%SZ").replace(
+                            tzinfo=_dt.timezone.utc).timestamp()
+                        _age = int(_now() - _t)
+                        data["bot"]["heartbeat_age_s"] = _age
+                        data["bot"]["online"] = bool(
+                            data["bot"].get("online")) and _age <= 300
+    except Exception:
+        pass
     # کپیِ منتشرشده نباید رکوردهای حجیمِ محلی را ببرد؛ همان ساختار کافی است.
     try:
         STATE_DIR.mkdir(parents=True, exist_ok=True)

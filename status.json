@@ -1,33 +1,64 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T20:24:03Z",
+ "updated_at": "2026-11-20T20:24:23Z",
  "bot": {
   "online": true,
   "last_heartbeat": "2026-11-20T20:23:46Z",
-  "heartbeat_age_s": 29,
+  "heartbeat_age_s": 37,
   "pid": 2266,
   "host": "runnervmccnms",
   "note": "run_minutes=12.0"
  },
  "cycle": {
-  "id": null,
-  "workflow": null,
-  "started_at": null,
-  "finished_at": null,
-  "ok": null,
-  "duration_s": null,
-  "error": null,
-  "stages": {}
+  "id": "runnervmccnms:2309",
+  "workflow": "aggregate",
+  "started_at": "2026-11-20T20:15:32Z",
+  "finished_at": "2026-11-20T20:24:23Z",
+  "ok": true,
+  "duration_s": 531.7,
+  "error": "",
+  "stages": {
+   "collection": {
+    "status": "ok",
+    "at": "2026-11-20T20:24:23Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "cascade": {
+    "status": "ok",
+    "at": "2026-11-20T20:24:23Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "google": {
+    "status": "ok",
+    "at": "2026-11-20T20:24:23Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "validation": {
+    "status": "ok",
+    "at": "2026-11-20T20:24:23Z",
+    "detail": "",
+    "duration_s": null
+   },
+   "publish": {
+    "status": "ok",
+    "at": "2026-11-20T20:24:23Z",
+    "detail": "",
+    "duration_s": null
+   }
+  }
  },
  "counts": {
-  "collected": 0,
-  "verified": 0,
-  "invalid": 0,
-  "new": 0,
-  "duplicate": 0,
-  "sent": 130,
+  "collected": 21126,
+  "verified": 1004,
+  "invalid": 1,
+  "new": 1004,
+  "duplicate": 9575,
+  "sent": 0,
   "send_failed": 0,
-  "queued": 831
+  "queued": 0
  },
  "workflows": {
   "test": {
@@ -43,9 +74,9 @@
    "error": ""
   },
   "aggregate": {
-   "last_run_at": "2026-11-20T20:10:56Z",
+   "last_run_at": "2026-11-20T20:24:23Z",
    "last_ok": true,
-   "duration_s": 583.1,
+   "duration_s": 531.7,
    "error": ""
   }
  },
@@ -140,6 +171,23 @@
     "sent": 0,
     "send_failed": 0,
     "new": 961
+   }
+  },
+  {
+   "at": "2026-11-20T20:24:23Z",
+   "workflow": "aggregate",
+   "ok": true,
+   "duration_s": 531.7,
+   "error": "",
+   "counts": {
+    "collected": 21126,
+    "duplicate": 9575,
+    "invalid": 1,
+    "verified": 1004,
+    "queued": 0,
+    "sent": 0,
+    "send_failed": 0,
+    "new": 1004
    }
   }
  ]

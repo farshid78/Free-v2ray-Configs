@@ -1,0 +1,12 @@
+#profile-title: @jojo_config — TAIWAN (TW)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/jojo_config
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @jojo_config — TAIWAN (TW) — 3 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://035b0138-5834-4db2-b03a-91fd127b55fa@2.27.174.182:5999?security=reality&encryption=none&pbk=hBuW2XARoZFMlggcvnEEj7M39hYQXQXY_rhejMGRgm4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=apple.com&sid=280893ea#TW 🇹🇼 | @jojo_config | B0F5CD
+vless://ead3595f-4020-4e76-a3ec-c248e1a2f2f7@free.fugui.lol:19482?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ&security=reality&sid=fa514b83&sni=swdist.apple.com&type=tcp#TW 🇹🇼 | @jojo_config | 22FB5C
+vless://ead3595f-4020-4e76-a3ec-c248e1a2f2f7@free.fugui.lol:51283?&security=reality&flow=xtls-rprx-vision&pbk=IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ&sid=fa514b83&fp=chrome&sni=swdist.apple.com&type=tcp&headerType=none&host=swdist.apple.com&path=%2F#TW 🇹🇼 | @jojo_config | 03A9BF

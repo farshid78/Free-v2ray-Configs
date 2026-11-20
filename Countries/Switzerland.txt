@@ -3,32 +3,29 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — SWITZERLAND (CH) — 25 configs
+# @jojo_config — SWITZERLAND (CH) — 22 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.189:19999#CH 🇨🇭 | @jojo_config | 68B652
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@186.190.215.251:19999#CH 🇨🇭 | @jojo_config | 0AC273
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@23.166.88.127:19999#CH 🇨🇭 | @jojo_config | ACB330
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.189:19999#CH 🇨🇭 | @jojo_config | 68B652
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@leviko-ch4470.shopingggg.ir:19999#CH 🇨🇭 | @jojo_config | 0055CE
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=learn.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 50D925
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | A7A956
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@186.190.215.251:19999#CH 🇨🇭 | @jojo_config | 0AC273
 vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&security=reality&sid=19253fae84102271&sni=www.cloudflare.com&type=tcp#CH 🇨🇭 | @jojo_config | 0B7909
 vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?encryption=none&flow=xtls-rprx-vision&fp=random&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&security=reality&sid=19253fae84102271&sni=www.cloudflare.com&type=raw#CH 🇨🇭 | @jojo_config | 15C43B
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=www.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 0EB917
 vless://ca60984f-b1f0-4073-bd33-4c75168f749a@31.59.148.132:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=c8IEc_c_QBmI5YAwILoVH0xw2xC4AJgJDKEYKcmKogo&security=reality&sid=7f2e9c4b1a8d6e55&sni=nl-salad-12.fantoff.online&type=tcp#CH 🇨🇭 | @jojo_config | 2883A3
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 8433E8
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?sni=resources.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | DA2ACE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?sni=www.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | 252CA9
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | 894BDE
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 53EDE0
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=learn.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 50D925
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?sni=courses.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | C6F0FA
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?allowInsecure=1&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 5C059F
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | 894BDE
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=www.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 0EB917
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | A7A956
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?sni=resources.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | DA2ACE
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 8433E8
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 53EDE0
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?security=tls&insecure=0&host=%2F%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&allowInsecure=0&sni=resources.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | A652DE
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.60:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=cdn.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 8499EA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.60:443?sni=cdn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | 82B9CD
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?allowInsecure=1&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 5C059F
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.60:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=cdn.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @jojo_config | 8499EA
 vless://dac0e736-5c69-4b7c-8b1d-27cbbc3bd948@45.95.232.233:8446?encryption=none&fp=firefox&pbk=XxWn04baea-nyjxLud3mjo15Xz1DNwlDOOken4qHNVA&security=reality&serviceName=grpc-tunnel&sid=555ac69b22424282&sni=1c.hlclub.tech&type=grpc#CH 🇨🇭 | @jojo_config | BE09EC
-vless://d199d953-be71-4e19-807b-7df54286733f@45.95.232.233:27020?type=grpc&security=reality&fp=firefox&pbk=XxWn04baea-nyjxLud3mjo15Xz1DNwlDOOken4qHNVA&sid=555ac69b22424282&sni=1c.hlclub.tech&mode=gun&serviceName=grpc-tunnel#CH 🇨🇭 | @jojo_config | 690929
 vless://d199d953-be71-4e19-807b-7df54286733f@1c.hlclub.tech:27020?security=reality&type=grpc&mode=gun&serviceName=grpc-tunnel&packetEncoding=xudp&sni=1c.hlclub.tech&fp=chrome&sid=555ac69b22424282&pbk=XxWn04baea-nyjxLud3mjo15Xz1DNwlDOOken4qHNVA&encryption=none#CH 🇨🇭 | @jojo_config | B51FBB
-vless://62995b2a-8f82-41f8-ac80-dfdfc1253e76@ch5.h1cloud.net:25035?mode=stream-one&path=/astral-edge-h1&security=reality&encryption=none&pbk=m7pPQqgE5q8qOjHhn9AjNA9sWhBFQ-gXzyGcZTNihUU&fp=chrome&type=xhttp&sni=96f799r.ch5.h1clayd.click&sid=eb63581de991f8c8#CH 🇨🇭 | @jojo_config | 174D4F
-vless://62995b2a-8f82-41f8-ac80-dfdfc1253e76@ch5.h1cloud.net:25035?type=xhttp&security=reality&path=/astral-edge-h1&sni=96f799r.ch5.h1clayd.click&pbk=m7pPQqgE5q8qOjHhn9AjNA9sWhBFQ-gXzyGcZTNihUU&sid=eb63581de991f8c8#CH 🇨🇭 | @jojo_config | 4CBF2D

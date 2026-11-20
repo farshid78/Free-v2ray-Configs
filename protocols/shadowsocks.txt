@@ -3,7 +3,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — shadowsocks — 824 configs
+# @jojo_config — shadowsocks — 823 configs
 ss://00ee2eeb-cb0e-453c-b151-c8cf28089d31@116.203.7.223:34257?security=reality&encryption=none&pbk=5FkOfDtgsGr856IC5mE1c27qzl_HQ85onkcaIzd_qgk&host=play.google.com&headerType=none&fp=chrome&type=tcp&sni=play.google.com&sid=601e43eb94a28919#DE 🇩🇪 | @jojo_config | 281D9A
 ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206RGlnOXQ0RThyZHlkVjEzNzRiM0V1dz09OkhzUjNFUEkzSm5YS2tlcncxKytpM2c9PQ@81.12.35.246:8080#IR 🇮🇷 | @jojo_config | DA1C76
 ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206SUwvN0ovQ2M1elFwSnZwQVAwWlZrQT09OkJaU2llMU0xNlBERHRQblhLb1ZiYXc9PQ==@rel.pasmazy1.ir:8080#DE 🇩🇪 | @jojo_config | EED0B7
@@ -79,7 +79,7 @@ ss://2022-blake3-chacha20-poly1305:8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=@
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6OHlPM0FOV2VmdXVHczFsUktYRUNRQTFGRWh4bFdGVjJwcFFNY0JhWm81WT0@leviko-de3534.shopingggg.ir:443#DE 🇩🇪 | @jojo_config | C82AF3
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6OHlPM0FOV2VmdXVHczFsUktYRUNRQTFGRWh4bFdGVjJwcFFNY0JhWm81WT0=@leviko-de8738.shopingggg.ir:443#Global 🌐 | @jojo_config | AE2639
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6OVBmUmxJR3ZwTXM4bkQ3czY1Qi8zSXhjY1FHK3A2MzFYOXRDTFp5K0NSST0@161.118.219.5:56927#SG 🇸🇬 | @jojo_config | 7E3D28
-ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6QzM0K3ppV3h2OFVMMUs0bTc0YlNJcUtnVVdOM1I1WGtTRGYrM3ZPajlSRT0=@129.221.253.23:56927#SG 🇸🇬 | @jojo_config | 034170
+ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6QzM0K3ppV3h2OFVMMUs0bTc0YlNJcUtnVVdOM1I1WGtTRGYrM3ZPajlSRT0@129.221.253.23:56927#SG 🇸🇬 | @jojo_config | 034170
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9BdnNyWVpHaEFKZUduUUl4ND0@13.40.94.96:443?#GB 🇬🇧 | @jojo_config | 587741
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9BdnNyWVpHaEFKZUduUUl4ND0@16.60.10.6:443#GB 🇬🇧 | @jojo_config | 7B56CE
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9BdnNyWVpHaEFKZUduUUl4ND0=@18.130.78.177:443#GB 🇬🇧 | @jojo_config | 477566
@@ -92,14 +92,13 @@ ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9BdnNyWVpHaEFKZUduUUl4ND0@18.175.238.57:443#GB 🇬🇧 | @jojo_config | 28E560
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9BdnNyWVpHaEFKZUduUUl4ND0@3.8.236.216:443#GB 🇬🇧 | @jojo_config | 128457
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2cyRHc0T2hkQlpocWJlTzlaVEEzZy9Hay9BdnNyWVpHaEFKZUduUUl4ND0@8.211.196.252:443#GB 🇬🇧 | @jojo_config | 3B17D8
-ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Q2doaGwwT28rYzUwcU5Tcll6a29uQU00aWVhV1ZQbzB1VzhlQy9uUjdYTT0=@129.146.118.209:50356#US 🇺🇸 | @jojo_config | 61C791
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6ZDRNNmZBajlRMDd1SzRIZVBudEFUVUFzMUtCY2VNenE4aEdQeTFBRnhGQT0@43.114.145.254:443#DE 🇩🇪 | @jojo_config | F4575A
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6ZkdVR1hBdXRFUzdZNWNwRVlmQjhnK00ybUM3MmNJeTVXSkozYXptRGdXMD0@141.144.195.47:45819#NL 🇳🇱 | @jojo_config | C52848
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6Rm1CNEhCTS8rNjNMWnIrc2p4czV6a0ZJdlptQi8vNUJQcWRmOFcrd250Zz0@79.76.105.62:59924#DE 🇩🇪 | @jojo_config | 243BD9
 ss://2022-blake3-chacha20-poly1305:FQwWid%2FyN8BbtdyXcViI%2BijKYMtWgeMg%2Bo%2FOCChCbVc%3D@129.221.181.20:56927#SG 🇸🇬 | @jojo_config | B038CA
 ss://2022-blake3-chacha20-poly1305:GMhXRpy%2FpfPMVrZeCAxOxI5MpuH3llOtZKoeNLUT0n8%3D@158.178.230.120:56927#SG 🇸🇬 | @jojo_config | 3E07E1
 ss://2022-blake3-chacha20-poly1305:lj5rXlwpypP0Ku0nzWOl8haA6R98vLoCsY8vmdGmfl4%3D@129.146.38.236:50356#US 🇺🇸 | @jojo_config | 061847
-ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6b1FpcnAzYXY3QUxzNklDSmo1UWYyVTh3QnhsQXhuQ2sxeWs2YW9BQU4zQT0=@92.5.21.171:59924#DE 🇩🇪 | @jojo_config | F40528
+ss://2022-blake3-chacha20-poly1305:oQirp3av7ALs6ICJj5Qf2U8wBxlAxnCk1yk6aoAAN3A=@92.5.21.171:59924#DE 🇩🇪 | @jojo_config | F40528
 ss://MjAyMi1ibGFrZTMtY2hhY2hhMjAtcG9seTEzMDU6cUc1SHpySk8yT0F6TUZZNldEejk5MXFISG9uU1AyaXg2bDZqS2xId29rWT0@129.146.61.90:50356#US 🇺🇸 | @jojo_config | C759A9
 ss://2022-blake3-chacha20-poly1305:RWtTKETUy87lj9TFubxPxfkWDx%2FJhYaQQwDjZv2Tgg0%3D@161.118.221.20:56927#SG 🇸🇬 | @jojo_config | 454EA9
 ss://2022-blake3-chacha20-poly1305:rx1e8SsjGM7ZKlR0tLnzSWoxhyRRJJrcTccM3uMu%2BRc%3D@144.21.35.158:45819#NL 🇳🇱 | @jojo_config | 4A5A6E

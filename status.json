@@ -1,61 +1,61 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T20:56:29Z",
+ "updated_at": "2026-11-20T20:57:07Z",
  "bot": {
   "online": true,
   "last_heartbeat": "2026-11-20T20:56:23Z",
-  "heartbeat_age_s": 29,
+  "heartbeat_age_s": 44,
   "pid": 2442,
   "host": "ip-10-0-133-115",
   "note": "run_minutes=12.0"
  },
  "cycle": {
-  "id": "runnervm0hi8g:2278",
+  "id": "ip-10-0-133-201:2449",
   "workflow": "aggregate",
-  "started_at": "2026-11-20T20:38:33Z",
-  "finished_at": "2026-11-20T20:47:46Z",
+  "started_at": "2026-11-20T20:48:10Z",
+  "finished_at": "2026-11-20T20:57:07Z",
   "ok": true,
-  "duration_s": 553.5,
+  "duration_s": 537.4,
   "error": "",
   "stages": {
    "collection": {
     "status": "ok",
-    "at": "2026-11-20T20:47:46Z",
+    "at": "2026-11-20T20:57:07Z",
     "detail": "",
     "duration_s": null
    },
    "cascade": {
     "status": "ok",
-    "at": "2026-11-20T20:47:46Z",
+    "at": "2026-11-20T20:57:07Z",
     "detail": "",
     "duration_s": null
    },
    "google": {
     "status": "ok",
-    "at": "2026-11-20T20:47:46Z",
+    "at": "2026-11-20T20:57:07Z",
     "detail": "",
     "duration_s": null
    },
    "validation": {
     "status": "ok",
-    "at": "2026-11-20T20:47:46Z",
+    "at": "2026-11-20T20:57:07Z",
     "detail": "",
     "duration_s": null
    },
    "publish": {
     "status": "ok",
-    "at": "2026-11-20T20:47:46Z",
+    "at": "2026-11-20T20:57:07Z",
     "detail": "",
     "duration_s": null
    }
   }
  },
  "counts": {
-  "collected": 0,
-  "verified": 0,
-  "invalid": 0,
-  "new": 0,
-  "duplicate": 0,
+  "collected": 21126,
+  "verified": 1071,
+  "invalid": 1,
+  "new": 1071,
+  "duplicate": 9575,
   "sent": 40,
   "send_failed": 0,
   "queued": 1009
@@ -74,9 +74,9 @@
    "error": ""
   },
   "aggregate": {
-   "last_run_at": "2026-11-20T20:38:17Z",
+   "last_run_at": "2026-11-20T20:57:07Z",
    "last_ok": true,
-   "duration_s": 571.4,
+   "duration_s": 537.4,
    "error": ""
   }
  },
@@ -205,6 +205,23 @@
     "sent": 0,
     "send_failed": 0,
     "new": 1049
+   }
+  },
+  {
+   "at": "2026-11-20T20:57:07Z",
+   "workflow": "aggregate",
+   "ok": true,
+   "duration_s": 537.4,
+   "error": "",
+   "counts": {
+    "collected": 21126,
+    "duplicate": 9575,
+    "invalid": 1,
+    "verified": 1071,
+    "queued": 0,
+    "sent": 0,
+    "send_failed": 0,
+    "new": 1071
    }
   }
  ]

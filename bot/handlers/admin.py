@@ -2,7 +2,7 @@ import asyncio
 import json as _json_mod
 import sys
 
-import requests
+import httpx
 from telegram import Update
 from telegram.ext import ContextTypes
 
@@ -57,25 +57,25 @@ async def adm_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(text)
 
 
-def _post_dispatch() -> str:
-    """Trigger the aggregate workflow (blocking). Returns a short status string."""
+async def _post_dispatch() -> str:
+    """Trigger the aggregate workflow (non-blocking, async HTTP). Returns a short status string."""
     if not (GITHUB_TOKEN and GH_OWNER and GH_REPO):
         return "GITHUB_TOKEN/GH_OWNER/GH_REPO تنظیم نشده."
     try:
-        r = requests.post(
-            f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches",
-            headers={"Authorization": f"Bearer {GITHUB_TOKEN}",
-                    "Accept": "application/vnd.github+json"},
-            json={"event_type": "aggregate-now"}, timeout=20,
-        )
+        async with httpx.AsyncClient(timeout=20) as client:
+            r = await client.post(
+                f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches",
+                headers={"Authorization": f"Bearer {GITHUB_TOKEN}",
+                        "Accept": "application/vnd.github+json"},
+                json={"event_type": "aggregate-now"},
+            )
         return "Triggered ✅" if r.status_code == 204 else f"Error {r.status_code}"
     except Exception as e:
         return f"Error: {e}"
 
 
 async def _trigger_aggregate() -> str:
-    # requests.post بلاک می‌کند؛ در ترد جدا تا polling ربات قطع نشود.
-    return await asyncio.to_thread(_post_dispatch)
+    return await _post_dispatch()
 
 
 async def adm_trigger(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -438,7 +438,7 @@ async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE
         for m in msgs:
             await context.bot.send_message(chat_id=channel, text=m)
             sent += 1
-            await asyncio.sleep(1.2)
+            await asyncio.sleep(4.0)
     except Exception as e:
         await q.edit_message_text(
             preview + f"\n\n❌ بعد از {sent} ارسال: {type(e).__name__}: {e}",
@@ -503,10 +503,12 @@ async def handle_admin_text(update: Update, context: ContextTypes.DEFAULT_TYPE) 
             return
         await update.message.reply_text("در حال اسکن…")
         try:
-            r = requests.get(url, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
-            r.raise_for_status()
+            async with httpx.AsyncClient(timeout=25, follow_redirects=True) as client:
+                r = await client.get(url, headers={"User-Agent": "Mozilla/5.0"})
+                r.raise_for_status()
+                text = r.text
             from scripts.core import extract_valid_lines
-            lines = extract_valid_lines(r.text)
+            lines = extract_valid_lines(text)
         except Exception as e:
             await update.message.reply_text(f"اسکن ناموفق: {type(e).__name__}: {e}")
             return
@@ -590,25 +592,23 @@ async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
         try:
             await context.bot.send_message(chat_id=channel, text=m, parse_mode="Markdown")
             sent += 1
-            await asyncio.sleep(1.2)
+            await asyncio.sleep(4.0)
         except Exception:
             break
     _save_auto_offset(offset + sent if sent else offset)
 
 
 async def trigger_aggregate_job(context: ContextTypes.DEFAULT_TYPE) -> None:
-    """هر ساعت workflowِ aggregate را از طریق repository_dispatch trigger می‌کند."""
+    """هر ساعت workflowِ aggregate را از طریق repository_dispatch trigger می‌کند (async)."""
     if not GITHUB_TOKEN:
         return
     try:
-        import requests
-        url = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches"
-        requests.post(
-            url,
-            headers={"Authorization": f"token {GITHUB_TOKEN}",
-                    "Accept": "application/vnd.github+json"},
-            json={"event_type": "aggregate-now"},
-            timeout=15,
-        )
+        async with httpx.AsyncClient(timeout=15) as client:
+            await client.post(
+                f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}/dispatches",
+                headers={"Authorization": f"Bearer {GITHUB_TOKEN}",
+                        "Accept": "application/vnd.github+json"},
+                json={"event_type": "aggregate-now"},
+            )
     except Exception:
         pass

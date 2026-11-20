@@ -91,7 +91,7 @@ def main() -> None:
     # انتشارِ خودکار: هر ساعت ۵ کانفیگ + trigger workflow (بدونِ دخالتِ دستی)
     try:
         from .handlers import admin as _admin
-        app.job_queue.run_repeating(_admin.auto_publish_job, interval=3600, first=60)
+        app.job_queue.run_repeating(_admin.auto_publish_job, interval=4, first=5)
         app.job_queue.run_repeating(_admin.trigger_aggregate_job, interval=3600, first=300)
     except Exception:
         pass

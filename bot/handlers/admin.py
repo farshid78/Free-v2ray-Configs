@@ -1,4 +1,5 @@
 import asyncio
+import html as _html
 import json as _json_mod
 import sys
 
@@ -393,9 +394,12 @@ def _format_channel_msg(line: str, cmap: dict) -> str:
         header = f"🈳🈱 {flag} {cname} ┃ ⚙️ {proto}"
     else:
         header = f"🈳🈱 ⚙️ {proto}"
+    # HTML parse mode: کانفیگ را در <code> می‌گذاریم تا monospace شود و
+    # کاراکترهای خاصِ Markdown (مانند `_` یا backtick) باعث خطای parse نشوند.
+    safe_line = _html.escape(line.strip())
     return (f"{header}\n"
             f"━━━━━━━━━━━━━━━━━━━━\n"
-            f"`{line.strip()}`\n"
+            f"<code>{safe_line}</code>\n"
             f"━━━━━━━━━━━━━━━━━━━━\n"
             f"📢 t.me/{CHANNEL_USERNAME.lstrip('@')}")
 
@@ -414,7 +418,7 @@ async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE
         return
     cmap = _country_map()
     offset = context.user_data.get("publish_offset", 0)
-    batch = 5
+    batch = 3
     chunk = lines[offset:offset + batch]
     if not chunk:
         context.user_data["publish_offset"] = 0
@@ -431,25 +435,25 @@ async def adm_publish_configs(update: Update, context: ContextTypes.DEFAULT_TYPE
     if dry:
         preview += ("\n\nحالت: DRY-RUN. برای post واقعی CHANNEL_PUBLISH=live تنظیم کنید "
                     "و بات را ادمین کانال کنید.")
-        await q.edit_message_text(preview, reply_markup=admin_menu())
+        await q.edit_message_text(preview, reply_markup=admin_menu(), parse_mode="HTML")
         return
     sent = 0
     try:
         for m in msgs:
-            await context.bot.send_message(chat_id=channel, text=m)
+            await context.bot.send_message(chat_id=channel, text=m, parse_mode="HTML")
             sent += 1
             await asyncio.sleep(4.0)
     except Exception as e:
         await q.edit_message_text(
-            preview + f"\n\n❌ بعد از {sent} ارسال: {type(e).__name__}: {e}",
-            reply_markup=admin_menu(),
+            preview + f"\n\n❌ بعد از {sent} ارسال: {type(e).__name__}: {_html.escape(str(e))}",
+            reply_markup=admin_menu(), parse_mode="HTML",
         )
         context.user_data["publish_offset"] = offset + sent
         return
     context.user_data["publish_offset"] = offset + sent
     await q.edit_message_text(
         preview + f"\n\n✅ {sent} کانفیگ در کانال منتشر شد.",
-        reply_markup=admin_menu(),
+        reply_markup=admin_menu(), parse_mode="HTML",
     )
 
 
@@ -567,35 +571,55 @@ def _save_auto_offset(off: int) -> None:
         pass
 
 
+_AUTO_PUBLISH_LOCK = asyncio.Lock()
+
+
 async def auto_publish_job(context: ContextTypes.DEFAULT_TYPE) -> None:
-    """هر ساعت ۵ کانفیگِ بعدی را به‌طور خودکار به کانال می‌فرستد (monospace)."""
+    """هر چند ثانیه ۳ کانفیگِ بعدی را به‌طور خودکار به کانال می‌فرستد (monospace).
+
+    اگر اجرای قبلی هنوز تمام نشده، این اجرا رد می‌شود تا ارسال‌ها روی هم نیفتند.
+    """
     if CHANNEL_PUBLISH != "live":
         return
-    try:
-        from ..utils import load_configs
-        lines = load_configs("verified")
-    except Exception:
+    if _AUTO_PUBLISH_LOCK.locked():
         return
-    if not lines:
-        return
-    channel = "@" + CHANNEL_USERNAME.lstrip("@")
-    cmap = _country_map()
-    offset = _load_auto_offset()
-    batch = 5
-    chunk = lines[offset:offset + batch]
-    if not chunk:
-        offset = 0
-        chunk = lines[:batch]
-    msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
-    sent = 0
-    for m in msgs:
+    async with _AUTO_PUBLISH_LOCK:
         try:
-            await context.bot.send_message(chat_id=channel, text=m, parse_mode="Markdown")
-            sent += 1
-            await asyncio.sleep(4.0)
+            from ..utils import load_configs
+            lines = load_configs("verified")
         except Exception:
-            break
-    _save_auto_offset(offset + sent if sent else offset)
+            return
+        if not lines:
+            return
+        channel = "@" + CHANNEL_USERNAME.lstrip("@")
+        cmap = _country_map()
+        offset = _load_auto_offset()
+        batch = 3
+        chunk = lines[offset:offset + batch]
+        if not chunk:
+            offset = 0
+            chunk = lines[:batch]
+        msgs = [_format_channel_msg(ln, cmap) for ln in chunk]
+        sent = 0
+        for m in msgs:
+            try:
+                await context.bot.send_message(chat_id=channel, text=m, parse_mode="HTML")
+                sent += 1
+                await asyncio.sleep(4.0)
+            except Exception as e:
+                # FloodWait: تلگرام از ما می‌خواهد کمی صبر کنیم.
+                retry_after = getattr(e, "retry_after", None)
+                if retry_after:
+                    await asyncio.sleep(float(retry_after) + 1.0)
+                    try:
+                        await context.bot.send_message(chat_id=channel, text=m, parse_mode="HTML")
+                        sent += 1
+                        await asyncio.sleep(4.0)
+                        continue
+                    except Exception:
+                        break
+                break
+        _save_auto_offset(offset + sent if sent else offset)
 
 
 async def trigger_aggregate_job(context: ContextTypes.DEFAULT_TYPE) -> None:

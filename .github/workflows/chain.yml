@@ -37,7 +37,7 @@ on:
         default: "5"
 
 permissions:
-  contents: read
+  contents: write
   actions: write
 
 env:

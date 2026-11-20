@@ -33,7 +33,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
   actions: write      # برای repository_dispatch ساعتیِ ربات (aggregate)
 
 env:

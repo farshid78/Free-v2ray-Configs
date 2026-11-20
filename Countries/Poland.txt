@@ -3,12 +3,10 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — POLAND (PL) — 5 configs
+# @jojo_config — POLAND (PL) — 3 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://e18f77f3-e518-4c8c-b230-c79e3708c7f4@45.144.49.138:1152?encryption=none&security=reality&type=xhttp&sni=in.tradingview.com&fp=chrome&pbk=Fmhl6wGywDftzMcxYFyzGrlHvP-XCwujzo_ULibHfHE&sid=ead6bdba606219a2#PL 🇵🇱 | @jojo_config | BD88C9
-vless://e18f77f3-e518-4c8c-b230-c79e3708c7f4@tun2.minoosell.ir:1152?encryption=none&security=reality&type=xhttp&sni=in.tradingview.com&fp=chrome&pbk=Fmhl6wGywDftzMcxYFyzGrlHvP-XCwujzo_ULibHfHE&sid=ead6bdba606219a2#PL 🇵🇱 | @jojo_config | F04A77
-vless://e18f77f3-e518-4c8c-b230-c79e3708c7f4@tun2.minoosell.ir:1152?mode=auto&security=reality&encryption=none&pbk=Fmhl6wGywDftzMcxYFyzGrlHvP-XCwujzo_ULibHfHE&fp=chrome&type=xhttp&sni=in.tradingview.com&sid=ead6bdba606219a2#PL 🇵🇱 | @jojo_config | 0BE96D
-vmess://eyJ2IjoiMiIsInBzIjoiUEwg8J+HtfCfh7EgfCBAam9qb19jb25maWcgfCBDRjBFRjkiLCJhZGQiOiI1NC4zNy4xMzEuMTI2IiwicG9ydCI6IjgwIiwiaWQiOiIxZTU1YmVjYS0zYzY5LTRmYTctZmIxZi0xNWMxYjc2NzQzNWYiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6IiIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLyIsImhvc3QiOiJnb29nbGUud2hhdHNhcHAuc25hcHAudG9yb2IuYmFzYWxhbS5oZXNhbmlkOC5pci4ifQ==
+vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | @jojo_config | 76B2DF
+vless://352a250d-080b-47b5-b7db-f9f8fa31c551@45.192.12.92:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=nltimes.nl&fp=chrome&pbk=aUOP5gJGQ1QFhdZuREZ8yosfPavFiJ6f_EySIBZ2WCE&type=tcp&headerType=none#PL 🇵🇱 | @jojo_config | DDB2B4
 vless://ecc0e60a-f2cc-4266-8353-b228df89730a@150.241.87.52:443?security=reality&encryption=none&pbk=GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=pl.galacticworld.online#PL 🇵🇱 | @jojo_config | BC77DA

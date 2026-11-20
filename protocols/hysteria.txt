@@ -1,0 +1,7 @@
+#profile-title: @jojo_config — HYSTERIA
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/jojo_config
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @jojo_config — hysteria — 1 configs
+hysteria://62.210.124.132:24667?alpn=h3&auth_str=dongtaiwang.com&downmbps=55&obfsParam=&insecure=1&peer=bing.com&upmbps=11#FR 🇫🇷 | @jojo_config | EA34EF

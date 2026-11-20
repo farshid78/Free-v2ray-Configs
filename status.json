@@ -1,61 +1,30 @@
 {
  "schema": 1,
- "updated_at": "2026-11-20T19:35:21Z",
+ "updated_at": "2026-11-20T19:58:31Z",
  "bot": {
-  "online": false,
-  "last_heartbeat": null,
-  "heartbeat_age_s": null,
-  "pid": null,
-  "host": null,
-  "note": ""
+  "online": true,
+  "last_heartbeat": "2026-11-20T19:58:31Z",
+  "heartbeat_age_s": 0,
+  "pid": 2263,
+  "host": "runnervm0hi8g",
+  "note": "run_minutes=12.0"
  },
  "cycle": {
-  "id": "runnervm0hi8g:2585",
-  "workflow": "aggregate",
-  "started_at": "2026-11-20T19:24:30Z",
-  "finished_at": "2026-11-20T19:35:21Z",
-  "ok": true,
-  "duration_s": 651.7,
-  "error": "",
-  "stages": {
-   "collection": {
-    "status": "ok",
-    "at": "2026-11-20T19:35:21Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "cascade": {
-    "status": "ok",
-    "at": "2026-11-20T19:35:21Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "google": {
-    "status": "ok",
-    "at": "2026-11-20T19:35:21Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "validation": {
-    "status": "ok",
-    "at": "2026-11-20T19:35:21Z",
-    "detail": "",
-    "duration_s": null
-   },
-   "publish": {
-    "status": "failed",
-    "at": "2026-11-20T19:35:21Z",
-    "detail": "",
-    "duration_s": null
-   }
-  }
+  "id": null,
+  "workflow": null,
+  "started_at": null,
+  "finished_at": null,
+  "ok": null,
+  "duration_s": null,
+  "error": null,
+  "stages": {}
  },
  "counts": {
-  "collected": 21159,
-  "verified": 951,
-  "invalid": 1,
-  "new": 951,
-  "duplicate": 9607,
+  "collected": 0,
+  "verified": 0,
+  "invalid": 0,
+  "new": 0,
+  "duplicate": 0,
   "sent": 0,
   "send_failed": 0,
   "queued": 0

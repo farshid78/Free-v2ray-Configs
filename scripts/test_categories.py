@@ -41,11 +41,11 @@ BUCKETS = {
     "google": os.path.join(ROOT, "google", "configs.txt"),
 }
 TOP = os.path.join(ROOT, "top100.txt")
-BRAND = "@farshid78"
+BRAND = "@jojo_config"
 
 #: قالب‌ها یکسان نیستند: «— VERIFIED — 12 configs» و «— TOP 12 — sorted …».
 HEADER_COUNT = re.compile(
-    r"—\s*(VERIFIED|FAST|SECURE|TOP|ALL|HEAVY|LIGHT|GOOGLE)\s*—?\s*(\d+)\b")
+    r"—\s*(VERIFIED|FAST|SECURE|TOP|ALL|HEAVY|LIGHT|GOOGLE)(?:\s+[A-Z]+)?\s*(?:—\s*)?(\d+)\b")
 
 
 class _SkipTest(Exception):
@@ -184,7 +184,7 @@ def test_published_headers_carry_this_repo_identity() -> None:
     files = [TOP] + [p for p in BUCKETS.values() if os.path.isfile(p)]
     for path in files:
         text = "\n".join(_lines(path))
-        assert "jojo_vpn" not in text and "jojo_config" not in text, (
+        assert "@farshid78" not in text and "jojo_vpn" not in text, (
             f"{os.path.relpath(path, ROOT)} still carries the old identity")
         head = _header(path)
         assert BRAND in head, (
@@ -211,7 +211,7 @@ def test_bot_counts_match_the_published_files() -> None:
 
 
 def test_brand_defaults_come_from_the_repo_identity() -> None:
-    """پیش‌فرضِ برند از GH_OWNER می‌آید، نه از پروژهٔ دیگر."""
+    """پیش‌فرضِ برند همان هندلِ همین ریپو است، نه هندلِ پروژهٔ دیگر."""
     import brand
     b = brand.values()
     assert b["brand"] == BRAND, f"default brand is {b['brand']!r}, expected {BRAND}"

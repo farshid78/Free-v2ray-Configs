@@ -2,65 +2,568 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>farshid78 — پنل گلس</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>JoJo VPN — پنل گلس</title>
+<link rel="icon" href="favicon.png">
+<!--
+  پنل گلس (Telegram Mini App) — تک‌فایل، بدون هیچ وابستگیِ خارجی.
+
+  چرا داده‌ها از raw/CDN خوانده می‌شوند و نه از مسیر نسبی:
+  این فایل در `docs/` است و GitHub Pages ریشه را روی `docs/` می‌گذارد، ولی
+  `index.json` / `health.json` / `Countries/index.json` در **ریشهٔ مخزن** ساخته
+  می‌شوند. پس `./index.json` روی Pages همیشه ۴۰۴ بود. آدرس‌ها مطلق‌اند
+  (`raw.githubusercontent.com` اول، `cdn.jsdelivr.net` جایگزین) تا صفحه از هر
+  origin و از هر زیرمسیر یکسان کار کند — همان قاعده‌ای که `docs/app.js` دارد.
+  برای تست آفلاین/محلی: `?data=http://127.0.0.1:8123` (ریشه‌ای که index.json
+  در آن است) و برای عوض‌کردن هندلِ ربات: `?bot=jojo_config_bot`.
+-->
 <style>
-  :root{--bg:#0b1020;--glass:rgba(255,255,255,.08);--border:rgba(255,255,255,.18);--accent:#4f9cff;--text:#eaf0ff;--muted:#9bb0d6}
+  :root{
+    --bg1:#0b1020; --glass:rgba(255,255,255,.07); --glass2:rgba(255,255,255,.12);
+    --line:rgba(255,255,255,.16); --text:#eaf0ff; --muted:#9bb0d6;
+    --accent:#4f9cff; --accent2:#8b5cff; --ok:#2ecc71; --warn:#f6c343; --bad:#ff6b6b;
+  }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(1200px 600px at 20% -10%,#1a2a4a 0%,#0b1020 60%),radial-gradient(900px 500px at 110% 110%,#1a3a6a 0%,transparent 60%);color:var(--text);min-height:100vh;padding:24px}
-  .glass{background:var(--glass);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06)}
-  header{display:flex;align-items:center;gap:14px;margin-bottom:22px}
-  .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#4f9cff,#8b5cff);display:grid;place-items:center;font-weight:800}
-  h1{font-size:20px}
-  .sub{color:var(--muted);font-size:13px;margin-top:2px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-  .card{padding:18px}
-  .card h2{font-size:15px;margin-bottom:6px}
-  .card p{color:var(--muted);font-size:13px;line-height:1.6}
-  .btn{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,#4f9cff,#8b5cff);color:#fff;text-decoration:none;font-weight:600;font-size:13px;border:0;cursor:pointer}
-  .btn.secondary{background:var(--glass);border:1px solid var(--border);color:var(--text)}
-  .status{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:var(--muted)}
-  .dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 8px #2ecc71}
-  footer{margin-top:24px;text-align:center;color:var(--muted);font-size:12px}
+  html,body{min-height:100%}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:
+      radial-gradient(1200px 600px at 18% -10%,#1a2a4a 0%,#0b1020 62%),
+      radial-gradient(900px 520px at 112% 108%,#1a3a6a 0%,transparent 60%);
+    background-attachment:fixed; color:var(--text);
+    padding:18px 14px calc(28px + env(safe-area-inset-bottom));
+    -webkit-tap-highlight-color:transparent;
+  }
+  .glass{background:var(--glass);backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid var(--line);
+    border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06)}
+  header{display:flex;align-items:center;gap:12px;margin:2px 4px 14px}
+  .logo{width:44px;height:44px;border-radius:13px;flex:0 0 auto;display:grid;place-items:center;
+    font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 6px 18px rgba(79,156,255,.35)}
+  h1{font-size:17px;letter-spacing:.2px}
+  .sub{color:var(--muted);font-size:12px;margin-top:3px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--muted);display:inline-block}
+  .dot.ok{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+  .dot.warn{background:var(--warn);box-shadow:0 0 8px var(--warn)}
+  .dot.bad{background:var(--bad);box-shadow:0 0 8px var(--bad)}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:9px;margin-bottom:14px}
+  .kpi{padding:11px 12px;border-radius:14px}
+  .kpi b{display:block;font-size:19px;line-height:1.2;font-variant-numeric:tabular-nums}
+  .kpi span{color:var(--muted);font-size:11px}
+
+  nav{display:flex;gap:6px;overflow-x:auto;padding:3px;margin-bottom:12px;
+    background:var(--glass);border:1px solid var(--line);border-radius:14px;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav button{flex:0 0 auto;padding:8px 12px;border:0;border-radius:11px;background:transparent;
+    color:var(--muted);font:inherit;font-size:12.5px;cursor:pointer;white-space:nowrap}
+  nav button[aria-selected="true"]{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:600}
+  section[hidden]{display:none}
+
+  .row{display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:12px 14px;border-radius:14px;margin-bottom:8px}
+  .row .t{font-size:13.5px;font-weight:600}
+  .row .c{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .row button,.btn{border:0;border-radius:11px;padding:8px 12px;font:inherit;font-size:12px;cursor:pointer;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;display:inline-block}
+  .btn.ghost{background:var(--glass2);border:1px solid var(--line);color:var(--text)}
+  .btn:active{transform:translateY(1px)}
+
+  pre{white-space:pre-wrap;word-break:break-all;font:11.5px/1.65 ui-monospace,Consolas,monospace;
+    background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:12px;padding:10px 12px;
+    max-height:42vh;overflow:auto;color:#d6e2ff}
+  .cfg{display:block;padding:6px 8px;border-radius:8px;cursor:pointer}
+  .cfg:active{background:rgba(79,156,255,.18)}
+  .hint{color:var(--muted);font-size:11.5px;margin:6px 2px 0;line-height:1.7}
+
+  input[type=search]{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);
+    background:rgba(0,0,0,.22);color:var(--text);font:inherit;font-size:13px;margin-bottom:10px}
+  input[type=search]::placeholder{color:#7f93b8}
+
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{padding:8px 6px;text-align:right;border-bottom:1px solid rgba(255,255,255,.08);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:11px}
+  .chip{padding:2px 7px;border-radius:8px;font-size:10.5px;background:rgba(46,204,113,.16);color:#7ee2a8}
+  .chip.empty{background:rgba(246,195,67,.16);color:#f3d27a}
+  .chip.fail{background:rgba(255,107,107,.16);color:#ffa8a8}
+  .chip.disabled{background:rgba(255,255,255,.1);color:var(--muted)}
+
+  details{padding:12px 14px;border-radius:14px;margin-bottom:8px}
+  summary{cursor:pointer;font-size:13px;font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▸ ";color:var(--muted)}
+  details[open] summary::before{content:"▾ "}
+  details .body{margin-top:10px}
+
+  footer{margin-top:18px;text-align:center;color:var(--muted);font-size:11.5px;line-height:1.9}
+  footer a{color:#9cc4ff;text-decoration:none}
+
+  #fatal{margin-top:8px;padding:16px;border-radius:16px;border:1px solid rgba(255,107,107,.4);
+    background:rgba(255,107,107,.08)}
+  #fatal h2{font-size:14px;margin-bottom:6px}
+  #fatal p{color:var(--muted);font-size:12.5px;line-height:1.8}
+  .spinner{width:15px;height:15px;border-radius:50%;border:2px solid rgba(255,255,255,.25);
+    border-top-color:var(--accent);display:inline-block;animation:sp .8s linear infinite;vertical-align:-2px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">J</div>
-  <div><h1>farshid78 — پنل مدیریت</h1><div class="sub">@jojo_config_bot · https://t.me/jojo_config</div></div>
+  <div class="logo" id="logo">J</div>
+  <div>
+    <h1 id="title">پنل گلس</h1>
+    <div class="sub">
+      <span class="dot" id="healthDot"></span><span id="healthText">در حال خواندن…</span>
+      <span id="brandText"></span>
+    </div>
+  </div>
 </header>
-<div class="grid">
-  <div class="glass card">
-    <h2>📊 وضعیت پروژه</h2>
-    <p>تجمیع هر ۱۵ دقیقه از طریق GitHub Actions. خروجی‌ها روی main منتشر می‌شوند.</p>
-    <div class="status"><span class="dot"></span>سالم</div>
-  </div>
-  <div class="glass card">
-    <h2>🔄 اجرای تجمیع</h2>
-    <p>Trigger aggregate-now از طریق ربات یا GitHub Actions.</p>
-    <a class="btn" href="https://t.me/jojo_config_bot">باز کردن ربات</a>
-  </div>
-  <div class="glass card">
-    <h2>📋 منابع کانفیگ</h2>
-    <p>مدیریت منابع از داخل پنل ادمین ربات (دکمهٔ «📋 منابع»).</p>
-    <a class="btn secondary" href="https://github.com/farshid78/Free-v2ray-Configs/blob/main/scripts/sources.py">مشاهدهٔ sources.py</a>
-  </div>
-  <div class="glass card">
-    <h2>🌍 کانفیگ کشورها</h2>
-    <p>دریافت کانفیگ مربوط به هر کشور از ربات (فیلتر کشور).</p>
-    <a class="btn secondary" href="https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/index.json">index.json</a>
-  </div>
-  <div class="glass card">
-    <h2>🛡️ مدیریت ادمین</h2>
-    <p>افزودن/حذف ادمین فقط توسط مالک (Owner ID).</p>
-    <a class="btn secondary" href="https://t.me/jojo_config_bot">پنل ادمین</a>
-  </div>
-  <div class="glass card">
-    <h2>📡 کانال تلگرام</h2>
-    <p>انتشار خودکار کانفیگ‌ها در کانال farshid78.</p>
-    <a class="btn" href="https://t.me/jojo_config">باز کردن کانال</a>
-  </div>
+
+<div class="kpis" id="kpis" aria-live="polite"></div>
+
+<nav role="tablist" aria-label="بخش‌ها">
+  <button role="tab" aria-selected="true"  data-tab="stats">📊 خلاصه</button>
+  <button role="tab" aria-selected="false" data-tab="cats">📚 دسته‌ها</button>
+  <button role="tab" aria-selected="false" data-tab="protos">⚙️ پروتکل‌ها</button>
+  <button role="tab" aria-selected="false" data-tab="countries">🌍 کشورها</button>
+  <button role="tab" aria-selected="false" data-tab="sources">📋 منابع</button>
+  <button role="tab" aria-selected="false" data-tab="admin">🛡️ ادمین</button>
+</nav>
+
+<main>
+  <section id="tab-stats">
+    <div class="glass" style="padding:14px">
+      <div id="statsBody" class="hint"><span class="spinner"></span> خواندن index.json…</div>
+    </div>
+  </section>
+  <section id="tab-cats" hidden><div id="catsBody"></div></section>
+  <section id="tab-protos" hidden><div id="protosBody"></div></section>
+  <section id="tab-countries" hidden>
+    <input type="search" id="countryFilter" placeholder="جست‌وجوی کشور…" autocomplete="off">
+    <div id="countriesBody"></div>
+  </section>
+  <section id="tab-sources" hidden><div id="sourcesBody"><span class="spinner"></span></div></section>
+  <section id="tab-admin" hidden><div id="adminBody"></div></section>
+</main>
+
+<div id="fatal" hidden>
+  <h2>داده‌های مخزن در دسترس نیست</h2>
+  <p id="fatalMsg"></p>
+  <p style="margin-top:10px">
+    <a class="btn" id="retry" href="javascript:void 0">تلاش دوباره</a>
+    <a class="btn ghost" id="rawLink" target="_blank" rel="noopener noreferrer">index.json روی GitHub</a>
+  </p>
 </div>
-<footer>farshid78 · farshid78_bot · https://t.me/jojo_config</footer>
+
+<footer>
+  <span id="footBrand">JoJo VPN</span> ·
+  <a id="chanLink" target="_blank" rel="noopener noreferrer">کانال تلگرام</a> ·
+  <a id="repoLink" target="_blank" rel="noopener noreferrer">مخزن</a>
+  <div id="footMeta"></div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var OWNER = "farshid78", REPO = "Free-v2ray-Configs", BRANCH = "main";
+  var RAW = "https://raw.githubusercontent.com/" + OWNER + "/" + REPO + "/" + BRANCH;
+  var CDN = "https://cdn.jsdelivr.net/gh/" + OWNER + "/" + REPO + "@" + BRANCH;
+  var REPO_URL = "https://github.com/" + OWNER + "/" + REPO;
+
+  var params = new URLSearchParams(location.search);
+  // ریشهٔ اختیاری داده (تست آفلاین: ?data=http://127.0.0.1:8123)
+  var DATA_ROOT = (params.get("data") || "").replace(/\/+$/, "");
+  // هندلِ ربات برای دکمه‌های ادمین. `@jojo_config_bot` هنوز در BotFather ساخته
+  // نشده (getChat → «chat not found»)، پس به رباتِ زندهٔ همین مخزن اشاره می‌کنیم
+  // تا هیچ دکمه‌ای به صفحهٔ مرده نرود. بعد از ساختِ آن هندل: ?bot=jojo_config_bot
+  var BOT = (params.get("bot") || "jojo_np_bot").replace(/^@/, "");
+  var CHANNEL = "jojo_config";
+
+  var BASES = DATA_ROOT ? [DATA_ROOT] : [RAW, CDN];
+  var TIMEOUT_MS = 15000;
+
+  var state = { idx: null, health: null, countries: null };
+
+  function $(id) { return document.getElementById(id); }
+  function num(n) { return (typeof n === "number" && isFinite(n)) ? n.toLocaleString("en-US") : "—"; }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  // فقط http(s) — یک فیلدِ آلوده در داده نباید لینکِ javascript:/data: بسازد.
+  // (http لازم است چون تستِ محلی داده را از 127.0.0.1 سرو می‌کند.)
+  function safeUrl(u) {
+    return typeof u === "string" && /^https?:\/\/[^\s"'<>]+$/.test(u) ? u : "";
+  }
+
+  function fetchWithTimeout(url, asJson) {
+    var ctrl = typeof AbortController === "function" ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;
+    var opts = { cache: "no-store", mode: "cors", credentials: "omit" };
+    if (ctrl) opts.signal = ctrl.signal;
+    var p = fetch(url, opts).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status + " · " + url);
+      return asJson ? res.json() : res.text();
+    });
+    return p.then(function (body) {
+      if (timer) clearTimeout(timer);
+      return body;
+    }, function (err) {
+      if (timer) clearTimeout(timer);
+      throw err;
+    });
+  }
+
+  /** خواندن `path` از ریشهٔ داده، سپس آینه؛ خطا فقط وقتی همه شکست بخورند. */
+  function getFile(path, asJson) {
+    var i = 0, lastErr = null;
+    function attempt() {
+      var url = BASES[i] + "/" + path.replace(/^\/+/, "");
+      return fetchWithTimeout(url, asJson).catch(function (err) {
+        lastErr = err; i += 1;
+        if (i < BASES.length) return attempt();
+        throw lastErr;
+      });
+    }
+    return attempt();
+  }
+
+  function ago(iso) {
+    var t = Date.parse(iso || "");
+    if (!t) return "—";
+    var m = Math.max(0, Math.round((Date.now() - t) / 60000));
+    if (m < 1) return "همین حالا";
+    if (m < 60) return m + " دقیقه پیش";
+    var h = Math.round(m / 60);
+    return h < 24 ? h + " ساعت پیش" : Math.round(h / 24) + " روز پیش";
+  }
+
+  /* ── مدلِ دسته‌ها: عددها همان چیزی است که pipeline در index.json می‌نویسد ── */
+  function buckets() {
+    var idx = state.idx || {}, cats = idx.categories || {}, cc = idx.cascade_categories || {};
+    function fromCascade(key, label, icon) {
+      var node = cc[key] || {}, files = node.files || {};
+      return { key: key, label: label, icon: icon, count: node.unique,
+               txt: files.configs_txt, b64: files.configs_base64, note: node.criterion };
+    }
+    var out = [
+      fromCascade("verified", "Verified", "🏆"),
+      fromCascade("fast", "Fast", "⚡"),
+      fromCascade("secure", "Secure", "🔐"),
+      fromCascade("google", "Google", "🟢")
+    ];
+    if (idx.top100) out.push({ key: "top100", label: "۱۰۰ برتر", icon: "🥇",
+                               count: idx.top100.count, txt: idx.top100.url, note: idx.top100.criterion });
+    [["all", "همه", "🌐"], ["heavy", "Heavy", "📦"], ["light", "Light", "⭐"]].forEach(function (b) {
+      var node = cats[b[0]] || {}, files = node.files || {};
+      out.push({ key: b[0], label: b[1], icon: b[2], count: node.unique,
+                 txt: files.configs_txt, b64: files.configs_base64 });
+    });
+    return out;
+  }
+
+  function allCount() {
+    var c = (state.idx || {}).categories || {};
+    return (c.all && c.all.unique) || 0;
+  }
+
+  /* ── رندر ──────────────────────────────────────────────────────────── */
+  function renderHeader() {
+    var idx = state.idx || {};
+    $("logo").textContent = "J";
+    // هندل با dir="ltr" تا در متنِ RTL به شکل «jojo_config@» برنگردد.
+    $("title").innerHTML = 'پنل گلس · <span dir="ltr" style="unicode-bidi:isolate">' +
+      esc(idx.brand || "JoJo VPN") + "</span>";
+    var fresh = (idx.freshness && idx.freshness.cascade) || {};
+    var stale = fresh.state && fresh.state !== "fresh";
+    $("healthDot").className = "dot " + (stale ? "warn" : "ok");
+    $("healthText").textContent = "به‌روزرسانی " + ago(idx.updated_at) +
+      (idx.update_interval_minutes ? " · هر " + idx.update_interval_minutes + " دقیقه" : "");
+    $("brandText").textContent = "";
+    $("chanLink").href = "https://t.me/" + CHANNEL;
+    $("repoLink").href = REPO_URL;
+    $("rawLink").href = RAW + "/index.json";
+    $("footMeta").textContent = (idx.updated_at ? "آخرین داده: " + idx.updated_at.replace("T", " ").slice(0, 19) + " UTC" : "");
+  }
+
+  function renderKpis() {
+    var idx = state.idx || {}, h = state.health || {}, s = h.summary || {};
+    var cc = idx.cascade_categories || {}, c = idx.categories || {};
+    var items = [
+      ["کل کانفیگ", (c.all && c.all.unique)],
+      ["Verified", (cc.verified && cc.verified.unique)],
+      ["۱۰۰ برتر", (idx.top100 && idx.top100.count)],
+      ["کشورها", (idx.countries && idx.countries.count)],
+      ["منابع سالم", s.ok != null ? s.ok + "/" + s.total : (idx.sources && idx.sources.healthy)],
+      ["زمان اجرا", idx.elapsed_seconds != null ? idx.elapsed_seconds + "s" : null]
+    ];
+    $("kpis").innerHTML = items.map(function (it) {
+      return '<div class="glass kpi"><b>' + (typeof it[1] === "number" ? num(it[1]) : esc(it[1] || "—")) +
+             "</b><span>" + esc(it[0]) + "</span></div>";
+    }).join("");
+  }
+
+  function renderStats() {
+    var idx = state.idx || {}, p = idx.protocols || {};
+    var rows = Object.keys(p).filter(function (k) { return p[k] > 0; })
+      .sort(function (a, b) { return p[b] - p[a]; })
+      .map(function (k) {
+        return '<div class="row glass"><span class="t">' + esc(k) + '</span>' +
+               '<span class="c">' + num(p[k]) + "</span></div>";
+      }).join("");
+    var dup = (idx.categories && idx.categories.all && idx.categories.all.duplicates);
+    var fetched = (idx.categories && idx.categories.all && idx.categories.all.total_fetched);
+    $("statsBody").innerHTML =
+      '<div class="hint" style="margin:0 2px 10px">پروتکل‌ها در کلِ استخر (dedup)</div>' + rows +
+      '<div class="hint">در این اجرا ' + num(fetched) + " خط خوانده شد؛ " + num(dup) +
+      " تکراری حذف شد و " + num(allCount()) + " کانفیگِ یکتا ماند.</div>";
+  }
+
+  function previewBlock(id, lines, total, label) {
+    var head = '<div class="hint" style="margin:0 2px 8px">' + esc(label) + " — " +
+      num(lines.length) + " از " + num(total) + " مورد (روی هر خط بزنید تا کپی شود)</div>";
+    var body = '<pre id="' + id + '">' + lines.map(function (l) {
+      return '<span class="cfg" data-copy="' + esc(l) + '">' + esc(l) + "</span>";
+    }).join("\n") + "</pre>";
+    return head + body;
+  }
+
+  function wireCopy(root) {
+    root.addEventListener("click", function (ev) {
+      var el = ev.target.closest("[data-copy]");
+      if (!el) return;
+      var text = el.getAttribute("data-copy");
+      var done = function () {
+        var old = el.textContent;
+        el.textContent = "✓ کپی شد";
+        setTimeout(function () { el.textContent = old; }, 900);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {});
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+
+  function renderCats() {
+    var list = buckets();
+    $("catsBody").innerHTML = list.map(function (b, i) {
+      var txt = safeUrl(b.txt), b64 = safeUrl(b.b64);
+      return '<div class="glass" style="padding:12px 14px;border-radius:14px;margin-bottom:8px">' +
+        '<div style="display:flex;align-items:center;gap:8px">' +
+          '<span style="font-size:16px">' + b.icon + "</span>" +
+          '<span class="t" style="flex:1">' + esc(b.label) + "</span>" +
+          '<span class="c">' + num(b.count) + " کانفیگ</span>" +
+        "</div>" +
+        '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">' +
+          '<button class="btn" data-preview="' + i + '">پیش‌نمایش ۱۰ مورد</button>' +
+          (b64 ? '<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="' + b64 + '">base64</a>' : "") +
+          (txt ? '<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="' + txt + '">فایل کامل</a>' : "") +
+        "</div>" +
+        '<div id="prev-' + i + '"></div>' +
+      "</div>";
+    }).join("");
+
+    $("catsBody").addEventListener("click", function (ev) {
+      var btn = ev.target.closest("[data-preview]");
+      if (!btn) return;
+      var b = list[Number(btn.getAttribute("data-preview"))];
+      var box = $("prev-" + btn.getAttribute("data-preview"));
+      if (!safeUrl(b.txt)) { box.innerHTML = '<div class="hint">فایلی برای این دسته ثبت نشده.</div>'; return; }
+      box.innerHTML = '<div class="hint"><span class="spinner"></span> خواندن ' + esc(b.label) + "…</div>";
+      fetchWithTimeout(safeUrl(b.txt), false).then(function (text) {
+        var lines = text.split(/\r?\n/).filter(function (l) { return l.trim() && l.charAt(0) !== "#"; });
+        box.innerHTML = previewBlock("cfg-" + b.key, lines.slice(0, 10), b.count || lines.length, b.label);
+      }).catch(function (err) {
+        box.innerHTML = '<div class="hint">خواندن نشد (' + esc(err.message) +
+          ') — «فایل کامل» را مستقیم باز کنید.</div>';
+      });
+    });
+    wireCopy($("catsBody"));
+  }
+
+  function renderProtos() {
+    var idx = state.idx || {}, p = idx.protocols || {}, f = idx.protocol_files || {};
+    var keys = Object.keys(p).filter(function (k) { return p[k] > 0; })
+      .sort(function (a, b) { return p[b] - p[a]; });
+    $("protosBody").innerHTML = keys.map(function (k) {
+      var url = safeUrl(f[k]);
+      return '<div class="glass" style="padding:12px 14px;border-radius:14px;margin-bottom:8px">' +
+        '<div style="display:flex;align-items:center;gap:8px">' +
+          '<span class="t" style="flex:1">' + esc(k) + "</span>" +
+          '<span class="c">' + num(p[k]) + "</span></div>" +
+        '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">' +
+          (url ? '<button class="btn" data-purl="' + esc(url) + '" data-pname="' + esc(k) + '">پیش‌نمایش ۱۰ مورد</button>' +
+                 '<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="' + url + '">فایل کامل</a>'
+               : '<span class="hint">فایلی ثبت نشده.</span>') +
+        "</div><div id=\"prev-p-" + esc(k) + '"></div></div>';
+    }).join("");
+
+    $("protosBody").addEventListener("click", function (ev) {
+      var btn = ev.target.closest("[data-purl]");
+      if (!btn) return;
+      var box = $("prev-p-" + btn.getAttribute("data-pname"));
+      box.innerHTML = '<div class="hint"><span class="spinner"></span> خواندن…</div>';
+      fetchWithTimeout(btn.getAttribute("data-purl"), false).then(function (text) {
+        var lines = text.split(/\r?\n/).filter(function (l) { return l.trim() && l.charAt(0) !== "#"; });
+        box.innerHTML = previewBlock("cfg-p", lines.slice(0, 10), lines.length, btn.getAttribute("data-pname"));
+      }).catch(function (err) {
+        box.innerHTML = '<div class="hint">خواندن نشد (' + esc(err.message) + ").</div>";
+      });
+    });
+    wireCopy($("protosBody"));
+  }
+
+  function renderCountries() {
+    var list = (state.countries && state.countries.countries) || [];
+    var q = ($("countryFilter").value || "").trim().toLowerCase();
+    var shown = list.filter(function (c) {
+      return !q || (c.name || "").toLowerCase().indexOf(q) >= 0 ||
+             (c.code || "").toLowerCase().indexOf(q) >= 0;
+    });
+    $("countriesBody").innerHTML = shown.length ? shown.map(function (c) {
+      var url = safeUrl(BASES[0] + "/" + c.file);
+      return '<div class="glass" style="padding:11px 14px;border-radius:14px;margin-bottom:7px">' +
+        '<div style="display:flex;align-items:center;gap:9px">' +
+          "<span>" + esc(c.flag || "🏳️") + "</span>" +
+          '<span class="t" style="flex:1">' + esc(c.name) + ' <span class="c">' + esc(c.code) + "</span></span>" +
+          '<span class="c">' + num(c.count) + "</span>" +
+          (url ? '<button class="btn" data-curl="' + esc(url) + '" data-cname="' + esc(c.code || c.name) + '">نمایش</button>' : "") +
+        "</div><div id=\"prev-c-" + esc(c.code || "") + '"></div></div>';
+    }).join("") : '<div class="hint">کشوری با این نام پیدا نشد.</div>';
+
+    if (!$("countriesBody").dataset.wired) {
+      $("countriesBody").dataset.wired = "1";
+      $("countriesBody").addEventListener("click", function (ev) {
+        var btn = ev.target.closest("[data-curl]");
+        if (!btn) return;
+        var box = $("prev-c-" + btn.getAttribute("data-cname"));
+        box.innerHTML = '<div class="hint"><span class="spinner"></span> خواندن…</div>';
+        fetchWithTimeout(btn.getAttribute("data-curl"), false).then(function (text) {
+          var lines = text.split(/\r?\n/).filter(function (l) { return l.trim() && l.charAt(0) !== "#"; });
+          box.innerHTML = previewBlock("cfg-c", lines.slice(0, 10), lines.length, btn.getAttribute("data-cname"));
+        }).catch(function (err) {
+          box.innerHTML = '<div class="hint">خواندن نشد (' + esc(err.message) + ").</div>";
+        });
+      });
+      wireCopy($("countriesBody"));
+    }
+  }
+
+  function renderSources() {
+    var h = state.health || {}, s = h.summary || {}, rows = h.sources || [];
+    if (!rows.length) { $("sourcesBody").innerHTML = '<div class="hint">health.json در دسترس نیست.</div>'; return; }
+    var body = rows.map(function (r) {
+      var cls = r.status === "ok" ? "" : (r.status === "empty" ? " empty" : (r.status === "fail" ? " fail" : " disabled"));
+      return "<tr><td>" + esc(r.name) + '<div class="c">' + esc(r.tier) + "</div></td>" +
+        '<td><span class="chip' + cls + '">' + esc(r.status) + "</span></td>" +
+        '<td class="c">' + num(r.count) + "</td>" +
+        '<td class="c">' + (r.latency_ms != null ? r.latency_ms + "ms" : "—") + "</td></tr>";
+    }).join("");
+    $("sourcesBody").innerHTML =
+      '<div class="glass" style="padding:12px 14px;border-radius:14px">' +
+      '<div class="hint" style="margin:0 0 8px">' + num(s.ok) + " سالم از " + num(s.total) +
+      " منبع · " + num(s.disabled) + " خاموش" +
+      (h.checked_at ? " · " + ago(h.checked_at) : "") + "</div>" +
+      "<table><thead><tr><th>منبع</th><th>وضعیت</th><th>کانفیگ</th><th>تأخیر</th></tr></thead><tbody>" +
+      body + "</tbody></table></div>" +
+      '<div class="hint">افزودن/خاموش‌کردن منبع و اجرای دستیِ تجمیع از پنل ادمینِ ربات انجام می‌شود ' +
+      '(دکمهٔ «📋 منابع»). این صفحه فقط‌خواندنی است.</div>';
+  }
+
+  function renderAdmin() {
+    var idx = state.idx || {}, h = state.health || {}, s = h.summary || {};
+    var cards = [
+      ["📊 آمار پروژه", num(allCount()) + " کانفیگ · " + num(idx.countries && idx.countries.count) + " کشور", "stats"],
+      ["📋 منابع و آنالیز", num(s.ok) + " سالم از " + num(s.total) + " منبع", "sources"],
+      ["🔄 اجرای تجمیع", "Trigger aggregate-now از ربات", "bot"],
+      ["📢 Broadcast", "ارسال پیام به کاربرانِ ربات", "bot"],
+      ["➕ افزودن منبع", "URL منبع را در ربات بفرستید", "bot"],
+      ["🛡️ افزودن/حذف ادمین", "فقط مالک (OWNER_ID)", "bot"]
+    ];
+    $("adminBody").innerHTML = cards.map(function (c) {
+      var action = c[2] === "bot"
+        ? '<a class="btn" target="_blank" rel="noopener noreferrer" href="https://t.me/' + esc(BOT) + '">در ربات</a>'
+        : '<button class="btn ghost" data-goto="' + c[2] + '">باز کردن</button>';
+      return '<div class="glass" style="padding:12px 14px;border-radius:14px;margin-bottom:8px">' +
+        '<div style="display:flex;align-items:center;gap:10px">' +
+          '<div style="flex:1"><div class="t">' + esc(c[0]) + '</div><div class="c">' + esc(c[1]) + "</div></div>" +
+          action + "</div></div>";
+    }).join("") +
+      '<div class="hint">اقداماتِ نوشتاری (اجرا، broadcast، منابع، ادمین) به‌خاطرِ امنیت فقط در ربات انجام می‌شوند؛ ' +
+      "این پنل همان آمار و منابعِ واقعی را نشان می‌دهد و شما را به رباتِ زنده وصل می‌کند.</div>";
+
+    $("adminBody").addEventListener("click", function (ev) {
+      var b = ev.target.closest("[data-goto]");
+      if (b) selectTab(b.getAttribute("data-goto"));
+    });
+  }
+
+  function selectTab(name) {
+    document.querySelectorAll("nav button").forEach(function (b) {
+      b.setAttribute("aria-selected", String(b.getAttribute("data-tab") === name));
+    });
+    ["stats", "cats", "protos", "countries", "sources", "admin"].forEach(function (t) {
+      $("tab-" + t).hidden = t !== name;
+    });
+    if (name === "countries" && !state.countries) loadCountries();
+  }
+
+  function fatal(err) {
+    $("fatal").hidden = false;
+    $("fatalMsg").textContent = "همهٔ مسیرها امتحان شدند (raw و آینهٔ jsDelivr). آخرین خطا: " +
+      (err && err.message ? err.message : "نامشخص") + ". اتصال شبکه یا فیلترِ ISP را بررسی کنید.";
+    $("statsBody").innerHTML = '<span class="hint">داده خوانده نشد.</span>';
+    $("healthDot").className = "dot bad";
+    $("healthText").textContent = "بدون داده";
+  }
+
+  function loadCountries() {
+    $("countriesBody").innerHTML = '<div class="hint"><span class="spinner"></span> خواندن Countries/index.json…</div>';
+    getFile("Countries/index.json", true).then(function (data) {
+      state.countries = data;
+      renderCountries();
+    }).catch(function (err) {
+      $("countriesBody").innerHTML = '<div class="hint">فهرست کشورها خوانده نشد (' + esc(err.message) +
+        ') — از ربات (فیلتر کشور) استفاده کنید.</div>';
+    });
+  }
+
+  function boot() {
+    $("kpis").innerHTML = '<div class="glass kpi"><b>…</b><span>در حال بارگذاری</span></div>';
+    getFile("index.json", true).then(function (idx) {
+      state.idx = idx;
+      renderHeader(); renderKpis(); renderStats(); renderCats(); renderProtos(); renderAdmin();
+      selectTab("stats");
+      return getFile("health.json", true).then(function (h) {
+        state.health = h;
+        renderKpis(); renderSources(); renderAdmin();
+      }).catch(function () { renderSources(); });
+    }).catch(function (err) {
+      fatal(err);
+    });
+  }
+
+  document.querySelectorAll("nav button").forEach(function (b) {
+    b.addEventListener("click", function () { selectTab(b.getAttribute("data-tab")); });
+  });
+  $("countryFilter").addEventListener("input", function () { renderCountries(); });
+  $("retry").addEventListener("click", function (ev) {
+    ev.preventDefault();
+    $("fatal").hidden = true;
+    boot();
+  });
+
+  boot();
+})();
+</script>
 </body>
 </html>

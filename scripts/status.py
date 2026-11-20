@@ -570,6 +570,29 @@ def publish() -> bool:
                         data["bot"]["heartbeat_age_s"] = _age
                         data["bot"]["online"] = bool(
                             data["bot"].get("online")) and _age <= 300
+            # حفظِ cycle/counts/workflows/history/lock از remote وقتی محلی
+            # خالی است (رباتِ زنده هیچ‌کدام را نمی‌نویسد و نباید دادهٔ
+            # چرخهٔ aggregate را پاک کند).
+            _rc = _remote.get("cycle")
+            if isinstance(_rc, dict) and _rc.get("id") is not None and not (
+                    isinstance(data.get("cycle"), dict) and data["cycle"].get("id") is not None):
+                data["cycle"] = dict(_rc)
+            _rcounts = _remote.get("counts")
+            if isinstance(_rcounts, dict) and _rcounts and not (data.get("counts") or {}):
+                data["counts"] = dict(_rcounts)
+            _rlock = _remote.get("lock")
+            if isinstance(_rlock, dict) and (_rlock.get("owner") or _rlock.get("fencing_token")) and not (
+                    isinstance(data.get("lock"), dict) and (data["lock"].get("owner") or data["lock"].get("fencing_token"))):
+                data["lock"] = dict(_rlock)
+            _rworkflows = _remote.get("workflows")
+            if isinstance(_rworkflows, dict):
+                _lworkflows = data.setdefault("workflows", {})
+                for _k, _v in _rworkflows.items():
+                    if _k not in _lworkflows:
+                        _lworkflows[_k] = _v
+            _rhistory = _remote.get("history")
+            if isinstance(_rhistory, list) and len(_rhistory) > len(data.get("history") or []):
+                data["history"] = list(_rhistory)
     except Exception:
         pass
     # کپیِ منتشرشده نباید رکوردهای حجیمِ محلی را ببرد؛ همان ساختار کافی است.

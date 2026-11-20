@@ -9,4 +9,4 @@
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&type=grpc&serviceName=ebl&mode=multi&security=reality&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fm=#IR 🇮🇷 | @jojo_config | EF1170
 vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?encryption=none&type=grpc&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&fp=firefox&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU#IR 🇮🇷 | @jojo_config | C12062
-vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?mode=gun&security=reality&encryption=none&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&type=grpc&serviceName=ebl&sni=optim.tildacdn.pub#IR 🇮🇷 | @jojo_config | 63B499
+vless://bee52362-4183-42c5-b065-d3a3f344d00c@p2tun1.greewebservices.ir:2053?headerType=none&security=reality&fp=chrome&pbk=ZlyoIAVvDFN8KARLfQv1-OHD2ivwIwNcZbcqY5Qz2Fo&sid=fac9ca37589c58de&type=tcp&encryption=none&sni=www.aparat.com#IR 🇮🇷 | @jojo_config | 4BC90B

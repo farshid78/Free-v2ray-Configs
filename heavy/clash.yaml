@@ -1228,7 +1228,7 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: "GB \U0001F1EC\U0001F1E7 | @jojo_config | 52DB82"
+- name: "Global \U0001F310 | @jojo_config | 52DB82"
   server: leviko-gb2271.shopingggg.ir
   port: 443
   type: ss
@@ -3938,7 +3938,7 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
   udp: true
-- name: "AL \U0001F1E6\U0001F1F1 | @jojo_config | 987C81"
+- name: "Global \U0001F310 | @jojo_config | 987C81"
   server: leviko-al6761.shopingggg.ir
   port: 43558
   type: ss
@@ -4491,7 +4491,7 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
   udp: true
-- name: "IE \U0001F1EE\U0001F1EA | @jojo_config | D42354"
+- name: "Global \U0001F310 | @jojo_config | D42354"
   server: leviko-ie6840.shopingggg.ir
   port: 443
   type: ss
@@ -7870,7 +7870,7 @@ proxies:
   udp: true
   sni: cdn.yourultimateprofessionalcareerhub.com
   network: tcp
-- name: "CL \U0001F1E8\U0001F1F1 | @jojo_config | 590A4E"
+- name: "Global \U0001F310 | @jojo_config | 590A4E"
   server: leviko-cl7123.shopingggg.ir
   port: 443
   type: trojan
@@ -19092,7 +19092,7 @@ proxies:
     short-id: 4d3d8e15
   client-fingerprint: chrome
   network: tcp
-- name: "TR \U0001F1F9\U0001F1F7 | @jojo_config | EFE6E1"
+- name: "Global \U0001F310 | @jojo_config | EFE6E1"
   server: leviko-tr3098.shopingggg.ir
   port: 43000
   type: vless
@@ -19647,7 +19647,7 @@ proxies:
     short-id: 7da3ba09a037e956
   client-fingerprint: chrome
   network: tcp
-- name: "GE \U0001F1EC\U0001F1EA | @jojo_config | F35CB1"
+- name: "Global \U0001F310 | @jojo_config | F35CB1"
   server: leviko-ge0115.shopingggg.ir
   port: 8443
   type: vless
@@ -21780,7 +21780,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ebl
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | 3262CC"
+- name: "Global \U0001F310 | @jojo_config | 3262CC"
   server: music.3apes.online
   port: 443
   type: vless
@@ -25046,7 +25046,7 @@ proxies:
   flow: xtls-rprx-vision
   servername: 146.19.254.171
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @jojo_config | 8FCC6C"
+- name: "Global \U0001F310 | @jojo_config | 8FCC6C"
   server: leviko-nl2559.shopingggg.ir
   port: 8443
   type: vless
@@ -26209,7 +26209,7 @@ proxies:
     short-id: 6ba85179e30d4fc2
   client-fingerprint: chrome
   network: tcp
-- name: "RU \U0001F1F7\U0001F1FA | @jojo_config | CFF4FB"
+- name: "Global \U0001F310 | @jojo_config | CFF4FB"
   server: leviko-ru1148.shopingggg.ir
   port: 8443
   type: vless
@@ -27705,7 +27705,7 @@ proxies:
     short-id: ''
   client-fingerprint: chrome
   network: tcp
-- name: "US \U0001F1FA\U0001F1F8 | @jojo_config | 125C36"
+- name: "Global \U0001F310 | @jojo_config | 125C36"
   server: leviko-se3078.shopingggg.ir
   port: 59539
   type: vless
@@ -31423,7 +31423,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: "SE \U0001F1F8\U0001F1EA | @jojo_config | FC9BE8"
+- name: "Global \U0001F310 | @jojo_config | FC9BE8"
   server: leviko-se8900.shopingggg.ir
   port: 443
   type: vless
@@ -36421,7 +36421,7 @@ proxies:
     short-id: ''
   client-fingerprint: chrome
   network: tcp
-- name: "TR \U0001F1F9\U0001F1F7 | @jojo_config | 4D4B8F"
+- name: "Global \U0001F310 | @jojo_config | 4D4B8F"
   server: leviko-tr1359.shopingggg.ir
   port: 443
   type: vless
@@ -39573,7 +39573,7 @@ proxies:
   servername: base.hosamobenl.co.uk
   client-fingerprint: chrome
   network: tcp
-- name: "IR \U0001F1EE\U0001F1F7 | @jojo_config | 4FFAF6"
+- name: "Global \U0001F310 | @jojo_config | 4FFAF6"
   server: leviko-ir8553.shopingggg.ir
   port: 443
   type: vless
@@ -41332,7 +41332,7 @@ proxies:
     short-id: 9f1fc5a631ef3126
   client-fingerprint: chrome
   network: tcp
-- name: "US \U0001F1FA\U0001F1F8 | @jojo_config | 3E7211"
+- name: "Global \U0001F310 | @jojo_config | 3E7211"
   server: leviko-us2057.shopingggg.ir
   port: 443
   type: vless
@@ -41374,7 +41374,7 @@ proxies:
     short-id: cb33163cf9c03ab1
   client-fingerprint: chrome
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | FB0723"
+- name: "Global \U0001F310 | @jojo_config | FB0723"
   server: leviko-de6003.shopingggg.ir
   port: 443
   type: vless
@@ -44615,7 +44615,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vpnjantit
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | E70AE6"
+- name: "Global \U0001F310 | @jojo_config | E70AE6"
   server: leviko-de4473.shopingggg.ir
   port: 10004
   type: vless
@@ -47531,7 +47531,7 @@ proxies:
     short-id: 945974883e
   client-fingerprint: chrome
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @jojo_config | 092FF3"
+- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | 092FF3"
   server: cdn7-39.vk-cdnvideo.com
   port: 8443
   type: vless
@@ -50368,7 +50368,7 @@ proxies:
     short-id: 705f0a232571
   client-fingerprint: chrome
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @jojo_config | 9B5491"
+- name: "GB \U0001F1EC\U0001F1E7 | @jojo_config | 9B5491"
   server: leviko-nl0448.shopingggg.ir
   port: 443
   type: vless
@@ -51083,7 +51083,7 @@ proxies:
     short-id: ''
   client-fingerprint: chrome
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | A87E8A"
+- name: "Global \U0001F310 | @jojo_config | A87E8A"
   server: leviko-de8370.shopingggg.ir
   port: 443
   type: vless
@@ -51244,7 +51244,7 @@ proxies:
     path: /api/v1/sync/
     host: bl1.nexfile.net
     mode: auto
-- name: "BY \U0001F1E7\U0001F1FE | @jojo_config | E8DFA0"
+- name: "BR \U0001F1E7\U0001F1F7 | @jojo_config | E8DFA0"
   server: leviko-pl7089.shopingggg.ir
   port: 4443
   type: vless
@@ -52566,7 +52566,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | DC4D75"
+- name: "Global \U0001F310 | @jojo_config | DC4D75"
   server: leviko-de3504.shopingggg.ir
   port: 59397
   type: vless
@@ -54577,7 +54577,7 @@ proxies:
     path: /vless
     headers:
       Host: 178.172.227.228
-- name: "BY \U0001F1E7\U0001F1FE | @jojo_config | 9F1A67"
+- name: "Global \U0001F310 | @jojo_config | 9F1A67"
   server: leviko-by6237.shopingggg.ir
   port: 14430
   type: vless
@@ -55836,7 +55836,7 @@ proxies:
     path: /admin.php
     headers:
       Host: ratatouille.adaspoloandco.com
-- name: "SE \U0001F1F8\U0001F1EA | @jojo_config | 2AFF3F"
+- name: "Global \U0001F310 | @jojo_config | 2AFF3F"
   server: leviko-se9938.shopingggg.ir
   port: 443
   type: vless
@@ -57212,7 +57212,7 @@ proxies:
     path: /
     headers:
       Host: suh.cryptofront.uk
-- name: "GB \U0001F1EC\U0001F1E7 | @jojo_config | 853E65"
+- name: "Global \U0001F310 | @jojo_config | 853E65"
   server: leviko-fr5882.shopingggg.ir
   port: 80
   type: vless
@@ -62752,7 +62752,7 @@ proxies:
     short-id: 15affa0af66dfc79
   client-fingerprint: chrome
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | @jojo_config | 531EBC"
+- name: "Global \U0001F310 | @jojo_config | 531EBC"
   server: leviko-nl6411.shopingggg.ir
   port: 443
   type: vless
@@ -65973,7 +65973,7 @@ proxies:
     path: /?ed=2560
     headers:
       Host: mh.sudonetwork.com
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | A6CA0F"
+- name: "FI \U0001F1EB\U0001F1EE | @jojo_config | A6CA0F"
   server: www.tgju.org
   port: 443
   type: vless
@@ -67467,7 +67467,7 @@ proxies:
     path: /fp=chrome
     headers:
       Host: edgetunnel-4uw.pages.dev
-- name: "DE \U0001F1E9\U0001F1EA | @jojo_config | 0AAE40"
+- name: "Global \U0001F310 | @jojo_config | 0AAE40"
   server: leviko-de2375.shopingggg.ir
   port: 443
   type: vless
@@ -73849,7 +73849,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 088543"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 02CE4D"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | BB7720"
-  - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 52DB82"
+  - "Global \U0001F310 | @jojo_config | 52DB82"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 261A44"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 5F81E9"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 45AF12"
@@ -74225,7 +74225,7 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @jojo_config | 33142D"
   - "IE \U0001F1EE\U0001F1EA | @jojo_config | C05363"
   - "AL \U0001F1E6\U0001F1F1 | @jojo_config | 6A1329"
-  - "AL \U0001F1E6\U0001F1F1 | @jojo_config | 987C81"
+  - "Global \U0001F310 | @jojo_config | 987C81"
   - "IE \U0001F1EE\U0001F1EA | @jojo_config | B19888"
   - "ZA \U0001F1FF\U0001F1E6 | @jojo_config | 227B68"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 0F4F6B"
@@ -74304,7 +74304,7 @@ proxy-groups:
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 5974FD"
   - "UA \U0001F1FA\U0001F1E6 | @jojo_config | A0C3E0"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 56D7B9"
-  - "IE \U0001F1EE\U0001F1EA | @jojo_config | D42354"
+  - "Global \U0001F310 | @jojo_config | D42354"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 210149"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 55CCE7"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | B3BBE9"
@@ -74700,7 +74700,7 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 86D8CB"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 5ADB5B"
   - "Global \U0001F310 | @jojo_config | B36FE6"
-  - "CL \U0001F1E8\U0001F1F1 | @jojo_config | 590A4E"
+  - "Global \U0001F310 | @jojo_config | 590A4E"
   - "Global \U0001F310 | @jojo_config | 862D3B"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | BC9C34"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | A6C8F7"
@@ -75994,7 +75994,7 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | @jojo_config | 4C06F3"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | F8BDF5"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | C12F5D"
-  - "TR \U0001F1F9\U0001F1F7 | @jojo_config | EFE6E1"
+  - "Global \U0001F310 | @jojo_config | EFE6E1"
   - "Global \U0001F310 | @jojo_config | AD2C2C"
   - "FR \U0001F1EB\U0001F1F7 | @jojo_config | DAD601"
   - "Global \U0001F310 | @jojo_config | 794B01"
@@ -76037,7 +76037,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 5CA778"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | B858C7"
   - "GE \U0001F1EC\U0001F1EA | @jojo_config | 28859B"
-  - "GE \U0001F1EC\U0001F1EA | @jojo_config | F35CB1"
+  - "Global \U0001F310 | @jojo_config | F35CB1"
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 5EE46A"
   - "FR \U0001F1EB\U0001F1F7 | @jojo_config | 5DEF06"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | EFC7C0"
@@ -76196,7 +76196,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | F09B30"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 69D2AF"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | C12062"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 3262CC"
+  - "Global \U0001F310 | @jojo_config | 3262CC"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 57833A"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | DAAF31"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 0C49D0"
@@ -76445,7 +76445,7 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 971E01"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 835BFF"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 5D8D32"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 8FCC6C"
+  - "Global \U0001F310 | @jojo_config | 8FCC6C"
   - "Global \U0001F310 | @jojo_config | 6E94F6"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9C8632"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | BC08E1"
@@ -76534,7 +76534,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8B2A2D"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9F6B9E"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 96B587"
-  - "RU \U0001F1F7\U0001F1FA | @jojo_config | CFF4FB"
+  - "Global \U0001F310 | @jojo_config | CFF4FB"
   - "Global \U0001F310 | @jojo_config | CA6523"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 0D4FF9"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | F9CF54"
@@ -76644,7 +76644,7 @@ proxy-groups:
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | E212FF"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | C73F3D"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 4B70AB"
-  - "US \U0001F1FA\U0001F1F8 | @jojo_config | 125C36"
+  - "Global \U0001F310 | @jojo_config | 125C36"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 7CC4D3"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 00305B"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 04F4F5"
@@ -76927,7 +76927,7 @@ proxy-groups:
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | E2E641"
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | A71691"
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | 02B473"
-  - "SE \U0001F1F8\U0001F1EA | @jojo_config | FC9BE8"
+  - "Global \U0001F310 | @jojo_config | FC9BE8"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 475BB6"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 50B902"
   - "IL \U0001F1EE\U0001F1F1 | @jojo_config | B6A72D"
@@ -77298,7 +77298,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8B0E40"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 3A06E5"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 8C6852"
-  - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 4D4B8F"
+  - "Global \U0001F310 | @jojo_config | 4D4B8F"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | F0966B"
   - "Global \U0001F310 | @jojo_config | 897FD7"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 5DE5B3"
@@ -77536,7 +77536,7 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 6AC1C8"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D53BE2"
   - "Global \U0001F310 | @jojo_config | F98BAF"
-  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 4FFAF6"
+  - "Global \U0001F310 | @jojo_config | 4FFAF6"
   - "FI \U0001F1EB\U0001F1EE | @jojo_config | D73D76"
   - "Global \U0001F310 | @jojo_config | 497649"
   - "Global \U0001F310 | @jojo_config | 3BACAA"
@@ -77672,10 +77672,10 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | C2FC67"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | C9C4C6"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 92088C"
-  - "US \U0001F1FA\U0001F1F8 | @jojo_config | 3E7211"
+  - "Global \U0001F310 | @jojo_config | 3E7211"
   - "Global \U0001F310 | @jojo_config | AF6712"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 75C614"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | FB0723"
+  - "Global \U0001F310 | @jojo_config | FB0723"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 3EB302"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 292724"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 6049E7"
@@ -77921,7 +77921,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 1E71AB"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 4E1F54"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 20B009"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | E70AE6"
+  - "Global \U0001F310 | @jojo_config | E70AE6"
   - "Global \U0001F310 | @jojo_config | 06A288"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 748385"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 5FA0AA"
@@ -78143,7 +78143,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 855E2C"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | B81BB1"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | 66117E"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 092FF3"
+  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 092FF3"
   - "Global \U0001F310 | @jojo_config | C80870"
   - "Global \U0001F310 | @jojo_config | A75A33"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 52C594"
@@ -78360,7 +78360,7 @@ proxy-groups:
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 9C93B7"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 4A69F2"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | F02A59"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 9B5491"
+  - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 9B5491"
   - "Global \U0001F310 | @jojo_config | 34850A"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | B7361E"
   - "VN \U0001F1FB\U0001F1F3 | @jojo_config | 11024B"
@@ -78413,7 +78413,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 481E00"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | F9DA6F"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | D2858D"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | A87E8A"
+  - "Global \U0001F310 | @jojo_config | A87E8A"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | A91982"
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 4127FF"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | CECFE4"
@@ -78425,7 +78425,7 @@ proxy-groups:
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 28FE4A"
   - "BY \U0001F1E7\U0001F1FE | @jojo_config | 4395D6"
   - "Global \U0001F310 | @jojo_config | C92212"
-  - "BY \U0001F1E7\U0001F1FE | @jojo_config | E8DFA0"
+  - "BR \U0001F1E7\U0001F1F7 | @jojo_config | E8DFA0"
   - "LV \U0001F1F1\U0001F1FB | @jojo_config | 5E738C"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 7F1B58"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | EF98AB"
@@ -78522,7 +78522,7 @@ proxy-groups:
   - "GE \U0001F1EC\U0001F1EA | @jojo_config | 54BD91"
   - "SC \U0001F1F8\U0001F1E8 | @jojo_config | D6C5A4"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | A576B7"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | DC4D75"
+  - "Global \U0001F310 | @jojo_config | DC4D75"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 8BFC7F"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | EDB3A8"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 003ABF"
@@ -78671,7 +78671,7 @@ proxy-groups:
   - "BY \U0001F1E7\U0001F1FE | @jojo_config | 77CE15"
   - "BY \U0001F1E7\U0001F1FE | @jojo_config | 7917B4"
   - "Global \U0001F310 | @jojo_config | 748EAA"
-  - "BY \U0001F1E7\U0001F1FE | @jojo_config | 9F1A67"
+  - "Global \U0001F310 | @jojo_config | 9F1A67"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 3A20A4"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 4CEA9C"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 5B1D88"
@@ -78768,7 +78768,7 @@ proxy-groups:
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | DB3621"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | B144A7"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | F204C5"
-  - "SE \U0001F1F8\U0001F1EA | @jojo_config | 2AFF3F"
+  - "Global \U0001F310 | @jojo_config | 2AFF3F"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 9B975B"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 6BBC0F"
   - "FI \U0001F1EB\U0001F1EE | @jojo_config | 85D16D"
@@ -78876,7 +78876,7 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 3F31AA"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 77FB06"
   - "Global \U0001F310 | @jojo_config | 4F7CA4"
-  - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 853E65"
+  - "Global \U0001F310 | @jojo_config | 853E65"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | F0E764"
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | 35A14E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | B0D3A0"
@@ -79289,7 +79289,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 0C6FE3"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 839CF6"
   - "Global \U0001F310 | @jojo_config | A23944"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 531EBC"
+  - "Global \U0001F310 | @jojo_config | 531EBC"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D823AF"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | F76F03"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 28311D"
@@ -79542,7 +79542,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | DFE156"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 871FF2"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | D9FE93"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | A6CA0F"
+  - "FI \U0001F1EB\U0001F1EE | @jojo_config | A6CA0F"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 5BE7E1"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 196378"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 2A8DB5"
@@ -79659,7 +79659,7 @@ proxy-groups:
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 98D48E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | AFA490"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | B9B241"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 0AAE40"
+  - "Global \U0001F310 | @jojo_config | 0AAE40"
   - "Global \U0001F310 | @jojo_config | 2E30FC"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 26394F"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 07C186"
@@ -80329,7 +80329,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 088543"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 02CE4D"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | BB7720"
-  - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 52DB82"
+  - "Global \U0001F310 | @jojo_config | 52DB82"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 261A44"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 5F81E9"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 45AF12"
@@ -80705,7 +80705,7 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | @jojo_config | 33142D"
   - "IE \U0001F1EE\U0001F1EA | @jojo_config | C05363"
   - "AL \U0001F1E6\U0001F1F1 | @jojo_config | 6A1329"
-  - "AL \U0001F1E6\U0001F1F1 | @jojo_config | 987C81"
+  - "Global \U0001F310 | @jojo_config | 987C81"
   - "IE \U0001F1EE\U0001F1EA | @jojo_config | B19888"
   - "ZA \U0001F1FF\U0001F1E6 | @jojo_config | 227B68"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 0F4F6B"
@@ -80784,7 +80784,7 @@ proxy-groups:
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 5974FD"
   - "UA \U0001F1FA\U0001F1E6 | @jojo_config | A0C3E0"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 56D7B9"
-  - "IE \U0001F1EE\U0001F1EA | @jojo_config | D42354"
+  - "Global \U0001F310 | @jojo_config | D42354"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 210149"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 55CCE7"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | B3BBE9"
@@ -81180,7 +81180,7 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 86D8CB"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 5ADB5B"
   - "Global \U0001F310 | @jojo_config | B36FE6"
-  - "CL \U0001F1E8\U0001F1F1 | @jojo_config | 590A4E"
+  - "Global \U0001F310 | @jojo_config | 590A4E"
   - "Global \U0001F310 | @jojo_config | 862D3B"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | BC9C34"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | A6C8F7"
@@ -82474,7 +82474,7 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | @jojo_config | 4C06F3"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | F8BDF5"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | C12F5D"
-  - "TR \U0001F1F9\U0001F1F7 | @jojo_config | EFE6E1"
+  - "Global \U0001F310 | @jojo_config | EFE6E1"
   - "Global \U0001F310 | @jojo_config | AD2C2C"
   - "FR \U0001F1EB\U0001F1F7 | @jojo_config | DAD601"
   - "Global \U0001F310 | @jojo_config | 794B01"
@@ -82517,7 +82517,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 5CA778"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | B858C7"
   - "GE \U0001F1EC\U0001F1EA | @jojo_config | 28859B"
-  - "GE \U0001F1EC\U0001F1EA | @jojo_config | F35CB1"
+  - "Global \U0001F310 | @jojo_config | F35CB1"
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 5EE46A"
   - "FR \U0001F1EB\U0001F1F7 | @jojo_config | 5DEF06"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | EFC7C0"
@@ -82676,7 +82676,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | F09B30"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 69D2AF"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | C12062"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 3262CC"
+  - "Global \U0001F310 | @jojo_config | 3262CC"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 57833A"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | DAAF31"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 0C49D0"
@@ -82925,7 +82925,7 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 971E01"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 835BFF"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 5D8D32"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 8FCC6C"
+  - "Global \U0001F310 | @jojo_config | 8FCC6C"
   - "Global \U0001F310 | @jojo_config | 6E94F6"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9C8632"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | BC08E1"
@@ -83014,7 +83014,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8B2A2D"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 9F6B9E"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 96B587"
-  - "RU \U0001F1F7\U0001F1FA | @jojo_config | CFF4FB"
+  - "Global \U0001F310 | @jojo_config | CFF4FB"
   - "Global \U0001F310 | @jojo_config | CA6523"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 0D4FF9"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | F9CF54"
@@ -83124,7 +83124,7 @@ proxy-groups:
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | E212FF"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | C73F3D"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 4B70AB"
-  - "US \U0001F1FA\U0001F1F8 | @jojo_config | 125C36"
+  - "Global \U0001F310 | @jojo_config | 125C36"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 7CC4D3"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 00305B"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 04F4F5"
@@ -83407,7 +83407,7 @@ proxy-groups:
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | E2E641"
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | A71691"
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | 02B473"
-  - "SE \U0001F1F8\U0001F1EA | @jojo_config | FC9BE8"
+  - "Global \U0001F310 | @jojo_config | FC9BE8"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 475BB6"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 50B902"
   - "IL \U0001F1EE\U0001F1F1 | @jojo_config | B6A72D"
@@ -83778,7 +83778,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 8B0E40"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 3A06E5"
   - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 8C6852"
-  - "TR \U0001F1F9\U0001F1F7 | @jojo_config | 4D4B8F"
+  - "Global \U0001F310 | @jojo_config | 4D4B8F"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | F0966B"
   - "Global \U0001F310 | @jojo_config | 897FD7"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 5DE5B3"
@@ -84016,7 +84016,7 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 6AC1C8"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D53BE2"
   - "Global \U0001F310 | @jojo_config | F98BAF"
-  - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 4FFAF6"
+  - "Global \U0001F310 | @jojo_config | 4FFAF6"
   - "FI \U0001F1EB\U0001F1EE | @jojo_config | D73D76"
   - "Global \U0001F310 | @jojo_config | 497649"
   - "Global \U0001F310 | @jojo_config | 3BACAA"
@@ -84152,10 +84152,10 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | C2FC67"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | C9C4C6"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 92088C"
-  - "US \U0001F1FA\U0001F1F8 | @jojo_config | 3E7211"
+  - "Global \U0001F310 | @jojo_config | 3E7211"
   - "Global \U0001F310 | @jojo_config | AF6712"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 75C614"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | FB0723"
+  - "Global \U0001F310 | @jojo_config | FB0723"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 3EB302"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 292724"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 6049E7"
@@ -84401,7 +84401,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 1E71AB"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 4E1F54"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 20B009"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | E70AE6"
+  - "Global \U0001F310 | @jojo_config | E70AE6"
   - "Global \U0001F310 | @jojo_config | 06A288"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 748385"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | 5FA0AA"
@@ -84623,7 +84623,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 855E2C"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | B81BB1"
   - "HK \U0001F1ED\U0001F1F0 | @jojo_config | 66117E"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 092FF3"
+  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 092FF3"
   - "Global \U0001F310 | @jojo_config | C80870"
   - "Global \U0001F310 | @jojo_config | A75A33"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 52C594"
@@ -84840,7 +84840,7 @@ proxy-groups:
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 9C93B7"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 4A69F2"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | F02A59"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 9B5491"
+  - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 9B5491"
   - "Global \U0001F310 | @jojo_config | 34850A"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | B7361E"
   - "VN \U0001F1FB\U0001F1F3 | @jojo_config | 11024B"
@@ -84893,7 +84893,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 481E00"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | F9DA6F"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | D2858D"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | A87E8A"
+  - "Global \U0001F310 | @jojo_config | A87E8A"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | A91982"
   - "PL \U0001F1F5\U0001F1F1 | @jojo_config | 4127FF"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | CECFE4"
@@ -84905,7 +84905,7 @@ proxy-groups:
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 28FE4A"
   - "BY \U0001F1E7\U0001F1FE | @jojo_config | 4395D6"
   - "Global \U0001F310 | @jojo_config | C92212"
-  - "BY \U0001F1E7\U0001F1FE | @jojo_config | E8DFA0"
+  - "BR \U0001F1E7\U0001F1F7 | @jojo_config | E8DFA0"
   - "LV \U0001F1F1\U0001F1FB | @jojo_config | 5E738C"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 7F1B58"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | EF98AB"
@@ -85002,7 +85002,7 @@ proxy-groups:
   - "GE \U0001F1EC\U0001F1EA | @jojo_config | 54BD91"
   - "SC \U0001F1F8\U0001F1E8 | @jojo_config | D6C5A4"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | A576B7"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | DC4D75"
+  - "Global \U0001F310 | @jojo_config | DC4D75"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 8BFC7F"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | EDB3A8"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 003ABF"
@@ -85151,7 +85151,7 @@ proxy-groups:
   - "BY \U0001F1E7\U0001F1FE | @jojo_config | 77CE15"
   - "BY \U0001F1E7\U0001F1FE | @jojo_config | 7917B4"
   - "Global \U0001F310 | @jojo_config | 748EAA"
-  - "BY \U0001F1E7\U0001F1FE | @jojo_config | 9F1A67"
+  - "Global \U0001F310 | @jojo_config | 9F1A67"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 3A20A4"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 4CEA9C"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 5B1D88"
@@ -85248,7 +85248,7 @@ proxy-groups:
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | DB3621"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | B144A7"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | F204C5"
-  - "SE \U0001F1F8\U0001F1EA | @jojo_config | 2AFF3F"
+  - "Global \U0001F310 | @jojo_config | 2AFF3F"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 9B975B"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 6BBC0F"
   - "FI \U0001F1EB\U0001F1EE | @jojo_config | 85D16D"
@@ -85356,7 +85356,7 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | 3F31AA"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 77FB06"
   - "Global \U0001F310 | @jojo_config | 4F7CA4"
-  - "GB \U0001F1EC\U0001F1E7 | @jojo_config | 853E65"
+  - "Global \U0001F310 | @jojo_config | 853E65"
   - "GB \U0001F1EC\U0001F1E7 | @jojo_config | F0E764"
   - "EE \U0001F1EA\U0001F1EA | @jojo_config | 35A14E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | B0D3A0"
@@ -85769,7 +85769,7 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 0C6FE3"
   - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 839CF6"
   - "Global \U0001F310 | @jojo_config | A23944"
-  - "NL \U0001F1F3\U0001F1F1 | @jojo_config | 531EBC"
+  - "Global \U0001F310 | @jojo_config | 531EBC"
   - "IR \U0001F1EE\U0001F1F7 | @jojo_config | D823AF"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | F76F03"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 28311D"
@@ -86022,7 +86022,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | DFE156"
   - "SG \U0001F1F8\U0001F1EC | @jojo_config | 871FF2"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | D9FE93"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | A6CA0F"
+  - "FI \U0001F1EB\U0001F1EE | @jojo_config | A6CA0F"
   - "SE \U0001F1F8\U0001F1EA | @jojo_config | 5BE7E1"
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 196378"
   - "US \U0001F1FA\U0001F1F8 | @jojo_config | 2A8DB5"
@@ -86139,7 +86139,7 @@ proxy-groups:
   - "RU \U0001F1F7\U0001F1FA | @jojo_config | 98D48E"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | AFA490"
   - "CA \U0001F1E8\U0001F1E6 | @jojo_config | B9B241"
-  - "DE \U0001F1E9\U0001F1EA | @jojo_config | 0AAE40"
+  - "Global \U0001F310 | @jojo_config | 0AAE40"
   - "Global \U0001F310 | @jojo_config | 2E30FC"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 26394F"
   - "DE \U0001F1E9\U0001F1EA | @jojo_config | 07C186"

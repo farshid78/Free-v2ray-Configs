@@ -1,11 +1,11 @@
 {
   "brand": "@jojo_config",
   "generator": "jojo-aggregator aggregator",
-  "updated_at": "2026-11-20T19:15:06.383083+00:00",
-  "updated_at_unix": 1795202106,
-  "next_update_eta": "2026-11-20T19:30:06.383083+00:00",
+  "updated_at": "2026-11-20T20:02:03.348402+00:00",
+  "updated_at_unix": 1795204923,
+  "next_update_eta": "2026-11-20T20:17:03.348402+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 20.8,
+  "elapsed_seconds": 23.7,
   "raw_base": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main",
@@ -25,13 +25,13 @@
     "all": {
       "unique": 11539,
       "broken": 1,
-      "duplicates": 9609,
-      "total_fetched": 21161,
+      "duplicates": 9607,
+      "total_fetched": 21159,
       "active_sources": 10,
       "protocols": {
-        "vless": 4462,
+        "vless": 4463,
         "vmess": 4417,
-        "trojan": 1598,
+        "trojan": 1597,
         "shadowsocks": 849,
         "hysteria2": 211,
         "hysteria": 1,
@@ -74,16 +74,16 @@
       }
     },
     "light": {
-      "unique": 6132,
+      "unique": 6135,
       "broken": 0,
-      "duplicates": 1810,
-      "total_fetched": 7944,
+      "duplicates": 1805,
+      "total_fetched": 7942,
       "active_sources": 6,
       "protocols": {
         "vmess": 4349,
-        "vless": 991,
-        "shadowsocks": 348,
-        "trojan": 254,
+        "vless": 994,
+        "shadowsocks": 350,
+        "trojan": 252,
         "hysteria2": 189,
         "hysteria": 1
       },
@@ -100,9 +100,9 @@
     }
   },
   "protocols": {
-    "vless": 4462,
+    "vless": 4463,
     "vmess": 4417,
-    "trojan": 1598,
+    "trojan": 1597,
     "shadowsocks": 849,
     "hysteria2": 211,
     "shadowsocksr": 1,
@@ -159,7 +159,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 930,
+      "unique": 961,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/configs.txt",
@@ -187,7 +187,7 @@
       }
     },
     "secure": {
-      "unique": 580,
+      "unique": 575,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/secure/configs.txt",
@@ -201,7 +201,7 @@
       }
     },
     "google": {
-      "unique": 438,
+      "unique": 443,
       "criterion": "verified AND, in all rounds, a real proxied request succeeded to gstatic, YouTube and Play generate_204 (exactly 204), a Google Maven POM (2xx) and gemini.google.com (2xx: not blocked, not CAPTCHA-flagged) AND Google places the exit IP in a Gemini-supported country; measured from the CI runner",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/google/configs.txt",
@@ -222,8 +222,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 47,
-    "configs": 930,
+    "count": 43,
+    "configs": 961,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/Countries/index.json",
@@ -232,15 +232,15 @@
   "freshness": {
     "cascade": {
       "state": "fresh",
-      "tested_at": "2026-11-20 19:19 UTC",
+      "tested_at": "2026-11-20 20:06 UTC",
       "age_minutes": 0,
-      "detail": "930 configs"
+      "detail": "961 configs"
     },
     "google": {
       "state": "fresh",
-      "tested_at": "2026-11-20 19:23 UTC",
+      "tested_at": "2026-11-20 20:10 UTC",
       "age_minutes": 0,
-      "detail": "438 configs"
+      "detail": "443 configs"
     }
   }
 }

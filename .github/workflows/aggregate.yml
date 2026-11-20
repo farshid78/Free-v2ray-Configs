@@ -358,7 +358,7 @@ jobs:
       # در `scripts/test_pipeline.py` قفل شده‌اند.
       # ══════════════════════════════════════════════════════════════════════
       - name: 🐍 Setup Python
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
+        if: steps.gate.outputs.should_run == 'true'
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
@@ -382,7 +382,7 @@ jobs:
       # OUTPUT_PATHS باید عیناً همانِ گامِ انتشار باشد (آزمون قفلش کرده است).
       - name: 🔄 Sync outputs with the newest publish
         id: sync_outputs
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
+        if: steps.gate.outputs.should_run == 'true'
         timeout-minutes: 3
         run: |
           OUTPUT_PATHS="all heavy light protocols archive index.json health.json verified fast secure top100.txt state.json Countries google"
@@ -425,14 +425,14 @@ jobs:
       # توصیفیِ خروجیِ قبلی باید پیش از آن خوانده شوند. منطق و آزمون‌ها در
       # `scripts/lkg.py`؛ پس از هر گامِ تولیدکننده گامِ «settle» تصمیم می‌گیرد.
       - name: 🗄️ Stash last-known-good tiers
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
+        if: steps.gate.outputs.should_run == 'true'
         continue-on-error: true
         run: |
           python scripts/lkg.py stash --set cascade --out .
           python scripts/lkg.py stash --set google --out .
 
       - name: 📦 Install dependencies
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true'
+        if: steps.gate.outputs.should_run == 'true'
         run: pip install -r requirements.txt
 
       # ── قفلِ چرخه و آغازِ رکوردِ وضعیت ──────────────────────────────────
@@ -581,7 +581,7 @@ jobs:
       # از واژگانِ سرویسِ کلیددار پاک می‌خواهد؛ این کامنتِ سطحِ YAML در پارس
       # حذف می‌شود و مشمولِ آن قاعده نیست.
       - name: 🌍 Download GeoIP database
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true' && steps.geoip_have.outputs.status != 'current'
+        if: steps.gate.outputs.should_run == 'true' && steps.geoip_have.outputs.status != 'current'
         id: geoip_dl
         run: |
           set -euo pipefail
@@ -668,7 +668,7 @@ jobs:
       # همه‌چیز را در `catch` می‌گیرد و `ReserveCacheError` به `core.info`
       # نگاشته می‌شود)، نه از روی مستندات فرض شد.
       - name: 🌍 Save GeoIP database cache
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true' && steps.geoip_dl.outputs.got != ''
+        if: steps.gate.outputs.should_run == 'true' && steps.geoip_dl.outputs.got != ''
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .cache/dbip-country-lite.mmdb
@@ -902,7 +902,7 @@ jobs:
       # پس آرشیوِ تأییدنشده یا نیمه هرگز به cache نمی‌رسد. خطای این گام (مثلاً
       # در دسترس نبودنِ سرویسِ cache) در سورسِ v6.1.0 فقط هشدار است.
       - name: 🧰 Save validator archives cache
-        if: steps.gate.outputs.should_run == 'true' && steps.cycle.outputs.busy != 'true' && steps.validators.outputs.downloaded == 'true'
+        if: steps.gate.outputs.should_run == 'true' && steps.validators.outputs.downloaded == 'true'
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: .cache/validators

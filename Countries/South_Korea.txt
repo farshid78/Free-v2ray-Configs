@@ -3,17 +3,16 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — SOUTH KOREA (KR) — 10 configs
+# @jojo_config — SOUTH KOREA (KR) — 9 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
+vmess://eyJhZGQiOiIxNDYuNTYuMTEyLjExMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJlN2MzMDJmMy05MGQ2LTQyZGQtOWQ3ZC05NGEzNjgzYTM3MDciLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicGNzIjoiIiwicG9ydCI6Ijg4ODgiLCJwcyI6IktSIPCfh7Dwn4e3IHwgQGpvam9fY29uZmlnIHwgRUQ1MzQzIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIiLCJ2Y24iOiIifQ==
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | @jojo_config | 75B776
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&type=tcp&headerType=none#KR 🇰🇷 | @jojo_config | DE0128
-vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCBAam9qb19jb25maWcgfCA5RjNCRTYiLCJhZGQiOiIxMzIuMTQ1LjgwLjIzMCIsInBvcnQiOiI4MCIsImlkIjoiNTE1NTg2MGUtZDA3ZC00NmMzLTkxMjgtM2FmYmQ4NDYyNmM3IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJhbHBuIjoiIiwicGF0aCI6Ii9jY3R2MTMubTN1OCIsImhvc3QiOiIxMzIuMTQ1LjgwLjIzMCJ9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&type=tcp&headerType=none&path=/#KR 🇰🇷 | @jojo_config | D1BD16
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&type=tcp&headerType=none#KR 🇰🇷 | @jojo_config | DE0128
+vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws#KR 🇰🇷 | @jojo_config | E820CB
+vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?path=%2F&security=none&type=ws#KR 🇰🇷 | @jojo_config | 6913F7
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F&sni=152.69.226.63#KR 🇰🇷 | @jojo_config | 52445E
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F&host=152.69.226.63#KR 🇰🇷 | @jojo_config | C98ACA
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?path=%2F&security=none&type=ws#KR 🇰🇷 | @jojo_config | 6913F7
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws#KR 🇰🇷 | @jojo_config | E820CB
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&sni=152.69.226.63&type=ws#KR 🇰🇷 | @jojo_config | E3B6CD
-vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCBAam9qb19jb25maWcgfCBDMUJCRjciLCJhZGQiOiIxMzIuMTQ1LjgwLjIzMCIsInBvcnQiOiI4MCIsImlkIjoiNTE1NTg2MGUtZDA3ZC00NmMzLTkxMjgtM2FmYmQ4NDYyNmM3IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJhbHBuIjoiIiwicGF0aCI6Ii9jY3R2MTMubTN1OCJ9

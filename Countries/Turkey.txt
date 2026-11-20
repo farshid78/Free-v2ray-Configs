@@ -3,10 +3,11 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — TURKEY (TR) — 3 configs
+# @jojo_config — TURKEY (TR) — 4 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://c34a41b6-598f-46ac-bea3-8b39a906f922@87.76.154.28:57231?encryption=none&security=none&type=tcp#TR 🇹🇷 | @jojo_config | C640C8
-vless://ba0dbd83-3569-46dc-bc3d-ef6e58ffc97b@153.56.229.218:443?security=reality&encryption=none&pbk=3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE&headerType=none&fp=chrome&type=tcp&sni=71b840t.de7.h1clayd.click&sid=e572b6579ea525d4#TR 🇹🇷 | @jojo_config | 605606
-vless://26843758-24de-4f76-b5d0-624038e353c4@153.56.229.218:443?encryption=none&fp=firefox&pbk=3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE&security=reality&sid=e572b6579ea525d4&sni=71b840t.de7.h1clayd.click&type=tcp#TR 🇹🇷 | @jojo_config | 70CDF6
+vless://128bd8ad-4f6c-4d70-af13-15a2cec331d2@185.71.216.95:2194?security=reality&encryption=none&pbk=jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=55986a94e2228791#TR 🇹🇷 | @jojo_config | 0C49D0
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvMy05RWc3OXVtaDRDYVk4c1dDN2Iz@31.210.78.66:1080#TR 🇹🇷 | @jojo_config | BF0D24
+vless://9654f1a9-8dbc-4897-85ea-c077a52b3857@185.71.216.95:2195?security=reality&encryption=none&pbk=OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=3869d49a9a79e06a#TR 🇹🇷 | @jojo_config | 283A45
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@153.56.230.6:443?security=reality&sni=0592efg.us8.h1clayd.click&type=grpc&serviceName=99f2107b03f8&fp=edge&pbk=cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk&sid=bd8f712209a9c283#TR 🇹🇷 | @jojo_config | AE9ECD

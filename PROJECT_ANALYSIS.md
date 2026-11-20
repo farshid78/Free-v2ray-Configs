@@ -132,6 +132,13 @@ bot/admin     → GitHub API repository_dispatch: aggregate-now
 - در `aggregate.process_category` روی هر خط یکتا اعمال می‌شود + دروازهٔ برند (retry + drop + count در `health.json`).
 - Hiddify header: `core.hiddify_profile_header` → `#profile-title`, support-url, profile-web-page-url.
 
+### مقادیر فعلی (۲۰۲۶-۱۱-۲۰)
+- `brand` = `@jojo_config` · `brand_name` = `JoJo VPN` · `bot_name` = `jojo-aggregator` · `bot` = `@jojo_config_bot`
+- `channel_url` = `support_url` = `https://t.me/jojo_config` · `group_url` = خالی
+- `owner/repo` = `farshid78/Free-v2ray-Configs` (هویت مخزن، خارج از برندینگ)
+- `index.json` → `"brand": "@jojo_config"`, `"generator": "jojo-aggregator aggregator"` · `health.json` → `"brand": "@jojo_config"`
+- گزارش کامل وضعیت: [`PROJECT_STATUS.md`](PROJECT_STATUS.md)
+
 ### متغیرهای لازم (env)
 - `AGG_BRAND_CHANNEL` / `CHANNEL_USERNAME` → تگ روی کانفیگ
 - `AGG_BRAND_NAME` → عنوان docs، JSON-LD

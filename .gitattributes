@@ -1,0 +1,7 @@
+# Keep every text file byte-identical to what CI produces, whatever the
+# contributor's platform or `core.autocrlf` setting. Two checks depend on the
+# exact bytes: `brand.py --check` compares the rendered README/dashboard output
+# with the committed file, and `docs-src/build.py` derives the `?v=` cache
+# busters from the bytes of docs/app.js and docs/*.css. With CRLF in a Windows
+# checkout both report drift that does not exist, so pin the line ending here.
+* text=auto eol=lf

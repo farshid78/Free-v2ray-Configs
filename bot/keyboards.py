@@ -4,8 +4,15 @@ from .config import MINI_APP_URL
 
 
 def main_menu(is_admin: bool = False) -> InlineKeyboardMarkup:
-    rows = [
-        [InlineKeyboardButton("🌐 پنل گلس (Mini App)", web_app=WebAppInfo(url=MINI_APP_URL))],
+    rows = []
+    # تلگرام Web App را فقط با HTTPS می‌پذیرد؛ اگر آدرس خالی/غیرِHTTPS باشد
+    # دکمه حذف می‌شود. دلیلش تجربهٔ واقعی است: یک `MINI_APP_URL=` تهی باعث
+    # می‌شد تلگرام کلِ پیامِ /start را با «URL host is empty» رد کند و کاربر
+    # هیچ پاسخی نبیند — یک دکمهٔ کم، بهتر از یک منوی مرده است.
+    if MINI_APP_URL.startswith("https://"):
+        rows.append([InlineKeyboardButton("🌐 پنل گلس (Mini App)",
+                                          web_app=WebAppInfo(url=MINI_APP_URL))])
+    rows += [
         [InlineKeyboardButton("📦 آخرین 20 کانفیگ", callback_data="latest20")],
         [InlineKeyboardButton("📚 دسته‌بندی‌ها", callback_data="categories"),
          InlineKeyboardButton("🌍 فیلتر کشور", callback_data="ask_country")],

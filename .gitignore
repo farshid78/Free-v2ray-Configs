@@ -12,6 +12,8 @@ venv/
 .env
 .env.*
 *.env
+# …but the template itself is safe and the setup docs tell users to copy it.
+!.env.example
 *.local
 
 # CI validation report (artifact only — never committed)

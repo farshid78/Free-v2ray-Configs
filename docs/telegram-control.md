@@ -212,8 +212,15 @@ raw.githubusercontent.com / cdn.jsdelivr.net  →  کانال/ربات تلگر�
 
 ```bash
 pip install -r requirements-bot.txt
-cp .env.example .env  # BOT_TOKEN, OWNER_ID, CHANNEL_USERNAME, GITHUB_TOKEN, GH_OWNER, GH_REPO
-python -m bot.main
+cp .env.example .env   # BOT_TOKEN, OWNER_ID, CHANNEL_USERNAME, GITHUB_TOKEN, GH_OWNER, GH_REPO, MINI_APP_URL
+python -X utf8 -m bot.main
 ```
 
-ربات باید admin کانال باشد تا بتواند broadcast کند. این ماژول aggregator را تغییر نمی‌دهد.
+یا همهٔ سرویس‌های محلی با هم: `start-local.cmd` (وب‌سرور + ربات، لاگ در `.cache/logs/`).
+
+- **اجرا فقط با long-polling است**؛ تا وقتی این پروسه روی یک ماشین/سرور زنده نیست، `/start` هیچ پاسخی نمی‌دهد. GitHub Actions ربات را اجرا نمی‌کند.
+- **پنل ادمین** در `config.py` با `OWNER_ID` باز می‌شود (آیدیِ عددی از `@userinfobot`). ادمین‌های دیگر با `adm_addadmin` اضافه می‌شوند.
+- **پنل گلس (Mini App)** به `MINI_APP_URL` نیاز دارد و باید HTTPS باشد؛ صفحه در `docs/miniapp.html` است، پس GitHub Pages باید روی شاخهٔ `main` و پوشهٔ `/docs` فعال باشد. آدرسِ غیرِHTTPS/تهی عمداً از منو حذف می‌شود، چون تلگرام کلِ پیامِ `/start` را با `URL host is empty` رد می‌کرد.
+- **دکمهٔ «Trigger aggregate»** به `GITHUB_TOKEN` با دسترسی `Actions: write` نیاز دارد؛ بقیهٔ پنل بدون آن کار می‌کند.
+- **Broadcast** به کاربرانِ ثبت‌شده در `data/bot.db` می‌فرستد، نه به کانال؛ ربات برای این کار لازم نیست ادمینِ کانال باشد. انتشار در کانال در این پروژه پیاده نشده است.
+- اگر دو نسخهٔ ربات هم‌زمان اجرا شوند، تلگرام `409 Conflict` می‌دهد؛ `stop-local.cmd` نسخه‌های قبلیِ همین پروژه را می‌بندد.

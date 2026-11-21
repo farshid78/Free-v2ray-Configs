@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "updated_at": "2026-11-21T01:02:12Z",
+ "updated_at": "2026-11-21T01:02:51Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-21T01:01:51Z",
-  "heartbeat_age_s": 29,
+  "last_heartbeat": "2026-11-21T01:02:51Z",
+  "heartbeat_age_s": 0,
   "pid": 2427,
   "host": "ip-10-0-137-210",
   "note": "run_minutes=12.0"

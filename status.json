@@ -4,7 +4,7 @@
  "bot": {
   "online": false,
   "last_heartbeat": "2026-11-21T01:03:51Z",
-  "heartbeat_age_s": 2,
+  "heartbeat_age_s": 4,
   "pid": 2427,
   "host": "ip-10-0-137-210",
   "note": "stopped"

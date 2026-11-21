@@ -1,10 +1,10 @@
-#profile-title: @jojo_config — BULGARIA (BG)
+#profile-title: @jojo_config — DENMARK (DK)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — BULGARIA (BG) — 1 configs
+# @jojo_config — DENMARK (DK) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://6589c320-db68-43cd-a273-b46299bab355@195.123.226.21:443?flow=xtls-rprx-vision&fp=chrome&pbk=rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo&security=reality&sid=77bb0d07bddbc832&sni=gateway.icloud.com&type=tcp#BG 🇧🇬 | @jojo_config | 02BB68
+vless://9a597d68-6688-4046-bf24-a5a541e115e0@135.136.33.134:8443?security=reality&pbk=6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU&fp=chrome&flow=xtls-rprx-vision&sni=www.apple.com&sid=f8d0271b4b5f9efc#DK 🇩🇰 | @jojo_config | EE7B11

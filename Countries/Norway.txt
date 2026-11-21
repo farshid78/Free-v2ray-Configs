@@ -1,10 +1,10 @@
-#profile-title: @jojo_config — CZECHIA (CZ)
+#profile-title: @jojo_config — NORWAY (NO)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — CZECHIA (CZ) — 1 configs
+# @jojo_config — NORWAY (NO) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://b34a52cb-cd52-49a8-9362-b8e97c151d49@212.102.38.25:443?flow=xtls-rprx-vision&security=reality&encryption=none&sni=udemy.com&fp=ios&pbk=23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE&sid=e90360ec7cc61b20&type=tcp&path=/#CZ 🇨🇿 | @jojo_config | 5AD3FE
+ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206ZURteXNhTXlSWmg3SlRFa2E2ZU90Z0NPY0ErVDd0bUM1RG5hVFpCUlFnZz06VWppVVcvcm9LVUxZL3pPOVhKbmJSMHZDUGNYeFdVZzAzV1V1VnZaMmlwbz0@144.31.217.18:554#NO 🇳🇴 | @jojo_config | DC099D

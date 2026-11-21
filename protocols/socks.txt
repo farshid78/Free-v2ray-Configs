@@ -1,0 +1,8 @@
+#profile-title: @jojo_config — SOCKS
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/jojo_config
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @jojo_config — socks — 2 configs
+socks://Og%3D%3D@20.83.154.79:7070#US 🇺🇸 | @jojo_config | 43E1F4
+socks://Og%3D%3D@69.55.49.177:38182#US 🇺🇸 | @jojo_config | E208F9

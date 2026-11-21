@@ -1,8 +1,0 @@
-#profile-title: @jojo_config — SHADOWSOCKSR
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=0
-#support-url: https://t.me/jojo_config
-#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — shadowsocksr — 1 configs
-# --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
-ssr://c3NyMi43NjI5ODgueHl6OjMzMzM2OmF1dGhfY2hhaW5fYTpjaGFjaGEyMC1pZXRmOnRsczEuMl90aWNrZXRfYXV0aDpaRzl1WjNSaGFYZGhibWN1WTI5dC8/b2Jmc3BhcmFtPSZyZW1hcmtzPThKJTJCSHV2Q2ZoN2hWVXkweE5EQXVNVGc0TGpjekxqRXlPUzB3TlRRMCZwcm90b3BhcmFtPQ==#US 🇺🇸 | @jojo_config | 35B189

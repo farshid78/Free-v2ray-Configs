@@ -1,0 +1,10 @@
+#profile-title: @jojo_config — NEW ZEALAND (NZ)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/jojo_config
+#profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
+# @jojo_config — NEW ZEALAND (NZ) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://654ba40a-0522-4fc3-8328-08099482c201@114.129.43.105:443?security=tls&type=xhttp&path=%2F&host=mama120.baklajann.ru&sni=mama120.baklajann.ru&fp=chrome&mode=auto&extra=%7B%22xmux%22%3A%7B%22maxConnections%22%3A%224%22%2C%22maxConcurrency%22%3A%220%22%2C%22cMaxReuseTimes%22%3A%220%22%2C%22hMaxRequestTimes%22%3A%22600-900%22%2C%22hMaxReusableSecs%22%3A%221800-3000%22%2C%22hKeepAlivePeriod%22%3A0%7D%7D&encryption=none#NZ 🇳🇿 | @jojo_config | 09BC95

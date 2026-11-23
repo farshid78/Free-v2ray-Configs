@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "updated_at": "2026-11-23T23:03:00Z",
+ "updated_at": "2026-11-23T23:03:02Z",
  "bot": {
-  "online": true,
+  "online": false,
   "last_heartbeat": "2026-11-23T23:03:00Z",
-  "heartbeat_age_s": 0,
+  "heartbeat_age_s": 2,
   "pid": 2433,
   "host": "ip-10-0-131-163",
-  "note": "run_minutes=12.0"
+  "note": "stopped"
  },
  "cycle": {
   "id": "runnervm0hi8g:2975",

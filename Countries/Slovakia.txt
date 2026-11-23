@@ -3,11 +3,8 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — SLOVAKIA (SK) — 4 configs
+# @jojo_config — SLOVAKIA (SK) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.156:443?encryption=none&security=reality&type=tcp&sni=f0d7aft.nl17.h1clayd.click&fp=firefox&pbk=kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI&sid=8956c57cb4c4f8d2#SK 🇸🇰 | @jojo_config | 1FEFEA
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@76574ct.nl8.h1clayd.click:443?security=reality&encryption=none&pbk=9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc&headerType=none&fp=chrome&spx=/&type=tcp&sni=76574ct.nl8.h1clayd.click&sid=2ca59bdc5121f921#SK 🇸🇰 | @jojo_config | 62A9C4
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.111:443?encryption=none&security=reality&type=tcp&sni=76574ct.nl8.h1clayd.click&fp=chrome&pbk=9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc&sid=2ca59bdc5121f921#SK 🇸🇰 | @jojo_config | 9EC026
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.92:443?encryption=none&security=reality&type=grpc&serviceName=204adda7e3da&mode=gun&sni=717252g.nl8.h1clayd.click&fp=chrome&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&sid=d3bd772514c87d28#SK 🇸🇰 | @jojo_config | 99D403
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.111:443?security=reality&encryption=none&pbk=9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc&headerType=none&fp=firefox&type=tcp&sni=76574ct.nl8.h1clayd.click&sid=2ca59bdc5121f921#SK 🇸🇰 | @jojo_config | 9EC026

@@ -1,11 +1,11 @@
 {
   "brand": "@jojo_config",
   "generator": "jojo-aggregator aggregator",
-  "updated_at": "2026-11-20T20:29:40.154856+00:00",
-  "updated_at_unix": 1795206580,
-  "next_update_eta": "2026-11-20T20:44:40.154856+00:00",
+  "updated_at": "2026-11-23T21:44:19.486502+00:00",
+  "updated_at_unix": 1795470259,
+  "next_update_eta": "2026-11-23T21:59:19.486502+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 25.2,
+  "elapsed_seconds": 36.4,
   "raw_base": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main",
@@ -23,18 +23,19 @@
   },
   "categories": {
     "all": {
-      "unique": 11538,
+      "unique": 10175,
       "broken": 1,
-      "duplicates": 9575,
-      "total_fetched": 21126,
-      "active_sources": 10,
+      "duplicates": 7413,
+      "total_fetched": 17593,
+      "active_sources": 9,
       "protocols": {
-        "vless": 4462,
-        "vmess": 4417,
-        "trojan": 1597,
-        "shadowsocks": 849,
-        "hysteria2": 211,
-        "hysteria": 1,
+        "vmess": 4461,
+        "vless": 4276,
+        "shadowsocks": 689,
+        "trojan": 493,
+        "hysteria2": 251,
+        "socks": 3,
+        "anytls": 1,
         "shadowsocksr": 1
       },
       "files": {
@@ -49,17 +50,17 @@
       }
     },
     "heavy": {
-      "unique": 6558,
+      "unique": 4719,
       "broken": 1,
-      "duplicates": 6615,
-      "total_fetched": 13184,
-      "active_sources": 4,
+      "duplicates": 4515,
+      "total_fetched": 9238,
+      "active_sources": 3,
       "protocols": {
-        "vless": 3814,
-        "trojan": 1480,
-        "shadowsocks": 790,
-        "vmess": 444,
-        "hysteria2": 29,
+        "vless": 3453,
+        "shadowsocks": 616,
+        "trojan": 343,
+        "vmess": 269,
+        "hysteria2": 37,
         "shadowsocksr": 1
       },
       "files": {
@@ -74,18 +75,19 @@
       }
     },
     "light": {
-      "unique": 6135,
+      "unique": 6285,
       "broken": 0,
-      "duplicates": 1805,
-      "total_fetched": 7942,
+      "duplicates": 2069,
+      "total_fetched": 8355,
       "active_sources": 6,
       "protocols": {
-        "vmess": 4349,
-        "vless": 994,
-        "shadowsocks": 350,
-        "trojan": 252,
-        "hysteria2": 189,
-        "hysteria": 1
+        "vmess": 4436,
+        "vless": 1104,
+        "shadowsocks": 310,
+        "hysteria2": 222,
+        "trojan": 209,
+        "socks": 3,
+        "anytls": 1
       },
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/light/configs.txt",
@@ -100,20 +102,20 @@
     }
   },
   "protocols": {
-    "vless": 4462,
-    "vmess": 4417,
-    "trojan": 1597,
-    "shadowsocks": 849,
-    "hysteria2": 211,
+    "vmess": 4461,
+    "vless": 4276,
+    "shadowsocks": 689,
+    "trojan": 493,
+    "hysteria2": 251,
+    "socks": 3,
     "shadowsocksr": 1,
-    "hysteria": 1,
+    "anytls": 1,
+    "hysteria": 0,
     "tuic": 0,
     "wireguard": 0,
     "juicity": 0,
-    "anytls": 0,
     "snell": 0,
-    "mieru": 0,
-    "socks": 0
+    "mieru": 0
   },
   "protocol_files": {
     "vless": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/vless.txt",
@@ -122,7 +124,8 @@
     "shadowsocks": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/shadowsocks.txt",
     "shadowsocksr": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/shadowsocksr.txt",
     "hysteria2": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/hysteria2.txt",
-    "hysteria": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/hysteria.txt"
+    "anytls": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/anytls.txt",
+    "socks": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/socks.txt"
   },
   "protocol_files_base64": {
     "vless": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/vless_base64.txt",
@@ -131,7 +134,8 @@
     "shadowsocks": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/shadowsocks_base64.txt",
     "shadowsocksr": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/shadowsocksr_base64.txt",
     "hysteria2": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/hysteria2_base64.txt",
-    "hysteria": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/hysteria_base64.txt"
+    "anytls": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/anytls_base64.txt",
+    "socks": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/protocols/socks_base64.txt"
   },
   "protocol_files_mirror": {
     "vless": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/vless.txt",
@@ -140,7 +144,8 @@
     "shadowsocks": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/shadowsocks.txt",
     "shadowsocksr": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/shadowsocksr.txt",
     "hysteria2": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/hysteria2.txt",
-    "hysteria": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/hysteria.txt"
+    "anytls": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/anytls.txt",
+    "socks": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/protocols/socks.txt"
   },
   "archive": {
     "all_broken": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/archive/all_broken.txt",
@@ -152,14 +157,14 @@
     "light_count": 8,
     "heavy_count": 5,
     "total_count": 13,
-    "healthy": 10,
-    "unhealthy": 0,
+    "healthy": 9,
+    "unhealthy": 1,
     "health_url": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/health.json",
     "health_url_mirror": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/health.json"
   },
   "cascade_categories": {
     "verified": {
-      "unique": 964,
+      "unique": 1067,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/verified/configs.txt",
@@ -173,7 +178,7 @@
       }
     },
     "fast": {
-      "unique": 641,
+      "unique": 724,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/fast/configs.txt",
@@ -187,7 +192,7 @@
       }
     },
     "secure": {
-      "unique": 587,
+      "unique": 633,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/secure/configs.txt",
@@ -201,7 +206,7 @@
       }
     },
     "google": {
-      "unique": 402,
+      "unique": 477,
       "criterion": "verified AND, in all rounds, a real proxied request succeeded to gstatic, YouTube and Play generate_204 (exactly 204), a Google Maven POM (2xx) and gemini.google.com (2xx: not blocked, not CAPTCHA-flagged) AND Google places the exit IP in a Gemini-supported country; measured from the CI runner",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/google/configs.txt",
@@ -222,8 +227,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/farshid78/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 45,
-    "configs": 964,
+    "count": 42,
+    "configs": 1067,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/farshid78/Free-v2ray-Configs/main/Countries/index.json",
@@ -232,15 +237,15 @@
   "freshness": {
     "cascade": {
       "state": "fresh",
-      "tested_at": "2026-11-20 20:34 UTC",
+      "tested_at": "2026-11-23 21:48 UTC",
       "age_minutes": 0,
-      "detail": "964 configs"
+      "detail": "1067 configs"
     },
     "google": {
       "state": "fresh",
-      "tested_at": "2026-11-20 20:37 UTC",
+      "tested_at": "2026-11-23 21:52 UTC",
       "age_minutes": 0,
-      "detail": "402 configs"
+      "detail": "477 configs"
     }
   }
 }

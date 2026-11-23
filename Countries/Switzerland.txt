@@ -3,13 +3,19 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — SWITZERLAND (CH) — 6 configs
+# @jojo_config — SWITZERLAND (CH) — 12 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.127:19999#CH 🇨🇭 | @jojo_config | ACB330
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@23.166.88.189:19999#CH 🇨🇭 | @jojo_config | 68B652
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.127:19999#CH 🇨🇭 | @jojo_config | ACB330
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@leviko-ch7709.shopingggg.ir:19999#CH 🇨🇭 | @jojo_config | F68F5F
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@leviko-ch9924.shopingggg.ir:19999#CH 🇨🇭 | @jojo_config | 0E875E
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@79.127.184.104:19999#CH 🇨🇭 | @jojo_config | A80DAC
+vless://9dd38d60-e683-47c6-bd53-d71bdfee78f3@179.43.187.67:443?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=portal.mavexa.ir#CH 🇨🇭 | @jojo_config | A19323
+vmess://eyJhZGQiOiIxODYuMTkwLjIxNS40IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI1YzA0MGYxZC00NWRiLTQzYmQtOGQ0Ni1lNDk1MGU0MzM3MzUiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6MTI3MCwicHMiOiJDSCDwn4eo8J+HrSB8IEBqb2pvX2NvbmZpZyB8IEMyRjM2QiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ4bWZobHB5LmNvbSIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIiLCJuYW1lIjoiQ0gg8J+HqPCfh60gfCBAam9qb19jb25maWcgfCBDMkYzNkIifQ==
+vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&security=reality&sid=19253fae84102271&sni=www.cloudflare.com&type=tcp#CH 🇨🇭 | @jojo_config | 0B7909
+vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&security=reality&sid=19253fae84102271&sni=www.cloudflare.com&type=tcp#CH 🇨🇭 | @jojo_config | 15C43B
+vless://ce8faf30-b1d6-4a53-95a0-8520dc609db3@85.208.69.43:33055/?type=xhttp&encryption=none&flow=&sni=yandex.ru&security=reality&pbk=1rvxGeCvBMccFM2LKGJ4SqezdkMxS4ZZagHR1MGdCgo&sid=77#CH 🇨🇭 | @jojo_config | 032682
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@186.190.215.251:19999#CH 🇨🇭 | @jojo_config | 0AC273
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpuY0lrdWJtb0RHc2w@208.69.78.133:443#CH 🇨🇭 | @jojo_config | AEEE60
-vless://9dd38d60-e683-47c6-bd53-d71bdfee78f3@179.43.187.67:443?security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=portal.mavexa.ir#CH 🇨🇭 | @jojo_config | A19323
-vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?encryption=none&flow=xtls-rprx-vision&fp=random&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&security=reality&sid=19253fae84102271&sni=www.cloudflare.com&type=raw#CH 🇨🇭 | @jojo_config | 15C43B
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @jojo_config | 894BDE

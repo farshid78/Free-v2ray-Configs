@@ -3,19 +3,31 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — JAPAN (JP) — 12 configs
+# @jojo_config — JAPAN (JP) — 24 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.240:443#JP 🇯🇵 | @jojo_config | 2459E0
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | @jojo_config | 9EF41E
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.204:443#JP 🇯🇵 | @jojo_config | 554D18
-vmess://eyJ2IjoiMiIsInBzIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCA4RTVCNTgiLCJhZGQiOiI2NC4xNzYuMzQuMTAyIiwicG9ydCI6IjQ2MTMwIiwiaWQiOiI0NzczNTBiMi03NTM2LTRmMzgtZWUyMS0wMjBlZmRkZTJkMWQiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJ0bHMiOiIifQ==
-ss://YWVzLTI1Ni1nY206WUt3RHozbUZwVDl2R2NMOG5CczVkSHJBMnN4TQ@64.176.57.251:8388#JP 🇯🇵 | @jojo_config | 494FE5
-ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@168.138.205.100:53758#JP 🇯🇵 | @jojo_config | 1A14DC
-ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@jpa.123069.xyz:53758#JP 🇯🇵 | @jojo_config | 66A632
-vless://1751bebc-1bf1-420c-8b9d-97157aad179b@168.110.21.56:18453?security=none&type=tcp&encryption=none#JP 🇯🇵 | @jojo_config | CFEA5D
-vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:12683?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP 🇯🇵 | @jojo_config | C99843
-vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8&security=reality&sid=684c7531e599dec0&sni=www.microsoft.com&type=tcp#JP 🇯🇵 | @jojo_config | AA31A8
-ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:80#JP 🇯🇵 | @jojo_config | EA55E0
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | @jojo_config | 9EF41E
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.240:443#JP 🇯🇵 | @jojo_config | 2459E0
+vless://7072eeba-94fd-4fb3-92f2-a4506dd84cd8@31.76.91.98:443?security=reality&encryption=none&pbk=ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=fuji.etherhub.cc&sid=bd6f67b6b2152b45#JP 🇯🇵 | @jojo_config | 890048
+vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?encryption=none&flow=xtls-rprx-vision&fp=&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP 🇯🇵 | @jojo_config | A463DD
+vless://03fcc618-b93d-6796-6aed-8a38c975d581@94.177.131.113:443?security=tls&sni=kuruish.org&type=tcp#JP 🇯🇵 | @jojo_config | 42E793
+vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?security=reality&type=tcp&sni=www.microsoft.com&fp=firefox&flow=xtls-rprx-vision&sid=684c7531e599dec0&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8#JP 🇯🇵 | @jojo_config | AA31A8
+vmess://eyJhZGQiOiIxNjEuMzMuMjAuMjU1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImUwODU2NTA4LWQ2OTMtNDUwYS1hMDk5LTQ1NTA5MWRjNGYyNSIsIm5hbWUiOiJKUCDwn4ev8J+HtSB8IEBqb2pvX2NvbmZpZyB8IEU0RTMxQiIsIm5ldCI6IndzIiwicGF0aCI6Ii9lMDg1NjUwOC1kNjkzLTQ1MGEtYTA5OS00NTUwOTFkYzRmMjUtdm0iLCJwb3J0Ijo4ODgwLCJwcyI6IkpQIPCfh6/wn4e1IHwgQGpvam9fY29uZmlnIHwgRTRFMzFCIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+vless://d508df52-3acb-483f-85d2-3fd5f6a76808@jpg1api.jumpernode.site:443?encryption=none&security=reality&flow=xtls-rprx-vision&type=tcp&sni=buybox.amazon.com&fp=chrome&pbk=dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I&sid=2c92d6#JP 🇯🇵 | @jojo_config | 21FD7C
+vmess://eyJ2IjoiMiIsInBzIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCBBOTQwRDYiLCJhZGQiOiIxNjguMTM4LjQzLjc1IiwicG9ydCI6IjgwIiwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6IiIsInRscyI6IiIsInBhdGgiOiIvY2N0djEzLm0zdTgiLCJob3N0IjoiMTY4LjEzOC40My43NSJ9
+vmess://eyJhZGQiOiIxNjguMTM4LjQzLjc1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJOb25lIiwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvY2N0djEzLm0zdTgiLCJwY3MiOiIiLCJwb3J0IjoiODAiLCJwcyI6IkpQIPCfh6/wn4e1IHwgQGpvam9fY29uZmlnIHwgNzVDN0VEIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiIsInZjbiI6IiJ9
+vmess://eyJhZGQiOiIxNjguMTM4LjQzLjc1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIxMWMzNjI3Zi0zMWU4LTQ2OTUtZGZiZC0zNDA3NmUyZjFmNWQiLCJuZXQiOiJ3cyIsInBhdGgiOiIvY2N0djEzLm0zdTgiLCJwb3J0IjoiODAiLCJwcyI6IkpQIPCfh6/wn4e1IHwgQGpvam9fY29uZmlnIHwgNjlDRjBEIiwic25pIjoianAwMS5hMGEueHl6IiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vless://052ad41f-7cf5-4027-b14d-c90f89e46103@154.36.152.216:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=dv37ircK63KvcVZwv3XJiUXvOsiP-dEsZQ3gXDdPmRs&sid=a3f7c2e1b9d4&spx=/cdn-cgi/trace&type=tcp&headerType=none#JP 🇯🇵 | @jojo_config | 0205F8
+ss://YWVzLTEyOC1nY206QndscWg3R2NGQg@168.138.205.100:53758#JP 🇯🇵 | @jojo_config | 1A14DC
 ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:443#JP 🇯🇵 | @jojo_config | 17E3DC
+ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:80#JP 🇯🇵 | @jojo_config | EA55E0
+vmess://eyJhZGQiOiIxNjguMTEwLjYzLjI0NyIsImFpZCI6IjAiLCJpZCI6ImMzYmRlMjk2LThlNDQtNGI4Yy1hMzI1LTU3N2Q1YjNjYzdjOCIsIm5ldCI6IndzIiwicGF0aCI6Ii92bGVzcyIsInBvcnQiOjgwODEsInBzIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCA5QjVDMzMiLCJzY3kiOiJhdXRvIiwidGxzIjoibm9uZSIsInR5cGUiOiIiLCJ2IjoiMiIsIm5hbWUiOiJKUCDwn4ev8J+HtSB8IEBqb2pvX2NvbmZpZyB8IDlCNUMzMyJ9
+vmess://eyJhZGQiOiIxNjguMTEwLjYzLjI0NyIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiYzNiZGUyOTYtOGU0NC00YjhjLWEzMjUtNTc3ZDViM2NjN2M4IiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZsZXNzIiwicG9ydCI6IjgwODEiLCJwcyI6IkpQIPCfh6/wn4e1IHwgQGpvam9fY29uZmlnIHwgQ0U2M0MxIiwic2N5IjoiYXV0byIsInNlcnZpY2VOYW1lIjoiIiwic25pIjoiMTY4LjExMC42My4yNDciLCJ0bHMiOiIiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiIxNjguMTM4LjQzLjc1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJqcDAxLmEwYS54eXoiLCJpZCI6IjExYzM2MjdmLTMxZTgtNDY5NS1kZmJkLTM0MDc2ZTJmMWY1ZCIsIm5ldCI6IndzIiwicGF0aCI6Ii9jY3R2MTMubTN1OCIsInBvcnQiOjgwLCJwcyI6IkpQIPCfh6/wn4e1IHwgQGpvam9fY29uZmlnIHwgMUUxQzE0Iiwic2N5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoiIiwidiI6IjIiLCJuYW1lIjoiSlAg8J+Hr/Cfh7UgfCBAam9qb19jb25maWcgfCAxRTFDMTQifQ==
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@154.31.114.162:8443?host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | @jojo_config | 8EB17B
+vless://7318caa1-93d1-4a9d-c481-504599902700@155.248.175.201:23169?sni=djj.zjlo.top&flow=xtls-rprx-vision&fp=firefox&security=tls#JP 🇯🇵 | @jojo_config | 9F5101
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@45.153.245.217:443?path=/tyxyws&security=tls&encryption=none&fm={"tcp":[{"settings":{"delays":["0"],"lengths":["0","104","1"],"maxSplit":"0","packets":"tlshello"},"type":"fragment"},{"settings":{"delays":["1"],"lengths":["114","1"],"maxSplit":"11","packets":"1-1"},"type":"fragment"}]}&insecure=0&host=jp3.yohototo.top&fp=unsafe&type=ws&allowInsecure=0&sni=jp3.yohototo.top#JP 🇯🇵 | @jojo_config | A12821
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@43.170.8.95:443?fp=chrome&host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | @jojo_config | 645DE6
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@152.69.200.216:443?fp=chrome&host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | @jojo_config | 3C8099

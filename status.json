@@ -1,61 +1,61 @@
 {
  "schema": 1,
- "updated_at": "2026-11-24T07:02:06Z",
+ "updated_at": "2026-11-24T16:23:33Z",
  "bot": {
   "online": false,
   "last_heartbeat": "2026-11-24T06:59:30Z",
-  "heartbeat_age_s": 156,
+  "heartbeat_age_s": 33843,
   "pid": 2474,
   "host": "runnervm0hi8g",
   "note": "stopped"
  },
  "cycle": {
-  "id": "runnervm0hi8g:2290",
+  "id": "runnervm0hi8g:2370",
   "workflow": "aggregate",
-  "started_at": "2026-11-24T06:53:47Z",
-  "finished_at": "2026-11-24T07:02:06Z",
+  "started_at": "2026-11-24T16:15:34Z",
+  "finished_at": "2026-11-24T16:23:33Z",
   "ok": true,
-  "duration_s": 499.4,
+  "duration_s": 479.5,
   "error": "",
   "stages": {
    "collection": {
     "status": "ok",
-    "at": "2026-11-24T07:02:06Z",
+    "at": "2026-11-24T16:23:33Z",
     "detail": "",
     "duration_s": null
    },
    "cascade": {
     "status": "ok",
-    "at": "2026-11-24T07:02:06Z",
+    "at": "2026-11-24T16:23:33Z",
     "detail": "",
     "duration_s": null
    },
    "google": {
     "status": "ok",
-    "at": "2026-11-24T07:02:06Z",
+    "at": "2026-11-24T16:23:33Z",
     "detail": "",
     "duration_s": null
    },
    "validation": {
     "status": "ok",
-    "at": "2026-11-24T07:02:06Z",
+    "at": "2026-11-24T16:23:33Z",
     "detail": "",
     "duration_s": null
    },
    "publish": {
     "status": "ok",
-    "at": "2026-11-24T07:02:06Z",
+    "at": "2026-11-24T16:23:33Z",
     "detail": "",
     "duration_s": null
    }
   }
  },
  "counts": {
-  "collected": 17551,
-  "verified": 885,
+  "collected": 17054,
+  "verified": 778,
   "invalid": 1,
-  "new": 885,
-  "duplicate": 7449,
+  "new": 778,
+  "duplicate": 7189,
   "sent": 183,
   "send_failed": 0,
   "queued": 820
@@ -74,9 +74,9 @@
    "error": ""
   },
   "aggregate": {
-   "last_run_at": "2026-11-24T07:02:06Z",
+   "last_run_at": "2026-11-24T16:23:33Z",
    "last_ok": true,
-   "duration_s": 499.4,
+   "duration_s": 479.5,
    "error": ""
   }
  },
@@ -93,23 +93,6 @@
   "status": null
  },
  "history": [
-  {
-   "at": "2026-11-21T15:25:58Z",
-   "workflow": "aggregate",
-   "ok": true,
-   "duration_s": 540.5,
-   "error": "",
-   "counts": {
-    "collected": 21456,
-    "duplicate": 9834,
-    "invalid": 1,
-    "verified": 955,
-    "queued": 0,
-    "sent": 0,
-    "send_failed": 0,
-    "new": 955
-   }
-  },
   {
    "at": "2026-11-21T16:20:57Z",
    "workflow": "aggregate",
@@ -431,6 +414,23 @@
     "sent": 0,
     "send_failed": 0,
     "new": 885
+   }
+  },
+  {
+   "at": "2026-11-24T16:23:33Z",
+   "workflow": "aggregate",
+   "ok": true,
+   "duration_s": 479.5,
+   "error": "",
+   "counts": {
+    "collected": 17054,
+    "duplicate": 7189,
+    "invalid": 1,
+    "verified": 778,
+    "queued": 0,
+    "sent": 0,
+    "send_failed": 0,
+    "new": 778
    }
   }
  ]

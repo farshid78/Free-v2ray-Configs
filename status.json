@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "updated_at": "2026-11-26T03:22:13Z",
+ "updated_at": "2026-11-26T03:22:51Z",
  "bot": {
   "online": true,
-  "last_heartbeat": "2026-11-26T03:21:51Z",
-  "heartbeat_age_s": 29,
+  "last_heartbeat": "2026-11-26T03:22:51Z",
+  "heartbeat_age_s": 0,
   "pid": 2267,
   "host": "runnervm0hi8g",
   "note": "run_minutes=12.0"

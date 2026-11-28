@@ -4,7 +4,7 @@
  "bot": {
   "online": false,
   "last_heartbeat": "2026-11-28T04:26:32Z",
-  "heartbeat_age_s": 60,
+  "heartbeat_age_s": 62,
   "pid": 2480,
   "host": "runnervm3lb7s",
   "note": "stopped"

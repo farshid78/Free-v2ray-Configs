@@ -3,10 +3,8 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — AUSTRALIA (AU) — 3 configs
+# @jojo_config — AUSTRALIA (AU) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?security=tls&sni=connectwithemployerstohireyouridealteam.com&type=tcp&headerType=none#AU 🇦🇺 | @jojo_config | 373E2E
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?allowInsecure=1&sni=connectwithemployerstohireyouridealteam.com&type=tcp#AU 🇦🇺 | @jojo_config | 063CD6
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?security=tls&sni=connectwithemployerstohireyouridealteam.com&type=tcp&headerType=none&path=/#AU 🇦🇺 | @jojo_config | 05791C
+vless://591e7de6-f2dd-4ff9-ae21-8e00d5affa2a@46.250.246.11:8443?security=tls&type=ws&path=%2Fvpn-live&host=46-250-246-11.sslip.io&sni=46-250-246-11.sslip.io&fp=firefox&encryption=none#AU 🇦🇺 | @jojo_config | 290B78

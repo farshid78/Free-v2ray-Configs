@@ -3,10 +3,12 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — LATVIA (LV) — 3 configs
+# @jojo_config — LATVIA (LV) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://02fcc1a4-ee90-4970-8bbb-4ffaa8109d24@195.123.213.28:443?security=reality&encryption=none&pbk=NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=5c256336e3b673fa#LV 🇱🇻 | @jojo_config | 289D87
 vless://5de0c218-0138-45d8-94d2-c2c3f37a1a6d@94.183.234.245:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.bing.com&fp=qq&flow=xtls-rprx-vision&sid=7f1e29593aa94ad1&pbk=tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc&encryption=none#LV 🇱🇻 | @jojo_config | A07BEC
-vless://cebc5f19-18d9-48e6-9029-fb4b04caf393@45.38.143.210:30584?fp=chrome&pbk=2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y&security=reality&sid=67ece882d65d0f1a&sni=m.vk.com&type=tcp#LV 🇱🇻 | @jojo_config | D611CB
+vless://02fcc1a4-ee90-4970-8bbb-4ffaa8109d24@195.123.213.28:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo&security=reality&sid=5c256336e3b673fa&sni=www.cloudflare.com&type=raw#LV 🇱🇻 | @jojo_config | 289D87
+vless://cebc5f19-18d9-48e6-9029-fb4b04caf393@45.38.143.210:30584?security=reality&encryption=none&pbk=2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y&headerType=none&fp=chrome&type=tcp&sni=m.vk.com&sid=67ece882d65d0f1a#LV 🇱🇻 | @jojo_config | D611CB
+vless://4e73a85c-21fb-4caf-97aa-af9f835d439c@31.56.179.171:2098?encryption=none&fp=chrome&pbk=xp7W9SCnpIS7cYsHLp9dW0DSdnR7J5JjOFuBpv00bF4&security=reality&sid=4c9f2e7c&sni=www.cloudflare.com&spx=/6dd3df22436d883&support-x25519mlkem768=true&type=tcp#LV 🇱🇻 | @jojo_config | B9443E
+vless://4e73a85c-21fb-4caf-97aa-af9f835d439c@31.56.179.171:8444?encryption=none&fp=chrome&pbk=xtiowfhPbLYybHWeUtcyqv8iMvsj2Id0uZtLDTga80o&security=reality&sid=209297f5&sni=www.nvidia.com&spx=/6dd3df22436d883&support-x25519mlkem768=true&type=tcp#LV 🇱🇻 | @jojo_config | CE406B

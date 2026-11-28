@@ -7,6 +7,6 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&type=grpc&serviceName=ebl&mode=multi&security=reality&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fm=#IR 🇮🇷 | @jojo_config | EF1170
-vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?mode=gun&security=reality&encryption=none&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&type=grpc&serviceName=ebl&sni=optim.tildacdn.pub#IR 🇮🇷 | @jojo_config | 63B499
-vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?encryption=none&type=grpc&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&fp=firefox&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU#IR 🇮🇷 | @jojo_config | C12062
+vless://d1ec39e3-ad7b-4b65-9f65-813696f9a04e@SUR.Deev-Guard.ir:15470?security=none&encryption=mlkem768x25519plus.native.0rtt.zxPnV8JfYCCBaYEMhAz0LUK2vVHy4JlbyNoQGAL_zFE&headerType=none&type=tcp#IR 🇮🇷 | @jojo_config | 1349F7
+vless://d1ec39e3-ad7b-4b65-9f65-813696f9a04e@SUR.Deev-Guard.ir:3036?security=none&type=tcp&encryption=mlkem768x25519plus.native.0rtt.x8try52PFaTDSgZvj01fbRsH43gXD5Dx0S3yX1QkuB8#IR 🇮🇷 | @jojo_config | B044C3
+vless://d1ec39e3-ad7b-4b65-9f65-813696f9a04e@SUQmci.Deev-Guard.ir:3036?security=none&encryption=mlkem768x25519plus.native.0rtt.x8try52PFaTDSgZvj01fbRsH43gXD5Dx0S3yX1QkuB8&headerType=none&type=tcp#IR 🇮🇷 | @jojo_config | 92FFD1

@@ -3,12 +3,9 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/jojo_config
 #profile-web-page-url: https://github.com/farshid78/Free-v2ray-Configs
-# @jojo_config — TURKEY (TR) — 5 configs
+# @jojo_config — TURKEY (TR) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://c34a41b6-598f-46ac-bea3-8b39a906f922@87.76.154.28:57231?encryption=none&security=none&type=tcp#TR 🇹🇷 | @jojo_config | C640C8
-vless://ba0dbd83-3569-46dc-bc3d-ef6e58ffc97b@153.56.229.218:443?security=reality&encryption=none&pbk=3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE&headerType=none&fp=chrome&type=tcp&sni=71b840t.de7.h1clayd.click&sid=e572b6579ea525d4#TR 🇹🇷 | @jojo_config | 605606
-vless://26843758-24de-4f76-b5d0-624038e353c4@153.56.229.218:443?encryption=none&fp=firefox&pbk=3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE&security=reality&sid=e572b6579ea525d4&sni=71b840t.de7.h1clayd.click&type=tcp#TR 🇹🇷 | @jojo_config | 70CDF6
-vless://ca21222b-caf1-4418-b404-345ea713daa4@185.71.216.94:2092?security=reality&encryption=none&pbk=zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=716b7eba38125f3a#TR 🇹🇷 | @jojo_config | BAC35C
-vless://128bd8ad-4f6c-4d70-af13-15a2cec331d2@185.71.216.94:2194?security=reality&encryption=none&pbk=jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=55986a94e2228791#TR 🇹🇷 | @jojo_config | DAAF31
+vless://b1758b10-8da1-4791-a1b3-44a77deea1ed@v2new.nimbaha9.ir:8080?encryption=none&host=v2new.nimbaha9.ir&path=/XDS45&security=none&type=ws#TR 🇹🇷 | @jojo_config | 677AB2
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpsWlp6Zm8xbXFIN1BxbmxvQW9nZGkyWEJobGdpb2ZNeQ@tr.subscriptionservice.ir:2089#TR 🇹🇷 | @jojo_config | 5870FB

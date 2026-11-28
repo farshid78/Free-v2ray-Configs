@@ -1,14 +1,14 @@
 {
   "brand": "@jojo_config",
-  "checked_at": "2026-11-20T20:29:40.155613+00:00",
-  "checked_at_unix": 1795206580,
-  "elapsed_seconds": 25.2,
+  "checked_at": "2026-11-28T13:21:11.428091+00:00",
+  "checked_at_unix": 1795872071,
+  "elapsed_seconds": 20.5,
   "summary": {
     "total": 13,
-    "ok": 10,
+    "ok": 9,
     "empty": 0,
     "fail": 0,
-    "disabled": 3,
+    "disabled": 4,
     "unknown": 0
   },
   "sources": [
@@ -17,20 +17,20 @@
       "tier": "light",
       "name": "base64.txt",
       "status": "ok",
-      "count": 93,
+      "count": 137,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 173
+      "latency_ms": 56
     },
     {
       "url": "https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
       "tier": "light",
       "name": "proxy_configs.txt",
       "status": "ok",
-      "count": 181,
+      "count": 373,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 132
+      "latency_ms": 48
     },
     {
       "url": "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
@@ -53,10 +53,10 @@
       "tier": "light",
       "name": "server.txt",
       "status": "ok",
-      "count": 4820,
+      "count": 5055,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 312
+      "latency_ms": 182
     },
     {
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
@@ -66,17 +66,17 @@
       "count": 1751,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 166
+      "latency_ms": 98
     },
     {
       "url": "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
       "tier": "light",
       "name": "AllConfigsSub.txt",
       "status": "ok",
-      "count": 597,
+      "count": 495,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 176
+      "latency_ms": 63
     },
     {
       "url": "https://raw.githubusercontent.com/LalatinaHub/LatinaSub/main/result/sub",
@@ -86,27 +86,27 @@
       "count": 500,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 184
+      "latency_ms": 70
     },
     {
       "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt",
       "tier": "heavy",
       "name": "V2RAY_RAW.txt",
       "status": "ok",
-      "count": 100,
+      "count": 113,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 68
+      "latency_ms": 71
     },
     {
       "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_base64_Sub.txt",
       "tier": "heavy",
       "name": "All_Configs_base64_Sub.txt",
       "status": "ok",
-      "count": 8855,
+      "count": 8803,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 571
+      "latency_ms": 316
     },
     {
       "url": "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat",
@@ -116,17 +116,15 @@
       "count": 143,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 157
+      "latency_ms": 52
     },
     {
       "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/all_configs.txt",
       "tier": "heavy",
       "name": "all_configs.txt",
-      "status": "ok",
-      "count": 4086,
-      "http_code": 200,
-      "attempts": 1,
-      "latency_ms": 618
+      "count": 0,
+      "status": "disabled",
+      "reason": "zero unique yield in the last 10 of 7583 rounds, and zero again this round"
     },
     {
       "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
@@ -139,36 +137,38 @@
   ],
   "converters": {
     "clash": {
-      "total": 97,
+      "total": 53,
       "by_reason": {
-        "invalid_server": 4,
-        "not_expressible": 2,
-        "unparsable": 78,
+        "invalid_server": 5,
+        "not_expressible": 4,
+        "unparsable": 31,
         "unroutable_server": 13
       },
       "by_protocol": {
-        "vmess": 68,
-        "ss": 22,
-        "vless": 4,
-        "hysteria": 1,
-        "shadowsocksr": 1,
-        "trojan": 1
+        "vmess": 26,
+        "ss": 12,
+        "vless": 7,
+        "socks": 4,
+        "trojan": 2,
+        "hy2": 1,
+        "shadowsocksr": 1
       }
     },
     "singbox": {
-      "total": 622,
+      "total": 548,
       "by_reason": {
-        "invalid_server": 4,
-        "not_expressible": 527,
-        "unparsable": 78,
+        "invalid_server": 5,
+        "not_expressible": 499,
+        "unparsable": 31,
         "unroutable_server": 13
       },
       "by_protocol": {
-        "vless": 478,
-        "vmess": 114,
-        "ss": 22,
-        "trojan": 6,
-        "hysteria": 1,
+        "vless": 451,
+        "vmess": 75,
+        "ss": 12,
+        "socks": 4,
+        "trojan": 4,
+        "hy2": 1,
         "shadowsocksr": 1
       }
     }
@@ -176,97 +176,102 @@
   "converters_by_category": {
     "all": {
       "clash": {
-        "total": 97,
+        "total": 53,
         "by_reason": {
-          "invalid_server": 4,
-          "not_expressible": 2,
-          "unparsable": 78,
+          "invalid_server": 5,
+          "not_expressible": 4,
+          "unparsable": 31,
           "unroutable_server": 13
         },
         "by_protocol": {
-          "vmess": 68,
-          "ss": 22,
-          "vless": 4,
-          "hysteria": 1,
-          "shadowsocksr": 1,
-          "trojan": 1
+          "vmess": 26,
+          "ss": 12,
+          "vless": 7,
+          "socks": 4,
+          "trojan": 2,
+          "hy2": 1,
+          "shadowsocksr": 1
         }
       },
       "singbox": {
-        "total": 622,
+        "total": 548,
         "by_reason": {
-          "invalid_server": 4,
-          "not_expressible": 527,
-          "unparsable": 78,
+          "invalid_server": 5,
+          "not_expressible": 499,
+          "unparsable": 31,
           "unroutable_server": 13
         },
         "by_protocol": {
-          "vless": 478,
-          "vmess": 114,
-          "ss": 22,
-          "trojan": 6,
-          "hysteria": 1,
+          "vless": 451,
+          "vmess": 75,
+          "ss": 12,
+          "socks": 4,
+          "trojan": 4,
+          "hy2": 1,
           "shadowsocksr": 1
         }
       }
     },
     "heavy": {
       "clash": {
-        "total": 85,
+        "total": 33,
         "by_reason": {
-          "not_expressible": 2,
-          "unparsable": 80,
-          "unroutable_server": 3
+          "not_expressible": 4,
+          "unparsable": 27,
+          "unroutable_server": 2
         },
         "by_protocol": {
-          "vmess": 57,
-          "ss": 22,
-          "vless": 4,
-          "shadowsocksr": 1,
-          "trojan": 1
+          "ss": 12,
+          "vmess": 12,
+          "vless": 5,
+          "trojan": 2,
+          "hy2": 1,
+          "shadowsocksr": 1
         }
       },
       "singbox": {
-        "total": 518,
+        "total": 455,
         "by_reason": {
-          "not_expressible": 435,
-          "unparsable": 80,
-          "unroutable_server": 3
+          "not_expressible": 426,
+          "unparsable": 27,
+          "unroutable_server": 2
         },
         "by_protocol": {
-          "vless": 431,
-          "vmess": 58,
-          "ss": 22,
-          "trojan": 6,
+          "vless": 423,
+          "vmess": 14,
+          "ss": 12,
+          "trojan": 4,
+          "hy2": 1,
           "shadowsocksr": 1
         }
       }
     },
     "light": {
       "clash": {
-        "total": 15,
+        "total": 20,
         "by_reason": {
-          "invalid_server": 4,
-          "unparsable": 1,
-          "unroutable_server": 10
+          "invalid_server": 5,
+          "unparsable": 4,
+          "unroutable_server": 11
         },
         "by_protocol": {
           "vmess": 14,
-          "hysteria": 1
+          "socks": 4,
+          "vless": 2
         }
       },
       "singbox": {
-        "total": 125,
+        "total": 134,
         "by_reason": {
-          "invalid_server": 4,
-          "not_expressible": 110,
-          "unparsable": 1,
-          "unroutable_server": 10
+          "invalid_server": 5,
+          "not_expressible": 114,
+          "unparsable": 4,
+          "unroutable_server": 11
         },
         "by_protocol": {
-          "vless": 64,
-          "vmess": 60,
-          "hysteria": 1
+          "vless": 67,
+          "vmess": 63,
+          "socks": 4
         }
       }
     }
@@ -290,128 +295,116 @@
   },
   "mihomo_gate": {
     "all": {
-      "dropped": 12,
+      "dropped": 6,
       "by_reason": {
-        "missing_port": 1,
-        "reality_bad_public_key": 2,
         "reality_bad_short_id": 1,
-        "ss_bad_plugin_mode": 2,
-        "ss_unknown_method": 6
-      },
-      "samples": [
-        "vless://f418674e-f518-4318-8ff9-e10000000046@172.67.131.125:2083?fp=chrome&host=smart-edge-424.arti98399-1905.workers.dev&path=%2Fsync&pbk=enabled&security=tls&",
-        "ss://Y2hhY2hhMjAtcG9seTEzMDU6azFkQk9tT0I0b3FpN1VtcDM3YTFiUQ@82.38.31.178:8080#v2go%20%7C%20%F0%9F%87%B3%F0%9F%87%B1%20NL%20%7C%20SS%20%7C%20560",
-        "ss://Y2hhY2hhMjAtcG9seTEzMDU6aWt1L0dmcnQ5WWVFVVVsZVhyMlB0ZjN1dnMwaHN6Q1IwSkhQcUdTanMrYz0@31.76.11.83:11650?type=tcp#Telegram:@v2rayng3"
-      ]
-    },
-    "heavy": {
-      "dropped": 10,
-      "by_reason": {
-        "missing_port": 1,
-        "reality_bad_public_key": 1,
-        "reality_bad_short_id": 1,
-        "ss_bad_plugin_mode": 2,
         "ss_unknown_method": 5
       },
       "samples": [
-        "ss://Y2hhY2hhMjAtcG9seTEzMDU6aWt1L0dmcnQ5WWVFVVVsZVhyMlB0ZjN1dnMwaHN6Q1IwSkhQcUdTanMrYz0@31.76.11.83:11650?type=tcp#Telegram:@v2rayng3",
-        "ss://Y2hhY2hhMjAtcG9seTEzMDU6b1pJb0E2OVE4eWhjUVY4a2EzUGEzQQ@82.38.31.54:8080#🇳🇱@Azaranv2ray",
-        "ss://Y2hhY2hhMjAtcG9seTEzMDU6ckhtVWhuanY3YitWOG8zWVdBTWFJREJTQmxnU05qdjN6SFlNdTZBTEZVOD0@31.77.148.89:56752?type=tcp#Telegran:@v2rayng3"
+        "ss://MjAyMi1ibGxha2V0ZTMtY2hhY2hhMjAtcG9seTEzMDU6OHlPM0FOV2VmdXVHczFsUktYRUNRQTFGRWh4bFdGVjJwcFFNY0JhWm81WT0@35.159.41.143:443#@VPsave",
+        "ss://Y2hhY2hhMjAtcG9seTEzMDU6azFkQk9tT0I0b3FpN1VtcDM3YTFiUQ@82.38.31.220:8080#13501@proxy_online_net",
+        "ss://Y2hhY2hhMjAtcG9seTEzMDU6azFkQk9tT0I0b3FpN1VtcDM3YTFiUQ@82.38.31.220:8080#Channel : @Daily_Configs"
+      ]
+    },
+    "heavy": {
+      "dropped": 6,
+      "by_reason": {
+        "reality_bad_short_id": 1,
+        "ss_unknown_method": 5
+      },
+      "samples": [
+        "ss://MjAyMi1ibGxha2V0ZTMtY2hhY2hhMjAtcG9seTEzMDU6OHlPM0FOV2VmdXVHczFsUktYRUNRQTFGRWh4bFdGVjJwcFFNY0JhWm81WT0@35.159.41.143:443#@VPsave",
+        "ss://Y2hhY2hhMjAtcG9seTEzMDU6azFkQk9tT0I0b3FpN1VtcDM3YTFiUQ@82.38.31.220:8080#13501@proxy_online_net",
+        "ss://Y2hhY2hhMjAtcG9seTEzMDU6azFkQk9tT0I0b3FpN1VtcDM3YTFiUQ@82.38.31.220:8080#Channel : @Daily_Configs"
       ]
     },
     "light": {
-      "dropped": 2,
-      "by_reason": {
-        "reality_bad_public_key": 1,
-        "ss_unknown_method": 1
-      },
-      "samples": [
-        "vless://f418674e-f518-4318-8ff9-e10000000046@172.67.131.125:2083?fp=chrome&host=smart-edge-424.arti98399-1905.workers.dev&path=%2Fsync&pbk=enabled&security=tls&",
-        "ss://Y2hhY2hhMjAtcG9seTEzMDU6azFkQk9tT0I0b3FpN1VtcDM3YTFiUQ@82.38.31.178:8080#v2go%20%7C%20%F0%9F%87%B3%F0%9F%87%B1%20NL%20%7C%20SS%20%7C%20560"
-      ]
+      "dropped": 0,
+      "by_reason": {},
+      "samples": []
     }
   },
   "converter_gate": {},
   "geo": {
     "db_loaded": 1,
-    "by_ip_literal": 4609,
-    "unknown_ip_literal": 6,
-    "by_dns": 1518,
-    "dns_failed": 644,
-    "unknown_after_dns": 1,
+    "by_ip_literal": 4014,
+    "unknown_ip_literal": 5,
+    "by_dns": 1408,
+    "dns_failed": 602,
+    "unknown_after_dns": 16,
     "skipped_no_db": 0,
-    "hosts_resolved": 6127,
-    "hosts_unknown": 651
+    "hosts_resolved": 5422,
+    "hosts_unknown": 623
   },
   "cascade": {
     "exit_country": {
-      "colo": "DFW",
+      "colo": "IAD",
       "loc": "US",
       "source": "https://cp.cloudflare.com/cdn-cgi/trace"
     },
     "layers": {
       "l0_l1": {
-        "in": 11538,
-        "out": 11441,
+        "in": 9885,
+        "out": 9833,
         "dropped": {
-          "unparsable": 78,
+          "unparsable": 31,
           "invalid_port": 1,
-          "invalid_uuid": 2,
+          "invalid_uuid": 3,
           "unroutable_server": 13,
-          "invalid_server": 3
+          "invalid_server": 4
         },
-        "endpoints_unique": 7449,
-        "dedup_saving_pct": 34.89,
-        "seconds": 0.49
+        "endpoints_unique": 6640,
+        "dedup_saving_pct": 32.47,
+        "seconds": 0.27
       },
       "l2": {
-        "in": 11441,
-        "out": 6906,
-        "open_pct": 60.36,
-        "open_pct_of_raw_input": 59.85,
-        "dns_failed": 613,
-        "dns_seconds": 16.93,
-        "tcp_seconds": 9.86,
+        "in": 9833,
+        "out": 5303,
+        "open_pct": 53.93,
+        "open_pct_of_raw_input": 53.65,
+        "dns_failed": 601,
+        "dns_seconds": 17.31,
+        "tcp_seconds": 9.67,
         "fd_before": 6,
         "fd_after": 6,
-        "seconds": 27.32
+        "seconds": 27.3
       },
       "l3": {
-        "in": 6906,
+        "in": 5303,
         "rounds": 3,
         "per_run_ok": [
-          1318,
-          1221,
-          1303
+          988,
+          1002,
+          974
         ],
-        "ever_ok": 1538,
-        "stable": 964,
-        "flaky_pct": 37.32,
-        "seconds": 245.94
+        "ever_ok": 1169,
+        "stable": 813,
+        "flaky_pct": 30.45,
+        "seconds": 170.35
       }
     },
     "buckets": {
-      "verified": 964,
-      "fast": 641,
-      "secure": 587,
+      "verified": 813,
+      "fast": 672,
+      "secure": 419,
       "top": 100,
       "top_short_by": 0,
       "fast_threshold_ms": 800
     },
-    "total_seconds": 274.3
+    "total_seconds": 198.29
   },
   "freshness": {
     "cascade": {
       "state": "fresh",
-      "tested_at": "2026-11-20 20:34 UTC",
+      "tested_at": "2026-11-28 13:24 UTC",
       "age_minutes": 0,
-      "detail": "964 configs"
+      "detail": "813 configs"
     },
     "google": {
       "state": "fresh",
-      "tested_at": "2026-11-20 20:37 UTC",
+      "tested_at": "2026-11-28 13:28 UTC",
       "age_minutes": 0,
-      "detail": "402 configs"
+      "detail": "412 configs"
     }
   },
   "google": {
@@ -446,7 +439,7 @@
       }
     },
     "removed_previous": [],
-    "input": 964,
+    "input": 813,
     "reference": {
       "ok": true,
       "endpoints": {
@@ -488,103 +481,100 @@
       }
     },
     "per_round_seconds": [
-      52.67,
-      52.6
+      46.73,
+      48.73
     ],
-    "panel_ready": 466,
-    "fail": 401,
-    "unknown": 97,
-    "judged": 867,
+    "panel_ready": 448,
+    "fail": 287,
+    "unknown": 78,
+    "judged": 735,
     "per_service": {
       "gstatic": {
-        "all_ok": 823,
-        "all_fail": 3,
-        "mixed": 41,
+        "all_ok": 695,
+        "all_fail": 8,
+        "mixed": 32,
         "fail_outcomes": {
-          "error": 47
+          "error": 48
         }
       },
       "youtube": {
-        "all_ok": 806,
-        "all_fail": 35,
-        "mixed": 26,
+        "all_ok": 681,
+        "all_fail": 22,
+        "mixed": 32,
         "fail_outcomes": {
-          "error": 96
+          "error": 76
         }
       },
       "play": {
-        "all_ok": 793,
-        "all_fail": 32,
-        "mixed": 42,
+        "all_ok": 676,
+        "all_fail": 30,
+        "mixed": 29,
         "fail_outcomes": {
-          "error": 106
+          "error": 89
         }
       },
       "maven": {
-        "all_ok": 613,
-        "all_fail": 214,
-        "mixed": 40,
+        "all_ok": 554,
+        "all_fail": 151,
+        "mixed": 30,
         "fail_outcomes": {
-          "status404": 374,
-          "error": 94
+          "status404": 235,
+          "error": 97
         }
       },
       "gemini": {
-        "all_ok": 636,
-        "all_fail": 177,
-        "mixed": 54,
+        "all_ok": 558,
+        "all_fail": 150,
+        "mixed": 27,
         "fail_outcomes": {
-          "error": 139,
-          "status404": 90,
-          "status403": 179
+          "error": 96,
+          "status403": 146,
+          "status404": 85
         }
       }
     },
     "geo": {
       "source": "https://www.youtube.com/sw.js_data",
       "kept_by_country": {
-        "US": 192,
-        "NL": 41,
-        "ID": 25,
-        "SG": 25,
-        "DE": 24,
-        "EG": 10,
-        "FR": 10,
-        "CA": 9,
-        "KR": 9,
-        "GB": 8,
-        "ES": 6,
-        "JP": 5,
-        "ZA": 5,
+        "US": 228,
+        "NL": 35,
+        "DE": 23,
+        "SG": 18,
+        "FR": 14,
+        "GB": 14,
+        "JP": 10,
+        "CA": 8,
+        "IL": 8,
+        "CH": 6,
+        "ID": 5,
+        "IN": 5,
+        "LK": 5,
         "AE": 4,
-        "AU": 3,
-        "CH": 3,
-        "IN": 3,
-        "IQ": 3,
-        "VN": 3,
-        "FI": 2,
-        "MA": 2,
-        "PL": 2,
-        "AT": 1,
+        "EG": 4,
+        "FI": 4,
+        "PL": 3,
+        "ZA": 3,
+        "HK": 2,
+        "IQ": 2,
+        "KR": 2,
+        "TR": 2,
+        "AU": 1,
         "BR": 1,
-        "CZ": 1,
-        "HK": 1,
-        "IT": 1,
-        "TH": 1,
-        "TR": 1,
-        "TW": 1
+        "KZ": 1,
+        "LV": 1,
+        "PK": 1,
+        "SE": 1,
+        "TH": 1
       },
       "dropped_unsupported_country": {
-        "RU": 59
+        "RU": 36
       },
-      "dropped_unknown": {
-        "fetch_failed": 5
-      },
-      "retried": 5,
-      "seconds": 107.25
+      "dropped_unknown": {},
+      "retried": 1,
+      "seconds": 133.52
     },
-    "ready": 402,
-    "ready_pct_of_judged": 46.37,
-    "seconds": 213.11
+    "ready": 412,
+    "ready_pct_of_judged": 56.05,
+    "seconds": 229.36
   }
 }
